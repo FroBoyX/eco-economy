@@ -1,18 +1,26 @@
-# Ironwood Blacksmithing — Industrial Intermediates
+# Ironwood Blacksmithing — Current Industrial Table
 
-Rebuilt from Eco 14 Core using the corrected Ironwood metal chain.
+Rebuilt from Eco 14 Core after the Mining/Smelting commercial-margin correction and the Hunting/Butchery audit.
 
-Derived producer costs use Town Buy/producer values for inputs; the Exchange retail spread is applied afterward.
+Blacksmithing spans several economic depths:
 
-Iron tools remain deferred until Leather Hide is rebuilt through Hunting/Tailoring.
+- plates and Nails are shallow industrial components;
+- Cooking Utensils and Saw Blades are ordinary multi-step goods/components;
+- Iron hand tools are durable finished goods;
+- the Sawmill is a low-volume capital workstation.
 
-## Inputs
+Commercial margin therefore increases with cash exposure rather than applying one markup to the entire profession.
 
-- Iron Bar: **1.70 Town Buy / 1.79 Town Sell**
-- Copper Bar: **3.43 / 3.60**
+## Current inputs
+
+- Iron Bar: **2.54 Town Buy / 2.67 Town Sell**
+- Copper Bar: **5.14 / 5.40**
+- Leather Hide: **0.60 / 0.63**
+- Board: **0.27 / 0.28**
 - Wood: **0.40 / 0.45**
+- labor: **0.001 credit/calorie**
 
-## Core intermediates
+## Shallow industrial components
 
 ### Iron Plate — Blacksmith 1
 
@@ -20,19 +28,21 @@ Core: 1 Iron Bar + 60 calories → 1 Iron Plate.
 
 At Blacksmith 1:
 
-- 0.8 Iron Bar × 1.70 = 1.360
+- 0.8 Iron Bar × 2.67 = 2.136
 - 48 calories = 0.048
-- entry cost ≈ **1.408**
+- Exchange cash cost = **2.184**
 
-**Iron Plate: 1.48 Town Buy / 1.55 Town Sell.**
+With a ~12% shallow-processing margin:
+
+**Iron Plate: 2.45 Town Buy / 2.57 Town Sell.**
 
 ### Copper Plate — Blacksmith 1
 
-- 0.8 Copper Bar × 3.43 = 2.744
+- 0.8 Copper Bar × 5.40 = 4.320
 - 48 calories = 0.048
-- entry cost ≈ **2.792**
+- cash cost = **4.368**
 
-**Copper Plate: 2.93 Town Buy / 3.08 Town Sell.**
+**Copper Plate: 4.89 Town Buy / 5.13 Town Sell.**
 
 ### Nails — Blacksmith 1
 
@@ -40,11 +50,13 @@ Core: 1 Iron Bar + 50 calories → 16 Nails.
 
 At Blacksmith 1:
 
-- 0.8 Iron Bar × 1.70 = 1.360
+- 0.8 Iron Bar × 2.67 = 2.136
 - 40 calories = 0.040
-- cost/Nail = **0.0875**
+- cash cost/Nail = **0.136**
 
-**Nail: 0.09 Town Buy / 0.10 Town Sell.**
+**Nail: 0.15 Town Buy / 0.16 Town Sell.**
+
+## Ordinary Blacksmith outputs
 
 ### Cooking Utensils — Blacksmith 1
 
@@ -52,57 +64,102 @@ Core: 2 Iron Bars + 50 calories → 1.
 
 At Blacksmith 1:
 
-- 1.6 Iron Bars × 1.70 = 2.720
+- 1.6 Iron Bars × 2.67 = 4.272
 - 40 calories = 0.040
-- entry cost = **2.760**
+- cash cost = **4.312**
 
-**Cooking Utensils: 2.90 Town Buy / 3.05 Town Sell.**
+**Cooking Utensils: 4.96 Town Buy / 5.21 Town Sell.**
 
 ### Iron Saw Blade — Blacksmith 2
 
 Core: 6 Iron Bars + 60 calories → 1.
 
-At Blacksmith 2 (75%):
+At Blacksmith 2 (0.75):
 
-- 4.5 Iron Bars × 1.70 = 7.650
+- 4.5 Iron Bars × 2.67 = 12.015
 - 45 calories = 0.045
-- entry cost ≈ **7.695**
+- cash cost = **12.060**
 
-**Iron Saw Blade: 8.08 Town Buy / 8.48 Town Sell.**
+**Iron Saw Blade: 13.87 Town Buy / 14.56 Town Sell.**
+
+## Iron hand tools — Blacksmith 1
+
+Current Core gives the same production recipe to:
+
+- Iron Axe;
+- Iron Pickaxe;
+- Iron Shovel;
+- Iron Hoe;
+- Iron Sickle;
+- Iron Machete;
+- Iron Hammer.
+
+Printed recipe for each:
+
+- 12 Iron Bars;
+- 8 Leather Hide;
+- 12 `WoodBoard`;
+- 250 calories;
+- crafted at the Grindstone.
+
+At Blacksmith 1:
+
+- 9.6 Iron Bars × 2.67 = 25.632
+- 6.4 Leather Hide × 0.63 = 4.032
+- 9.6 Boards × 0.28 = 2.688
+- 200 calories = 0.200
+- Exchange-sourced cash cost = **32.552**
+
+Durable hand tools receive an ~18% ordinary-finished-goods margin:
+
+**Iron tools: 38.41 Town Buy / 40.33 Town Sell each.**
+
+This gives the Blacksmith roughly **5.86 credits of entry-level wholesale surplus per tool** even if every input is purchased from the Exchange. Higher Blacksmith skill and direct supplier relationships expand that profit further.
 
 ## Sawmill — Blacksmith 2
 
 Core:
 
-- 4 Iron Bars, skill-modified
-- 16 Wood, skill-modified
-- 1 Iron Saw Blade, static
-- 600 calories, skill-modified
+- 4 Iron Bars, skill-modified;
+- 16 Wood, skill-modified;
+- 1 Iron Saw Blade, **static**;
+- 600 calories, skill-modified.
 
 At Blacksmith 2:
 
-- 3 Iron Bars × 1.70 = 5.100
-- 12 Wood × 0.40 = 4.800
-- 1 static Iron Saw Blade × 8.08 = 8.080
+- 3 Iron Bars × 2.67 = 8.010
+- 12 Wood × 0.45 = 5.400
+- 1 static Iron Saw Blade × 14.56 = 14.560
 - 450 calories = 0.450
-- entry cost ≈ **18.430**
+- Exchange cash cost = **28.420**
 
-**Sawmill: 19.35 Town Buy / 20.32 Town Sell.**
+As a low-volume capital workstation, Sawmill receives the 30% capital-good target:
 
-## Exchange-ready Blacksmith table
+**Sawmill: 36.95 Town Buy / 38.80 Town Sell.**
+
+Entry-level wholesale surplus is approximately **8.53 credits per Sawmill**.
+
+## Exchange-ready Blacksmith foundation
 
 | Item | Town Buys | Town Sells |
 |---|---:|---:|
-| Nail | **0.09** | **0.10** |
-| Iron Plate | **1.48** | **1.55** |
-| Copper Plate | **2.93** | **3.08** |
-| Cooking Utensils | **2.90** | **3.05** |
-| Iron Saw Blade | **8.08** | **8.48** |
-| Sawmill | **19.35** | **20.32** |
+| Nail | **0.15** | **0.16** |
+| Iron Plate | **2.45** | **2.57** |
+| Copper Plate | **4.89** | **5.13** |
+| Cooking Utensils | **4.96** | **5.21** |
+| Iron Saw Blade | **13.87** | **14.56** |
+| Iron Axe | **38.41** | **40.33** |
+| Iron Pickaxe | **38.41** | **40.33** |
+| Iron Shovel | **38.41** | **40.33** |
+| Iron Hoe | **38.41** | **40.33** |
+| Iron Sickle | **38.41** | **40.33** |
+| Iron Machete | **38.41** | **40.33** |
+| Iron Hammer | **38.41** | **40.33** |
+| Sawmill | **36.95** | **38.80** |
 
 ## Deferred Blacksmith rows
 
-- Iron tools requiring Leather Hide;
-- Bank, Mint and Currency Exchange civic/capital goods;
-- Steel tools and Steel products;
-- lamps/candles requiring Tallow/Cotton.
+- Sharpening Steel and Steel tools require the Advanced Smelting/Steel chain;
+- civic capital goods such as Bank, Mint and Currency Exchange need their complete cross-profession inputs and may receive separate civic procurement treatment;
+- lighting/candle outputs use the newly canonical Tallow/Cotton values and will be included in the full profession-output pass;
+- remaining decorative metal goods will be priced after their dependency classes are verified.
