@@ -19,26 +19,19 @@ Raw anchors are design inputs. Processed goods must be checked through their com
 |---|---:|---:|---|---|
 | Sandstone | **0.15** | **0.17** | validated | Arrastra byproduct/reference rock for Iron Ore processing. |
 | Granite | **0.15** | **0.17** | validated | Arrastra byproduct/reference rock for Copper and Gold processing. |
-| **Clay** | **0.05** | **0.06** | validated current-era | Clay began as near-waste, but Clay Molds, Pottery, Brick, Cement and later industrial recipes now create recurring demand. It remains cheaper than Sand/Rock because it is abundant. |
+| **Sand** | **0.10** | **0.11** | validated current-era | Abundant shovel-gathered construction feedstock. Mortar and Glass create recurring demand without requiring Rock-level pricing. |
+| **Clay** | **0.10** | **0.11** | validated current-era | Transitioned from day-one spoil to recurring feedstock for Clay Molds, Pottery, Brick, Cement and later industry. Still treated as abundant rather than scarce. |
 | **Iron Ore** | **0.20** | **0.22** | validated | Foundational industrial ore. |
 | **Copper Ore** | **0.30** | **0.33** | validated | Moderate scarcity premium; narrowed Exchange spread avoids compounding through the metal chain. |
 | **Gold Ore** | **0.30** | **0.35** | validated | Gold's Core conversion is already much worse than Iron/Copper, so the recipe itself supplies the scarcity premium. |
 
-## Why Clay moved upward from day-one waste pricing
+## Sand and Clay as current-era commodities
 
-Clay was initially almost a spoil material. That was appropriate before there was meaningful demand.
+Sand and Clay are abundant resources, but abundance does not mean zero value once the economy has persistent uses for them.
 
-It is now a recurring input across several profession chains. Eco 14 Core includes Clay in:
+Ironwood therefore uses **0.10 buy / 0.11 sell** for both in the current era.
 
-- Gathering 1 Clay Molds;
-- Pottery 1 Wet Bricks and Shale Brick processing;
-- Pottery Ceramic Molds and ceramic goods;
-- Masonry 4 Cement;
-- later Electronics and environmental-remediation recipes.
-
-That technological transition justifies paying more for Clay without pretending it is scarce.
-
-The current **0.05 buy / 0.06 sell** anchor deliberately keeps Clay below Sand and ordinary Rock while giving Gatherers a reason to collect and deliver it.
+This is deliberately below ordinary Rock and far below processed building materials. It gives Gatherers a reason to move these materials into the Exchange while leaving most downstream value creation to Masonry, Pottery, Glassworking and later industry.
 
 ### Clay Mold check
 
@@ -46,20 +39,31 @@ Core Gathering 1: 1 Clay + 50 calories → 4 Clay Molds.
 
 At Gathering 1:
 
-- effective Clay: 0.8 × 0.06 = 0.048;
+- effective Clay: 0.8 × 0.11 = 0.088;
 - effective labor: 40 calories = 0.040;
-- total craft cost ≈ 0.088;
-- cost per mold ≈ **0.022**.
+- total craft cost ≈ 0.128;
+- cost per mold ≈ **0.032**.
 
-A practical Exchange price is therefore about **0.03 buy / 0.04 sell per Clay Mold**.
+Practical Exchange price: **0.04 buy / 0.05 sell per Clay Mold**.
+
+### Mortar check
+
+Core Masonry 1: 1 Sand + 25 calories → 3 Mortar.
+
+At Masonry 1:
+
+- effective Sand: 0.8 × 0.11 = 0.088;
+- effective labor: 20 calories = 0.020;
+- total craft cost = 0.108;
+- cost per Mortar = **0.036**.
+
+Practical Exchange price: **0.04 buy / 0.05 sell per Mortar**.
 
 ### Pottery sanity check
 
 Core Pottery 1 Wet Brick uses 12 Clay + 3 Sand + 1 Wooden Mold + 100 calories → 4 Wet Bricks.
 
-At Pottery 1 and Sand at the intended 0.11 consumer anchor, Clay + Sand + labor contribute about **0.23 credit per Wet Brick before allocating the reusable Wooden Mold**.
-
-That keeps the raw Clay contribution meaningful without allowing the raw material to dominate Brick value. Pottery skill, molds, firing, fuel, waste and later processing still create most of the finished-product value.
+At Pottery 1, Clay + Sand + labor contribute about **0.35 credit per Wet Brick before allocating the reusable Wooden Mold**. That is enough raw-material value to reward supply without overwhelming the later Pottery work, mold cost, firing, fuel and waste handling.
 
 ## Why Gold Ore is not given a large raw premium
 
