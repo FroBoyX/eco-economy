@@ -1,0 +1,11 @@
+{
+  "run": "ironwood",
+  "status": "canonical-run-identity",
+  "primary": "#B9CDBB",
+  "known_source": "Product Owner supplied Eco display color: <color=#B9CDBB>Ironwood</color>",
+  "secondary": null,
+  "table_header": null,
+  "table_body": null,
+  "table_grid": null,
+  "notes": "Only the primary Ironwood color is currently canonical. Do not infer or preserve unrecovered legacy palette values."
+}
