@@ -36,7 +36,9 @@ The Rocker Box concentrate recipes are skill-modified, so at Mining 1 their crus
 |---|---:|---:|
 | Iron Ore | **0.20** | **0.22** |
 | Copper Ore | **0.30** | **0.33** |
-| Gold Ore | **0.50** | **0.55** |
+| Gold Ore | **0.30** | **0.35** |
+
+Gold does not receive a large raw-price premium because the Core conversion ratio already makes Gold substantially more expensive per finished bar.
 
 ## Supporting crushed rock
 
@@ -53,7 +55,7 @@ Arrastra ore quantity remains static at 12.
 |---|---|---:|---:|---:|
 | Crushed Iron Ore | 12×0.22 + 40 cal - 0.73 sandstone credit → 2 | ~0.975 | **1.02** | **1.06** |
 | Crushed Copper Ore | 12×0.33 + 56 cal - 0.74 granite credit → 2 | ~1.638 | **1.72** | **1.79** |
-| Crushed Gold Ore | 12×0.55 + 56 cal - 0.74 granite credit → 2 | ~2.958 | **3.11** | **3.23** |
+| Crushed Gold Ore | 12×0.35 + 56 cal - 0.74 granite credit → 2 | ~1.758 | **1.86** | **1.94** |
 
 ## Crushed ore → concentrate
 
@@ -63,7 +65,7 @@ At Mining 1, effective crushed-ore quantities are 80% of the printed Rocker Box 
 |---|---|---:|---:|---:|
 | Iron Concentrate | 4.0 Crushed Iron + 40 cal + 1.5 Tailings | ~4.81 | **5.00** | **5.20** |
 | Copper Concentrate | 5.6 Crushed Copper + 40 cal + 2.25 Tailings | ~10.85 | **11.30** | **11.75** |
-| Gold Concentrate | 8.0 Crushed Gold + 40 cal + 3 Tailings | ~26.93 | **28.00** | **29.00** |
+| Gold Concentrate | 8.0 Crushed Gold + 40 cal + 3 Tailings | ~16.61 | **17.25** | **18.00** |
 
 ## Gold concentrate is not one-bar-equivalent
 
@@ -71,9 +73,9 @@ At Smelting 4, the Bloomery Gold recipe uses **1.3 effective Gold Concentrate to
 
 Therefore:
 
-`29.00 / (3 / 1.3) ≈ 12.57 credits per bar-equivalent`
+`18.00 / (3 / 1.3) ≈ 7.80 credits of concentrate per finished-bar equivalent`
 
-The concentrate's nominal item price being higher than the Gold Bar item price is not a value inversion. It is a unit-size issue: one concentrate item contains enough material for more than two bars at the skill level where Gold can first be smelted.
+The concentrate's nominal item price being above the Gold Bar item price is therefore not a value inversion. One concentrate contains enough material for about **2.31 Gold Bars** at the skill level where Gold can first be smelted.
 
 ## Validated Mining metal table
 
@@ -81,12 +83,12 @@ The concentrate's nominal item price being higher than the Gold Bar item price i
 |---|---:|---:|
 | Iron Ore | **0.20** | **0.22** |
 | Copper Ore | **0.30** | **0.33** |
-| Gold Ore | **0.50** | **0.55** |
+| Gold Ore | **0.30** | **0.35** |
 | Crushed Iron Ore | **1.02** | **1.06** |
 | Crushed Copper Ore | **1.72** | **1.79** |
-| Crushed Gold Ore | **3.11** | **3.23** |
+| Crushed Gold Ore | **1.86** | **1.94** |
 | Iron Concentrate | **5.00** | **5.20** |
 | Copper Concentrate | **11.30** | **11.75** |
-| Gold Concentrate | **28.00** | **29.00** |
+| Gold Concentrate | **17.25** | **18.00** |
 
 Later Mining skills, machinery, modules, talents, and Recycling should improve producer margins without automatically changing these prices.
