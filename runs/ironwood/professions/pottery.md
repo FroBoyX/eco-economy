@@ -1,114 +1,118 @@
 # Ironwood Pottery — Brick Foundation
 
-Derived from Eco 14 Core using current Ironwood anchors and entry-skill efficiency.
+Rebuilt from Eco 14 Core after the Logging, Blacksmithing and Masonry commercial-margin corrections.
 
-Derived producer costs use Town Buy/producer values for inputs. The Exchange retail spread is applied after the producer price is established.
+Brick remains on Ironwood's separate Tier-3 bulk-construction policy. Its intermediate inputs are still priced commercially so Potters and upstream suppliers are not forced to work at cost.
 
 ## Current inputs
 
-- Sand: **0.10 Town Buy / 0.11 Town Sell**
+- Sand: **0.10 / 0.11**
 - Clay: **0.10 / 0.11**
-- Board: **0.26 / 0.27**
-- Nail: **0.09 / 0.10**
+- Board: **0.27 / 0.28**
+- Nail: **0.15 / 0.16**
 - Mortar: **0.04 / 0.05**
-- Charcoal: **1.17 / 1.23**, 20,000 J fuel value
-- labor: **0.001 credit/calorie**
-- Kiln fuel consumption: **50 W**
-
-Pottery 1 uses 80% of skill-modified ingredients, labor and craft time.
+- Iron Bar: **2.54 / 2.67**
+- Charcoal: **1.24 / 1.30**, 20,000 J
+- Kiln: 50 W fuel consumption
 
 ## Wooden Mold — Logging 3
 
-Core recipe:
+Core:
 
 - 2 Nails
-- 8 WoodBoard
+- 8 `WoodBoard`
 - 120 calories
-- output 4 Wooden Molds
+- → 4 Wooden Molds
 
-At Logging 3 (70%):
+At Logging 3 (0.70):
 
-- 1.4 Nails × 0.09 = 0.126
-- 5.6 Boards × 0.26 = 1.456
+- 1.4 Nails × 0.16 = 0.224
+- 5.6 Boards × 0.28 = 1.568
 - 84 calories = 0.084
-- total = **1.666**
-- cost/mold ≈ **0.417**
+- cash cost/craft = 1.876
+- cash cost/mold = **0.469**
 
-**Wooden Mold: 0.44 Town Buy / 0.46 Town Sell.**
+With a shallow component margin:
 
-Wooden Molds are consumed fractionally by the Wet Brick recipe; they are not a free permanent tool.
+**Wooden Mold: 0.53 Town Buy / 0.56 Town Sell.**
 
 ## Wet Brick — Pottery 1
 
-Core recipe:
+Core:
 
 - 3 Sand
 - 12 Clay
 - 1 Wooden Mold
 - 100 calories
 - 0.1 Wood Scrap garbage
-- output 4 Wet Bricks
+- → 4 Wet Bricks
 
 At Pottery 1:
 
-- 2.4 Sand × 0.10 = 0.240
-- 9.6 Clay × 0.10 = 0.960
-- 0.8 Wooden Mold × 0.44 = 0.352
+- 2.4 Sand × 0.11 = 0.264
+- 9.6 Clay × 0.11 = 1.056
+- 0.8 Wooden Mold × 0.56 = 0.448
 - 80 calories = 0.080
-- Wood Scrap disposal allowance ≈ 0.008/craft
-- total craft cost ≈ **1.640**
-- cost/Wet Brick ≈ **0.410**
+- Wood Scrap disposal allowance ≈ 0.008
+- craft cash cost ≈ 1.856
+- cost/Wet Brick ≈ **0.464**
 
-**Wet Brick: 0.43 Town Buy / 0.45 Town Sell.**
-
-Wet Brick remains a process/intermediate value. The finished Brick receives an Ironwood bulk-construction valuation premium; do not infer finished Brick price only from the Wet Brick public price.
+**Wet Brick: 0.53 Town Buy / 0.56 Town Sell.**
 
 ## Brick — Pottery 1, Kiln
 
-Core recipe:
+Core:
 
 - 1 Wet Brick
 - 4 Mortar
 - 15 calories
-- output 1 Brick
-- base craft time 0.32 minutes
+- base time 0.32 minutes
+- → 1 Brick
 
-At Pottery 1, the mechanically modeled entry floor is:
+At Pottery 1:
 
-- 0.8 Wet Brick × 0.43 = 0.344
-- 3.2 Mortar × 0.04 = 0.128
+- 0.8 Wet Brick × 0.56 = 0.448
+- 3.2 Mortar × 0.05 = 0.160
 - 12 calories = 0.012
-- effective craft time = 0.256 minutes
-- 50 W Kiln fuel ≈ 0.045
-- modeled entry floor ≈ **0.529**
+- effective Kiln fuel ≈ 0.050
+- Exchange-sourced cash floor ≈ **0.670**
 
-The modeled floor understates the practical burden of Brick supply. Brick is a bulk Tier-3 construction block assembled from large quantities of hand-shoveled Sand and Clay, then moved through molds, intermediate Wet Bricks, Mortar, Kiln throughput, storage, and repeated hauling. Those burdens are only weakly represented by recipe calories.
-
-Ironwood therefore applies a deliberate **bulk construction valuation premium** rather than pricing Brick as an ordinary low-friction intermediate.
+Ironwood's accepted bulk-construction policy still dominates this floor:
 
 **Brick: 1.20 Town Buy / 1.25 Town Sell.**
 
-This is a policy value, not a claim that the recipe consumes 1.20 credits of modeled ingredients. It rewards the real logistics burden while keeping Brick below Glass and Lumber in the Tier-3 structural band.
+That leaves about 0.53 credits of entry-level wholesale surplus per Brick before higher-skill efficiency. This is intentionally strong because Brick production carries shovel/haul/storage/kiln burden that Eco's recipe calories only weakly represent.
 
-A materially higher value such as 1.50–2.00 should be used only if actual supply remains weak, because at the current recipe floor it would create an extremely large guaranteed Exchange margin for producers.
+## Glassworks — Pottery 1
 
-## Construction comparison
+Core:
 
-| Material | Tier | Town Buys | Town Sells |
-|---|---:|---:|---:|
-| Mortared Stone | 2 | **0.38** | **0.40** |
-| Brick | 3 | **1.20** | **1.25** |
-| Glass | 3 | **1.45** | **1.52** |
-| Lumber | 3 | **1.60** | **1.68** |
+- 8 Iron Bars
+- 16 Bricks
+- 20 `WoodBoard`
+- 150 calories
+- crafted at Kiln; base craft time 5 minutes
 
-This creates a clear Tier-3 structural band rather than letting Brick appear to be only marginally more valuable than Tier-2 Mortared Stone.
+At Pottery 1:
+
+- 6.4 Iron Bars × 2.67 = 17.088
+- 12.8 Bricks × 1.25 = 16.000
+- 16 Boards × 0.28 = 4.480
+- 120 calories = 0.120
+- effective 4-minute Kiln fuel = 12,000 J = 0.6 Charcoal × 1.30 = 0.780
+- Exchange cash cost = **38.468**
+
+As a capital workstation:
+
+**Glassworks: 50.01 Town Buy / 52.51 Town Sell.**
 
 ## Exchange-ready Pottery foundation
 
 | Item | Town Buys | Town Sells |
 |---|---:|---:|
-| Wooden Mold | **0.44** | **0.46** |
-| Wet Brick | **0.43** | **0.45** |
-| **Brick** | **1.20** | **1.25** |
+| Wooden Mold | **0.53** | **0.56** |
+| Wet Brick | **0.53** | **0.56** |
+| Brick | **1.20** | **1.25** |
+| Glassworks | **50.01** | **52.51** |
 
-Ceramics, pottery furniture and advanced Pottery remain to be audited from this corrected foundation.
+The Brick policy survives the full upstream commercial-margin correction without needing inflation above 1.25 retail.
