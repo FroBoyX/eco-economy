@@ -1,71 +1,115 @@
-# Ironwood Farming — Crop and Seed Foundation
+# Ironwood Farming — Current Steam-Era Table
 
-Derived from the supplied Eco 14 Core using the current Gathering crop anchors.
+Derived from the supplied Eco 14 Core using current Gathering crop anchors.
 
-Farming itself does not create a separate permanent markup on harvested crops. Harvested crops remain Depth-0/gathered anchors because the farm converts land, time and seed into new raw supply rather than buying a deep manufactured input chain.
+Harvested crops remain Depth-0 anchors. Farming's direct manufactured economy is seeds plus farm objects; these receive shallow/ordinary margins without inflating raw food.
 
-Farming's direct priced outputs are primarily **seed recipes and farm objects**.
+## Current seed / spore prices
 
-## Farming 1 seed economics
+| Seed / Spore | Town Buys | Town Sells |
+|---|---:|---:|
+| Agave Seed | **0.13** | **0.14** |
+| Amanita Mushroom Spores | **0.04** | **0.05** |
+| Beet Seed | **0.15** | **0.16** |
+| Bolete Mushroom Spores | **0.13** | **0.14** |
+| Cookeina Mushroom Spores | **0.13** | **0.14** |
+| Corn Seed | **0.15** | **0.16** |
+| Cotton Seed | **0.14** | **0.15** |
+| Creosote Bush Seed | **0.03** | **0.04** |
+| Crimini Mushroom Spores | **0.13** | **0.14** |
+| Daisy Seed | **0.03** | **0.04** |
+| Fern Spore | **0.10** | **0.11** |
+| Fireweed Seed | **0.10** | **0.11** |
+| Flax Seed | **0.04** | **0.05** |
+| Huckleberry Seed | **0.20** | **0.21** |
+| Orchid Seed | **0.03** | **0.04** |
+| Papaya Seed | **0.26** | **0.27** |
+| Pineapple Seed | **0.13** | **0.14** |
+| Prickly Pear Seed | **0.24** | **0.25** |
+| Pumpkin Seed | **0.22** | **0.23** |
+| Rose Seed | **0.03** | **0.04** |
+| Sunflower Seed | **0.03** | **0.04** |
+| Taro Seed | **0.16** | **0.17** |
+| Tomato Seed | **0.30** | **0.32** |
+| Trillium Seed | **0.03** | **0.04** |
+| Tulip Seed | **0.03** | **0.04** |
+| Wheat Seed | **0.06** | **0.07** |
 
-Farming 1 uses the 0.80 recipe/labor multiplier. Most crop seed recipes convert harvested crop back into a larger fixed number of seeds, making seed value derive naturally from the crop rather than requiring arbitrary seed anchors.
+Flax Seed remains the important correction: Farming 1 turns 2 Flax Stems into 6 seeds, giving the current **0.04 / 0.05** value.
 
-Town Buy below uses a shallow ~10% specialist margin over Exchange-sourced crop input cost at Farming 1.
+## Current farm objects
 
-| Seed / Spore | Source crop | Town Buys | Town Sells |
-|---|---|---:|---:|
-| Agave Seed | Agave Leaves | **0.13** | **0.14** |
-| Amanita Mushroom Spores | Amanita Mushrooms | **0.04** | **0.05** |
-| Beet Seed | Beet | **0.15** | **0.16** |
-| Bolete Mushroom Spores | Bolete Mushrooms | **0.13** | **0.14** |
-| Cookeina Mushroom Spores | Cookeina Mushrooms | **0.13** | **0.14** |
-| Corn Seed | Corn | **0.15** | **0.16** |
-| Cotton Seed | Cotton Boll | **0.14** | **0.15** |
-| Creosote Bush Seed | Creosote Flower | **0.03** | **0.04** |
-| Crimini Mushroom Spores | Crimini Mushrooms | **0.13** | **0.14** |
-| Daisy Seed | Daisy | **0.03** | **0.04** |
-| Fern Spore | Fiddleheads | **0.10** | **0.11** |
-| Fireweed Seed | Fireweed Shoots | **0.10** | **0.11** |
-| **Flax Seed** | **Flax Stem** | **0.04** | **0.05** |
-| Huckleberry Seed | Huckleberries | **0.20** | **0.21** |
-| Orchid Seed | Orchid | **0.03** | **0.04** |
-| Papaya Seed | Papaya | **0.26** | **0.27** |
-| Pineapple Seed | Pineapple | **0.13** | **0.14** |
-| Prickly Pear Seed | Prickly Pear Fruit | **0.24** | **0.25** |
-| Pumpkin Seed | Pumpkin | **0.22** | **0.23** |
-| Rose Seed | Rose | **0.03** | **0.04** |
-| Sunflower Seed | Sunflower | **0.03** | **0.04** |
-| Taro Seed | Taro Root | **0.16** | **0.17** |
-| Tomato Seed | Tomato | **0.30** | **0.32** |
-| Trillium Seed | Trillium Flower | **0.03** | **0.04** |
-| Tulip Seed | Tulip | **0.03** | **0.04** |
-| Wheat Seed | Wheat | **0.06** | **0.07** |
+| Item | Farming | Exchange cash cost | Town Buys | Town Sells |
+|---|---:|---:|---:|---:|
+| Tallow Candle | 2 | 0.878 | **1.01** | **1.06** |
+| Carved Pumpkin | 1 | 1.444 | **1.66** | **1.74** |
+| Salt Basket | 3 | 3.990 | **4.59** | **4.82** |
+| Scarecrow | 1 | 12.408 | **14.27** | **14.98** |
+| Friendly Scarecrow | 1 | same parent | **14.27** | **14.98** |
+| Garden Pond | 4 | 2.444 | **2.81** | **2.95** |
+| Koi Pond | 4 | same parent | **2.81** | **2.95** |
+| Farmer Sign | 5 | Store Sign variant | **4.72** | **4.96** |
 
-## Flax Seed correction
+### Tallow Candle — Farming 2
 
-Core Farming 1 recipe:
+Core:
 
-- 2 Flax Stems
+- 4 Tallow, skill-reduced
+- 1 Cotton Thread, static
+- 50 calories
+
+At Farming 2:
+
+- 3 Tallow × 0.21 = 0.630
+- Cotton Thread = 0.210
+- 37.5 calories = 0.038
+- cash cost ≈ **0.878**
+
+**Tallow Candle: 1.01 / 1.06.**
+
+### Carved Pumpkin — Farming 1
+
+Core uses one static Tallow Candle + one static Pumpkin + 30 calories.
+
+Current cash cost = **1.444**.
+
+**Carved Pumpkin: 1.66 / 1.74.**
+
+### Salt Basket — Farming 3
+
+20 `WoodBoard` + 100 calories. At Farming 3 cash cost = **3.990**.
+
+**Salt Basket: 4.59 / 4.82.**
+
+### Scarecrow — Farming 1
+
+Core:
+
+- 35 Plant Fibers
+- 15 generic Fabric
+- 6 Wood
 - 60 calories
-- output 6 Flax Seeds
 
-At Farming 1:
+The least-cost current Fabric route is Linen Fabric at 0.71 public Sell. Entry cash cost = **12.408**.
 
-- 1.6 Flax Stems × 0.11 Exchange Sell = 0.176
-- 48 calories = 0.048
-- total cash cost = 0.224
-- cost/seed ≈ 0.037
+**Scarecrow: 14.27 / 14.98.**
 
-**Flax Seed: 0.04 Town Buy / 0.05 Town Sell.**
+Friendly Scarecrow is a tag-product variant of the same parent recipe and receives the same central price.
 
-This supersedes the provisional 0.10/0.11 seed assumption that had been used only to unblock Lumber discovery.
+### Garden / Koi Pond — Farming 4
 
-## Farming and Gathering relationship
+Garden Pond uses 15 `CrushedRock` + 10 `WoodBoard` + 60 calories. Current cash cost = **2.444**.
 
-Farmed plants are still harvested through Gathering. Common crop items in current Core use a Gathering yield progression from 1.0× at level 0 to 2.0× at level 7.
+**Garden Pond: 2.81 / 2.95.**
 
-That means a dedicated farmer/gatherer earns additional profit through physical yield rather than through a continuously increasing government crop price.
+Koi Pond is a tag-product variant of Garden Pond and receives the same price.
 
-## Farm objects and research
+## Bean Sprout note
 
-Scarecrow, Carved Pumpkin, Tallow Candle, Salt Basket, Garden Pond, Farming Upgrade and research outputs will be priced with the full profession output pass. The crop/seed table is canonical now because it is required by Milling, Tailoring, food and Engineering dependencies.
+The Farming recipe that converts Beans into Bean Sprout is more expensive than the ordinary 100-calorie Bean Sprout raw-food anchor. It is therefore a convenience/substitution recipe and does **not** set the shared Bean Sprout market above **0.10 / 0.11**.
+
+## Research / specialty progression
+
+Farming Upgrade, Agriculture Research Paper and specialty skill books depend on the research economy and are not folded into ordinary farm-object prices.
+
+Higher Farming/Gathering efficiency becomes producer profit; crop anchors do not rise simply because a specialist becomes better at growing or harvesting them.
