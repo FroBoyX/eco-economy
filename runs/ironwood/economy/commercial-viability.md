@@ -12,6 +12,16 @@ That guaranteed outlet must therefore pay enough that a specialist can do more t
 
 A Town Buy price that merely reimburses ingredients is not a viable downstream import price.
 
+## Current-run era rule
+
+For the active Ironwood run, **current prices are authoritative for the technology era the settlement has actually reached**.
+
+Future recipes and future technologies do not retroactively determine today's prices. A later Petroleum, Electronics, Industry, Recycling or other route may prove that a commodity can eventually be produced more cheaply, but that future efficiency is ignored until the relevant technology is actually present and broadly usable in the current economy.
+
+Ironwood therefore prices from the **best normal route available in the current run**, not from the cheapest route anywhere in the full Eco technology tree.
+
+Future work may define a full transition scale with explicit era boundaries and adoption thresholds. That transition model is a separate planning artifact and must not silently overwrite the current-run Exchange tables.
+
 ## Depth-sensitive pricing
 
 The commercial uplift scales with **production depth, cash exposure, turnover and whether the output is itself a downstream input**. It is not applied uniformly to the economy.
@@ -118,18 +128,20 @@ Prices should allow repeated ordinary production to build enough cash for replac
 
 For terminal goods, a deliberate larger windfall is desirable because those transactions are rare and represent the culmination of many earlier production stages.
 
-## Progression
+## Progression and future transitions
 
-Commercial viability is evaluated at the minimum skill level where the recipe is legitimately available.
+Commercial viability is evaluated at the minimum skill level where the recipe is legitimately available **in the active era**.
 
 Higher skill, talents, modules, improved machinery, better logistics and direct supplier relationships increase producer profit above this baseline. That extra efficiency is an intended reward for specialization.
 
-Ironwood should not reduce a price merely because one advanced producer becomes more efficient. Economy-wide technological transitions may still justify structural repricing later.
+Ironwood should not reduce a price merely because one advanced producer becomes more efficient. A later economy-wide technological transition may justify structural repricing, but only when Ironwood deliberately changes eras or adopts the new route as normal infrastructure.
 
 ## Interpretation
 
 Ironwood is deliberately creating an economy where specialization can reproduce itself.
 
 **Raw gathering anchors stay cheap and stable. Strong commercial margins appear only as purchased value and production depth accumulate through the chain, with the largest deliberate windfalls concentrated in terminal late-game goods where they do not recursively inflate the rest of the economy.**
+
+For the active run, **current-era prices are the rule**. Future-era efficiencies are planning information, not present-day price setters.
 
 Town Buy is a profitable wholesale floor for manufactured goods, not cost reimbursement, while gathered commodities remain anchor-driven inputs to the wider economy.
