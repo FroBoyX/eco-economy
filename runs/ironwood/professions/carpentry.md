@@ -29,7 +29,7 @@ With a shallow producer margin:
 
 **Flaxseed Oil: 1.20 Town Buy / 1.26 Town Sell.**
 
-This is a working price pending the full Farming/Tailoring audit. Lumber is not highly sensitive to moderate changes in Oil because each finished Lumber consumes only 0.2 Oil at Carpentry 1.
+This is a working price pending the full Farming/Tailoring audit.
 
 ## Lumber — Carpentry 1, Sawmill
 
@@ -56,23 +56,22 @@ Using upstream producer values:
 - Flaxseed Oil: 0.4 × 1.20 = 0.480
 - labor: 0.048
 - total craft cost = **2.752**
-- cost per Lumber = **1.376**
+- modeled cost per Lumber = **1.376**
 
-With a shallow producer margin and normal Ironwood Exchange spread:
+Lumber is a Tier-3 bulk construction material. The modeled recipe floor already captures much more of its real burden than Brick because Boards, metal fasteners and milled oil are priced inputs, but Ironwood still gives it a modest construction/logistics premium.
 
-**Lumber: 1.45 Town Buy / 1.52 Town Sell.**
+**Lumber: 1.60 Town Buy / 1.68 Town Sell.**
 
-The previous working value around 3 credits is superseded. It cannot be supported by the current Eco 14 recipe unless Flaxseed Oil is priced at an implausibly high level.
+The prior 3-credit working price remains superseded. The 1.60/1.68 value keeps Lumber at the top of the current Tier-3 structural band without making it perceptually detached from Brick and Glass.
 
-## Building-material comparison
+## Tier-3 structural comparison
 
-| Material | Block Tier | Town Buys | Town Sells |
+| Material | Modeled floor | Town Buys | Town Sells |
 |---|---:|---:|---:|
-| Mortared Stone | 2 | **0.38** | **0.40** |
-| Brick | 3 | **0.56** | **0.59** |
-| Glass | 3 | **1.21** | **1.27** |
-| Lumber | 3 | **1.45** | **1.52** |
+| Brick | ~0.53 | **1.20** | **1.25** |
+| Glass | ~1.15 | **1.45** | **1.52** |
+| Lumber | ~1.38 | **1.60** | **1.68** |
 
-This is a much more coherent perceived progression. Lumber remains the most expensive of the current Tier-3 building materials because it combines processed Boards, metal fasteners, and milled oil, but it is only about 20% above Glass rather than more than twice Glass.
+Mortared Stone remains a cheaper Tier-2 baseline at approximately **0.38 / 0.40**.
 
-Do not raise Brick or Glass merely to preserve the old 3-credit Lumber price.
+The Tier-3 prices are deliberately not identical. Brick receives the largest uplift because its shovel/haul burden is poorly represented by recipe calories; Glass and Lumber already internalize more of their real effort through expensive processed inputs.
