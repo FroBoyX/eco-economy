@@ -1,87 +1,95 @@
-# Ironwood Pottery — Current Brick and Kiln Infrastructure Foundation
+# Ironwood Pottery — Current Steam-Era Table
 
-Rebuilt from Eco 14 Core after the Logging, Blacksmithing and Masonry commercial-margin corrections.
+Rebuilt from Eco 14 Core using current commercial upstream prices. Brick remains on Ironwood's separate Tier-3 bulk-construction policy; ordinary pottery/decor receives only normal margins.
 
-Brick remains on Ironwood's separate Tier-3 bulk-construction policy. Pottery workstations receive capital-good margins so a specialist can finance the next production layer.
-
-## Current inputs
-
-- Sand: **0.10 / 0.11**
-- Clay: **0.10 / 0.11**
-- Board: **0.27 / 0.28**
-- Nail: **0.15 / 0.16**
-- Mortar: **0.04 / 0.05**
-- Iron Bar: **2.54 / 2.67**
-- Cooking Utensils: **4.96 / 5.21**
-- Charcoal: **1.24 / 1.30**, 20,000 J
-- Kiln: 50 W fuel consumption
-
-## Wooden Mold — Logging 3
-
-Core: 2 Nails + 8 `WoodBoard` + 120 calories -> 4 Wooden Molds.
-
-At Logging 3, public-input cash cost is about **0.469 per mold**.
-
-**Wooden Mold: 0.53 Town Buy / 0.56 Town Sell.**
-
-## Wet Brick — Pottery 1
-
-Core: 3 Sand + 12 Clay + 1 Wooden Mold + 100 calories + 0.1 Wood Scrap -> 4 Wet Bricks.
-
-At Pottery 1, cash cost is about **0.464 per Wet Brick**.
-
-**Wet Brick: 0.53 / 0.56.**
-
-## Brick — Pottery 1, Kiln
-
-At current public inputs the mechanically modeled cash floor is about **0.670 per Brick**. Ironwood's accepted bulk-construction policy remains above that floor:
-
-**Brick: 1.20 Town Buy / 1.25 Town Sell.**
-
-The large spread over recipe cost is intentional compensation for bulk shovel/haul/storage/kiln burden that recipe calories poorly represent.
-
-## Glassworks — Pottery 1
-
-Core: 8 Iron Bars + 16 Bricks + 20 `WoodBoard` + 150 calories at the Kiln.
-
-At Pottery 1, Exchange-sourced cash cost is about **38.468**.
-
-**Glassworks: 50.01 Town Buy / 52.51 Town Sell.**
-
-## Bakery Oven — Pottery 1
-
-Core:
-
-- 20 Bricks
-- 10 Iron Bars
-- 1 Cooking Utensils
-- 180 calories
-- base craft time 8 minutes
-- crafted at the 50 W Kiln
-
-At Pottery 1:
-
-- 16 Bricks × 1.25 = 20.000
-- 8 Iron Bars × 2.67 = 21.360
-- 0.8 Cooking Utensils × 5.21 = 4.168
-- 144 calories = 0.144
-- 6.4 effective minutes of Kiln fuel = 19,200 J = 0.96 Charcoal × 1.30 = 1.248
-- Exchange cash cost = **46.920**
-
-As a low-volume capital workstation:
-
-**Bakery Oven: 61.00 Town Buy / 64.05 Town Sell.**
-
-This is the current capital input for the rebuilt Baking profession.
-
-## Exchange-ready Pottery foundation
+## Current foundation
 
 | Item | Town Buys | Town Sells |
 |---|---:|---:|
 | Wooden Mold | **0.53** | **0.56** |
+| Ceramic Mold | **0.06** | **0.07** |
 | Wet Brick | **0.53** | **0.56** |
 | Brick | **1.20** | **1.25** |
 | Glassworks | **50.01** | **52.51** |
 | Bakery Oven | **61.00** | **64.05** |
 
-Remaining ceramics, pottery furniture and later Pottery utilities stay for the full profession-output pass.
+### Ceramic Mold — Pottery 1
+
+Core makes 8 Ceramic Molds from 1 Clay + 1 Sand + 1 `Silica` + 200 calories. Current cheap Crushed Rock/Silica routes keep the cash cost around **0.048 per mold**.
+
+**Ceramic Mold: 0.06 / 0.07.**
+
+### Brick — Pottery 1
+
+Current Exchange-sourced recipe floor is about **0.67**, but the accepted bulk/logistics valuation remains:
+
+**Brick: 1.20 / 1.25.**
+
+### Glassworks — Pottery 1
+
+Current cash cost is about **38.468**.
+
+**Glassworks: 50.01 / 52.51.**
+
+### Bakery Oven — Pottery 1
+
+Current cash cost is about **46.920**.
+
+**Bakery Oven: 61.00 / 64.05.**
+
+## Current pottery, planters and fixtures
+
+| Item | Pottery | Exchange cash cost | Town Buys | Town Sells |
+|---|---:|---:|---:|---:|
+| Planter Pot Round | 3 | 0.340 | **0.39** | **0.41** |
+| Planter Pot Square | 3 | 0.340 | **0.39** | **0.41** |
+| Small Clay Pot | 3 | 0.340 | **0.39** | **0.41** |
+| Small Square Clay Pot | 3 | 0.340 | **0.39** | **0.41** |
+| Hanging Basket | 3 | 0.340 | **0.39** | **0.41** |
+| Standing Clay Pot | 3 | 2.720 | **3.13** | **3.29** |
+| Ceramic Tray | 4 | 0.452 | **0.52** | **0.55** |
+| Ceramic Tea Cup | 4 | 0.442 | **0.51** | **0.54** |
+| Ceramic Tea Pot | 4 | 0.809 | **0.93** | **0.98** |
+| Small Sink | 5 | 18.072 | **21.69** | **22.77** |
+| Bathtub | 7 | 29.080 | **34.90** | **36.65** |
+| Brick Fireplace | 4 | 75.530 | **94.41** | **99.13** |
+
+### Brick Fireplace
+
+Core uses 50 Brick + 20 Iron Bars + 300 calories at Pottery 4. Even after skill reduction the current public cash cost is **75.53**.
+
+As a deep material-heavy housing fixture:
+
+**Brick Fireplace: 94.41 / 99.13.**
+
+### Small Sink
+
+30 Clay + 10 Iron Bars + 2 White Powder + 60 calories at Pottery 5.
+
+**Small Sink: 21.69 / 22.77.**
+
+### Bathtub
+
+40 Clay + 20 Iron Bars + 4 White Powder + 240 calories at Pottery 7.
+
+**Bathtub: 34.90 / 36.65.**
+
+## Pottery Upgrade — level 2
+
+Core uses 32 static Ceramic Molds + 12 static Brick + 6,000 calories.
+
+Current cash cost = **21.42**.
+
+As a skill/capital upgrade:
+
+**Pottery Upgrade: 27.85 / 29.24.**
+
+## Current-run boundary
+
+Do not use these future-material rows to set current prices:
+
+- Toilet — Steel Pipe;
+- Standing Steel Brick Sign — Steel Plate;
+- advanced/research outputs — separate future/research policy.
+
+The alternate Shale Wet Brick route is a resource-substitution path and does not control the shared Wet Brick price while the ordinary Sand/Clay route is cheaper and fully available.
