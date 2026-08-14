@@ -22,6 +22,24 @@ Ironwood therefore prices from the **best normal route available in the current 
 
 Future work may define a full transition scale with explicit era boundaries and adoption thresholds. That transition model is a separate planning artifact and must not silently overwrite the current-run Exchange tables.
 
+## Same-specialty internal component rule
+
+A specialty does **not** pay its own commercial markup repeatedly as it turns its own intermediate products into deeper products.
+
+For pricing purposes, each Eco specialty is treated as an integrated workshop. If a recipe in specialty `P` consumes an item also produced by specialty `P`, that ingredient enters the downstream recipe at the component's **Projected Cost**, before the component's Town Buy markup and before the Exchange spread.
+
+If the ingredient is produced by a **different specialty**, it enters the downstream recipe at that upstream item's **Town Sell** price. That preserves the upstream specialist's commercial margin and models the downstream producer actually purchasing from another profession.
+
+This rule is applied at the **specialty level**, not merely the broad profession family. For example, Logging and Carpentry are separate specialties even though both belong to the Carpenter family; a Carpenter buying Boards from a Logger pays the Logging market price. Mechanics using its own Iron Gears internally uses Iron Gear Projected Cost.
+
+The intended accounting is:
+
+`Projected Cost = external-specialty inputs at Town Sell + same-specialty inputs at their Projected Cost + labor + fuel + disposal/operating costs`
+
+An intermediate item still receives its normal commercial markup when it is sold directly. The markup is simply not recursively charged to another recipe inside the same specialty.
+
+This is the canonical rule for the final output-table **Projected Cost** column.
+
 ## Depth-sensitive pricing
 
 The commercial uplift scales with **production depth, cash exposure, turnover and whether the output is itself a downstream input**. It is not applied uniformly to the economy.
@@ -36,7 +54,7 @@ These remain **anchor-priced**. They do not receive a manufactured-goods markup 
 
 Examples: Boards, Mortar, basic crushed material, simple bars, plates, Nails and similarly shallow conversions.
 
-These should earn a **modest specialist margin**, normally around **8–12% over realistic Exchange-sourced cash cost** where that test is meaningful.
+These should earn a **modest specialist margin**, normally around **8–12% over realistic Projected Cost** where that test is meaningful.
 
 The purpose is to make specialization worthwhile without compounding large margins at every stage.
 
@@ -44,7 +62,7 @@ The purpose is to make specialization worthwhile without compounding large margi
 
 Examples: components or finished goods that consume multiple processed inputs but are still relatively common or high-turnover.
 
-Target roughly **12–18% over Exchange-sourced cash cost**, depending on depth, throughput and absolute surplus.
+Target roughly **12–18% over Projected Cost**, depending on depth, throughput and absolute surplus.
 
 ### Depth 3 — deep manufactured goods
 
@@ -52,15 +70,15 @@ Examples: Boilers, complex machine components, deep furniture/workshop outputs a
 
 Town Buy should normally target approximately:
 
-`Exchange-sourced cash cost × 1.25`
+`Projected Cost × 1.25`
 
-This creates enough operating surplus for food, working capital, material buy orders and continued production without forcing vertical integration.
+This creates enough operating surplus for food, working capital, material buy orders and continued production without forcing vertical integration across professions.
 
 ### Ordinary capital goods, workstations and machinery
 
 Town Buy should normally target approximately:
 
-`Exchange-sourced cash cost × 1.30`
+`Projected Cost × 1.30`
 
 Examples include Lathes, Stamp Mills and comparable workstations that are expensive and low-turnover but may still participate in later production chains.
 
@@ -70,11 +88,11 @@ Very deep, low-volume goods may justify a larger guaranteed windfall when most o
 
 Typical target:
 
-`Exchange-sourced cash cost × 1.40 to 1.50`
+`Projected Cost × 1.40 to 1.50`
 
 Use the lower end for late capital equipment that still becomes an input to later production. Use the upper end for true terminal/end-use goods such as completed vehicles or similarly deep consumer/capital products.
 
-This larger margin is deliberately concentrated at the **end of the chain**, where it creates player wealth without recursively inflating dozens of later recipes.
+This larger margin is deliberately concentrated at the **end of the chain**, where it creates player wealth without recursively inflating later recipes.
 
 A completed Steam Truck, for example, should normally receive this terminal-capital treatment. A Steam Truck Flatbed or other attachment is still a component and should receive a smaller uplift unless evidence shows it is itself extremely low-turnover.
 
@@ -82,7 +100,9 @@ A completed Steam Truck, for example, should normally receive this terminal-capi
 
 Ironwood's separate construction-band policy applies to Brick, Glass, Lumber and similar bulk structural goods.
 
-Their prices are judged by recipe floor, gathering/hauling burden, workstation throughput, storage burden, perceived technology tier and whether producing stacks is economically attractive.
+Their direct-sale prices are judged by recipe floor, gathering/hauling burden, workstation throughput, storage burden, perceived technology tier and whether producing stacks is economically attractive.
+
+If a bulk material is consumed by another recipe **inside the same specialty that makes it**, its internal component value is still its Projected Cost rather than its policy-marked direct-sale price.
 
 ### Exceptional goods
 
@@ -90,12 +110,13 @@ Research, civic procurement, megaprojects, garbage/recycling streams, deliberate
 
 ## Required cost views
 
-Every derived manufactured price should have at least two cost views:
+Every final Exchange table should expose at least these three values:
 
-1. **Modeled producer cost** — upstream Town Buy/producer values, used to understand the structural dependency chain without recursively treating the Exchange spread as production value.
-2. **Exchange-sourced cash cost** — the same entry recipe using upstream Town Sell prices for purchased inputs, plus labor calories, fuel, waste/disposal and other operating costs.
+1. **Projected Cost** — current-era minimum-unlock production cost under the same-specialty internal component rule above.
+2. **Town Buys** — the guaranteed wholesale price after the appropriate direct-sale commercial margin or policy adjustment.
+3. **Town Sells** — the Exchange fallback supply price after the public spread.
 
-The second value becomes increasingly important with production depth because deep producers have more currency tied up in upstream goods.
+Projected Cost is the factual/structural baseline; Town Buy is the economic policy choice. This lets the town manually tune an outlier without hiding the actual production burden.
 
 ## Player-run input/import stores
 
@@ -105,7 +126,7 @@ The intended loop is:
 
 1. player produces output;
 2. Town Buy guarantees a profitable currency outlet;
-3. player retains enough surplus to place buy orders for the next batch of inputs;
+3. player retains enough surplus to place buy orders for the next batch of **cross-profession** inputs;
 4. player can offer input suppliers attractive prices instead of depending exclusively on the government shop;
 5. player may sell their own output privately for more than Town Buy when market conditions support it;
 6. retained earnings finance better shops, buildings, workstations and later technology.
@@ -124,9 +145,11 @@ The Exchange should not extract the producer's entire margin. Its spread funds s
 
 Percentage margin alone is insufficient for deep and low-volume goods.
 
-Prices should allow repeated ordinary production to build enough cash for replacement inputs, meaningful food purchases, material buy orders, workshop expansion and eventual purchase of the next workstation or upgrade.
+Prices should allow repeated ordinary production to build enough cash for replacement cross-profession inputs, meaningful food purchases, material buy orders, workshop expansion and eventual purchase of the next workstation or upgrade.
 
 For terminal goods, a deliberate larger windfall is desirable because those transactions are rare and represent the culmination of many earlier production stages.
+
+The same-specialty internal component rule prevents that windfall from being artificially inflated by charging a profession its own profit margin repeatedly before the final item is sold.
 
 ## Progression and future transitions
 
@@ -140,8 +163,6 @@ Ironwood should not reduce a price merely because one advanced producer becomes 
 
 Ironwood is deliberately creating an economy where specialization can reproduce itself.
 
-**Raw gathering anchors stay cheap and stable. Strong commercial margins appear only as purchased value and production depth accumulate through the chain, with the largest deliberate windfalls concentrated in terminal late-game goods where they do not recursively inflate the rest of the economy.**
+**Raw gathering anchors stay cheap and stable. Cross-profession purchases preserve upstream margins. A specialty's own components flow downstream at internal production cost, so commercial markup is realized when an item is actually sold rather than recursively charged inside one workshop. The largest deliberate windfalls remain concentrated in terminal goods.**
 
 For the active run, **current-era prices are the rule**. Future-era efficiencies are planning information, not present-day price setters.
-
-Town Buy is a profitable wholesale floor for manufactured goods, not cost reimbursement, while gathered commodities remain anchor-driven inputs to the wider economy.
