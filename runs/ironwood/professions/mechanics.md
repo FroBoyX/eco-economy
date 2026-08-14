@@ -2,87 +2,71 @@
 
 Rebuilt from Eco 14 Core using current Ironwood Iron Bar and current-era Board prices.
 
+Derived producer costs use Town Buy/producer values for intermediate inputs. The Exchange retail spread is applied afterward.
+
 ## Inputs
 
-- Iron Bar retail: **1.65**
-- Board retail: **0.27**
+- Iron Bar: **1.70 Town Buy / 1.79 Town Sell**
+- Board: **0.26 / 0.27**
 - labor: **0.001 credit/calorie**
 
-Mechanics resource multipliers follow the common Eco 14 specialty curve. Level 1 uses 0.80; level 2 uses 0.75.
+Mechanics level 1 uses 0.80 resource efficiency; level 2 uses 0.75.
 
 ## Screws — Mechanics 1
 
-Core:
-
-- 1 Iron Bar;
-- 25 calories;
-- 4 Screws.
+Core: 1 Iron Bar + 25 calories → 4 Screws.
 
 At Mechanics 1:
 
-- 0.8 Iron Bar;
-- 20 calories;
-- cost ≈ **0.335 per Screw**.
+- 0.8 Iron Bar × 1.70 = 1.360
+- 20 calories = 0.020
+- cost/Screw = **0.345**
 
-**Screws: 0.35 Town Buy / 0.37 Town Sell.**
+**Screws: 0.36 Town Buy / 0.38 Town Sell.**
 
 ## Iron Gear — Mechanics 1
 
-Core:
-
-- 1 Iron Bar;
-- 75 calories;
-- 1 Iron Gear.
+Core: 1 Iron Bar + 75 calories → 1 Iron Gear.
 
 At Mechanics 1:
 
-- 0.8 Iron Bar;
-- 60 calories;
-- entry cost ≈ **1.38**.
+- 0.8 Iron Bar × 1.70 = 1.360
+- 60 calories = 0.060
+- entry cost = **1.420**
 
-**Iron Gear: 1.45 Town Buy / 1.52 Town Sell.**
+**Iron Gear: 1.49 Town Buy / 1.56 Town Sell.**
 
-The current Eco14-Core recipe produces no garbage output from Iron Gear production.
+The current Eco 14 Core recipe produces no garbage output from Iron Gear production.
 
 ## Stamp Mill — Mechanics 2
 
 Core:
 
-- 5 Iron Bars;
-- 14 Screws;
-- 8 Iron Gears;
-- 14 WoodBoard-tag inputs;
-- 120 calories;
-- 1 Stamp Mill.
+- 5 Iron Bars
+- 14 Screws
+- 8 Iron Gears
+- 14 WoodBoard-tag inputs
+- 120 calories
 
-At Mechanics 2 (0.75 multiplier):
+At Mechanics 2 (75%):
 
-- 3.75 Iron Bars;
-- 10.5 Screws;
-- 6 Iron Gears;
-- 10.5 Boards;
-- 90 calories.
+- 3.75 Iron Bars × 1.70 = 6.375
+- 10.5 Screws × 0.36 = 3.780
+- 6 Iron Gears × 1.49 = 8.940
+- 10.5 Boards × 0.26 = 2.730
+- 90 calories = 0.090
+- entry cost ≈ **21.915**
 
-Using current Exchange consumer prices:
+**Stamp Mill: 23.01 Town Buy / 24.16 Town Sell.**
 
-- Iron Bars: 3.75 × 1.65 = 6.1875;
-- Screws: 10.5 × 0.37 = 3.885;
-- Iron Gears: 6 × 1.52 = 9.12;
-- Boards: 10.5 × 0.27 = 2.835;
-- labor: 0.09.
+The Stamp Mill remains near its previous rebuilt value because the common-rock correction affects its metal inputs only modestly after the producer-value pricing correction.
 
-Entry cost ≈ **22.12**.
-
-**Stamp Mill: 23.25 Town Buy / 24.40 Town Sell.**
-
-The previous emergency Stamp Mill prices are superseded. This value is derived from the corrected current metal and wood chains.
-
-## Current Exchange-ready Mechanics table
+## Exchange-ready Mechanics table
 
 | Item | Town Buys | Town Sells |
 |---|---:|---:|
-| Screws | **0.35** | **0.37** |
-| Iron Gear | **1.45** | **1.52** |
-| Stamp Mill | **23.25** | **24.40** |
+| Screws | **0.36** | **0.38** |
+| Iron Gear | **1.49** | **1.56** |
+| Stamp Mill | **23.01** | **24.16** |
 
-Further Mechanics items will be added after their dependencies—Iron Wheel, Iron Plate, Lubricant, Boiler, Lumber, and related Engineering/Carpentry goods—are canonical.
+Further Mechanics items will be added after Iron Wheel, Lubricant, Boiler, Lumber and related dependencies are canonical.
