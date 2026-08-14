@@ -22,19 +22,19 @@ Raw anchors are design inputs. Processed goods must be checked through their com
 | Clay | **0.15** | **0.17** | working | Used for Clay Molds. Revisit with Gathering/Masonry. |
 | **Iron Ore** | **0.20** | **0.22** | validated | Foundational industrial ore. |
 | **Copper Ore** | **0.30** | **0.33** | validated | Moderate scarcity premium; narrowed Exchange spread avoids compounding through the metal chain. |
-| **Gold Ore** | **0.50** | **0.55** | validated | Gold already has a much worse ore-to-bar conversion than Iron/Copper, so it does not need an additional 20% Exchange toll. |
+| **Gold Ore** | **0.30** | **0.35** | validated | Gold's Core conversion is already much worse than Iron/Copper, so the recipe itself supplies the scarcity premium. |
 
-## Why the raw spreads are narrow
+## Why Gold Ore is not given a large raw premium
 
-The earlier 0.30 → 0.35 Copper and 0.50 → 0.60 Gold spreads created a large government toll before Mining added any value. That toll then propagated through Crushed Ore, Concentrate, Bars, and every downstream profession.
+At first legitimate production, the complete Core chain effectively consumes approximately:
 
-The current metal anchors retain the extraction values while narrowing the consumption side:
+- **6.4 Iron Ore per Iron Bar**;
+- **8.96 Copper Ore per Copper Bar**;
+- **20.8 Gold Ore per Gold Bar**.
 
-- Iron: 0.20 → 0.22;
-- Copper: 0.30 → 0.33;
-- Gold: 0.50 → 0.55.
+Gold therefore already requires about **3.25×** as much raw ore per finished bar as Iron and **2.32×** as much as Copper before any raw-resource premium is assigned.
 
-The scarcity difference is primarily created by the ore anchor itself and by the Eco production ratios, not by an increasingly large Exchange markup.
+Giving Gold Ore an additional large price premium double-counts scarcity and drives advanced downstream goods disproportionately high. Ironwood therefore keeps Gold Ore near Copper Ore and lets the poor Gold conversion ratio create most of Gold's final value.
 
 ## Gold unit warning
 
@@ -42,7 +42,7 @@ One Gold Concentrate item is not equivalent to one Gold Bar.
 
 At the entry Bloomery Gold recipe (Smelting 4), **1.3 effective Gold Concentrate produces 3 Gold Bars**. Therefore one Gold Concentrate represents about **2.31 bar-equivalents** before Smelting labor, fuel, mold, waste handling, and margin.
 
-A Gold Concentrate price numerically above a Gold Bar price is therefore mechanically normal. The relevant comparison is concentrate price per bar-equivalent.
+A Gold Concentrate price numerically above a Gold Bar price is mechanically normal. The relevant comparison is concentrate price per bar-equivalent.
 
 ## Current metal-chain assumptions
 
