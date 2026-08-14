@@ -2,23 +2,23 @@
 
 Rebuilt from Eco 14 Core after the Mining/Masonry fuel and commercial-margin corrections.
 
-Glass remains a Tier-3 bulk construction material. Its accepted structural band is preserved, but its Town Buy must also clear the actual cash cost of buying Sand, Crushed Limestone and fuel through the Exchange.
+Glass remains a Tier-3 bulk construction material. Its accepted structural band is preserved, but Town Buy also clears the actual cash cost of buying Sand, Crushed Limestone and fuel through the Exchange.
 
 ## Current inputs
 
 - Sand: **0.10 / 0.11**
-- Limestone: **0.15 / 0.17**
 - Crushed Limestone: **0.76 / 0.80**
 - Quicklime: **0.80 / 0.84**
 - Charcoal: **1.24 / 1.30**, 20,000 J
-- Glassworks: 50 W fuel consumption
+- Copper Wiring: **1.62 / 1.70**
+- Glassworks fuel: 50 W
 
 ## Basic Glass — Glassworking 1
 
 Core:
 
 - 4 Sand, skill-modified
-- 1 Crushed Limestone, **static**
+- 1 Crushed Limestone, static
 - 30 calories
 - base craft time 1.2 minutes
 - → 1 Glass
@@ -28,13 +28,12 @@ At Glassworking 1:
 - 3.2 Sand × 0.11 = 0.352
 - 1 static Crushed Limestone × 0.80 = 0.800
 - 24 calories = 0.024
-- effective time 0.96 minutes = 2,880 J
-- fuel = 0.144 Charcoal × 1.30 = 0.187
+- 0.96 effective minutes of 50 W fuel = 2,880 J = 0.144 Charcoal × 1.30 = 0.187
 - Exchange cash cost ≈ **1.363**
 
-A 15% commercial floor gives approximately 1.57 Town Buy, which remains comfortably inside the accepted Tier-3 structural band.
-
 **Glass: 1.57 Town Buy / 1.65 Town Sell.**
+
+This satisfies both the commercial floor and the accepted Tier-3 construction band.
 
 ## Quicklime Glass — Glassworking 4
 
@@ -46,23 +45,37 @@ Core:
 - base time 1 minute
 - → 1 Glass
 
-At Glassworking 4 (0.65):
-
-- 1.95 Sand × 0.11 = 0.215
-- 1.3 Quicklime × 0.84 = 1.092
-- 29.25 calories = 0.029
-- fuel ≈ 0.127
-- Exchange cash cost ≈ **1.463**
-
-At public input prices this later route is slightly more expensive than direct Crushed-Limestone Glass because it includes the Mason's Quicklime margin. That is acceptable: a vertically integrated or directly supplied producer captures that upstream margin themselves, while division of labor pays both specialists.
+At level 4 (0.65), public input cash cost is about **1.463**. The route includes the Mason's Quicklime margin, so it is not necessarily cheaper for a Glassworker buying every upstream good at retail. Vertically integrated/direct-supplier production recaptures that margin.
 
 The market Glass price remains **1.57 / 1.65**.
 
+## Light Bulb — Glassworking 2
+
+Core:
+
+- 2 Glass
+- 6 Copper Wiring
+- 60 calories
+- base craft time 2 minutes
+- → 1 Light Bulb
+
+At Glassworking 2 (0.75):
+
+- 1.5 Glass × 1.65 = 2.475
+- 4.5 Copper Wiring × 1.70 = 7.650
+- 45 calories = 0.045
+- 1.5 effective minutes of 50 W fuel = 4,500 J = 0.225 Charcoal × 1.30 = 0.293
+- Exchange cash cost ≈ **10.463**
+
+As a multi-step industrial/electrical component:
+
+**Light Bulb: 12.35 Town Buy / 12.97 Town Sell.**
+
+This resolves the last non-terminal material dependency in the current Steam Truck/Steam Tractor recipe.
+
 ## Glassworks — Pottery dependency
 
-Current commercially viable Pottery price:
-
-**Glassworks: 50.01 Town Buy / 52.51 Town Sell.**
+**Glassworks: 50.01 / 52.51.**
 
 ## Tier-3 structural comparison
 
@@ -72,14 +85,12 @@ Current commercially viable Pottery price:
 | Glass | **1.57** | **1.65** |
 | Lumber | **1.62** | **1.70** |
 
-Glass and Lumber now sit almost side by side, while Brick remains the cheaper but still properly valued hand-gathered structural option.
-
-## Exchange-ready glass chain
+## Exchange-ready Glassworking foundation
 
 | Item | Town Buys | Town Sells |
 |---|---:|---:|
-| Limestone | **0.15** | **0.17** |
 | Crushed Limestone | **0.76** | **0.80** |
 | Quicklime | **0.80** | **0.84** |
 | Glass | **1.57** | **1.65** |
+| Light Bulb | **12.35** | **12.97** |
 | Glassworks | **50.01** | **52.51** |
