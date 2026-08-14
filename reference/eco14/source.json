@@ -1,0 +1,12 @@
+{
+  "schema_version": 1,
+  "source_label": "Eco 14 Core snapshot",
+  "observed_upload_filename": "Eco14-Core(3).zip",
+  "sha256": "de214e1a89ea9c47d4ffc98e90a5a50c885bd34bcaa0e824e42461917cbf9daf",
+  "archive_file_count": 2755,
+  "recipe_families_detected": 1122,
+  "copyright_notice_observed": "Copyright (c) Strange Loop Games. All rights reserved.",
+  "license_note": "Core source files refer to a LICENSE file in the project root, but that license file was not present in this supplied archive. Do not mirror the raw archive into this public repository by default.",
+  "adopted_for_project": true,
+  "notes": "This hash identifies the Core snapshot used for current Eco 14 mechanical extraction. The filename suffix is not semantically meaningful."
+}
