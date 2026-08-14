@@ -1,109 +1,102 @@
-# Ironwood Gathering — Current Foundation
+# Ironwood Gathering — Current Steam-Era Table
 
 Derived from the supplied Eco 14 Core.
 
-Gathered goods are **Depth 0**. They do not receive the downstream 25–50% commercial-capital uplift because a gatherer is not buying a deep stack of upstream materials. Their Town Buy prices are anchors chosen from calories, scarcity, strategic usefulness and desired gathering incentive.
+Gathered goods are **Depth 0**. They remain anchor-priced from calories, scarcity, strategic usefulness and desired gathering incentive. Processed Gathering objects receive only shallow margins.
 
 ## Raw food rule
 
-Ironwood keeps the locked food-energy anchor of **1 credit per 1,000 calories** for ordinary raw edible crops. This is a baseline import value, not a claim that all nutrition is interchangeable. Shortage overlays and freshness rules can still modify actual market behavior.
+Ironwood keeps **1 credit per 1,000 calories** as the ordinary raw-food baseline. Shortage/freshness overlays remain separate.
 
 ## Current raw plant/gathering anchors
 
-| Item | Calories | Town Buys | Town Sells | Note |
-|---|---:|---:|---:|---|
-| Agave Leaves | 200 | **0.20** | **0.21** | calorie anchor |
-| Bean Sprout | 100 | **0.10** | **0.11** | calorie anchor |
-| Beans | 150 | **0.15** | **0.16** | calorie anchor |
-| Beet | 230 | **0.23** | **0.24** | calorie anchor |
-| Beet Greens | 100 | **0.10** | **0.11** | calorie anchor |
-| Bolete Mushrooms | 200 | **0.20** | **0.21** | calorie anchor |
-| Camas Bulb | 150 | **0.15** | **0.16** | calorie anchor |
-| Cookeina Mushrooms | 200 | **0.20** | **0.21** | calorie anchor |
-| Corn | 230 | **0.23** | **0.24** | calorie anchor |
-| Crimini Mushrooms | 200 | **0.20** | **0.21** | calorie anchor |
-| Fiddleheads | 150 | **0.15** | **0.16** | calorie anchor |
-| Fireweed Shoots | 150 | **0.15** | **0.16** | calorie anchor |
-| Giant Cactus Fruit | 100 | **0.10** | **0.11** | calorie anchor |
-| Heart of Palm | 100 | **0.10** | **0.11** | calorie anchor |
-| Huckleberries | 150 | **0.15** | **0.16** | calorie anchor |
-| Papaya | 200 | **0.20** | **0.21** | calorie anchor |
-| Pineapple | 200 | **0.20** | **0.21** | calorie anchor |
-| Prickly Pear Fruit | 190 | **0.19** | **0.20** | calorie anchor |
-| Pumpkin | 340 | **0.34** | **0.36** | calorie anchor |
-| Rice | 150 | **0.15** | **0.16** | calorie anchor |
-| Sunflower | 50 | **0.05** | **0.06** | edible + later oil/seed input |
-| Taro Root | 250 | **0.25** | **0.26** | calorie anchor |
-| Tomato | 240 | **0.24** | **0.25** | calorie anchor; vitamin-rich but no permanent scarcity markup baked into the anchor |
-| Wheat | 150 | **0.15** | **0.16** | calorie anchor |
+| Item | Town Buys | Town Sells |
+|---|---:|---:|
+| Agave Leaves | **0.20** | **0.21** |
+| Bean Sprout | **0.10** | **0.11** |
+| Beans | **0.15** | **0.16** |
+| Beet | **0.23** | **0.24** |
+| Beet Greens | **0.10** | **0.11** |
+| Bolete Mushrooms | **0.20** | **0.21** |
+| Camas Bulb | **0.15** | **0.16** |
+| Cookeina Mushrooms | **0.20** | **0.21** |
+| Corn | **0.23** | **0.24** |
+| Crimini Mushrooms | **0.20** | **0.21** |
+| Fiddleheads | **0.15** | **0.16** |
+| Fireweed Shoots | **0.15** | **0.16** |
+| Giant Cactus Fruit | **0.10** | **0.11** |
+| Heart of Palm | **0.10** | **0.11** |
+| Huckleberries | **0.15** | **0.16** |
+| Papaya | **0.20** | **0.21** |
+| Pineapple | **0.20** | **0.21** |
+| Prickly Pear Fruit | **0.19** | **0.20** |
+| Pumpkin | **0.34** | **0.36** |
+| Rice | **0.15** | **0.16** |
+| Sunflower | **0.05** | **0.06** |
+| Taro Root | **0.25** | **0.26** |
+| Tomato | **0.24** | **0.25** |
+| Wheat | **0.15** | **0.16** |
 
 ## Non-food / strategic gathered anchors
 
-| Item | Town Buys | Town Sells | Note |
-|---|---:|---:|---|
-| Plant Fibers | **0.05** | **0.06** | ubiquitous primitive fiber/fuel input |
-| Kelp | **0.03** | **0.04** | Shred Kelp 8 → 7 Plant Fibers is approximately break-even at the public fallback prices |
-| Flax Stem | **0.10** | **0.11** | strategic bridge into seeds, Flax Fiber, Linen |
-| Cotton Boll | **0.10** | **0.11** | strategic bridge into Cotton Seed/Lint/Fabric |
-| Amanita Mushrooms | **0.05** | **0.06** | non-calorie/limited food value; seed/spore input |
-| Creosote Flower | **0.05** | **0.06** | pigment/seed input |
-| Flax Flower | **0.05** | **0.06** | low-value plant output |
-| Daisy | **0.05** | **0.06** | decorative/seed input |
-| Lupine | **0.05** | **0.06** | low-value gathered plant |
-| Orchid | **0.05** | **0.06** | decorative/seed input |
-| Rose | **0.05** | **0.06** | decorative/seed input |
-| Trillium Flower | **0.05** | **0.06** | pigment/seed input |
-| Tulip | **0.05** | **0.06** | decorative/seed input |
+| Item | Town Buys | Town Sells |
+|---|---:|---:|
+| Plant Fibers | **0.05** | **0.06** |
+| Kelp | **0.03** | **0.04** |
+| Flax Stem | **0.10** | **0.11** |
+| Cotton Boll | **0.10** | **0.11** |
+| Amanita Mushrooms | **0.05** | **0.06** |
+| common flowers/petals | **0.05** | **0.06** |
+| **Wood Pulp** | **0.05** | **0.06** |
 
-## Gathering skill yield
-
-Current Eco 14 plant items commonly use the Gathering yield array:
-
-- level 0: 1.0×
-- level 1: 1.4×
-- level 2: 1.5×
-- level 3: 1.6×
-- level 4: 1.7×
-- level 5: 1.8×
-- level 6: 1.9×
-- level 7: 2.0×
-
-That increased physical yield is the gatherer's progression profit. We therefore do not increase raw anchors merely because a high-level gatherer becomes more efficient.
+Wood Pulp is an abundant tree/palm byproduct and is therefore valued by current practical reuse demand rather than a dedicated-production recipe.
 
 ## Processed Gathering outputs
 
-### Clay Mold — Gathering 1
+| Item | Gathering | Town Buys | Town Sells |
+|---|---:|---:|---:|
+| Clay Mold | 1 | **0.04** | **0.05** |
+| Flax Fiber | 2 | **0.29** | **0.30** |
+| Cotton Lint | 2 | **0.39** | **0.41** |
+| Basic Backpack | 1 | **4.38** | **4.60** |
+| Gathering Basic Upgrade | 2 | **4.80** | **5.04** |
 
-Core: 1 Clay + 50 calories → 4 Clay Molds.
-
-The existing canonical **0.04 Town Buy / 0.05 Town Sell** remains adequate.
-
-### Flax Fiber — Gathering 2
-
-Core:
-
-- 3 Flax Stems
-- 35 calories
-- → 1 Flax Fiber + 0.25 Plant Fiber
-
-At Gathering 2 (0.75 recipe multiplier), using Exchange-sourced Flax Stem at 0.11 and crediting the Plant Fiber byproduct:
-
-- cash cost ≈ 0.261 per Flax Fiber
-
-**Flax Fiber: 0.29 Town Buy / 0.30 Town Sell.**
-
-### Cotton Lint — Gathering 2
+### Basic Backpack — Gathering 1
 
 Core:
 
-- 4 Cotton Bolls
-- 35 calories
-- → 1 Cotton Lint + 0.25 Plant Fiber
+- 30 Plant Fibers
+- 24 Cotton Bolls
+- 120 calories
+- -> 1 Basic Backpack
 
-At Gathering 2:
+At Gathering 1:
 
-- cash cost ≈ 0.344 per Cotton Lint
+- 24 Plant Fibers × 0.06 = 1.440
+- 19.2 Cotton Bolls × 0.11 = 2.112
+- 96 calories = 0.096
+- cash cost = **3.648**
 
-**Cotton Lint: 0.39 Town Buy / 0.41 Town Sell.**
+As a useful finished gathering item:
 
-These processed fibers receive only a shallow specialist margin. The larger value growth occurs later in Tailoring when several processed inputs and workstations are chained together.
+**Basic Backpack: 4.38 / 4.60.**
+
+The Hunting `Primitive Backpack` route makes the same item but is more expensive at current Leather prices, so Gathering controls the shared Basic Backpack market price.
+
+### Gathering Basic Upgrade — Gathering 2
+
+Core uses 20 static `NaturalFiber` + 10 static `Crop` + 3,000 calories and produces 0.2 Trash.
+
+Using current least-cost legitimate inputs (Kelp as Natural Fiber and a low-value Crop) plus the current Trash disposal charge gives cash cost about **3.69**.
+
+**Gathering Basic Upgrade: 4.80 / 5.04.**
+
+### Refine Heart of Palm
+
+Core converts 1 Palm Log into 2 Heart of Palm + 4 Wood Pulp. At the common Wood/log fallback price, the combined current output value approximately covers the shallow processing cost. This is a byproduct/resource-conversion route, not a standalone profit fountain.
+
+## Gathering yield progression
+
+Current plant items commonly rise from 1.0x physical yield at Gathering 0 to 2.0x at Gathering 7. That increased physical yield is the gatherer's progression profit; raw anchors do not rise with skill.
+
+Research papers and the Farming skill book remain under the separate research/skill-book economy.
