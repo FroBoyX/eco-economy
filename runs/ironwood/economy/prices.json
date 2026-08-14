@@ -1,5 +1,5 @@
 {
-  "schema_version": 9,
+  "schema_version": 10,
   "run": "ironwood",
   "game_version": "Eco 14",
   "currency": "Ironwood credit",
@@ -44,8 +44,8 @@
     "Rock": {"public_buy": 0.15, "public_sell": 0.17, "status": "working_current_era"},
     "Sandstone": {"public_buy": 0.15, "public_sell": 0.17, "status": "validated_metal_chain"},
     "Granite": {"public_buy": 0.15, "public_sell": 0.17, "status": "validated_metal_chain"},
-    "Sand": {"public_buy": 0.15, "public_sell": 0.17, "status": "working_masonry"},
-    "Clay": {"public_buy": 0.15, "public_sell": 0.17, "status": "working_metal_input"},
+    "Sand": {"public_buy": 0.15, "public_sell": 0.17, "status": "working_masonry_reaudit_needed"},
+    "Clay": {"public_buy": 0.02, "public_sell": 0.03, "status": "validated_abundant_feedstock", "note": "Restored after full Clay Mold check; do not normalize to Rock/Sand."},
     "IronOre": {"public_buy": 0.20, "public_sell": 0.22, "status": "validated_metal_chain"},
     "CopperOre": {"public_buy": 0.30, "public_sell": 0.33, "status": "validated_metal_chain"},
     "GoldOre": {"public_buy": 0.30, "public_sell": 0.35, "status": "validated_metal_chain", "note": "Gold scarcity is supplied primarily by the poor Core conversion ratio."}
@@ -60,8 +60,8 @@
     "HewnLogItem": {"display_name": "Hewn Log", "public_buy": 0.87, "public_sell": 0.91, "status": "working_current_era", "source_profession": "Logging"},
     "CharcoalItem": {"display_name": "Charcoal", "public_buy": 1.17, "public_sell": 1.23, "status": "working_current_era", "source_profession": "Logging"},
 
-    "MortarItem": {"display_name": "Mortar", "public_buy": 0.06, "public_sell": 0.07, "status": "working_rebuild", "source_profession": "Masonry"},
-    "MortaredStoneItem": {"display_name": "Mortared Stone", "public_buy": 0.65, "public_sell": 0.69, "status": "working_rebuild", "source_profession": "Masonry"},
+    "MortarItem": {"display_name": "Mortar", "public_buy": 0.06, "public_sell": 0.07, "status": "working_rebuild_sand_reaudit_needed", "source_profession": "Masonry"},
+    "MortaredStoneItem": {"display_name": "Mortared Stone", "public_buy": 0.65, "public_sell": 0.69, "status": "working_rebuild_sand_reaudit_needed", "source_profession": "Masonry"},
     "WhetstoneItem": {"display_name": "Whetstone", "public_buy": 0.46, "public_sell": 0.49, "status": "working_rebuild", "source_profession": "Masonry"},
     "MillStoneItem": {"display_name": "Mill Stone", "public_buy": 0.82, "public_sell": 0.87, "status": "working_rebuild", "source_profession": "Masonry"},
     "StoneBrazierItem": {"display_name": "Stone Brazier", "public_buy": 2.17, "public_sell": 2.28, "status": "working_rebuild", "source_profession": "Masonry"},
@@ -79,7 +79,7 @@
     "CopperConcentrateItem": {"display_name": "Copper Concentrate", "public_buy": 11.30, "public_sell": 11.75, "status": "validated_metal_chain", "source_profession": "Mining"},
     "GoldConcentrateItem": {"display_name": "Gold Concentrate", "public_buy": 17.25, "public_sell": 18.00, "status": "validated_metal_chain", "source_profession": "Mining"},
 
-    "ClayMoldItem": {"display_name": "Clay Mold", "public_buy": 0.05, "public_sell": 0.06, "status": "validated_metal_chain", "source_profession": "Gathering"},
+    "ClayMoldItem": {"display_name": "Clay Mold", "public_buy": 0.02, "public_sell": 0.03, "status": "validated_metal_chain", "source_profession": "Gathering"},
     "SlagItem": {"display_name": "Slag", "public_buy": 0.05, "public_sell": 0.08, "status": "working_byproduct", "source_profession": "Smelting"},
     "IronBarItem": {"display_name": "Iron Bar", "public_buy": 1.55, "public_sell": 1.65, "status": "validated_metal_chain", "source_profession": "Smelting"},
     "CopperBarItem": {"display_name": "Copper Bar", "public_buy": 3.40, "public_sell": 3.60, "status": "validated_metal_chain", "source_profession": "Smelting"},
@@ -96,14 +96,15 @@
     "WoodenWheelItem": {"display_name": "Wooden Wheel", "public_buy": 3.10, "public_sell": 3.26, "status": "working_rebuild", "source_profession": "Basic Engineering"},
     "ArrastraItem": {"display_name": "Arrastra", "public_buy": 9.60, "public_sell": 10.08, "status": "working_rebuild", "source_profession": "Basic Engineering"},
     "RockerBoxItem": {"display_name": "Rocker Box", "public_buy": 4.62, "public_sell": 4.85, "status": "working_rebuild", "source_profession": "Basic Engineering"},
-    "StoneRoadItem": {"display_name": "Stone Road", "public_buy": 0.33, "public_sell": 0.35, "status": "validated_byproduct_sink", "source_profession": "Basic Engineering"},
-    "StoneRoadToolItem": {"display_name": "Stone Road Tool", "public_buy": 5.97, "public_sell": 6.27, "status": "working_rebuild", "source_profession": "Basic Engineering"},
+    "StoneRoadItem": {"display_name": "Stone Road", "public_buy": 0.33, "public_sell": 0.35, "status": "validated_byproduct_sink_sand_reaudit_needed", "source_profession": "Basic Engineering"},
+    "StoneRoadToolItem": {"display_name": "Stone Road Tool", "public_buy": 5.97, "public_sell": 6.27, "status": "working_rebuild_sand_reaudit_needed", "source_profession": "Basic Engineering"},
 
     "ScrewsItem": {"display_name": "Screws", "public_buy": 0.35, "public_sell": 0.37, "status": "working_rebuild", "source_profession": "Mechanics"},
     "IronGearItem": {"display_name": "Iron Gear", "public_buy": 1.45, "public_sell": 1.52, "status": "working_rebuild", "source_profession": "Mechanics"},
     "StampMillItem": {"display_name": "Stamp Mill", "public_buy": 23.25, "public_sell": 24.40, "status": "working_rebuild", "source_profession": "Mechanics"}
   },
   "unpriced_dependencies": [
+    "Sand/Mortar/Masonry cascade re-audit",
     "Limestone and Quicklime chain",
     "Brick and Glass chains",
     "Iron tools requiring Leather Hide",
