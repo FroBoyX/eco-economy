@@ -1,126 +1,116 @@
-# Ironwood Smelting — Metal Bars
+# Ironwood Smelting — Current Metal Bars and Pipes
 
-This file contains the currently validated Smelting portion of the Ironwood metal economy.
+Rebuilt from the supplied Eco 14 Core after applying commercial margins to Mining. Smelting is a Depth-2 industrial conversion: a smelter can buy Concentrate, Clay Molds and fuel from the Exchange, carry waste liability, and still needs enough wholesale surplus to operate independently.
 
-It uses the corrected Mining chain from `mining.md` and Eco 14 Core. Derived producer costs use Town Buy/producer values for intermediate inputs so the public Exchange spread is not recursively compounded through every stage.
+## Current inputs
 
-## Entry-skill rule
-
-Smelting resource multipliers are:
-
-- level 1: 0.80
-- level 2: 0.75
-- level 3: 0.70
-- level 4: 0.65
-- level 5: 0.60
-- level 6: 0.55
-- level 7: 0.50
-
-Iron and Copper Bloomery recipes require Smelting 1. Gold requires Smelting 4.
-
-## Supporting inputs and environmental costs
-
-- Clay: **0.10 Town Buy / 0.11 Town Sell**
+- Iron Concentrate: **7.64 / 8.02**
+- Copper Concentrate: **15.70 / 16.48**
+- Gold Concentrate: **23.61 / 24.79**
 - Clay Mold: **0.04 / 0.05**
-- Slag: **0.05 / 0.08** working byproduct value
+- Charcoal: **1.24 / 1.30**, 20,000 J
+- Slag Town Buy credit: **0.05**
 - Ceramic Scrap disposal: **0.15/unit**
-- Tailings disposal is already included upstream in concentrate values
-- Charcoal producer value: **1.17**, 20,000 J fuel value
-- Bloomery fuel consumption: **10 W**
+- Bloomery: **10 W** fuel consumption
 
-## Iron Bar — Bloomery, Smelting 1
+## Iron Bar — Smelting 1
 
-Effective recipe:
+Core effective at level 1:
 
 - 1.6 Iron Concentrate
 - 1.6 Clay Molds
 - 48 calories
-- 6 Iron Bars
-- 1.6 Slag
+- 4 effective craft minutes
+- → 6 Iron Bars + 1.6 Slag
 - 1.5 Ceramic Scrap
-- about 4 effective craft minutes
 
-Producer-value cost:
+Exchange-sourced cash cost:
 
-- 1.6 × 5.84 Iron Concentrate = 9.344
-- 1.6 × 0.04 Clay Mold = 0.064
-- labor = 0.048
-- Ceramic Scrap disposal = 0.225
-- Bloomery fuel ≈ 0.140
-- Slag credit = −0.080
-- total ≈ 9.741
-- cost/bar ≈ **1.624**
+- Concentrate: 1.6 × 8.02 = 12.832
+- Molds: 0.080
+- labor: 0.048
+- Ceramic Scrap disposal: 0.225
+- Bloomery fuel: ~0.156
+- Slag credit: −0.080
+- total/craft ≈ 13.261
+- cash cost/bar ≈ **2.210**
 
-**Iron Bar: 1.70 Town Buy / 1.79 Town Sell.**
+With a 15% Depth-2 wholesale margin:
 
-## Copper Bar — Bloomery, Smelting 1
+**Iron Bar: 2.54 Town Buy / 2.67 Town Sell.**
 
-Effective recipe:
+## Copper Bar — Smelting 1
 
-- 1.6 Copper Concentrate
-- 1.6 Clay Molds
-- 48 calories
-- 6 Copper Bars
-- 1.6 Slag
-- 1.5 Ceramic Scrap
-- about 4.8 effective craft minutes
+Effective cash cost:
 
-Producer-value cost:
+- 1.6 Copper Concentrate × 16.48 = 26.368
+- Molds/labor/waste/fuel/Slag net ≈ 0.460
+- total ≈ 26.828
+- cost/bar ≈ **4.471**
 
-- 1.6 × 11.98 Copper Concentrate = 19.168
-- molds = 0.064
-- labor = 0.048
-- Ceramic Scrap disposal = 0.225
-- fuel ≈ 0.168
-- Slag credit = −0.080
-- total ≈ 19.593
-- cost/bar ≈ **3.266**
+**Copper Bar: 5.14 Town Buy / 5.40 Town Sell.**
 
-**Copper Bar: 3.43 Town Buy / 3.60 Town Sell.**
+## Gold Bar — Smelting 4
 
-## Gold Bar — Bloomery, Smelting 4
+At Smelting 4 (0.65):
 
-Gold unlocks at Smelting 4, so skill-modified resources use the 0.65 multiplier.
-
-Effective recipe:
-
-- 1.3 Gold Concentrate
+- 1.3 Gold Concentrate × 24.79 = 32.227
 - 1.3 Clay Molds
 - 39 calories
-- 3 Gold Bars
-- 1.3 Slag
+- 3.9 effective craft minutes
 - 1.5 Ceramic Scrap
-- about 3.9 effective craft minutes
+- 1.3 Slag credit
+- total/craft ≈ 32.643
+- output 3 bars
+- cash cost/bar ≈ **10.881**
 
-Producer-value cost:
+**Gold Bar: 12.51 Town Buy / 13.14 Town Sell.**
 
-- 1.3 × 17.02 Gold Concentrate = 22.126
-- molds = 0.052
-- labor = 0.039
-- Ceramic Scrap disposal = 0.225
-- fuel ≈ 0.137
-- Slag credit = −0.065
-- total ≈ 22.514
-- cost/bar ≈ **7.505**
+## Iron Pipe — Smelting 1, Anvil
 
-**Gold Bar: 7.88 Town Buy / 8.27 Town Sell.**
+Core:
 
-Gold remains substantially more expensive than Copper because the complete first-unlock chain requires about 20.8 Gold Ore per finished bar versus 8.96 Copper Ore and 6.4 Iron Ore.
+- 1 Iron Bar
+- 15 calories
+- → 1 Iron Pipe
 
-## Exchange-ready bar table
+At Smelting 1:
 
-| Item | Town Buys | Town Sells | Entry cost/unit |
-|---|---:|---:|---:|
-| Iron Bar | **1.70** | **1.79** | ~1.624 |
-| Copper Bar | **3.43** | **3.60** | ~3.266 |
-| Gold Bar | **7.88** | **8.27** | ~7.505 |
+- 0.8 Iron Bar × 2.67 = 2.136
+- 12 calories = 0.012
+- cash cost = 2.148
 
-## Why these shifted
+With a shallow follow-on processing margin:
 
-The previous chain gave Crushed Sandstone/Granite a large byproduct credit based on their hypothetical dedicated crushing cost. Core shows they are generic `CrushedRock`/`Silica` byproducts with no exact-item consumer, so Ironwood now values them as low-value reuse material instead.
+**Iron Pipe: 2.41 Town Buy / 2.53 Town Sell.**
 
-At the same time, the corrected pricing model no longer compounds the Exchange retail spread through every industrial stage. Those two corrections largely offset one another: Copper remains at **3.60 retail**, Iron rises modestly, and Gold falls slightly.
+## Copper Pipe — Smelting 2, Anvil
 
-## Progression
+Core:
 
-Later Blast Furnace production, higher skill, modules, talents and Recycling should reduce effective costs and raise producer margins. Civilization-wide technology transitions may later pass part of those gains downstream through deliberate repricing.
+- 1 Copper Bar
+- 15 calories
+- → 1 Copper Pipe
+
+At Smelting 2 (0.75):
+
+- 0.75 Copper Bar × 5.40 = 4.050
+- 11.25 calories = 0.011
+- cash cost ≈ 4.061
+
+**Copper Pipe: 4.55 Town Buy / 4.78 Town Sell.**
+
+## Exchange-ready Smelting foundation
+
+| Item | Town Buys | Town Sells |
+|---|---:|---:|
+| Iron Bar | **2.54** | **2.67** |
+| Copper Bar | **5.14** | **5.40** |
+| Gold Bar | **12.51** | **13.14** |
+| Iron Pipe | **2.41** | **2.53** |
+| Copper Pipe | **4.55** | **4.78** |
+| Slag | **0.05** | **0.08** |
+
+The prior 1.70/3.43/7.88 bar Buy values were cost-baseline outputs. They left little or no surplus when a smelter actually bought concentrates through the Exchange. The revised values restore the intended capital flow without changing raw ore anchors.
+
+Later Blast Furnace/Advanced Smelting/Recycling transitions may reduce structural costs when they become economy-wide rather than merely improving one producer's profit.
