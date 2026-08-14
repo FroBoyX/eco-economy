@@ -21,11 +21,11 @@ A specialty is not considered complete merely because one dependency has been pr
 
 ## Status meanings
 
-- **canonical-current** — current Core audited and the currently relevant profession outputs are canonical.
-- **canonical-foundation** — current Core audited for major upstream inputs; full profession output table still pending.
-- **legacy-only** — prior Ironwood work exists but still requires validation under the current source/margin model.
+- **canonical-current** — current Core audited and the currently relevant outputs are canonical.
+- **canonical-foundation** — major upstream inputs are current; full profession output table still pending.
+- **legacy-only** — prior work exists but has not been revalidated under the current source/margin model.
 - **untouched** — no current canonical audit yet.
-- **policy/outside normal market** — requires a specialized treatment rather than ordinary commodity pricing.
+- **policy/outside normal market** — specialized treatment rather than ordinary commodity pricing.
 
 ## Farmer
 
@@ -33,7 +33,7 @@ A specialty is not considered complete merely because one dependency has been pr
 |---|---:|---|
 | Gathering | 1 | **canonical-foundation** |
 | Farming | 2 | **canonical-foundation** |
-| Milling | 2 | **canonical-foundation** |
+| Milling | 2 | **canonical-foundation** — core flours/oils/Sugar/Yeast/Sun Cheese/industrial inputs locked |
 | Fertilizers | 3 | untouched |
 
 ## Hunter
@@ -41,15 +41,15 @@ A specialty is not considered complete merely because one dependency has been pr
 | Specialty | Tier | Status |
 |---|---:|---|
 | Hunting | 1 | **canonical-foundation** |
-| Butchery | 2 | **canonical-foundation** |
+| Butchery | 2 | **canonical-foundation** — Meat/Leather/Fur/Wool/Tallow/Lubricant locked |
 
 ## Chef
 
 | Specialty | Tier | Status |
 |---|---:|---|
-| Campfire Cooking | 2 | legacy-only |
-| Baking | 3 | legacy-only |
-| Cooking | 3 | legacy-only |
+| Campfire Cooking | 2 | **canonical-current** except research/upgrade objects |
+| Baking | 3 | **canonical-current** except research/upgrade objects |
+| Cooking | 3 | **canonical-current** except research/upgrade objects |
 | Advanced Baking | 4 | untouched |
 | Advanced Cooking | 4 | untouched |
 | Cutting Edge Cooking | 5 | untouched |
@@ -59,7 +59,7 @@ A specialty is not considered complete merely because one dependency has been pr
 | Specialty | Tier | Status |
 |---|---:|---|
 | Logging | 1 | **canonical-current** |
-| Carpentry | 2 | canonical-current for Lumber/current wood economy; full output repricing pending |
+| Carpentry | 2 | **canonical-current** for all current rows not blocked by Paper/Steel/research |
 | Shipwright | 2 | **canonical-foundation** |
 | Paper Milling | 3 | untouched |
 | Composites | 5 | untouched |
@@ -68,9 +68,9 @@ A specialty is not considered complete merely because one dependency has been pr
 
 | Specialty | Tier | Status |
 |---|---:|---|
-| Tailoring | 2 | **canonical-foundation** — Linen/Cotton/Wool chains locked; full clothing/furniture table pending |
+| Tailoring | 2 | **canonical-foundation** — Linen/Cotton/Wool chains locked; clothing/furniture pending |
 
-Tailor/Tailoring is a distinct Core profession family. It must never again be folded implicitly into Farmer or Carpenter coverage.
+Tailor/Tailoring is a distinct Core profession family and must not be folded implicitly into Farmer or Carpenter coverage.
 
 ## Mason
 
@@ -79,14 +79,14 @@ Tailor/Tailoring is a distinct Core profession family. It must never again be fo
 | Mining | 1 | **canonical-current** |
 | Masonry | 2 | **canonical-current** |
 | Glassworking | 3 | canonical-current foundation including Glass/Light Bulb; remaining decor pending |
-| Pottery | 3 | canonical-current Brick/Glassworks foundation; remaining ceramics/furniture pending |
+| Pottery | 3 | canonical-current foundation including Brick/Glassworks/Bakery Oven; remaining ceramics/furniture pending |
 | Advanced Masonry | 5 | untouched |
 
 ## Smith
 
 | Specialty | Tier | Status |
 |---|---:|---|
-| Smelting | 2 | **canonical-current** — bars and Iron/Copper Pipe |
+| Smelting | 2 | **canonical-current** — bars, Pipes and Cast Iron Stove |
 | Blacksmith | 3 | canonical-current industrial/tool foundation; remaining civic/decor/Steel rows pending |
 | Advanced Smelting | 4 | untouched |
 
@@ -94,8 +94,8 @@ Tailor/Tailoring is a distinct Core profession family. It must never again be fo
 
 | Specialty | Tier | Status |
 |---|---:|---|
-| Basic Engineering | 2 | **canonical-current** for current infrastructure/vehicles; a few cross-profession rows pending |
-| Mechanics | 3 | **canonical-current** through the Steam Truck/Tractor and major steam machinery |
+| Basic Engineering | 2 | **canonical-current** for current infrastructure/vehicle outputs |
+| Mechanics | 3 | **canonical-current** through completed Steam Truck/Tractor and major steam machinery |
 | Electronics | 4 | untouched |
 | Industry | 5 | untouched |
 
@@ -115,42 +115,47 @@ Tailor/Tailoring is a distinct Core profession family. It must never again be fo
 
 ## Foundation discoveries now canonical
 
-- raw edible crops use the **1 credit / 1,000 calories** anchor unless another material/recipe constraint controls value;
-- Flax Seed is Farming-derived: 2 Flax Stems → 6 seeds; current **0.04 / 0.05**;
+- ordinary raw edible crops use **1 credit / 1,000 calories** unless another material/recipe constraint controls value;
+- Flax Seed is Farming-derived; current **0.04 / 0.05**;
 - Flax Fiber and Cotton Lint are Gathering outputs;
-- Linen/Cotton/Wool textile intermediates are now sourced through Tailoring rather than guessed;
+- Linen/Cotton/Wool textile intermediates are sourced through Tailoring rather than guessed;
 - Leather Hide, Fur Pelt, Wool and Tallow are canonical Butchery outputs;
-- early Lubricant comes from Butchery Grease: 2 Tallow → 4 Lubricant; current **0.28 / 0.29**;
-- Flaxseed Oil is Milling-derived and currently **0.66 / 0.69**;
+- Campfire `Render Fat` proved Tallow must sit near its calorie floor: **0.20 / 0.21**;
+- early Butchery Grease Lubricant is therefore **0.14 / 0.15**, replacing the provisional 0.28/0.29;
+- Flaxseed Oil is Milling-derived at **0.66 / 0.69**;
+- early Huckleberry Sugar is **1.16 / 1.22**, while later Beet Sugar supports roughly **0.32 / 0.34** and will trigger a bakery/cooking transition when broadly adopted;
 - Iron/Copper Pipe are canonical Smelting outputs;
 - Wooden Hull Planks, Hemp Mooring Rope and Iron Hull Sheet are canonical Shipwright bridge materials;
 - Light Bulb is Glassworking 2, not Electronics;
-- current Steam Truck and Steam Tractor recipes are identical and are now priceable without Electronics.
+- current Steam Truck and Steam Tractor recipes are identical and currently support **955.62 / 965.62** under the terminal-capital policy.
 
 ## Current industrial milestone
 
-The current dependency chain is canonical through:
+The current dependency spine is canonical through:
 
 **raw gathering → Farming/Hunting → Butchery/Milling/Tailoring → Logging/Mining → Smelting/Blacksmith/Masonry/Pottery/Glassworking/Shipwright → Basic Engineering → Mechanics → completed Steam Truck / Steam Tractor.**
 
-That does **not** mean the full economy is complete. It means this production spine no longer contains guessed material prices.
+The basic food spine is also current through:
+
+**raw crops/meat/fish → Campfire Cooking / Baking / Cooking.**
+
+That does **not** mean the full economy is complete. It means these spines no longer contain guessed foundational inputs.
 
 ## Next profession-output order
 
-1. reprice the complete current Carpentry output table from the corrected Lumber/metal/component inputs;
-2. finish Campfire Cooking, Baking and Cooking under calorie + recipe-cost rules;
-3. finish full Tailoring clothing/furniture outputs;
-4. finish Hunting/Butchery/Farming/Milling non-foundation outputs;
-5. Fertilizers;
-6. Paper Milling;
-7. complete Shipwright boats/shipyards and terminal-vessel windfalls;
-8. Pottery/Glassworking decorative and utility outputs;
-9. Advanced Smelting / Steel;
-10. Electronics;
-11. Recycling current-era transition prices;
-12. Oil Drilling petroleum era;
-13. Advanced Masonry, Composites and Industry;
-14. Painting and remaining specialty furniture/decor;
-15. advanced/cutting-edge food professions.
+1. finish full Tailoring clothing/furniture outputs;
+2. finish Hunting/Butchery/Farming/Milling non-foundation objects;
+3. Fertilizers;
+4. Paper Milling;
+5. complete Shipwright boats/shipyards and terminal-vessel windfalls;
+6. Pottery/Glassworking remaining decorative/utility outputs;
+7. Advanced Smelting / Steel;
+8. Electronics;
+9. Recycling current-era transition prices;
+10. Oil Drilling petroleum era;
+11. Advanced Masonry, Composites and Industry;
+12. Painting and remaining specialty furniture/decor;
+13. Advanced Baking, Advanced Cooking and Cutting Edge Cooking;
+14. research/skill-book/upgrade economy across specialties.
 
-The final public Exchange tables should only be called complete after every row above is either priced or explicitly marked outside Ironwood's unlimited import/export scope.
+The final public Exchange tables should only be called complete after every specialty above is either priced or explicitly marked outside Ironwood's unlimited import/export scope.
