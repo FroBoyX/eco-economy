@@ -1,5 +1,5 @@
 {
-  "schema_version": 10,
+  "schema_version": 11,
   "run": "ironwood",
   "game_version": "Eco 14",
   "currency": "Ironwood credit",
@@ -45,7 +45,7 @@
     "Sandstone": {"public_buy": 0.15, "public_sell": 0.17, "status": "validated_metal_chain"},
     "Granite": {"public_buy": 0.15, "public_sell": 0.17, "status": "validated_metal_chain"},
     "Sand": {"public_buy": 0.15, "public_sell": 0.17, "status": "working_masonry_reaudit_needed"},
-    "Clay": {"public_buy": 0.02, "public_sell": 0.03, "status": "validated_abundant_feedstock", "note": "Restored after full Clay Mold check; do not normalize to Rock/Sand."},
+    "Clay": {"public_buy": 0.05, "public_sell": 0.06, "status": "validated_current_era", "note": "Transitioned from day-one near-waste to recurring feedstock for Clay Molds, Pottery, Brick, Cement and later industry; remains cheaper than Sand/Rock because it is abundant."},
     "IronOre": {"public_buy": 0.20, "public_sell": 0.22, "status": "validated_metal_chain"},
     "CopperOre": {"public_buy": 0.30, "public_sell": 0.33, "status": "validated_metal_chain"},
     "GoldOre": {"public_buy": 0.30, "public_sell": 0.35, "status": "validated_metal_chain", "note": "Gold scarcity is supplied primarily by the poor Core conversion ratio."}
@@ -79,7 +79,7 @@
     "CopperConcentrateItem": {"display_name": "Copper Concentrate", "public_buy": 11.30, "public_sell": 11.75, "status": "validated_metal_chain", "source_profession": "Mining"},
     "GoldConcentrateItem": {"display_name": "Gold Concentrate", "public_buy": 17.25, "public_sell": 18.00, "status": "validated_metal_chain", "source_profession": "Mining"},
 
-    "ClayMoldItem": {"display_name": "Clay Mold", "public_buy": 0.02, "public_sell": 0.03, "status": "validated_metal_chain", "source_profession": "Gathering"},
+    "ClayMoldItem": {"display_name": "Clay Mold", "public_buy": 0.03, "public_sell": 0.04, "status": "validated_current_era", "source_profession": "Gathering"},
     "SlagItem": {"display_name": "Slag", "public_buy": 0.05, "public_sell": 0.08, "status": "working_byproduct", "source_profession": "Smelting"},
     "IronBarItem": {"display_name": "Iron Bar", "public_buy": 1.55, "public_sell": 1.65, "status": "validated_metal_chain", "source_profession": "Smelting"},
     "CopperBarItem": {"display_name": "Copper Bar", "public_buy": 3.40, "public_sell": 3.60, "status": "validated_metal_chain", "source_profession": "Smelting"},
