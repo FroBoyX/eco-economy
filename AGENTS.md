@@ -75,6 +75,24 @@ When recovering information from old chats or earlier files:
 - if a prior value is no longer defensible, replace it rather than preserving it for continuity;
 - mark genuinely unresolved questions as unresolved rather than inventing continuity.
 
+## Eco Core reference workflow
+
+Before asking the Product Owner to upload an Eco Core archive, inspect `reference/eco14/` for already-ingested mechanical facts.
+
+The adopted Core snapshot is identified by `reference/eco14/source.json`. Normalized facts derived from that snapshot are preferred for routine economy and policy analysis because they remain available across chat sessions through GitHub.
+
+When the required mechanic has already been ingested, use the repository reference and do **not** request the ZIP again.
+
+When a required mechanic has not yet been ingested and direct Core inspection is necessary:
+
+1. use the supplied Core archive as mechanical evidence;
+2. extract the smallest coherent reusable mechanical dataset needed;
+3. record the original Core source path and adopted source hash;
+4. commit the normalized facts under `reference/eco14/` so the same upload is not required next time;
+5. keep raw Core source code out of the public repository unless the Product Owner explicitly approves it and redistribution is known to be appropriate.
+
+Do not confuse extracted mechanical facts with economic policy. Core answers what Eco mechanically does; the project decides what prices, laws, incentives, and server policy should be.
+
 ## Project goals
 
 All work should serve the current Eco 14 design goals:
