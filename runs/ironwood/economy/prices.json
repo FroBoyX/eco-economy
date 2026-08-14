@@ -1,5 +1,5 @@
 {
-  "schema_version": 12,
+  "schema_version": 13,
   "run": "ironwood",
   "game_version": "Eco 14",
   "currency": "Ironwood credit",
@@ -15,15 +15,19 @@
       "status": "locked",
       "note": "Evaluate skill-modified ingredients, labor, and craft time at the minimum skill level required by the selected recipe. Static ingredients are not reduced."
     },
+    "derived_input_valuation": {
+      "value": "producer_value_public_buy_proxy",
+      "status": "locked",
+      "note": "Derived producer costs use the upstream producer/Town Buy value rather than recursively stacking the Exchange retail spread. Public Sell is a market-service spread applied after producer value is established."
+    },
     "current_era_repricing": {
       "status": "locked_principle",
-      "note": "Personal efficiency gains normally become producer profit. When better infrastructure becomes the normal economy-wide production base, structural input prices may be reviewed downward so some technological gain passes downstream."
+      "note": "Personal efficiency gains normally become producer profit. Economy-wide technology transitions may pass part of structural efficiency gains downstream."
     },
     "industrial_producer_margin": {
       "target_minimum_rate": 0.02,
       "target_maximum_rate": 0.06,
-      "status": "working_method",
-      "note": "Entry margins are deliberately shallow. Higher skills, modules, talents, machinery and mature infrastructure create larger margins."
+      "status": "working_method"
     },
     "ironwood_exchange_spread": {
       "baseline_rate": 0.05,
@@ -32,88 +36,96 @@
       "high_maximum_spread": 10.0,
       "minimum_spread": 0.01,
       "status": "locked",
-      "note": "Use approximately 5% when practical. Medium goods should not exceed a 5-credit Exchange spread and high-value goods should not exceed 10 credits. Exceptional civic/megaproject procurement is reviewed individually."
+      "note": "Exceptional civic and megaproject procurement is reviewed individually."
     },
     "byproduct_pricing": {
       "status": "locked_principle",
-      "note": "Abundant byproducts and waste-derived usable materials are valued by practical reuse demand, scarcity and disposal pressure, not by the cost of a hypothetical dedicated production recipe. Tag-consuming recipes use the cheapest practical accepted input."
+      "note": "Abundant byproducts are valued by practical reuse demand and disposal pressure, not hypothetical dedicated-production cost."
     }
   },
   "anchors": {
     "Wood": {"public_buy": 0.40, "public_sell": 0.45, "status": "working_current_era"},
-    "Rock": {"public_buy": 0.15, "public_sell": 0.17, "status": "working_current_era"},
-    "Sandstone": {"public_buy": 0.15, "public_sell": 0.17, "status": "validated_metal_chain"},
-    "Granite": {"public_buy": 0.15, "public_sell": 0.17, "status": "validated_metal_chain"},
     "Sand": {"public_buy": 0.10, "public_sell": 0.11, "status": "validated_current_era"},
-    "Clay": {"public_buy": 0.10, "public_sell": 0.11, "status": "validated_current_era", "note": "Clay has transitioned from day-one spoil to recurring feedstock for Clay Molds, Pottery, Brick, Cement and later industry."},
+    "Clay": {"public_buy": 0.10, "public_sell": 0.11, "status": "validated_current_era"},
+    "Rock": {"public_buy": 0.10, "public_sell": 0.11, "status": "validated_current_era"},
+    "Sandstone": {"public_buy": 0.10, "public_sell": 0.11, "status": "validated_current_era"},
+    "Granite": {"public_buy": 0.10, "public_sell": 0.11, "status": "validated_current_era"},
+    "Limestone": {"public_buy": 0.15, "public_sell": 0.17, "status": "validated_strategic_rock"},
     "IronOre": {"public_buy": 0.20, "public_sell": 0.22, "status": "validated_metal_chain"},
     "CopperOre": {"public_buy": 0.30, "public_sell": 0.33, "status": "validated_metal_chain"},
-    "GoldOre": {"public_buy": 0.30, "public_sell": 0.35, "status": "validated_metal_chain", "note": "Gold scarcity is supplied primarily by the poor Core conversion ratio."}
+    "GoldOre": {"public_buy": 0.30, "public_sell": 0.35, "status": "validated_metal_chain"}
   },
   "garbage_disposal": {
+    "WoodScrap": {"price": -0.08, "status": "working_pre_recycling"},
     "Tailings": {"price": -0.35, "status": "working_pre_recycling"},
     "CeramicScrap": {"price": -0.15, "status": "working_pre_recycling"}
   },
   "items": {
-    "DowelItem": {"display_name": "Dowel", "public_buy": 0.05, "public_sell": 0.06, "status": "working_current_era", "source_profession": "Logging"},
-    "BoardItem": {"display_name": "Board", "public_buy": 0.26, "public_sell": 0.27, "status": "working_current_era", "source_profession": "Logging", "note": "Current structural price uses Sawmill-era Logging production."},
-    "HewnLogItem": {"display_name": "Hewn Log", "public_buy": 0.87, "public_sell": 0.91, "status": "working_current_era", "source_profession": "Logging"},
-    "CharcoalItem": {"display_name": "Charcoal", "public_buy": 1.17, "public_sell": 1.23, "status": "working_current_era", "source_profession": "Logging"},
+    "DowelItem": {"display_name": "Dowel", "public_buy": 0.05, "public_sell": 0.06, "source_profession": "Logging"},
+    "BoardItem": {"display_name": "Board", "public_buy": 0.26, "public_sell": 0.27, "source_profession": "Logging", "note": "Current Sawmill-era structural price."},
+    "HewnLogItem": {"display_name": "Hewn Log", "public_buy": 0.87, "public_sell": 0.91, "source_profession": "Logging"},
+    "CharcoalItem": {"display_name": "Charcoal", "public_buy": 1.17, "public_sell": 1.23, "source_profession": "Logging"},
 
-    "MortarItem": {"display_name": "Mortar", "public_buy": 0.04, "public_sell": 0.05, "status": "validated_current_era", "source_profession": "Masonry"},
-    "MortaredStoneItem": {"display_name": "Mortared Stone", "public_buy": 0.63, "public_sell": 0.66, "status": "validated_current_era", "source_profession": "Masonry"},
-    "WhetstoneItem": {"display_name": "Whetstone", "public_buy": 0.46, "public_sell": 0.49, "status": "working_rebuild", "source_profession": "Masonry"},
-    "MillStoneItem": {"display_name": "Mill Stone", "public_buy": 0.82, "public_sell": 0.87, "status": "working_rebuild", "source_profession": "Masonry"},
-    "StoneBrazierItem": {"display_name": "Stone Brazier", "public_buy": 2.17, "public_sell": 2.28, "status": "working_rebuild", "source_profession": "Masonry"},
-    "GrindstoneItem": {"display_name": "Grindstone", "public_buy": 11.96, "public_sell": 12.56, "status": "working_rebuild", "source_profession": "Masonry"},
-    "KilnItem": {"display_name": "Kiln", "public_buy": 6.69, "public_sell": 7.03, "status": "working_rebuild", "source_profession": "Masonry"},
-    "MillItem": {"display_name": "Mill", "public_buy": 13.06, "public_sell": 13.72, "status": "working_rebuild", "source_profession": "Masonry"},
+    "MortarItem": {"display_name": "Mortar", "public_buy": 0.04, "public_sell": 0.05, "source_profession": "Masonry"},
+    "MortaredStoneItem": {"display_name": "Mortared Stone", "public_buy": 0.38, "public_sell": 0.40, "source_profession": "Masonry"},
+    "WhetstoneItem": {"display_name": "Whetstone", "public_buy": 0.28, "public_sell": 0.29, "source_profession": "Masonry"},
+    "MillStoneItem": {"display_name": "Mill Stone", "public_buy": 0.52, "public_sell": 0.55, "source_profession": "Masonry"},
+    "StoneBrazierItem": {"display_name": "Stone Brazier", "public_buy": 1.28, "public_sell": 1.34, "source_profession": "Masonry"},
+    "GrindstoneItem": {"display_name": "Grindstone", "public_buy": 9.35, "public_sell": 9.82, "source_profession": "Masonry"},
+    "KilnItem": {"display_name": "Kiln", "public_buy": 3.83, "public_sell": 4.02, "source_profession": "Masonry"},
+    "MillItem": {"display_name": "Mill", "public_buy": 10.09, "public_sell": 10.59, "source_profession": "Masonry"},
+    "CrushedLimestoneItem": {"display_name": "Crushed Limestone", "public_buy": 0.64, "public_sell": 0.67, "source_profession": "Mining"},
+    "QuicklimeItem": {"display_name": "Quicklime", "public_buy": 0.61, "public_sell": 0.64, "source_profession": "Masonry"},
 
-    "CrushedMixedRockItem": {"display_name": "Crushed Mixed Rock", "public_buy": 0.05, "public_sell": 0.06, "status": "working_byproduct_reuse", "source_profession": "Mining/Recycling", "note": "Abundant useful byproduct/waste stream; not priced from dedicated crushing cost."},
-    "CrushedSandstoneItem": {"display_name": "Crushed Sandstone", "public_buy": 0.73, "public_sell": 0.76, "status": "validated_metal_chain", "source_profession": "Mining"},
-    "CrushedGraniteItem": {"display_name": "Crushed Granite", "public_buy": 0.74, "public_sell": 0.77, "status": "validated_metal_chain", "source_profession": "Mining"},
-    "CrushedIronOreItem": {"display_name": "Crushed Iron Ore", "public_buy": 1.02, "public_sell": 1.06, "status": "validated_metal_chain", "source_profession": "Mining"},
-    "CrushedCopperOreItem": {"display_name": "Crushed Copper Ore", "public_buy": 1.72, "public_sell": 1.79, "status": "validated_metal_chain", "source_profession": "Mining"},
-    "CrushedGoldOreItem": {"display_name": "Crushed Gold Ore", "public_buy": 1.86, "public_sell": 1.94, "status": "validated_metal_chain", "source_profession": "Mining"},
-    "IronConcentrateItem": {"display_name": "Iron Concentrate", "public_buy": 5.00, "public_sell": 5.20, "status": "validated_metal_chain", "source_profession": "Mining"},
-    "CopperConcentrateItem": {"display_name": "Copper Concentrate", "public_buy": 11.30, "public_sell": 11.75, "status": "validated_metal_chain", "source_profession": "Mining"},
-    "GoldConcentrateItem": {"display_name": "Gold Concentrate", "public_buy": 17.25, "public_sell": 18.00, "status": "validated_metal_chain", "source_profession": "Mining"},
+    "CrushedMixedRockItem": {"display_name": "Crushed Mixed Rock", "public_buy": 0.05, "public_sell": 0.06, "source_profession": "Mining/Recycling", "note": "Low-value reusable byproduct."},
+    "CrushedSandstoneItem": {"display_name": "Crushed Sandstone", "public_buy": 0.05, "public_sell": 0.06, "source_profession": "Mining", "note": "Generic CrushedRock/Silica byproduct; no exact-item consumer."},
+    "CrushedGraniteItem": {"display_name": "Crushed Granite", "public_buy": 0.05, "public_sell": 0.06, "source_profession": "Mining", "note": "Generic CrushedRock/Silica byproduct; no exact-item consumer."},
+    "CrushedIronOreItem": {"display_name": "Crushed Iron Ore", "public_buy": 1.25, "public_sell": 1.31, "source_profession": "Mining"},
+    "CrushedCopperOreItem": {"display_name": "Crushed Copper Ore", "public_buy": 1.89, "public_sell": 1.98, "source_profession": "Mining"},
+    "CrushedGoldOreItem": {"display_name": "Crushed Gold Ore", "public_buy": 1.89, "public_sell": 1.98, "source_profession": "Mining"},
+    "IronConcentrateItem": {"display_name": "Iron Concentrate", "public_buy": 5.84, "public_sell": 6.13, "source_profession": "Mining"},
+    "CopperConcentrateItem": {"display_name": "Copper Concentrate", "public_buy": 11.98, "public_sell": 12.58, "source_profession": "Mining"},
+    "GoldConcentrateItem": {"display_name": "Gold Concentrate", "public_buy": 17.02, "public_sell": 17.87, "source_profession": "Mining"},
 
-    "ClayMoldItem": {"display_name": "Clay Mold", "public_buy": 0.04, "public_sell": 0.05, "status": "validated_current_era", "source_profession": "Gathering"},
-    "SlagItem": {"display_name": "Slag", "public_buy": 0.05, "public_sell": 0.08, "status": "working_byproduct", "source_profession": "Smelting"},
-    "IronBarItem": {"display_name": "Iron Bar", "public_buy": 1.55, "public_sell": 1.65, "status": "validated_metal_chain", "source_profession": "Smelting"},
-    "CopperBarItem": {"display_name": "Copper Bar", "public_buy": 3.40, "public_sell": 3.60, "status": "validated_metal_chain", "source_profession": "Smelting"},
-    "GoldBarItem": {"display_name": "Gold Bar", "public_buy": 8.35, "public_sell": 8.70, "status": "validated_metal_chain", "source_profession": "Smelting"},
+    "ClayMoldItem": {"display_name": "Clay Mold", "public_buy": 0.04, "public_sell": 0.05, "source_profession": "Gathering"},
+    "SlagItem": {"display_name": "Slag", "public_buy": 0.05, "public_sell": 0.08, "source_profession": "Smelting", "status": "working_byproduct"},
+    "IronBarItem": {"display_name": "Iron Bar", "public_buy": 1.70, "public_sell": 1.79, "source_profession": "Smelting"},
+    "CopperBarItem": {"display_name": "Copper Bar", "public_buy": 3.43, "public_sell": 3.60, "source_profession": "Smelting"},
+    "GoldBarItem": {"display_name": "Gold Bar", "public_buy": 7.88, "public_sell": 8.27, "source_profession": "Smelting"},
 
-    "NailItem": {"display_name": "Nail", "public_buy": 0.09, "public_sell": 0.10, "status": "working_rebuild", "source_profession": "Blacksmith"},
-    "IronPlateItem": {"display_name": "Iron Plate", "public_buy": 1.44, "public_sell": 1.52, "status": "working_rebuild", "source_profession": "Blacksmith"},
-    "CopperPlateItem": {"display_name": "Copper Plate", "public_buy": 3.08, "public_sell": 3.24, "status": "working_rebuild", "source_profession": "Blacksmith"},
-    "CookingUtensilsItem": {"display_name": "Cooking Utensils", "public_buy": 2.82, "public_sell": 2.97, "status": "working_rebuild", "source_profession": "Blacksmith"},
-    "IronSawBladeItem": {"display_name": "Iron Saw Blade", "public_buy": 7.85, "public_sell": 8.25, "status": "working_rebuild", "source_profession": "Blacksmith"},
-    "SawmillItem": {"display_name": "Sawmill", "public_buy": 20.00, "public_sell": 21.00, "status": "working_current_era", "source_profession": "Blacksmith"},
+    "WoodenMoldItem": {"display_name": "Wooden Mold", "public_buy": 0.44, "public_sell": 0.46, "source_profession": "Logging"},
+    "WetBrickItem": {"display_name": "Wet Brick", "public_buy": 0.43, "public_sell": 0.45, "source_profession": "Pottery"},
+    "BrickItem": {"display_name": "Brick", "public_buy": 0.56, "public_sell": 0.59, "source_profession": "Pottery"},
+    "GlassItem": {"display_name": "Glass", "public_buy": 1.21, "public_sell": 1.27, "source_profession": "Glassworking"},
+    "GlassworksItem": {"display_name": "Glassworks", "public_buy": 24.18, "public_sell": 25.39, "source_profession": "Pottery"},
 
-    "WoodenGearItem": {"display_name": "Wooden Gear", "public_buy": 3.10, "public_sell": 3.26, "status": "working_rebuild", "source_profession": "Basic Engineering"},
-    "WoodenWheelItem": {"display_name": "Wooden Wheel", "public_buy": 3.10, "public_sell": 3.26, "status": "working_rebuild", "source_profession": "Basic Engineering"},
-    "ArrastraItem": {"display_name": "Arrastra", "public_buy": 9.60, "public_sell": 10.08, "status": "working_rebuild", "source_profession": "Basic Engineering"},
-    "RockerBoxItem": {"display_name": "Rocker Box", "public_buy": 4.62, "public_sell": 4.85, "status": "working_rebuild", "source_profession": "Basic Engineering"},
-    "StoneRoadItem": {"display_name": "Stone Road", "public_buy": 0.28, "public_sell": 0.29, "status": "validated_byproduct_sink", "source_profession": "Basic Engineering"},
-    "StoneRoadToolItem": {"display_name": "Stone Road Tool", "public_buy": 5.97, "public_sell": 6.27, "status": "working_rebuild_reaudit_needed", "source_profession": "Basic Engineering"},
+    "NailItem": {"display_name": "Nail", "public_buy": 0.09, "public_sell": 0.10, "source_profession": "Blacksmith"},
+    "IronPlateItem": {"display_name": "Iron Plate", "public_buy": 1.48, "public_sell": 1.55, "source_profession": "Blacksmith"},
+    "CopperPlateItem": {"display_name": "Copper Plate", "public_buy": 2.93, "public_sell": 3.08, "source_profession": "Blacksmith"},
+    "CookingUtensilsItem": {"display_name": "Cooking Utensils", "public_buy": 2.90, "public_sell": 3.05, "source_profession": "Blacksmith"},
+    "IronSawBladeItem": {"display_name": "Iron Saw Blade", "public_buy": 8.08, "public_sell": 8.48, "source_profession": "Blacksmith"},
+    "SawmillItem": {"display_name": "Sawmill", "public_buy": 19.35, "public_sell": 20.32, "source_profession": "Blacksmith"},
 
-    "ScrewsItem": {"display_name": "Screws", "public_buy": 0.35, "public_sell": 0.37, "status": "working_rebuild", "source_profession": "Mechanics"},
-    "IronGearItem": {"display_name": "Iron Gear", "public_buy": 1.45, "public_sell": 1.52, "status": "working_rebuild", "source_profession": "Mechanics"},
-    "StampMillItem": {"display_name": "Stamp Mill", "public_buy": 23.25, "public_sell": 24.40, "status": "working_rebuild", "source_profession": "Mechanics"}
+    "WoodenGearItem": {"display_name": "Wooden Gear", "public_buy": 2.96, "public_sell": 3.11, "source_profession": "Basic Engineering"},
+    "WoodenWheelItem": {"display_name": "Wooden Wheel", "public_buy": 2.96, "public_sell": 3.11, "source_profession": "Basic Engineering"},
+    "ArrastraItem": {"display_name": "Arrastra", "public_buy": 7.18, "public_sell": 7.54, "source_profession": "Basic Engineering"},
+    "RockerBoxItem": {"display_name": "Rocker Box", "public_buy": 4.28, "public_sell": 4.49, "source_profession": "Basic Engineering"},
+    "StoneRoadItem": {"display_name": "Stone Road", "public_buy": 0.24, "public_sell": 0.25, "source_profession": "Basic Engineering", "note": "Cheap public-use sink for CrushedRock byproduct."},
+    "StoneRoadToolItem": {"display_name": "Stone Road Tool", "public_buy": 4.45, "public_sell": 4.67, "source_profession": "Basic Engineering"},
+
+    "ScrewsItem": {"display_name": "Screws", "public_buy": 0.36, "public_sell": 0.38, "source_profession": "Mechanics"},
+    "IronGearItem": {"display_name": "Iron Gear", "public_buy": 1.49, "public_sell": 1.56, "source_profession": "Mechanics"},
+    "StampMillItem": {"display_name": "Stamp Mill", "public_buy": 23.01, "public_sell": 24.16, "source_profession": "Mechanics"}
   },
   "unpriced_dependencies": [
-    "Limestone and Quicklime chain",
-    "Brick and Glass chains",
-    "Masonry workstations/furniture affected by Mortared Stone repricing",
-    "Iron tools requiring Leather Hide",
     "Carpentry and Lumber",
     "Tailoring and Linen",
+    "Iron tools requiring Leather Hide",
     "Lubricant",
     "Iron Pipe and remaining Smelting outputs",
-    "advanced Engineering",
+    "remaining Basic Engineering",
     "remaining Mechanics",
+    "Cement and Reinforced Concrete",
     "food and agriculture",
     "research economy",
     "advanced Recycling transition prices"
