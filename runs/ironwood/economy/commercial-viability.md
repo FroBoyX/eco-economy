@@ -8,31 +8,19 @@ The Exchange's **Town Buy** price is a guaranteed wholesale/import outlet. It is
 
 A player may instead operate their own shop and sell above the Town Buy price when local supply and demand support it. The government outlet exists so producing a useful good always has a reliable path back into currency.
 
-That guaranteed outlet must therefore pay enough that a specialist can do more than replace ingredients. Producer surplus is expected to finance:
-
-- food and recurring calorie needs;
-- replacement inputs;
-- inventory held in an input/import shop;
-- buy orders placed for materials from other players;
-- workshop buildings and building materials;
-- new workstations and upgrades;
-- transport, storage and tools;
-- mistakes, downtime and unsold inventory;
-- capital for the next profession or technology layer.
+That guaranteed outlet must therefore pay enough that a specialist can do more than replace ingredients. Producer surplus is expected to finance food, replacement inputs, shop inventory, material buy orders, workshop buildings, workstations, transport, storage, mistakes, downtime and later specialization.
 
 A Town Buy price that merely reimburses ingredients is not a viable downstream import price.
 
 ## Depth-sensitive pricing
 
-The commercial uplift must scale with **production depth and cash exposure**. It is not applied uniformly to the entire economy.
+The commercial uplift scales with **production depth, cash exposure, turnover and whether the output is itself a downstream input**. It is not applied uniformly to the economy.
 
 ### Depth 0 — gathered and raw commodities
 
 Examples: Wood, Sand, Clay, Rock, Limestone, raw ores, crops, seeds and other directly gathered resources.
 
-These remain **anchor-priced**. They do not receive a 25–30% manufactured-goods markup simply because gathering takes time. Their acquisition does not require the producer to purchase a deep chain of upstream inputs.
-
-Raw anchors are set by abundance, desired gathering incentive, scarcity, environmental policy and downstream economic effects.
+These remain **anchor-priced**. They do not receive a manufactured-goods markup simply because gathering takes time. Raw anchors are set by abundance, gathering incentive, scarcity, environmental policy and downstream economic effects.
 
 ### Depth 1 — simple processing
 
@@ -40,17 +28,17 @@ Examples: Boards, Mortar, basic crushed material, simple bars, plates, Nails and
 
 These should earn a **modest specialist margin**, normally around **8–12% over realistic Exchange-sourced cash cost** where that test is meaningful.
 
-The purpose is to make specialization worthwhile without compounding large margins at every stage of the chain.
+The purpose is to make specialization worthwhile without compounding large margins at every stage.
 
 ### Depth 2 — multi-step intermediates and ordinary finished goods
 
-Examples: components or finished goods that consume multiple processed inputs but are still relatively common/high-turnover.
+Examples: components or finished goods that consume multiple processed inputs but are still relatively common or high-turnover.
 
 Target roughly **12–18% over Exchange-sourced cash cost**, depending on depth, throughput and absolute surplus.
 
 ### Depth 3 — deep manufactured goods
 
-Examples: Boilers, complex machine components, deep furniture/workshop outputs and similar goods that contain substantial purchased value from several professions.
+Examples: Boilers, complex machine components, deep furniture/workshop outputs and similar goods containing substantial purchased value from several professions.
 
 Town Buy should normally target approximately:
 
@@ -58,28 +46,33 @@ Town Buy should normally target approximately:
 
 This creates enough operating surplus for food, working capital, material buy orders and continued production without forcing vertical integration.
 
-### Capital goods, workstations, vehicles and low-volume machinery
+### Ordinary capital goods, workstations and machinery
 
 Town Buy should normally target approximately:
 
 `Exchange-sourced cash cost × 1.30`
 
-These goods sell less frequently and are themselves part of the capital-formation loop. Their producers need a larger absolute surplus because turnover is low and the output often finances the next workshop or technology layer.
+Examples include Lathes, Stamp Mills and comparable workstations that are expensive and low-turnover but may still participate in later production chains.
+
+### Late capital goods and terminal manufactured goods
+
+Very deep, low-volume goods may justify a larger guaranteed windfall when most of their value has already accumulated through multiple specialties and the item has little or no downstream use.
+
+Typical target:
+
+`Exchange-sourced cash cost × 1.40 to 1.50`
+
+Use the lower end for late capital equipment that still becomes an input to later production. Use the upper end for true terminal/end-use goods such as completed vehicles or similarly deep consumer/capital products.
+
+This larger margin is deliberately concentrated at the **end of the chain**, where it creates player wealth without recursively inflating dozens of later recipes.
+
+A completed Steam Truck, for example, should normally receive this terminal-capital treatment. A Steam Truck Flatbed or other attachment is still a component and should receive a smaller uplift unless evidence shows it is itself extremely low-turnover.
 
 ### Bulk construction materials
 
 Ironwood's separate construction-band policy applies to Brick, Glass, Lumber and similar bulk structural goods.
 
-Their prices are not set by the deep-manufacturing multiplier alone. They are judged by:
-
-- recipe floor;
-- bulk gathering and hauling burden;
-- workstation throughput;
-- storage/inventory burden;
-- perceived technology tier;
-- whether producing stacks of the material is economically attractive.
-
-They must remain commercially viable, but the construction band may be above or below a generic depth formula.
+Their prices are judged by recipe floor, gathering/hauling burden, workstation throughput, storage burden, perceived technology tier and whether producing stacks is economically attractive.
 
 ### Exceptional goods
 
@@ -115,19 +108,15 @@ Town Sell is the Exchange's public reference/import price, not a declaration tha
 
 When the Exchange has stock, its Sell price provides a predictable fallback supply. When it is short or empty, private stores can command higher prices. Producers are always free to bypass Town Buy and seek a higher private sale price.
 
-The Exchange should not be tuned to extract the producer's entire margin. Its spread funds stabilization/liquidity friction; the producer's commercial surplus belongs primarily in Town Buy.
+The Exchange should not extract the producer's entire margin. Its spread funds stabilization/liquidity friction; the producer's commercial surplus belongs primarily in Town Buy.
 
 ## Capital-formation sanity check
 
 Percentage margin alone is insufficient for deep and low-volume goods.
 
-A technically adequate percentage that produces only pennies of profit per normal transaction is not adequate. Prices should allow repeated ordinary production to build enough cash for:
+Prices should allow repeated ordinary production to build enough cash for replacement inputs, meaningful food purchases, material buy orders, workshop expansion and eventual purchase of the next workstation or upgrade.
 
-- one or more batches of replacement inputs;
-- meaningful food purchases;
-- material buy orders;
-- workshop expansion;
-- eventual purchase of the next workstation or upgrade.
+For terminal goods, a deliberate larger windfall is desirable because those transactions are rare and represent the culmination of many earlier production stages.
 
 ## Progression
 
@@ -141,6 +130,6 @@ Ironwood should not reduce a price merely because one advanced producer becomes 
 
 Ironwood is deliberately creating an economy where specialization can reproduce itself.
 
-**Raw gathering anchors stay cheap and stable. Strong commercial margins appear only as purchased value and production depth accumulate through the chain.**
+**Raw gathering anchors stay cheap and stable. Strong commercial margins appear only as purchased value and production depth accumulate through the chain, with the largest deliberate windfalls concentrated in terminal late-game goods where they do not recursively inflate the rest of the economy.**
 
 Town Buy is a profitable wholesale floor for manufactured goods, not cost reimbursement, while gathered commodities remain anchor-driven inputs to the wider economy.
