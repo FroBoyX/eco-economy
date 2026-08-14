@@ -2,9 +2,29 @@
 
 Ironwood prices must support a functioning player economy, not merely prove that crafting is technically above zero.
 
+## Role of the Ironwood Exchange
+
+The Exchange's **Town Buy** price is a guaranteed wholesale/import outlet. It is not intended to equal a producer's cost and it is not intended to be the highest price a producer can earn.
+
+A player may instead operate their own shop and sell above the Town Buy price when local supply and demand support it. The government outlet exists so producing a useful good always has a reliable path back into currency.
+
+That guaranteed outlet must therefore pay enough that a specialist can do more than replace ingredients. Producer surplus is expected to finance:
+
+- food and recurring calorie needs;
+- replacement inputs;
+- inventory held in an input/import shop;
+- buy orders placed for materials from other players;
+- workshop buildings and building materials;
+- new workstations and upgrades;
+- transport, storage and tools;
+- mistakes, downtime and unsold inventory;
+- capital for the next profession or technology layer.
+
+A Town Buy price that merely reimburses ingredients is not a viable import price.
+
 ## Problem found in the first corrected profession pass
 
-The early rebuild used roughly a 5% producer markup over modeled producer-value inputs. Because the Ironwood Exchange itself adds about a 5% resale spread, a specialist who actually buys inputs from the Exchange can end up at break-even or a small loss.
+The early rebuild used roughly a 5% producer markup over modeled producer-value inputs. Because the Ironwood Exchange itself adds a resale spread, a specialist who buys inputs from the Exchange can end up at break-even or a small loss.
 
 Examples from the pre-rebalance tables:
 
@@ -14,62 +34,107 @@ Examples from the pre-rebalance tables:
 - Steam Truck Flatbed: Exchange-sourced input cost about 23.31; Town Buy 23.33; surplus about 0.02.
 - Iron Wheel: Exchange-sourced input cost about 7.59; Town Buy 7.57; slight loss.
 
-That is not commercially viable. A producer must be able to pay for food/calorie needs, transport, inventory, mistakes, workshop buildings, replacement equipment, and eventual expansion into new workstations and specialties.
+Those are cost-reimbursement prices, not functioning market prices.
 
-## Required stress test
+## Required cost views
 
-Every derived price must now have two cost views:
+Every derived price must have at least two cost views:
 
 1. **Modeled producer cost** — upstream Town Buy/producer values, used to understand the structural dependency chain without recursively treating the Exchange spread as production value.
 2. **Exchange-sourced cash cost** — the same entry recipe using upstream Town Sell prices for any purchased inputs, plus labor calories, fuel, waste/disposal and other operating costs.
 
-The second value is the commercial viability test.
+The second value is the commercial-viability floor because a specialist must be able to participate without vertically integrating every dependency.
 
-## Minimum producer surplus
+## Normal Ironwood producer target
 
 ### Standard crafted goods and industrial intermediates
 
-Town Buy must normally be at least:
+Town Buy should normally target approximately:
 
-`Exchange-sourced cash cost × 1.15`
+`Exchange-sourced cash cost × 1.25`
 
-This creates a minimum **15% operating surplus over replacement/input cash cost** for an entry-level specialist even when they buy everything from the Exchange.
+This is a **25% markup on replacement/input cash cost**, equivalent to roughly a 20% gross margin on the Town Buy revenue before the producer's other business expenses.
+
+This surplus is intended to pay for food, working capital, shop inventory and gradual expansion.
+
+A minimum around 15% over Exchange-sourced cash cost may be accepted only for unusually high-volume, low-risk commodities where throughput reliably creates enough absolute income. It is not the normal target.
 
 ### Workstations, vehicles and low-volume capital goods
 
-Town Buy must normally be at least:
+Town Buy should normally target approximately:
 
-`Exchange-sourced cash cost × 1.20`
+`Exchange-sourced cash cost × 1.30`
 
-These goods are lower-volume and are part of the capital-formation loop. Their producers need enough absolute surplus to finance workshop construction, new machines and later specialization.
+These goods sell less frequently and are themselves part of the capital-formation loop. Their producers need a larger per-unit surplus because they cannot depend on high turnover.
 
 ### Bulk construction materials
 
-Ironwood's separate construction-band policy still applies, but a structural material must also pass the standard commercial viability test. Tier/perceptual valuation may raise it further.
+Ironwood's construction-band policy still applies, but a structural material must also pass the normal commercial viability test. Tier/perceptual valuation may raise it further.
+
+Bulk building materials should create enough margin to make gathering, hauling, storing and producing them attractive at the stack quantities construction actually consumes.
 
 ### Exceptional goods
 
-Research, civic procurement, megaprojects, garbage/recycling streams and deliberate subsidies may use separate policy prices.
+Research, civic procurement, megaprojects, garbage/recycling streams, deliberate subsidies and emergency shortage imports may use separate policy prices.
 
-## Exchange spread
+## Player-run input/import stores
 
-The Ironwood Exchange spread is applied only after the commercially viable Town Buy is established. The normal retail spread remains approximately 5%, subject to the existing 5-credit and 10-credit caps and special review for very high-value/civic goods.
+A specialist should be able to use accumulated producer surplus as **working capital** for a shop that buys the materials their profession needs.
+
+The intended loop is:
+
+1. player produces output;
+2. Town Buy guarantees a profitable currency outlet;
+3. player retains enough surplus to place buy orders for the next batch of inputs;
+4. player can offer input suppliers attractive prices instead of depending exclusively on the government shop;
+5. player may sell their own output privately for more than Town Buy when market conditions support it;
+6. retained earnings finance better shops, buildings, workstations and later technology.
+
+The Exchange is therefore a market maker and buyer of last resort, not a mechanism for confiscating production at cost.
+
+## Town Sell and private retail
+
+Town Sell is the Exchange's public reference/import price, not a declaration that every player must sell at that price.
+
+When the Exchange has stock, its Sell price provides a predictable fallback supply. When it is short or empty, private stores can command higher prices. Producers are always free to bypass Town Buy and seek a higher private sale price.
+
+The Exchange should not be tuned to extract the producer's entire margin. Its spread funds stabilization/liquidity friction; the producer's commercial surplus belongs primarily in Town Buy.
+
+## Capital-formation sanity check
+
+In addition to percentage margin, low-volume and expensive goods should be checked for **absolute surplus**.
+
+A technically adequate percentage that produces only pennies of profit per normal transaction is not adequate. Prices should allow repeated ordinary production to build enough cash for:
+
+- one or more batches of replacement inputs;
+- meaningful food purchases;
+- material buy orders;
+- workshop expansion;
+- eventual purchase of the next workstation or upgrade.
+
+This check is qualitative until Ironwood has enough observed shop turnover to define reliable batch-size and capital-recovery targets.
 
 ## Progression
 
-The commercial viability floor is evaluated at the minimum skill level where the recipe is legitimately available. Higher skill, talents, modules, improved machinery, better logistics and later technology increase producer profit above this floor.
+Commercial viability is evaluated at the minimum skill level where the recipe is legitimately available and with Exchange-sourced inputs.
+
+Higher skill, talents, modules, improved machinery, better logistics and direct supplier relationships increase producer profit above this baseline. That extra efficiency is an intended reward for specialization.
 
 Ironwood should not reduce a price merely because one advanced producer becomes more efficient. Economy-wide technological transitions may still justify structural repricing later.
 
 ## Interpretation
 
-The purpose of producer surplus is not arbitrary markup. It is the money that allows the player economy to reproduce itself:
+Ironwood is deliberately creating an economy where specialization can reproduce itself.
 
-- buy food and other recurring needs;
-- buy inputs instead of requiring total vertical integration;
-- build and furnish workshops;
-- buy workstations and upgrades;
-- replace tools and equipment;
-- accumulate capital for the next profession/technology layer.
+A successful profession should be able to:
 
-A price that only covers ingredients is not a functioning market price.
+- eat;
+- restock;
+- run material buy orders;
+- maintain a shop;
+- build and improve its workplace;
+- purchase new machinery;
+- accumulate capital;
+- then compete for higher private-market prices rather than being permanently dependent on the government outlet.
+
+**Town Buy is a profitable wholesale floor, not cost reimbursement.**
