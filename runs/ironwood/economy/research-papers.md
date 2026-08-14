@@ -4,6 +4,27 @@ Source: supplied Eco 14 Core (`Eco14-Core(3).zip`) plus the current Ironwood sch
 
 This is a **separate research projection lane**. Modern-support materials are priced only far enough to calculate research-paper economics; they do **not** become current Steam-era Exchange price setters.
 
+## Naming and producer map
+
+Eco uses two related naming systems here, and they should not be conflated:
+
+- the **Research Paper family** is the actual item name (`Agriculture`, `Culinary`, `Dendrology`, `Engineering`, `Gathering`, `Geology`, `Metallurgy`);
+- the **producing specialty** is the skill that crafts that tier of paper.
+
+This matters especially for Engineering: **Basic Engineering is the specialty that produces `Engineering Research Paper Advanced`**. The supplied vanilla Core does not define an `Engineering Research Paper Basic` item.
+
+| Core paper family | Basic producer | Advanced producer | Modern producer |
+|---|---|---|---|
+| Agriculture | Farming | Fertilizers | Oil Drilling |
+| Culinary | Campfire Cooking | Cooking / alternate Baking route | Advanced Cooking |
+| Dendrology | Logging | Carpentry / alternate Shipwright route | Paper Milling |
+| Engineering | — | **Basic Engineering** | Mechanics |
+| Gathering | Gathering | Tailoring | — |
+| Geology | Mining | Masonry | Pottery / alternate Glassworking route |
+| Metallurgy | Smelting | Blacksmith | Advanced Smelting |
+
+The Core display names use **`Agriculture Research Paper ...`** and **`Dendrology Research Paper ...`** exactly. Ironwood may use friendlier labels in signage, but the ledger should preserve the source item names.
+
 ## Pricing rule
 
 Research papers use the same integrated-specialty accounting as the rest of Ironwood:
@@ -41,16 +62,16 @@ Town Sell then uses Ironwood's ordinary Exchange spread.
 - Culinary Basic has three Core routes. The Campfire Cooking route is cheaper than the Dried Fish and Dried Meat Hunting routes under current prices.
 - Gathering Basic uses cheap raw food plus `NaturalFiber`; Kelp is a valid Natural Fiber.
 - Metallurgy Basic uses Iron Bar as the cheapest current `Metal` and low-value crushed rock for `CrushedRock`.
-- **Eco 14 Core defines no Engineering Research Paper Basic.** Engineering begins at Advanced.
+- There is no Engineering-family Basic paper in the supplied Core. **Basic Engineering appears one tier later as the producer of Engineering Research Paper Advanced.**
 
 ## Advanced Research Papers
 
-| Research Paper | Cheapest Core Route | Projected Cost | Town Buys | Town Sells |
+| Research Paper | Producing Specialty / Cheapest Core Route | Projected Cost | Town Buys | Town Sells |
 |---|---|---:|---:|---:|
 | Agriculture Research Paper Advanced | Fertilizers 1 | **24.72** | **29.66** | **31.14** |
 | Culinary Research Paper Advanced | Baking meat route | **19.76** | **23.71** | **24.90** |
 | Dendrology Research Paper Advanced | Shipwright hull-plank route | **15.54** | **18.64** | **19.57** |
-| Engineering Research Paper Advanced | Basic Engineering 1 | **29.44** | **35.33** | **37.10** |
+| Engineering Research Paper Advanced | **Basic Engineering 1** | **29.44** | **35.33** | **37.10** |
 | Gathering Research Paper Advanced | Tailoring 1 | **4.91** | **5.89** | **6.18** |
 | Geology Research Paper Advanced | Masonry 1 | **6.80** | **8.16** | **8.57** |
 | Metallurgy Research Paper Advanced | Blacksmith 1 | **19.82** | **23.79** | **24.98** |
@@ -81,7 +102,7 @@ Town Sell then uses Ironwood's ordinary Exchange spread.
 - Engineering Modern uses Mechanics-produced Iron Axles and Iron Gears at Mechanics Projected Cost, while Lubricant, Ink, Paper and the Advanced Engineering paper remain cross-specialty purchases.
 - Geology Modern has Pottery/Brick and Glassworking/Glass routes. The **Brick route is materially cheaper** under current Ironwood policy because Pottery carries its own Brick at Brick's Projected Cost rather than the 1.20/1.25 bulk direct-sale policy price.
 - Metallurgy Modern uses Steel Bar and Rebar internally inside Advanced Smelting, so neither Steel nor Rebar direct-sale markup is compounded into the paper.
-- **Eco 14 Core defines no Gathering Research Paper Modern.**
+- The supplied Core defines no Gathering Research Paper Modern.
 
 ## Future-support projections used only for Modern papers
 
