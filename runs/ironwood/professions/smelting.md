@@ -6,7 +6,7 @@ It uses the corrected Mining chain from `mining.md` and Eco 14 Core. Other Smelt
 
 ## Entry-skill rule
 
-Smelting uses the same multiplicative resource strategy:
+Smelting resource multipliers are:
 
 - level 1: 0.80
 - level 2: 0.75
@@ -16,133 +16,55 @@ Smelting uses the same multiplicative resource strategy:
 - level 6: 0.55
 - level 7: 0.50
 
-The Bloomery recipes for Iron and Copper require Smelting 1. Gold requires Smelting 4.
+Iron and Copper Bloomery recipes require Smelting 1. Gold requires Smelting 4.
 
-Their concentrate and Clay Mold ingredients are skill-modified, so entry quantities are not the printed quantities.
+## Supporting inputs and environmental costs
 
-## Cross-profession input: Clay Mold
-
-Core Gathering 1 recipe:
-
-- 1 Clay, skill-modified;
-- 50 calories, skill-modified;
-- 4 Clay Molds.
-
-At Gathering 1 with Clay retail 0.17:
-
-- effective Clay: 0.8;
-- effective labor: 40 calories;
-- cost per four molds: about 0.176;
-- cost per mold: about 0.044.
-
-**Clay Mold: 0.05 Town Buy / 0.06 Town Sell.**
-
-## Environmental costs
-
-Current pre-recycling treatment:
-
-- Tailings disposal: **0.35/unit** — already included in concentrate prices;
+- Clay Mold: **0.05 Town Buy / 0.06 Town Sell**;
+- Slag: **0.05 Town Buy / 0.08 Town Sell**;
 - Ceramic Scrap disposal: **0.15/unit**;
-- Slag: **0.05 Town Buy / 0.08 Town Sell** as a low-value useful byproduct.
-
-Bloomery recipes create 1.5 Ceramic Scrap per craft.
-
-Slag output is skill-modified. At Smelting 1, a printed 2 Slag becomes 1.6; at Smelting 4 it becomes 1.3.
-
-## Bloomery fuel
-
-The Bloomery consumes 10 W of heat power from `Burnable Fuel`.
-
-For a conservative entry-cost check, this calculation uses Charcoal at 1.95 retail rather than relying on the cheapest possible fuel arbitrage.
-
-Fuel remains a small part of bar cost:
-
-- Iron Bloomery craft: roughly 0.23 credit;
-- Copper Bloomery craft: roughly 0.28 credit;
-- Gold Bloomery craft: roughly 0.23 credit.
-
-A cheaper valid fuel would increase Smelting margin slightly without requiring a price change.
+- Tailings disposal is already included upstream in concentrate prices;
+- Bloomery fuel is included as a small operating cost using conservative Charcoal pricing.
 
 ## Iron Bar
 
-Core Bloomery recipe, Smelting 1:
+Smelting 1 effective Bloomery recipe:
 
-Printed:
-
-- 2 Iron Concentrate;
-- 2 Clay Molds;
-- 60 calories;
+- 1.6 Iron Concentrate;
+- 1.6 Clay Molds;
+- 48 calories;
 - 6 Iron Bars;
-- 2 Slag;
+- 1.6 Slag;
 - 1.5 Ceramic Scrap;
-- 5 craft minutes.
+- Bloomery fuel.
 
-Entry-effective at Smelting 1:
-
-- **1.6 Iron Concentrate**;
-- **1.6 Clay Molds**;
-- **48 calories**;
-- **6 Iron Bars**;
-- **1.6 Slag**;
-- **1.5 Ceramic Scrap**;
-- about **4 minutes** of Bloomery operation.
-
-Using Iron Concentrate retail 5.35:
-
-- concentrate: 8.56;
-- molds: 0.096;
-- labor: 0.048;
-- Ceramic Scrap disposal: 0.225;
-- conservative Charcoal fuel: ~0.234;
-- Slag credit: -0.080.
-
-Total craft cost: about **9.083**.
-
-Cost per Iron Bar: about **1.514**.
+Using Iron Concentrate retail **5.20**, entry cost is about **1.47 per bar**.
 
 **Iron Bar: 1.55 Town Buy / 1.65 Town Sell.**
 
-Entry Bloomery margin at the Town Buy price is about **2.4%**. That is deliberately shallow.
-
 ## Copper Bar
 
-Core Bloomery recipe, Smelting 1:
+Smelting 1 effective Bloomery recipe:
 
-Entry-effective:
+- 1.6 Copper Concentrate;
+- 1.6 Clay Molds;
+- 48 calories;
+- 6 Copper Bars;
+- 1.6 Slag;
+- 1.5 Ceramic Scrap;
+- Bloomery fuel.
 
-- **1.6 Copper Concentrate**;
-- **1.6 Clay Molds**;
-- **48 calories**;
-- **6 Copper Bars**;
-- **1.6 Slag**;
-- **1.5 Ceramic Scrap**;
-- about **4.8 minutes** of Bloomery operation.
+Using Copper Concentrate retail **11.75**, entry cost is about **3.23 per bar**.
 
-Using Copper Concentrate retail 12.90:
+**Copper Bar: 3.40 Town Buy / 3.60 Town Sell.**
 
-Total craft cost is about **21.210**.
-
-Cost per Copper Bar: about **3.535**.
-
-**Copper Bar: 3.65 Town Buy / 3.85 Town Sell.**
-
-Entry Bloomery margin at the Town Buy price is about **3.3%**.
+This is slightly below the earlier 3.85 retail value because the corrected model removes an unnecessarily wide raw Copper Ore Exchange spread.
 
 ## Gold Bar
 
-Gold is different because the Bloomery recipe requires **Smelting 4**.
+Gold unlocks at Smelting 4, so the Bloomery uses the 0.65 resource multiplier.
 
-Core printed recipe:
-
-- 2 Gold Concentrate;
-- 2 Clay Molds;
-- 60 calories;
-- 3 Gold Bars;
-- 2 Slag;
-- 1.5 Ceramic Scrap;
-- 6 craft minutes.
-
-At Smelting 4, the multiplier is 0.65:
+Entry-effective recipe:
 
 - **1.3 Gold Concentrate**;
 - **1.3 Clay Molds**;
@@ -150,44 +72,39 @@ At Smelting 4, the multiplier is 0.65:
 - **3 Gold Bars**;
 - **1.3 Slag**;
 - **1.5 Ceramic Scrap**;
-- about **3.9 minutes** of Bloomery operation.
+- Bloomery fuel.
 
-Using Gold Concentrate retail 32.90:
+Using Gold Concentrate retail **29.00**, total craft cost is about **38.2**, or roughly **12.74 per Gold Bar**.
 
-Total craft cost is about **43.275**.
+**Gold Bar: 13.40 Town Buy / 14.00 Town Sell.**
 
-Cost per Gold Bar: about **14.425**.
+## Why Gold Concentrate can cost more than a Gold Bar
 
-**Gold Bar: 15.10 Town Buy / 16.00 Town Sell.**
+The item units are not one-to-one.
 
-Entry Bloomery margin at the Town Buy price is about **4.7%**.
+At the first Gold-smelting skill level:
+
+- 1.3 Gold Concentrate → 3 Gold Bars;
+- therefore 1 Gold Concentrate → about **2.31 Gold Bars**.
+
+At 29.00 retail, one Gold Concentrate carries about **12.57 credits of concentrate cost per eventual bar**. Smelting then adds molds, labor, fuel, waste handling, and a shallow producer margin to reach the 14.00 Gold Bar retail price.
+
+So the nominal comparison `29 concentrate vs 14 bar` is misleading; the economically relevant comparison is **29 concentrate vs ~32.3 credits of finished bars produced from one concentrate-equivalent**.
 
 ## Validated bar table
 
-| Item | Town Buys | Town Sells | Entry Bloomery cost/unit |
+| Item | Town Buys | Town Sells | Entry cost/unit |
 |---|---:|---:|---:|
-| **Iron Bar** | **1.55** | **1.65** | ~1.514 |
-| **Copper Bar** | **3.65** | **3.85** | ~3.535 |
-| **Gold Bar** | **15.10** | **16.00** | ~14.425 |
+| **Iron Bar** | **1.55** | **1.65** | ~1.47 |
+| **Copper Bar** | **3.40** | **3.60** | ~3.23 |
+| **Gold Bar** | **13.40** | **14.00** | ~12.74 |
 
-## Blast Furnace progression check
+## Downstream reason not to overprice Gold
 
-The later Blast Furnace recipes use fewer concentrates, less Ceramic Scrap, and much less craft time.
+Gold Bars feed Electronics, Mechanics, advanced Masonry, banking/currency infrastructure, Country/Federation foundations, and later high-volume products such as the Laser. Core includes recipes consuming dozens of Gold Bars at once.
 
-Using the same fixed bar prices and conservative Charcoal fuel, approximate entry costs at the relevant skill level are:
+The Gold ore-to-bar conversion already creates strong scarcity. An additional large Exchange spread would magnify every later technology and government structure unnecessarily.
 
-| Bar | Blast Furnace cost/unit | Town Buy | Approx. producer margin |
-|---|---:|---:|---:|
-| Iron | ~1.13 | 1.55 | ~38% |
-| Copper | ~2.64 | 3.65 | ~38% |
-| Gold | ~10.79 | 15.10 | ~40% |
+## Progression
 
-This is intentional technological progression.
-
-The bar price does **not** fall merely because the producer acquires better infrastructure. The improved machine creates the producer's larger margin.
-
-## Recycling transition
-
-When Tailings, Ceramic Scrap, or Slag gain stronger recovery value, do not preserve the old disposal assumption. Recalculate the chain.
-
-The default expectation is that recycling technology should reduce effective Mining/Smelting cost and improve margins unless Ironwood deliberately lowers prices to pass some technological deflation downstream.
+Later Blast Furnace production, higher skill, modules, talents, and Recycling should reduce effective costs and raise producer margins while these fixed bar prices remain stable unless Ironwood deliberately passes technological deflation downstream.
