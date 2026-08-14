@@ -1,8 +1,8 @@
-# Ironwood Pottery — Brick Foundation
+# Ironwood Pottery — Current Brick and Kiln Infrastructure Foundation
 
 Rebuilt from Eco 14 Core after the Logging, Blacksmithing and Masonry commercial-margin corrections.
 
-Brick remains on Ironwood's separate Tier-3 bulk-construction policy. Its intermediate inputs are still priced commercially so Potters and upstream suppliers are not forced to work at cost.
+Brick remains on Ironwood's separate Tier-3 bulk-construction policy. Pottery workstations receive capital-good margins so a specialist can finance the next production layer.
 
 ## Current inputs
 
@@ -12,99 +12,67 @@ Brick remains on Ironwood's separate Tier-3 bulk-construction policy. Its interm
 - Nail: **0.15 / 0.16**
 - Mortar: **0.04 / 0.05**
 - Iron Bar: **2.54 / 2.67**
+- Cooking Utensils: **4.96 / 5.21**
 - Charcoal: **1.24 / 1.30**, 20,000 J
 - Kiln: 50 W fuel consumption
 
 ## Wooden Mold — Logging 3
 
-Core:
+Core: 2 Nails + 8 `WoodBoard` + 120 calories -> 4 Wooden Molds.
 
-- 2 Nails
-- 8 `WoodBoard`
-- 120 calories
-- → 4 Wooden Molds
-
-At Logging 3 (0.70):
-
-- 1.4 Nails × 0.16 = 0.224
-- 5.6 Boards × 0.28 = 1.568
-- 84 calories = 0.084
-- cash cost/craft = 1.876
-- cash cost/mold = **0.469**
-
-With a shallow component margin:
+At Logging 3, public-input cash cost is about **0.469 per mold**.
 
 **Wooden Mold: 0.53 Town Buy / 0.56 Town Sell.**
 
 ## Wet Brick — Pottery 1
 
-Core:
+Core: 3 Sand + 12 Clay + 1 Wooden Mold + 100 calories + 0.1 Wood Scrap -> 4 Wet Bricks.
 
-- 3 Sand
-- 12 Clay
-- 1 Wooden Mold
-- 100 calories
-- 0.1 Wood Scrap garbage
-- → 4 Wet Bricks
+At Pottery 1, cash cost is about **0.464 per Wet Brick**.
 
-At Pottery 1:
-
-- 2.4 Sand × 0.11 = 0.264
-- 9.6 Clay × 0.11 = 1.056
-- 0.8 Wooden Mold × 0.56 = 0.448
-- 80 calories = 0.080
-- Wood Scrap disposal allowance ≈ 0.008
-- craft cash cost ≈ 1.856
-- cost/Wet Brick ≈ **0.464**
-
-**Wet Brick: 0.53 Town Buy / 0.56 Town Sell.**
+**Wet Brick: 0.53 / 0.56.**
 
 ## Brick — Pottery 1, Kiln
 
-Core:
-
-- 1 Wet Brick
-- 4 Mortar
-- 15 calories
-- base time 0.32 minutes
-- → 1 Brick
-
-At Pottery 1:
-
-- 0.8 Wet Brick × 0.56 = 0.448
-- 3.2 Mortar × 0.05 = 0.160
-- 12 calories = 0.012
-- effective Kiln fuel ≈ 0.050
-- Exchange-sourced cash floor ≈ **0.670**
-
-Ironwood's accepted bulk-construction policy still dominates this floor:
+At current public inputs the mechanically modeled cash floor is about **0.670 per Brick**. Ironwood's accepted bulk-construction policy remains above that floor:
 
 **Brick: 1.20 Town Buy / 1.25 Town Sell.**
 
-That leaves about 0.53 credits of entry-level wholesale surplus per Brick before higher-skill efficiency. This is intentionally strong because Brick production carries shovel/haul/storage/kiln burden that Eco's recipe calories only weakly represent.
+The large spread over recipe cost is intentional compensation for bulk shovel/haul/storage/kiln burden that recipe calories poorly represent.
 
 ## Glassworks — Pottery 1
 
+Core: 8 Iron Bars + 16 Bricks + 20 `WoodBoard` + 150 calories at the Kiln.
+
+At Pottery 1, Exchange-sourced cash cost is about **38.468**.
+
+**Glassworks: 50.01 Town Buy / 52.51 Town Sell.**
+
+## Bakery Oven — Pottery 1
+
 Core:
 
-- 8 Iron Bars
-- 16 Bricks
-- 20 `WoodBoard`
-- 150 calories
-- crafted at Kiln; base craft time 5 minutes
+- 20 Bricks
+- 10 Iron Bars
+- 1 Cooking Utensils
+- 180 calories
+- base craft time 8 minutes
+- crafted at the 50 W Kiln
 
 At Pottery 1:
 
-- 6.4 Iron Bars × 2.67 = 17.088
-- 12.8 Bricks × 1.25 = 16.000
-- 16 Boards × 0.28 = 4.480
-- 120 calories = 0.120
-- effective 4-minute Kiln fuel = 12,000 J = 0.6 Charcoal × 1.30 = 0.780
-- Exchange cash cost = **38.468**
+- 16 Bricks × 1.25 = 20.000
+- 8 Iron Bars × 2.67 = 21.360
+- 0.8 Cooking Utensils × 5.21 = 4.168
+- 144 calories = 0.144
+- 6.4 effective minutes of Kiln fuel = 19,200 J = 0.96 Charcoal × 1.30 = 1.248
+- Exchange cash cost = **46.920**
 
-As a capital workstation:
+As a low-volume capital workstation:
 
-**Glassworks: 50.01 Town Buy / 52.51 Town Sell.**
+**Bakery Oven: 61.00 Town Buy / 64.05 Town Sell.**
+
+This is the current capital input for the rebuilt Baking profession.
 
 ## Exchange-ready Pottery foundation
 
@@ -114,5 +82,6 @@ As a capital workstation:
 | Wet Brick | **0.53** | **0.56** |
 | Brick | **1.20** | **1.25** |
 | Glassworks | **50.01** | **52.51** |
+| Bakery Oven | **61.00** | **64.05** |
 
-The Brick policy survives the full upstream commercial-margin correction without needing inflation above 1.25 retail.
+Remaining ceramics, pottery furniture and later Pottery utilities stay for the full profession-output pass.
