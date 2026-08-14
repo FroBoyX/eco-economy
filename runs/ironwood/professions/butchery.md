@@ -1,85 +1,44 @@
-# Ironwood Butchery — Meat, Hides, Tallow and Early Lubricant
+# Ironwood Butchery — Current Steam-Era Table
 
 Derived from the supplied Eco 14 Core using current Hunting anchors and the depth-sensitive commercial policy.
 
-The Campfire Cooking audit exposed an important cross-profession arbitrage: Campfire Cooking 1 can render Scrap Meat into Tallow cheaply. Tallow and Lubricant are therefore corrected here before final Engineering outputs are locked.
+Butchery is the bridge from hunted raw supply into food, Leather, Wool, Tallow and the current animal-fat Lubricant economy.
 
 ## Core material outputs
 
-| Item | Town Buys | Town Sells | Role |
-|---|---:|---:|---|
-| Raw Meat | **0.25** | **0.27** | 250-calorie raw food anchor |
-| Scrap Meat | **0.09** | **0.10** | low-grade meat / fat-rendering input |
-| Leather Hide | **0.60** | **0.63** | strategic tool/equipment input |
-| Fur Pelt | **0.45** | **0.47** | clothing/tanning input |
-| Shorn Wool | **0.45** | **0.47** | Tailoring input |
-| **Tallow** | **0.20** | **0.21** | 200-calorie fat/fuel/industrial input |
-| **Lubricant** | **0.14** | **0.15** | early Butchery Grease route |
+| Item | Town Buys | Town Sells |
+|---|---:|---:|
+| Raw Meat | **0.25** | **0.27** |
+| Scrap Meat | **0.09** | **0.10** |
+| Leather Hide | **0.60** | **0.63** |
+| Fur Pelt | **0.45** | **0.47** |
+| Shorn Wool | **0.45** | **0.47** |
+| Tallow | **0.20** | **0.21** |
+| Lubricant | **0.14** | **0.15** |
 
-## Why Tallow is 0.20, not 0.50
+## Tallow and Lubricant control
 
-Core Campfire Cooking 1 `Render Fat`:
+Campfire `Render Fat` can turn 10 Scrap Meat into 5 Tallow. That alternate route makes the old provisional 0.50 Tallow price arbitrageable, so Tallow is held at its 200-calorie floor:
 
-- 10 Scrap Meat
-- 20 calories
-- → 5 Tallow
+**Tallow: 0.20 / 0.21.**
 
-At Campfire Cooking 1 (0.80):
+Butchery 1 Grease uses 2 Tallow + 180 calories -> 4 Lubricant. Current cash cost is about 0.120 per Lubricant.
 
-- 8 Scrap Meat × 0.10 = 0.800
-- 16 calories = 0.016
-- cash cost/craft = 0.816
-- cash cost/Tallow = **0.163**
+**Lubricant: 0.14 / 0.15.**
 
-At the old 0.50 Town Buy, a player could buy Scrap Meat from Ironwood, render it, and sell the Tallow back for a huge risk-free government arbitrage.
+This is the current Steam-entry Lubricant route; petroleum does not set this run's price.
 
-Tallow itself contains **200 calories**, so the locked food-energy anchor gives a natural floor of 0.20.
+## Carcass processing
 
-**Tallow: 0.20 Town Buy / 0.21 Town Sell.**
+At current carcass anchors, all normal butcher routes leave useful specialist value:
 
-That still leaves Render Fat a useful Campfire-cook margin without creating a money printer.
+- Medium Leather carcass -> 5 Raw Meat + 1 Leather Hide;
+- Medium Wooly -> 5 Raw Meat + 1 Leather + 2 Shorn Wool;
+- Wolf -> 5 Raw Meat + 1 Fur Pelt;
+- Bison -> 10 Raw Meat + 2 Leather + 3 Wool;
+- Tiny/Small/Hare routes similarly preserve processing margin.
 
-## Grease — Lubricant — Butchery 1
-
-Core:
-
-- 2 Tallow
-- 180 calories
-- → 4 Lubricant
-
-At Butchery 1:
-
-- 1.6 Tallow × 0.21 = 0.336
-- 144 calories = 0.144
-- cash cost/craft = 0.480
-- cash cost/Lubricant = **0.120**
-
-With a shallow processing margin:
-
-**Lubricant: 0.14 Town Buy / 0.15 Town Sell.**
-
-This supersedes the provisional 0.28/0.29 value. Petroleum Lubricant remains a later Oil Drilling technology route and can trigger a structural repricing only if it materially undercuts this already-cheap animal-fat route.
-
-## Carcass processing sanity checks
-
-At Butchery 1:
-
-- Medium Leather carcass cash cost at 1.58 public carcass price ≈ 1.304; 5 Raw Meat + 1 Leather Hide return **1.85 Town Buy value**.
-- Medium Wooly carcass cash cost ≈ 1.512; 5 Raw Meat + 1 Leather + 2 Wool return **2.75**.
-- Bison at Butchery 2 has cash cost ≈ 2.813; 10 Raw Meat + 2 Leather + 3 Wool return **5.05**.
-
-Hunter and Butcher both retain meaningful margins without inflating the raw carcass anchors.
-
-## Tanning Leather — Butchery 5
-
-Core: 2 Fur Pelts + 25 calories → 1 Leather Hide + 1 Tallow.
-
-At Butchery 5:
-
-- Exchange cash cost ≈ 0.579
-- Town Buy outputs = 0.60 + 0.20 = **0.80**
-
-The route remains profitable and converts excess Fur into two useful outputs.
+The hunter therefore receives a direct cash outlet for the carcass while the butcher still benefits from processing it.
 
 ## Prepared meat outputs
 
@@ -91,4 +50,46 @@ The route remains profitable and converts excess Fur into two useful outputs.
 | Prepared Meat | 4 | 600 | **0.60** | **0.63** | calorie floor |
 | Prime Cut | 6 | 600 | **1.76** | **1.85** | deep recipe cost |
 
-The corrected Tallow/Lubricant values must be propagated through Basic Engineering and Mechanics before the public ledger is finalized.
+## Tanning Leather — Butchery 5
+
+2 Fur Pelts + 25 calories -> 1 Leather Hide + 1 Tallow.
+
+Current public cash cost ≈ 0.579 while output Town Buy value = 0.80, so the late Butchery conversion remains usefully profitable.
+
+## Butchery Upgrade — level 2
+
+Core:
+
+- 20 Raw Meat, static
+- 3,000 calories
+- -> 1 Butchery Upgrade
+
+At Butchery 2:
+
+- 20 Raw Meat × 0.27 = 5.400
+- effective labor = 2.250
+- cash cost = **7.650**
+
+As a skill/capital upgrade:
+
+**Butchery Upgrade: 9.95 Town Buy / 10.45 Town Sell.**
+
+## Exchange-ready Butchery table
+
+| Item | Town Buys | Town Sells |
+|---|---:|---:|
+| Raw Meat | **0.25** | **0.27** |
+| Scrap Meat | **0.09** | **0.10** |
+| Leather Hide | **0.60** | **0.63** |
+| Fur Pelt | **0.45** | **0.47** |
+| Shorn Wool | **0.45** | **0.47** |
+| Tallow | **0.20** | **0.21** |
+| Lubricant | **0.14** | **0.15** |
+| Raw Sausage | **0.50** | **0.53** |
+| Raw Roast | **0.60** | **0.63** |
+| Raw Bacon | **0.35** | **0.37** |
+| Prepared Meat | **0.60** | **0.63** |
+| Prime Cut | **1.76** | **1.85** |
+| Butchery Upgrade | **9.95** | **10.45** |
+
+Cooking skill books/research remain under the separate research economy.
