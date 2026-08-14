@@ -1,25 +1,8 @@
-# Ironwood Mining — Metal Chain
+# Ironwood Mining — Current Metal Chain
 
-This file contains the currently validated Mining portion of the Ironwood metal economy.
+Rebuilt from the supplied Eco 14 Core using raw anchors plus the approved depth-sensitive commercial margins.
 
-It is derived from Eco 14 Core and the Ironwood raw anchors. Derived producer costs use Town Buy/producer values for upstream materials so the Exchange retail spread is not recursively compounded through the chain.
-
-## Skill rule
-
-Mining's multiplicative resource strategy is:
-
-- level 0: 1.00
-- level 1: 0.80
-- level 2: 0.75
-- level 3: 0.70
-- level 4: 0.65
-- level 5: 0.60
-- level 6: 0.55
-- level 7: 0.50
-
-Arrastra metal-crushing recipes use 12 raw ore as a `staticIngredient`, so ore quantity is not reduced by Mining skill.
-
-Rocker Box concentrate recipes are skill-modified, so at Mining 1 their crushed-ore inputs use the 0.80 multiplier.
+Raw ore remains Depth 0. Ore crushing is a shallow specialty conversion; concentrates are a deeper Mining output because they consume processed ore and create Tailings disposal liability.
 
 ## Raw anchors
 
@@ -32,53 +15,62 @@ Rocker Box concentrate recipes are skill-modified, so at Mining 1 their crushed-
 | Copper Ore | **0.30** | **0.33** |
 | Gold Ore | **0.30** | **0.35** |
 
-## Common crushed-rock byproducts
+## Abundant crushed-rock byproducts
 
-Core facts:
+Crushed Sandstone, Crushed Granite and Crushed Mixed Rock remain **0.05 Town Buy / 0.06 Town Sell**. They are abundant ore-processing byproducts and generic `CrushedRock`/`Silica` inputs; hypothetical dedicated crushing cost does not control their value.
 
-- Crushed Sandstone and Crushed Granite are tagged `CrushedRock` and `Silica`.
-- No recipe requires `CrushedSandstoneItem` or `CrushedGraniteItem` specifically.
-- Iron Ore crushing automatically outputs Crushed Sandstone.
-- Copper and Gold Ore crushing automatically output Crushed Granite.
-- Generic `CrushedRock` has several useful sinks, including Stone Roads and concrete.
+## Crushed Limestone — Mining 1
 
-Because these stones are abundant ore-processing byproducts, dedicated crushing cost does **not** establish their market value.
+Dedicated Limestone crushing is different because exact downstream recipes consume it.
 
-**Crushed Sandstone / Crushed Granite / Crushed Mixed Rock: 0.05 Town Buy / 0.06 Town Sell.**
+Core:
 
-This preserves a small reuse value while recognizing that the supply is largely incidental waste material.
+- 12 Limestone, static
+- 50 calories
+- → 3 Crushed Limestone
 
-Crushed Limestone is different because exact-item recipes consume it. Its current price is **0.64 / 0.67** from the dedicated Limestone chain.
+At Mining 1 using the public 0.17 Limestone input:
+
+- 12 × 0.17 + 40 calories = 2.080
+- cash cost/output ≈ 0.693
+
+With a shallow processing margin:
+
+**Crushed Limestone: 0.76 Town Buy / 0.80 Town Sell.**
+
+This supersedes the prior 0.64/0.67 cost-baseline value.
 
 ## Ore → crushed ore — Arrastra, Mining 1
 
-Producer cost credits the incidental rock byproduct at its actual 0.05 Town Buy value.
+Raw ore quantities are static; Mining skill reduces labor but not the 12-ore input. Incidental Crushed Sandstone/Granite is credited at 0.05 Town Buy.
 
-| Output | Entry calculation | Cost/output | Town Buys | Town Sells |
-|---|---|---:|---:|---:|
-| Crushed Iron Ore | 12×0.20 + 40 cal − 0.05 byproduct → 2 | ~1.195 | **1.25** | **1.31** |
-| Crushed Copper Ore | 12×0.30 + 56 cal − 0.05 byproduct → 2 | ~1.803 | **1.89** | **1.98** |
-| Crushed Gold Ore | 12×0.30 + 56 cal − 0.05 byproduct → 2 | ~1.803 | **1.89** | **1.98** |
+| Output | Exchange-sourced cost/output | Town Buys | Town Sells |
+|---|---:|---:|---:|
+| Crushed Iron Ore | ~1.315 | **1.45** | **1.52** |
+| Crushed Copper Ore | ~1.983 | **2.18** | **2.29** |
+| Crushed Gold Ore | ~2.103 | **2.31** | **2.43** |
 
-Ironwood intentionally does not give Gold Ore a large raw premium; Gold's later conversion ratio creates the scarcity.
+Gold crushing is now modestly above Copper because the existing Ironwood Gold Ore public Sell is 0.35 rather than 0.33.
 
 ## Crushed ore → concentrate — Rocker Box, Mining 1
 
-Tailings remain at their printed garbage quantities and currently carry a **0.35/unit disposal cost**.
+Tailings remain at printed garbage quantity and cost **0.35 per unit to dispose**.
 
-| Output | Entry-effective recipe | Entry cost | Town Buys | Town Sells |
-|---|---|---:|---:|---:|
-| Iron Concentrate | 4.0 Crushed Iron + 40 cal + 1.5 Tailings | ~5.565 | **5.84** | **6.13** |
-| Copper Concentrate | 5.6 Crushed Copper + 40 cal + 2.25 Tailings | ~11.412 | **11.98** | **12.58** |
-| Gold Concentrate | 8.0 Crushed Gold + 40 cal + 3 Tailings | ~16.210 | **17.02** | **17.87** |
+Entry-effective Core recipes:
 
-## Gold concentrate unit warning
+- Iron: 4.0 Crushed Iron + 40 calories + 1.5 Tailings;
+- Copper: 5.6 Crushed Copper + 40 calories + 2.25 Tailings;
+- Gold: 8.0 Crushed Gold + 40 calories + 3 Tailings.
 
-At Smelting 4, the Bloomery recipe uses **1.3 effective Gold Concentrate to make 3 Gold Bars**.
+Concentrates receive a Depth-2 margin because a miner can buy crushed ore from another producer and must finance the Tailings liability.
 
-One concentrate therefore represents about **2.31 finished bars** at first Gold-smelting unlock. A concentrate item can numerically cost more than one Gold Bar without creating a value inversion.
+| Output | Exchange-sourced cash cost | Town Buys | Town Sells |
+|---|---:|---:|---:|
+| Iron Concentrate | ~6.645 | **7.64** | **8.02** |
+| Copper Concentrate | ~13.652 | **15.70** | **16.48** |
+| Gold Concentrate | ~20.530 | **23.61** | **24.79** |
 
-## Exchange-ready Mining metal table
+## Exchange-ready Mining table
 
 | Item | Town Buys | Town Sells |
 |---|---:|---:|
@@ -87,15 +79,16 @@ One concentrate therefore represents about **2.31 finished bars** at first Gold-
 | Limestone | **0.15** | **0.17** |
 | Crushed Sandstone | **0.05** | **0.06** |
 | Crushed Granite | **0.05** | **0.06** |
-| Crushed Limestone | **0.64** | **0.67** |
+| Crushed Mixed Rock | **0.05** | **0.06** |
+| Crushed Limestone | **0.76** | **0.80** |
 | Iron Ore | **0.20** | **0.22** |
 | Copper Ore | **0.30** | **0.33** |
 | Gold Ore | **0.30** | **0.35** |
-| Crushed Iron Ore | **1.25** | **1.31** |
-| Crushed Copper Ore | **1.89** | **1.98** |
-| Crushed Gold Ore | **1.89** | **1.98** |
-| Iron Concentrate | **5.84** | **6.13** |
-| Copper Concentrate | **11.98** | **12.58** |
-| Gold Concentrate | **17.02** | **17.87** |
+| Crushed Iron Ore | **1.45** | **1.52** |
+| Crushed Copper Ore | **2.18** | **2.29** |
+| Crushed Gold Ore | **2.31** | **2.43** |
+| Iron Concentrate | **7.64** | **8.02** |
+| Copper Concentrate | **15.70** | **16.48** |
+| Gold Concentrate | **23.61** | **24.79** |
 
-Later machinery, skill, modules and Recycling improve producer margins without automatically raising these prices.
+This is the first industrial chain fully converted from the old 5%-over-cost baseline to the approved commercial model. The raw anchors did not move; the additional value appears as specialization and cash exposure accumulate.
