@@ -20,107 +20,79 @@ That guaranteed outlet must therefore pay enough that a specialist can do more t
 - mistakes, downtime and unsold inventory;
 - capital for the next profession or technology layer.
 
-A Town Buy price that merely reimburses ingredients is not a viable import price for deep manufactured goods.
+A Town Buy price that merely reimburses ingredients is not a viable downstream import price.
 
-## Depth-sensitive pricing rule
+## Depth-sensitive pricing
 
-The commercial-surplus uplift is **not** applied uniformly to the entire economy.
+The commercial uplift must scale with **production depth and cash exposure**. It is not applied uniformly to the entire economy.
 
-The reason for the larger margin on downstream goods is that a deep producer has real currency tied up in purchased inputs, inventory, workshops and machinery before they can sell the final output. A gatherer usually does not have the same material cash exposure: Wood, Rock, Sand, Clay, ore, crops and similar raw resources are obtained directly from the world.
+### Depth 0 — gathered and raw commodities
 
-Applying a 25–30% replacement-cost multiplier to gathered goods would simply inflate the bottom of every downstream chain and is therefore specifically rejected.
+Examples: Wood, Sand, Clay, Rock, Limestone, raw ores, crops, seeds and other directly gathered resources.
 
-### Class A — gathered/raw anchors
+These remain **anchor-priced**. They do not receive a 25–30% manufactured-goods markup simply because gathering takes time. Their acquisition does not require the producer to purchase a deep chain of upstream inputs.
 
-Examples:
+Raw anchors are set by abundance, desired gathering incentive, scarcity, environmental policy and downstream economic effects.
 
-- Wood;
-- Sand, Clay and common Rock;
-- Limestone;
-- raw ores;
-- crops, seeds and other directly gathered/agricultural commodities;
-- other direct extraction outputs where the main input is player time rather than purchased materials.
+### Depth 1 — simple processing
 
-These use **anchor prices**, not the downstream commercial-margin formula.
+Examples: Boards, Mortar, basic crushed material, simple bars, plates, Nails and similarly shallow conversions.
 
-Their Town Buy values are policy choices based on abundance, scarcity, usefulness, gathering burden, desired currency injection and observed supply. The fact that gathering has food/tool/time costs may influence the anchor, but there is no automatic percentage markup over a fictional material input cost.
+These should earn a **modest specialist margin**, normally around **8–12% over realistic Exchange-sourced cash cost** where that test is meaningful.
 
-### Class B — shallow processing / primary commodities
+The purpose is to make specialization worthwhile without compounding large margins at every stage of the chain.
 
-Examples include simple first-stage conversions such as basic boards, mortar, crushed ore, concentrates, bars, molds and similar goods.
+### Depth 2 — multi-step intermediates and ordinary finished goods
 
-These should have a legitimate specialist margin, but they do **not** automatically receive the full deep-manufacturing 25–30% uplift. Their purpose is to reward specialization without compounding large margins at every layer of a production chain.
+Examples: components or finished goods that consume multiple processed inputs but are still relatively common/high-turnover.
 
-Use the smallest margin that still makes the processing profession worth operating, considering throughput, calories, fuel, waste and actual cash spent on inputs. High-volume primary commodities can live on a smaller percentage because they turn over frequently.
+Target roughly **12–18% over Exchange-sourced cash cost**, depending on depth, throughput and absolute surplus.
 
-### Class C — deep manufactured goods
+### Depth 3 — deep manufactured goods
 
-This is where the stronger commercial-surplus rule applies.
-
-A good normally belongs here when it consumes several purchased intermediate goods, requires meaningful inventory capital, or sits multiple professions downstream from raw extraction.
-
-Examples:
-
-- complex furniture and storage goods;
-- advanced components assembled from several prior professions;
-- machinery parts with substantial intermediate inputs;
-- other manufactured goods where the producer must finance a meaningful bill of materials before sale.
+Examples: Boilers, complex machine components, deep furniture/workshop outputs and similar goods that contain substantial purchased value from several professions.
 
 Town Buy should normally target approximately:
 
 `Exchange-sourced cash cost × 1.25`
 
-This is a **25% markup on replacement/input cash cost**, equivalent to roughly a 20% gross margin on Town Buy revenue before the producer's other business expenses.
+This creates enough operating surplus for food, working capital, material buy orders and continued production without forcing vertical integration.
 
-### Class D — workstations, vehicles and low-volume capital goods
-
-Examples:
-
-- Boilers, Lathes, Stamp Mills and other workstations;
-- vehicles and major vehicle attachments;
-- expensive production infrastructure;
-- other goods whose producers cannot depend on high turnover.
+### Capital goods, workstations, vehicles and low-volume machinery
 
 Town Buy should normally target approximately:
 
 `Exchange-sourced cash cost × 1.30`
 
-These goods are themselves part of the capital-formation loop. Their producers need enough absolute surplus to finance workshop construction, restocking and the next layer of machinery.
+These goods sell less frequently and are themselves part of the capital-formation loop. Their producers need a larger absolute surplus because turnover is low and the output often finances the next workshop or technology layer.
 
 ### Bulk construction materials
 
-Ironwood's separate construction-band policy still applies.
+Ironwood's separate construction-band policy applies to Brick, Glass, Lumber and similar bulk structural goods.
 
-Brick, Glass, Lumber and similar structural blocks are priced partly from recipe cost and partly from their gathering/hauling/storage burden and their place in the building-material progression. They should be commercially attractive at stack quantities, but they are **not** automatically given the Class C or D multiplier merely because they are crafted.
+Their prices are not set by the deep-manufacturing multiplier alone. They are judged by:
+
+- recipe floor;
+- bulk gathering and hauling burden;
+- workstation throughput;
+- storage/inventory burden;
+- perceived technology tier;
+- whether producing stacks of the material is economically attractive.
+
+They must remain commercially viable, but the construction band may be above or below a generic depth formula.
 
 ### Exceptional goods
 
 Research, civic procurement, megaprojects, garbage/recycling streams, deliberate subsidies and emergency shortage imports may use separate policy prices.
 
-## Required cost views for manufactured goods
+## Required cost views
 
-For Class B through D goods, maintain two useful cost views where applicable:
+Every derived manufactured price should have at least two cost views:
 
 1. **Modeled producer cost** — upstream Town Buy/producer values, used to understand the structural dependency chain without recursively treating the Exchange spread as production value.
 2. **Exchange-sourced cash cost** — the same entry recipe using upstream Town Sell prices for purchased inputs, plus labor calories, fuel, waste/disposal and other operating costs.
 
-The second value becomes increasingly important as production depth and purchased-input exposure increase.
-
-## Why the stronger rule is needed downstream
-
-The first corrected profession pass used roughly a 5% producer markup over modeled producer-value inputs. Because the Ironwood Exchange itself adds a resale spread, a specialist who bought all inputs from the Exchange could end up at break-even or a small loss.
-
-Examples from that pre-rebalance pass:
-
-- Boiler: Exchange-sourced input cost about 31.64; Town Buy 31.67; surplus about 0.03.
-- Lathe: Exchange-sourced input cost about 40.44; Town Buy 40.48; surplus about 0.04.
-- Stamp Mill: Exchange-sourced input cost about 22.99; Town Buy 23.01; surplus about 0.02.
-- Steam Truck Flatbed: Exchange-sourced input cost about 23.31; Town Buy 23.33; surplus about 0.02.
-- Iron Wheel: Exchange-sourced input cost about 7.59; Town Buy 7.57; slight loss.
-
-Those are cost-reimbursement prices, not functioning prices for downstream manufacturing.
-
-The lesson is **not** that Wood, Rock or Iron Ore need 25% more margin. The lesson is that deep producers carrying a large purchased bill of materials need substantially more surplus than primary extraction does.
+The second value becomes increasingly important with production depth because deep producers have more currency tied up in upstream goods.
 
 ## Player-run input/import stores
 
@@ -147,9 +119,9 @@ The Exchange should not be tuned to extract the producer's entire margin. Its sp
 
 ## Capital-formation sanity check
 
-In addition to percentage margin, deep and expensive goods should be checked for **absolute surplus**.
+Percentage margin alone is insufficient for deep and low-volume goods.
 
-A technically adequate percentage that produces only pennies of profit per normal transaction is not adequate. Deep manufacturing should allow repeated ordinary production to build enough cash for:
+A technically adequate percentage that produces only pennies of profit per normal transaction is not adequate. Prices should allow repeated ordinary production to build enough cash for:
 
 - one or more batches of replacement inputs;
 - meaningful food purchases;
@@ -157,29 +129,18 @@ A technically adequate percentage that produces only pennies of profit per norma
 - workshop expansion;
 - eventual purchase of the next workstation or upgrade.
 
-This check is qualitative until Ironwood has enough observed shop turnover to define reliable batch-size and capital-recovery targets.
-
 ## Progression
 
-Commercial viability is evaluated at the minimum skill level where a manufactured recipe is legitimately available.
+Commercial viability is evaluated at the minimum skill level where the recipe is legitimately available.
 
-Higher skill, talents, modules, improved machinery, better logistics, self-supplied raw materials and direct supplier relationships increase profit above the baseline. That extra efficiency is an intended reward for specialization.
+Higher skill, talents, modules, improved machinery, better logistics and direct supplier relationships increase producer profit above this baseline. That extra efficiency is an intended reward for specialization.
 
 Ironwood should not reduce a price merely because one advanced producer becomes more efficient. Economy-wide technological transitions may still justify structural repricing later.
 
 ## Interpretation
 
-Ironwood deliberately distinguishes **resource extraction** from **capital-intensive manufacturing**.
+Ironwood is deliberately creating an economy where specialization can reproduce itself.
 
-Gathered goods remain inexpensive anchors so they do not inflate the entire economy. Deep manufactured goods receive enough guaranteed wholesale margin to let specialists:
+**Raw gathering anchors stay cheap and stable. Strong commercial margins appear only as purchased value and production depth accumulate through the chain.**
 
-- eat;
-- restock;
-- run material buy orders;
-- maintain a shop;
-- build and improve their workplace;
-- purchase new machinery;
-- accumulate capital;
-- then compete for higher private-market prices rather than being permanently dependent on the government outlet.
-
-**The deeper the producer's real purchased-input exposure, the more important commercial surplus becomes.**
+Town Buy is a profitable wholesale floor for manufactured goods, not cost reimbursement, while gathered commodities remain anchor-driven inputs to the wider economy.
