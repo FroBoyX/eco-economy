@@ -11,7 +11,7 @@ Raw anchors are design inputs. Processed goods must be checked through their com
 - downstream profitability is tested using Town Sell prices for purchased inputs;
 - prices are evaluated at the recipe's minimum required skill level;
 - `staticIngredient` recipe inputs are not reduced by skill efficiency;
-- the Exchange spread is deliberately shallow so repeated processing stages do not inflate deep production chains excessively.
+- Exchange spreads on industrial inputs should stay narrow enough that repeated processing stages do not create artificial inflation.
 
 ## Validated metal-chain anchors
 
@@ -19,41 +19,41 @@ Raw anchors are design inputs. Processed goods must be checked through their com
 |---|---:|---:|---|---|
 | Sandstone | **0.15** | **0.17** | validated | Arrastra byproduct/reference rock for Iron Ore processing. |
 | Granite | **0.15** | **0.17** | validated | Arrastra byproduct/reference rock for Copper and Gold processing. |
-| Clay | **0.15** | **0.17** | working | Used for Clay Molds. Its effect on bar cost is small; revisit with Gathering/Masonry. |
-| **Iron Ore** | **0.20** | **0.22** | validated | Full ore → crushed → concentrate → Bloomery chain supports the intended ~1.65 Iron Bar retail price. |
-| **Copper Ore** | **0.30** | **0.35** | validated | Higher scarcity/extraction anchor plus the less favorable Copper concentration ratio supports ~3.85 Copper Bar retail. |
-| **Gold Ore** | **0.50** | **0.60** | validated | Scarcity anchor plus the much poorer Gold concentration/smelting ratio supports ~16 Gold Bar retail. |
+| Clay | **0.15** | **0.17** | working | Used for Clay Molds. Revisit with Gathering/Masonry. |
+| **Iron Ore** | **0.20** | **0.22** | validated | Foundational industrial ore. |
+| **Copper Ore** | **0.30** | **0.33** | validated | Moderate scarcity premium; narrowed Exchange spread avoids compounding through the metal chain. |
+| **Gold Ore** | **0.50** | **0.55** | validated | Gold already has a much worse ore-to-bar conversion than Iron/Copper, so it does not need an additional 20% Exchange toll. |
 
-These ore anchors are not being retained because they appeared in an older table. They were re-adopted because the Eco 14 Core chain validates them against the current shallow-margin objective.
+## Why the raw spreads are narrow
 
-## Why the ore anchors differ
+The earlier 0.30 → 0.35 Copper and 0.50 → 0.60 Gold spreads created a large government toll before Mining added any value. That toll then propagated through Crushed Ore, Concentrate, Bars, and every downstream profession.
 
-The three metals do not need identical raw-resource values.
+The current metal anchors retain the extraction values while narrowing the consumption side:
 
-Iron is deliberately inexpensive because it becomes the foundational industrial metal.
+- Iron: 0.20 → 0.22;
+- Copper: 0.30 → 0.33;
+- Gold: 0.50 → 0.55.
 
-Copper receives a larger extraction/scarcity premium and also requires more Crushed Copper Ore per concentrate than Iron.
+The scarcity difference is primarily created by the ore anchor itself and by the Eco production ratios, not by an increasingly large Exchange markup.
 
-Gold receives the largest raw-resource premium and then compounds that scarcity through the least favorable concentration and Bloomery output ratio.
+## Gold unit warning
 
-This places meaningful value in both extraction and specialist processing instead of forcing all scarcity premium into the final Smelter.
+One Gold Concentrate item is not equivalent to one Gold Bar.
 
-## Current metal-chain checks
+At the entry Bloomery Gold recipe (Smelting 4), **1.3 effective Gold Concentrate produces 3 Gold Bars**. Therefore one Gold Concentrate represents about **2.31 bar-equivalents** before Smelting labor, fuel, mold, waste handling, and margin.
 
-The validated chain currently uses:
+A Gold Concentrate price numerically above a Gold Bar price is therefore mechanically normal. The relevant comparison is concentrate price per bar-equivalent.
+
+## Current metal-chain assumptions
 
 - Mining 1 Arrastra ore crushing;
 - Mining 1 Rocker Box concentration;
 - Smelting 1 Bloomery for Iron and Copper;
 - Smelting 4 Bloomery for Gold;
 - 1 credit per 1,000 calories;
-- current Tailings disposal cost of **0.35 per unit**;
-- current Ceramic Scrap disposal cost of **0.15 per unit**;
-- a small Slag byproduct credit;
-- Bloomery fuel consumption as a real but minor operating cost.
+- Tailings disposal at **0.35/unit** (working pre-Recycling);
+- Ceramic Scrap disposal at **0.15/unit** (working pre-Recycling);
+- small Slag byproduct credit;
+- Bloomery fuel included as an operating cost.
 
-The current prices are valid only while those assumptions remain current. If Recycling turns Tailings or Ceramic Scrap into positive-value feedstock, recalculate the chain directly.
-
-## Other raw anchors
-
-Other commodities are intentionally omitted from this validation file until their own profession chain is rebuilt. Ironwood-specific prices for Logging, agriculture, food, Masonry, and later industry should not be inferred from the metal chain.
+If Recycling changes the value of Tailings, Ceramic Scrap, or Slag, recalculate the chain directly.
