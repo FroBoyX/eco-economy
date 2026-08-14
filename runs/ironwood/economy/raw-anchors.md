@@ -19,10 +19,20 @@ Raw anchors are design inputs. Processed goods must be checked through their com
 |---|---:|---:|---|---|
 | Sandstone | **0.15** | **0.17** | validated | Arrastra byproduct/reference rock for Iron Ore processing. |
 | Granite | **0.15** | **0.17** | validated | Arrastra byproduct/reference rock for Copper and Gold processing. |
-| Clay | **0.15** | **0.17** | working | Used for Clay Molds. Revisit with Gathering/Masonry. |
+| **Clay** | **0.02** | **0.03** | validated | Abundant shovel-extracted feedstock. Core Gathering 1 turns 1 Clay into 4 Clay Molds, so pricing Clay like premium construction stone was unjustified. |
 | **Iron Ore** | **0.20** | **0.22** | validated | Foundational industrial ore. |
 | **Copper Ore** | **0.30** | **0.33** | validated | Moderate scarcity premium; narrowed Exchange spread avoids compounding through the metal chain. |
 | **Gold Ore** | **0.30** | **0.35** | validated | Gold's Core conversion is already much worse than Iron/Copper, so the recipe itself supplies the scarcity premium. |
+
+## Why Clay stays cheap
+
+Clay is abundant raw material, and its main early metal-chain role is as feedstock for Clay Molds.
+
+Eco 14 Core: Gathering 1 uses 1 skill-modified Clay + 50 skill-modified calories to produce 4 Clay Molds. At Gathering 1, that means 0.8 Clay and 40 calories per craft.
+
+With Clay at 0.03 retail, the material-plus-labor cost is only about 0.064 for four molds, or 0.016 per mold. The practical Exchange price therefore rounds to about **0.02 buy / 0.03 sell per Clay Mold**.
+
+Clay should not be normalized to Rock or Sand merely because all are raw construction materials.
 
 ## Why Gold Ore is not given a large raw premium
 
