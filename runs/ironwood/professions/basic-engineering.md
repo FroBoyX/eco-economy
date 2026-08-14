@@ -1,87 +1,165 @@
-# Ironwood Basic Engineering — Current Early Infrastructure
+# Ironwood Basic Engineering — Current Infrastructure Table
 
-Rebuilt from the supplied Eco 14 Core using current Ironwood Logging, Masonry, Mining, Carpentry and metal-chain prices.
+Rebuilt from the supplied Eco 14 Core after canonicalizing Lubricant, Leather, Linen/Cotton textiles, Shipwright materials, Iron/Copper Pipe and the commercially viable metal/wood chains.
 
-Derived producer costs use Town Buy/producer values. The Exchange retail spread is applied afterward rather than compounded through every dependency.
+Basic Engineering now spans simple components, ordinary tools, infrastructure workstations and vehicle-scale capital. Margin therefore increases with economic depth.
 
-## Reusable Mining byproduct
+## Current key inputs
 
-Crushed Mixed Rock, Crushed Sandstone and Crushed Granite are abundant `CrushedRock` byproduct streams.
+- Hewn Log: **0.93 / 0.98**
+- Board: **0.27 / 0.28**
+- Iron Bar: **2.54 / 2.67**
+- Iron Plate: **2.45 / 2.57**
+- Copper Plate: **4.89 / 5.13**
+- Iron Pipe: **2.41 / 2.53**
+- Leather Hide: **0.60 / 0.63**
+- Lumber: **1.62 / 1.70**
+- Linen Fabric: **0.68 / 0.71**
+- Cotton Fabric: **0.86 / 0.90**
+- Lubricant: **0.28 / 0.29**
+- Wooden Hull Planks: **1.10 / 1.16**
+- Hemp Mooring Rope: **1.05 / 1.10**
+- Charcoal Powder: **0.22 / 0.23** working canonical Milling value
 
-**Common CrushedRock reuse value: 0.05 Town Buy / 0.06 Town Sell.**
+## Exchange-ready Basic Engineering outputs
 
-Crushed Limestone remains separate because exact-item recipes consume it.
-
-## Exchange-ready Basic Engineering table
-
-| Item | Basic Engineering | Entry cost | Town Buys | Town Sells | Notes |
+| Item | Basic Eng. | Exchange cash cost | Town Buys | Town Sells | Class |
 |---|---:|---:|---:|---:|---|
-| Wooden Gear | 1 | 2.816 | **2.96** | **3.11** | 4 Hewn Logs, skill-modified. |
-| Wooden Wheel | 1 | 2.816 | **2.96** | **3.11** | Same material burden as Wooden Gear. |
-| Arrastra | 1 | 6.840 | **7.18** | **7.54** | Includes static Mill Stone. |
-| Rocker Box | 1 | 4.080 | **4.28** | **4.49** | Boards + Wood. |
-| Stone Road | 1 | 0.224 | **0.24** | **0.25** | Cheap public-use sink for CrushedRock byproduct. |
-| Stone Road Tool | 1 | 4.240 | **4.45** | **4.67** | Wood + common Rock. |
-| **Basic Engineering Upgrade** | 2 | **20.010** | **21.01** | **22.06** | Six Wooden Gears are static; 2,250 effective labor calories. |
-| Stop Sign | 2 | 10.245 | **10.76** | **11.30** | 8 Iron Bars, skill-modified. |
-| Street Sign | 2 | 10.245 | **10.76** | **11.30** | Same recipe burden as Stop Sign. |
-| **Iron Wheel** | 3 | **7.210** | **7.57** | **7.95** | 6 Iron Bars at Basic Engineering 3. |
+| Wooden Gear | 1 | 3.168 | **3.55** | **3.73** | simple component |
+| Wooden Wheel | 1 | 3.168 | **3.55** | **3.73** | simple component |
+| Arrastra | 1 | 7.570 | **9.84** | **10.33** | capital workstation |
+| Rocker Box | 1 | 4.480 | **5.82** | **6.11** | capital workstation |
+| Stone Road | 1 | ~0.264 | **0.30** | **0.32** | special public/byproduct sink |
+| Stone Road Tool | 1 | 4.720 | **5.57** | **5.85** | durable finished tool |
+| **Waterwheel** | 1 | 16.336 | **21.24** | **22.30** | capital power infrastructure |
+| **Windmill** | 1 | 19.648 | **25.54** | **26.82** | capital power infrastructure |
+| **Wood Cart** | 1 | 12.798 | **16.64** | **17.47** | early vehicle/capital good |
+| **Mechanical Water Pump** | 1 | 33.328 | **43.33** | **45.50** | capital machine |
+| **Carbon Filter** | 1 | 5.648 ea | **6.66** | **6.99** | multi-step component |
+| Basic Engineering Upgrade | 2 | 24.630 | **32.02** | **33.62** | capital/upgrade |
+| Stop Sign | 2 | 16.065 | **18.47** | **19.39** | ordinary finished |
+| Street Sign | 2 | 16.065 | **18.47** | **19.39** | ordinary finished |
+| **Hand Plow** | 2 | 32.520 | **42.28** | **44.39** | vehicle/tool capital |
+| Iron Wheel | 3 | 11.284 | **12.64** | **13.27** | industrial component |
+| **Iron Road Tool** | 3 | 59.154 | **73.94** | **77.64** | deep durable tool |
+| **Wooden Liquid Tank** | 4 | 52.728 | **68.55** | **71.98** | capital infrastructure |
+| **Wooden Elevator** | 1 | 80.100 | **112.14** | **117.75** | deep infrastructure/late-capital windfall |
 
-## Key calculations
+## Key new dependencies and calculations
 
-### Basic Engineering Upgrade — level 2
+### Waterwheel — Basic Engineering 1
 
 Core:
 
-- 6 Wooden Gears, **static**
-- 3000 calories, skill-modified
+- 8 Wooden Hull Planks
+- 4 Lubricant
+- 10 Hewn Logs
+- 180 calories
 
-At Basic Engineering 2:
+At level 1:
 
-- 6 × 2.96 = 17.760
-- 2250 calories = 2.250
-- total = **20.010**
+- 6.4 Hull Planks × 1.16 = 7.424
+- 3.2 Lubricant × 0.29 = 0.928
+- 8 Hewn Logs × 0.98 = 7.840
+- 144 calories = 0.144
+- cash cost = **16.336**
 
-**21.01 Town Buy / 22.06 Town Sell.**
+**21.24 / 22.30.**
 
-### Stop Sign / Street Sign — level 2
+### Windmill — Basic Engineering 1
 
-Core: 8 Iron Bars + 60 calories.
+Core:
 
-At level 2:
+- 12 Linen Fabric
+- 4 Lubricant
+- 15 Hewn Logs
+- 180 calories
 
-- 6 Iron Bars × 1.70 = 10.200
-- 45 calories = 0.045
-- cost = **10.245**
+At level 1:
 
-**10.76 / 11.30** each.
+- 9.6 Linen Fabric × 0.71 = 6.816
+- 3.2 Lubricant × 0.29 = 0.928
+- 12 Hewn Logs × 0.98 = 11.760
+- 144 calories = 0.144
+- cash cost = **19.648**
 
-### Iron Wheel — level 3
+**25.54 / 26.82.**
 
-Core: 6 Iron Bars + 100 calories.
+### Wood Cart — Basic Engineering 1
 
-At level 3:
+Core:
 
-- 4.2 Iron Bars × 1.70 = 7.140
-- 70 calories = 0.070
-- cost = **7.210**
+- 4 Hewn Logs, skill-modified
+- 8 Boards, skill-modified
+- 2 Wooden Wheels, **static**
+- 1 Lubricant, **static**
+- 150 calories
 
-**7.57 / 7.95.**
+At level 1:
 
-## Deferred Basic Engineering rows
+- 3.2 Hewn Logs × 0.98 = 3.136
+- 6.4 Boards × 0.28 = 1.792
+- 2 Wheels × 3.73 = 7.460
+- Lubricant = 0.290
+- 120 calories = 0.120
+- cash cost = **12.798**
 
-These are source-confirmed recipes but still depend on unpriced chains:
+**16.64 / 17.47.**
 
-- Waterwheel — Wooden Hull Planks + Lubricant;
-- Windmill — Linen Fabric + Lubricant;
-- Wood Cart — Lubricant;
-- Wood Shop Cart — Cotton Fabric, Wood Cart, Store, Lubricant;
-- Wooden Elevator — Hemp Mooring Rope + Lubricant;
-- Hand Plow — Lubricant;
-- Iron Road Tool — Leather Hide;
-- Wooden Liquid Tank — Iron Pipe;
-- Powered Cart — Fabric, Cast Iron Stove, Lubricant;
-- Carbon Filter — Linen Fabric + Charcoal Powder;
-- Mechanical Water Pump — Iron Pipe;
-- Asphalt Concrete — Cement;
-- Engineering research outputs — research-economy inputs.
+### Wooden Elevator — Basic Engineering 1
+
+Core:
+
+- 16 Iron Bars
+- 6 Wooden Gears
+- 4 Hemp Mooring Rope
+- 30 Hewn Logs
+- 2 Lubricant, static
+- 500 calories
+
+At level 1:
+
+- 12.8 Iron Bars × 2.67 = 34.176
+- 4.8 Wooden Gears × 3.73 = 17.904
+- 3.2 Hemp Rope × 1.10 = 3.520
+- 24 Hewn Logs × 0.98 = 23.520
+- 2 static Lubricant × 0.29 = 0.580
+- 400 calories = 0.400
+- total cash cost = **80.100**
+
+This is exactly the sort of deep, low-volume infrastructure good that should create a noticeable currency event for the specialist.
+
+**Wooden Elevator: 112.14 Town Buy / 117.75 Town Sell** using a ~40% late-capital uplift.
+
+### Iron Road Tool — Basic Engineering 3
+
+Core:
+
+- 20 Iron Bars
+- 6 Leather Hide
+- 16 Lumber
+- 125 calories
+
+At level 3 (0.70):
+
+- 14 Iron Bars × 2.67 = 37.380
+- 4.2 Leather × 0.63 = 2.646
+- 11.2 Lumber × 1.70 = 19.040
+- 87.5 calories = 0.088
+- cash cost ≈ **59.154**
+
+As a deep durable tool:
+
+**73.94 / 77.64.**
+
+## Stone Road note
+
+Stone Road now costs roughly 0.264 in public inputs at Basic Engineering 1, so the commodity price is raised slightly to **0.30 / 0.32**. The existing government road-placement payment should be reviewed separately because its purpose is infrastructure labor/subsidy rather than ordinary commodity margin.
+
+## Still deferred
+
+- Wood Shop Cart — `Store` dependency still needs its Carpentry price;
+- Powered Cart — Cast Iron Stove and generic Fabric lane need final source audit;
+- research outputs — research-economy policy;
+- Asphalt Concrete — Cement/Advanced Masonry;
+- advanced electrical/industrial Engineering — later professions.
