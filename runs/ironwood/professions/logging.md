@@ -1,8 +1,8 @@
-# Ironwood Logging — Current-Era Foundation
+# Ironwood Logging — Current Steam-Era Table
 
 Rebuilt from Eco 14 Core using the current Sawmill-era production structure and Ironwood's depth-sensitive commercial policy.
 
-Raw Wood remains a Depth-0 anchor. Processed Logging commodities are evaluated against **Exchange-sourced input cash cost** and receive only a shallow 10–12% specialist uplift; the large downstream commercial premiums do not apply here.
+Raw Wood remains a Depth-0 anchor. Processed Logging commodities receive only shallow specialist margins; capital workstations receive the larger margin appropriate to their role.
 
 ## Raw input
 
@@ -12,60 +12,94 @@ Raw Wood remains a Depth-0 anchor. Processed Logging commodities are evaluated a
 
 ## Core Logging commodities
 
+| Item | Town Buys | Town Sells |
+|---|---:|---:|
+| Dowel | **0.05** | **0.06** |
+| Board | **0.27** | **0.28** |
+| Hewn Log | **0.93** | **0.98** |
+| Charcoal | **1.24** | **1.30** |
+
 ### Dowel — Logging 1
 
-Core: 2 Wood + 40 calories → 16 Dowels.
+2 Wood + 40 calories -> 16 Dowels. Current cash cost ≈ 0.047 each.
 
-At Logging 1 (0.80):
-
-- 1.6 Wood × 0.45 = 0.720
-- 32 calories = 0.032
-- cash cost ≈ 0.047/Dowel
-
-**Dowel: 0.05 Town Buy / 0.06 Town Sell.**
+**0.05 / 0.06.**
 
 ### Board — Logging 1, Sawmill
 
-Current structural route: 2 Wood + 20 calories → 3 Boards.
+2 Wood + 20 calories -> 3 Boards. Current cash cost ≈ 0.245 each.
 
-At Logging 1:
-
-- 1.6 Wood × 0.45 = 0.720
-- 16 calories = 0.016
-- cash cost ≈ 0.245/Board
-
-With a shallow commodity margin:
-
-**Board: 0.27 Town Buy / 0.28 Town Sell.**
-
-The primitive Carpentry Table route is not the current structural price floor once Sawmill infrastructure is normal.
+**0.27 / 0.28.**
 
 ### Hewn Log — Logging 1
 
-Core: 2 Dowels + 2 Wood + 20 calories → 1 Hewn Log.
+2 Dowels + 2 Wood + 20 calories -> 1. Current cash cost = 0.832.
 
-At Logging 1:
-
-- 1.6 Dowels × 0.06 = 0.096
-- 1.6 Wood × 0.45 = 0.720
-- 16 calories = 0.016
-- cash cost = 0.832
-
-**Hewn Log: 0.93 Town Buy / 0.98 Town Sell.**
+**0.93 / 0.98.**
 
 ### Charcoal — Logging 3
 
-Core: 7 Wood + 25 calories → 2 Charcoal.
+7 Wood + 25 calories -> 2. Current cash cost ≈ 1.111 each.
 
-At Logging 3 (0.70):
+**1.24 / 1.30.**
 
-- 4.9 Wood × 0.45 = 2.205
-- 17.5 calories = 0.018
-- cash cost ≈ 1.111/Charcoal
+## Shipwright-support outputs
 
-**Charcoal: 1.24 Town Buy / 1.30 Town Sell.**
+### Wooden Keel — Logging 2
 
-## Exchange-ready Logging commodities
+Core:
+
+- 8 Wood
+- 60 calories
+- -> 1 Wooden Keel
+
+At Logging 2:
+
+- 6 Wood × 0.45 = 2.700
+- 45 calories = 0.045
+- cash cost = **2.745**
+
+As a shallow ship component:
+
+**Wooden Keel: 3.07 Town Buy / 3.22 Town Sell.**
+
+### Wooden Oar — Logging 2
+
+Core:
+
+- 4 Hewn Logs
+- 60 calories
+- -> 1 Wooden Oar
+
+At Logging 2:
+
+- 3 Hewn Logs × 0.98 = 2.940
+- 45 calories = 0.045
+- cash cost = **2.985**
+
+**Wooden Oar: 3.34 / 3.51.**
+
+### Small Shipyard — Logging 1
+
+Core:
+
+- 10 Hewn Logs
+- 8 Boards
+- 360 calories
+- -> 1 Small Shipyard
+
+At Logging 1:
+
+- 8 Hewn Logs × 0.98 = 7.840
+- 6.4 Boards × 0.28 = 1.792
+- 288 calories = 0.288
+- cash cost = **9.920**
+
+As a capital workstation:
+
+**Small Shipyard: 12.90 Town Buy / 13.55 Town Sell.**
+
+## Exchange-ready Logging table
 
 | Item | Town Buys | Town Sells |
 |---|---:|---:|
@@ -74,9 +108,10 @@ At Logging 3 (0.70):
 | Board | **0.27** | **0.28** |
 | Hewn Log | **0.93** | **0.98** |
 | Charcoal | **1.24** | **1.30** |
-
-The previous 0.26 Board, 0.87 Hewn Log and 1.17 Charcoal Town Buy values were useful recipe-cost baselines but did not leave enough wholesale margin when a logger buys inputs through the Exchange.
+| Wooden Keel | **3.07** | **3.22** |
+| Wooden Oar | **3.34** | **3.51** |
+| Small Shipyard | **12.90** | **13.55** |
 
 ## Peat
 
-Do not currently place Peat on an unlimited Ironwood Exchange order. Eco 14 Core can convert Peat into Charcoal later; its environmental/harvesting policy should be designed before giving it an unlimited central-market anchor.
+Do not place Peat on an unlimited Ironwood Exchange order yet. Its environmental/harvesting policy should be deliberately designed before it receives a central anchor.
