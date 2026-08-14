@@ -13,7 +13,8 @@ For these foundational commodities:
 - **Buy** is the value paid by the Ironwood Exchange to a player supplying the resource.
 - **Sell** is the Exchange resale/import price to a player consuming the resource.
 - the spread is deliberately shallow and exists for liquidity and anti-cycling rather than profit maximization;
-- downstream recipe calculations use the producer/input value appropriate to real player trade, not an arbitrary high government markup.
+- downstream recipe calculations use the **Exchange sell / consumer acquisition price** when testing whether a profession remains profitable while buying its inputs;
+- an extraction anchor may be revised when a direct transformation proves that a low raw price would create obvious arbitrage.
 
 ## Phase-one industrial anchors
 
@@ -29,14 +30,26 @@ For these foundational commodities:
 | Limestone | 0.20 | 0.23 | Strategic mineral with dedicated downstream quicklime/cement/steel use; kept distinct from ordinary rock. |
 | Clay | 0.15 | 0.17 | Shovel-extracted foundational masonry, mold, and ceramic input. |
 | Sand | 0.15 | 0.17 | High-quality construction/glass sand; Core explicitly describes it as sought after rather than treating all desert sand as equivalent. |
-| Peat | 0.10 | 0.12 | Early gathered fuel/charcoal feedstock; deliberately below logs. |
+| **Peat** | **5.55** | **6.25** | Constrained by Logging 4: Core converts 1 Peat + 50 calories into 4 Charcoal. A dirt-like peat price would make Charcoal arbitrage enormous. This unusually high value is deliberate and should be paired with environmental/quantity policy if peat harvesting becomes destructive. |
 | Coal | 0.20 | 0.23 | Fuel and advanced industrial feedstock. |
 | Sulfur | 0.20 | 0.23 | Chemical/explosive industrial feedstock. |
-| Iron Ore | 0.30 | 0.34 | Foundational metal ore. Chosen to keep the early Mining→Smelting chain valuable without forcing inflated tool prices. |
-| Copper Ore | 0.35 | 0.40 | Later metal ore with a somewhat higher extraction/scarcity premium and less favorable processing ratios than iron. |
-| Gold Ore | 0.40 | 0.45 | Scarce ore. The Core processing chain already gives gold a much poorer ore-to-bar conversion, so the raw premium remains moderate rather than extreme. |
+| **Iron Ore** | **0.18** | **0.20** | Kept close to common rock so most metal value is created by Mining and Smelting rather than front-loaded into ore extraction. |
+| **Copper Ore** | **0.22** | **0.25** | Moderate scarcity premium over iron; Core's less favorable processing ratio supplies much of the eventual copper-bar premium. |
+| **Gold Ore** | **0.25** | **0.28** | Moderate raw premium only. Core's poor gold processing ratio should create the much larger downstream gold value. |
 | Plant Fibers | 0.10 | 0.12 | Generic gathered natural-fiber input. |
 | Kelp | 0.15 | 0.17 | Gathered marine input used in both production and food chains; kept above generic fiber because it requires a distinct gathering environment. |
+
+## Why ore stays cheap
+
+Raw ore is not intended to capture the miner's entire economic contribution. Mining adds value through crushing, separating and concentrating. Smelting adds another production step.
+
+If raw ore is priced too highly, every tool, workstation, machine and downstream metal product inherits that inflation before a specialist has added any work. The current ore anchors therefore stay deliberately close to ordinary rock and allow the profession chain to create the value.
+
+## Why peat is different
+
+Peat cannot be priced as cheap generic soil while Charcoal has a positive fixed price. Eco 14 Core provides a Logging 4 recipe that turns 1 Peat into 4 Charcoal with only 50 calories of recipe labor.
+
+The current peat price is therefore constrained by the Charcoal economy rather than by visual similarity to Dirt. If this creates undesirable peat extraction pressure, the preferred correction is environmental or quantity policy, or removal of an unlimited public buy order—not pretending the transformation value does not exist.
 
 ## Not anchored here
 
@@ -55,7 +68,7 @@ The following should **not** be assigned arbitrary values in this sheet:
 
 The anchors are retained only if the profession tables built from Core remain coherent. In particular:
 
-1. Logging 1 should profit slightly on Boards at base recipe efficiency.
+1. Logging 1 should profit slightly on early processed wood at base recipe quantities.
 2. Mining should profit on crushing/concentrating rather than having raw ore capture all value.
 3. Smelting should profit on bars without making iron tools unaffordable.
 4. Copper and Gold should become more valuable substantially through their worse processing ratios, not only by assigning huge raw-ore premiums.
