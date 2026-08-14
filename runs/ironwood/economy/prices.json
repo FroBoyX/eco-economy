@@ -1,5 +1,5 @@
 {
-  "schema_version": 7,
+  "schema_version": 8,
   "run": "ironwood",
   "game_version": "Eco 14",
   "currency": "Ironwood credit",
@@ -21,10 +21,15 @@
       "status": "working_method",
       "note": "Industrial entry margins are intentionally very shallow; later skill, modules, talents, and machinery create the larger margin."
     },
-    "industrial_intermediate_spread": {
-      "target_rate": 0.04,
-      "status": "working_method",
-      "note": "Keep intermediate Exchange spreads narrow to avoid compounding inflation through deep chains. Final prices may be rounded to practical shop values."
+    "ironwood_exchange_spread": {
+      "baseline_rate": 0.05,
+      "medium_price_ceiling": 100.0,
+      "medium_maximum_spread": 5.0,
+      "high_maximum_spread": 10.0,
+      "minimum_spread": 0.01,
+      "status": "locked",
+      "formula": "spread = max(0.01, min(public_buy * 0.05, public_buy <= 100 ? 5 : 10)); public_sell = public_buy + spread, rounded to a practical shop price",
+      "note": "The Exchange is a liquidity and stabilization service, not a profit-maximizing retailer. Producer profit is embedded in Town Buy; the Exchange spread is separate. The 5-credit medium cap and 10-credit high-value cap prevent percentage markup from looking like price gouging on expensive equipment."
     }
   },
   "anchors": {
