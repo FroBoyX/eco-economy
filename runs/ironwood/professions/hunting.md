@@ -1,40 +1,25 @@
-# Ironwood Hunting — Carcass and Fish Foundation
+# Ironwood Hunting — Current Steam-Era Table
 
 Derived from the supplied Eco 14 Core.
 
-Hunted animals and caught fish are **Depth 0 gathered goods**. Their Town Buy prices are effort/rarity anchors, not cost-plus manufactured prices. Processing recipes then create specialist margin for Hunting/Butchery.
+Hunted animals and caught fish are **Depth 0 gathered goods**. Their anchors remain effort/rarity values. Hunting equipment, processing stations and taxidermy then receive normal specialist margins.
 
 ## Carcass anchors
 
-Current Core carcass tags establish the practical butchery classes:
+| Hunting output | Town Buys | Town Sells |
+|---|---:|---:|
+| Tiny Fur Carcass | **0.50** | **0.53** |
+| Tiny Leather Carcass | **0.55** | **0.58** |
+| Hare Carcass | **0.65** | **0.68** |
+| Small Carcass | **0.80** | **0.84** |
+| Medium Leather Carcass | **1.50** | **1.58** |
+| Medium Wooly Carcass | **1.75** | **1.84** |
+| Wolf Carcass | **1.50** | **1.58** |
+| Bison Carcass | **3.50** | **3.68** |
 
-- Tiny Fur: Agouti, Otter;
-- Tiny Leather: Prairie Dog, Snapping Turtle, Turkey;
-- Hare: dedicated Hare recipe;
-- Small: Coyote, Fox;
-- Medium Leather: Alligator, Deer, Elk, Jaguar;
-- Medium Wooly: Bighorn Sheep, Mountain Goat;
-- Wolf: dedicated medium recipe yielding Fur rather than Leather;
-- Bison: dedicated large recipe.
+## Fish / marine anchors
 
-Ironwood import anchors:
-
-| Hunting output | Town Buys | Town Sells | Purpose |
-|---|---:|---:|---|
-| Tiny Fur Carcass | **0.50** | **0.53** | small hunting cash outlet |
-| Tiny Leather Carcass | **0.55** | **0.58** | slightly higher because Leather is strategic |
-| Hare Carcass | **0.65** | **0.68** | meat + fur + wool butchery route |
-| Small Carcass | **0.80** | **0.84** | Coyote/Fox class |
-| Medium Leather Carcass | **1.50** | **1.58** | Deer/Elk/Alligator/Jaguar class |
-| Medium Wooly Carcass | **1.75** | **1.84** | adds wool value |
-| Wolf Carcass | **1.50** | **1.58** | medium meat + fur route |
-| **Bison Carcass** | **3.50** | **3.68** | rare/high-output hunting windfall |
-
-These anchors intentionally give hunters useful direct currency without applying downstream manufacturing multipliers to the kill itself.
-
-## Fish and marine anchors
-
-| Gathered catch | Town Buys | Town Sells |
+| Catch | Town Buys | Town Sells |
 |---|---:|---:|
 | Pacific Sardine | **0.08** | **0.09** |
 | Clam | **0.08** | **0.09** |
@@ -44,50 +29,110 @@ These anchors intentionally give hunters useful direct currency without applying
 | Medium Fish | **0.35** | **0.37** |
 | Large Fish | **0.65** | **0.68** |
 | Kelp | **0.03** | **0.04** |
+| Raw Fish | **0.20** | **0.21** |
+| Dried Fish | **0.45** | **0.47** |
+| Dried Meat | **0.55** | **0.58** |
 
-## Cleaned fish
+Current cleaning recipes preserve a modest Hunting margin while Raw Fish remains anchored at 200 calories.
 
-Raw Fish has 200 calories, so the food-energy anchor is **0.20 Town Buy / 0.21 Town Sell**.
+## Current Hunting equipment and workstations
 
-Current Core Hunting 1 routes:
+| Item | Hunting | Exchange cash cost | Town Buys | Town Sells |
+|---|---:|---:|---:|---:|
+| Arrow | 1 | 0.187 ea | **0.22** | **0.23** |
+| Fishery | 1 | 9.152 | **11.90** | **12.50** |
+| Fish Trap | 1 | 16.496 | **21.44** | **22.51** |
+| Fish Rack | 2 | 7.980 | **10.37** | **10.89** |
+| Crab Pot | 3 | 20.664 | **24.38** | **25.60** |
+| Flax Trawler Net | 2 | 4.890 | **5.77** | **6.06** |
+| Recurve Bow | 3 | 48.741 | **60.93** | **63.98** |
+| Hunting Upgrade | 2 | 17.610 | **22.89** | **24.03** |
 
-- 2 Pacific Sardines → 1 Raw Fish;
-- 1 Crab Carcass → 1 Raw Fish;
-- 1 Moon Jellyfish → 1 Raw Fish;
-- 2 Urchins → 1 Raw Fish;
-- 2 Clams → 1 Raw Fish;
-- 1 Medium Fish → 2 Raw Fish;
-- 1 Large Fish → 4 Raw Fish.
+### Recurve Bow — Hunting 3
 
-At Hunting 1's 0.80 recipe multiplier, the catch anchors above leave a positive but modest processing margin while preserving Raw Fish's calorie value.
+Core:
 
-**Raw Fish: 0.20 / 0.21.**
+- 20 Iron Bars
+- 20 Linen Yarn
+- 6 Leather Hide
+- 5 Lumber
+- 750 calories
 
-## Kelp → Plant Fiber
+At Hunting 3, current public cash cost = **48.741**.
 
-Core Hunting 0:
+As a durable multi-profession hunting tool:
 
-- 8 Kelp
-- 25 calories
-- → 7 Plant Fibers
+**Recurve Bow: 60.93 / 63.98.**
 
-At Kelp 0.04 public Sell, the cash cost is approximately 0.345 and seven Plant Fibers return 0.35 at the 0.05 Town Buy. This is intentionally close to break-even: shredding Kelp is a fallback fiber route, not a currency printer.
+### Fish Trap — Hunting 1
 
-## Preserved hunting food
+15 Plant Fibers + 20 Hewn Logs + 120 calories. Current cash cost = **16.496**.
 
-Core Hunting 2:
+As current fishing infrastructure:
 
-- 1 Raw Meat → 1 Dried Meat;
-- 1 Raw Fish → 1 Dried Fish;
-- 25 calories each.
+**Fish Trap: 21.44 / 22.51.**
 
-Dried Meat contains 550 calories and Dried Fish 450 calories, so the locked calorie anchor itself provides a healthy preservation margin:
+### Fishery — Hunting 1
+
+20 Wood + 8 Boards + 200 calories. Cash cost = **9.152**.
+
+**Fishery: 11.90 / 12.50.**
+
+### Fish Rack — Hunting 2
+
+10 Plant Fibers + 10 Hewn Logs + 240 calories. Cash cost = **7.980**.
+
+**Fish Rack: 10.37 / 10.89.**
+
+### Flax Trawler Net — Hunting 2
+
+40 Linen Yarn + 120 calories. Cash cost = **4.890**.
+
+**Flax Trawler Net: 5.77 / 6.06.**
+
+Nylon Trawler Net is future petroleum/textile-era work and does not set the current price.
+
+## Preserved / specialty food
+
+### Sweet Jerky — Hunting 4
+
+Core uses Raw Meat + Sugar + generic Oil + Fruit + 25 calories.
+
+At Hunting 4, current Huckleberry-era Sugar makes cash cost about **1.355**. Sweet Jerky contains 600 calories, so recipe cost dominates the calorie floor.
+
+**Sweet Jerky: 1.60 Town Buy / 1.68 Town Sell.**
+
+## Taxidermy / trophy outputs
+
+Current Lumber + Linen Fabric permit the following ordinary trophy goods:
 
 | Item | Town Buys | Town Sells |
 |---|---:|---:|
-| Dried Meat | **0.55** | **0.58** |
-| Dried Fish | **0.45** | **0.47** |
+| Hare/Fox/Deer/Wolf/Bison Pelt display family | **1.92** | **2.02** |
+| Stuffed Alligator | **17.69** | **18.57** |
+| Stuffed Wolf | **17.69** | **18.57** |
+| Stuffed Jaguar | **17.69** | **18.57** |
+| Stuffed Elk | **17.69** | **18.57** |
+| Stuffed Mountain Goat | **17.99** | **18.89** |
+| Stuffed Bison | **18.78** | **19.72** |
+| Sheep Mount | **25.66** | **26.94** |
+| Goat Mount | **25.66** | **26.94** |
 
-## Deferred Hunting outputs
+Pelt display variants inherit the Hare Pelt parent recipe: one static `MediumCarcass` plus the parent's Hunting labor. They are normalized to one central price rather than inventing separate labor for each tag-product variant.
 
-Fish Trap, Fishery, Fish Rack, Flax/Nylon Trawler Nets, Recurve/Composite Bow, mounts and taxidermy objects remain for the complete profession-output pass. Their required dependencies are now being resolved rather than guessed.
+## Shared Basic Backpack
+
+Hunting's Primitive Backpack route makes the same Basic Backpack item as Gathering but is more expensive at current Leather prices. The shared market therefore remains controlled by Gathering:
+
+**Basic Backpack: 4.38 / 4.60.**
+
+## Current-run boundary
+
+Do not price these as current unlimited imports:
+
+- Nylon Trawler Net — Nylon;
+- Composite Bow — Fiberglass + Nylon Thread;
+- Elk/Bison mounts using Composite Lumber;
+- research papers/skill books — research policy.
+
+Current Hunting is otherwise output-ready for the Steam-entry economy.
