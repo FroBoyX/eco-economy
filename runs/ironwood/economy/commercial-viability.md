@@ -36,6 +36,12 @@ The intended accounting is:
 
 `Projected Cost = external-specialty inputs at Town Sell + same-specialty inputs at their Projected Cost + labor + fuel + disposal/operating costs`
 
+### Same-specialty raw-anchor opportunity value
+
+A gathered/raw item has no craft recipe from which to derive a Projected Cost. When a specialty consumes a raw anchor that it itself produces or directly controls, Ironwood carries that raw input internally at its **Town Buy anchor**, not its Town Sell price and not zero.
+
+This is an opportunity-cost value: using the raw material internally means giving up the guaranteed Town Buy sale. It preserves the value of raw labor and extraction while avoiding the fiction that a specialty paid itself the Exchange spread. Examples include Logging consuming its own Wood and Mining consuming its own raw ore.
+
 An intermediate item still receives its normal commercial markup when it is sold directly. The markup is simply not recursively charged to another recipe inside the same specialty.
 
 This is the canonical rule for the final output-table **Projected Cost** column.
@@ -117,52 +123,3 @@ Every final Exchange table should expose at least these three values:
 3. **Town Sells** — the Exchange fallback supply price after the public spread.
 
 Projected Cost is the factual/structural baseline; Town Buy is the economic policy choice. This lets the town manually tune an outlier without hiding the actual production burden.
-
-## Player-run input/import stores
-
-A specialist should be able to use accumulated producer surplus as **working capital** for a shop that buys the materials their profession needs.
-
-The intended loop is:
-
-1. player produces output;
-2. Town Buy guarantees a profitable currency outlet;
-3. player retains enough surplus to place buy orders for the next batch of **cross-profession** inputs;
-4. player can offer input suppliers attractive prices instead of depending exclusively on the government shop;
-5. player may sell their own output privately for more than Town Buy when market conditions support it;
-6. retained earnings finance better shops, buildings, workstations and later technology.
-
-The Exchange is therefore a market maker and buyer of last resort, not a mechanism for confiscating production at cost.
-
-## Town Sell and private retail
-
-Town Sell is the Exchange's public reference/import price, not a declaration that every player must sell at that price.
-
-When the Exchange has stock, its Sell price provides a predictable fallback supply. When it is short or empty, private stores can command higher prices. Producers are always free to bypass Town Buy and seek a higher private sale price.
-
-The Exchange should not extract the producer's entire margin. Its spread funds stabilization/liquidity friction; the producer's commercial surplus belongs primarily in Town Buy.
-
-## Capital-formation sanity check
-
-Percentage margin alone is insufficient for deep and low-volume goods.
-
-Prices should allow repeated ordinary production to build enough cash for replacement cross-profession inputs, meaningful food purchases, material buy orders, workshop expansion and eventual purchase of the next workstation or upgrade.
-
-For terminal goods, a deliberate larger windfall is desirable because those transactions are rare and represent the culmination of many earlier production stages.
-
-The same-specialty internal component rule prevents that windfall from being artificially inflated by charging a profession its own profit margin repeatedly before the final item is sold.
-
-## Progression and future transitions
-
-Commercial viability is evaluated at the minimum skill level where the recipe is legitimately available **in the active era**.
-
-Higher skill, talents, modules, improved machinery, better logistics and direct supplier relationships increase producer profit above this baseline. That extra efficiency is an intended reward for specialization.
-
-Ironwood should not reduce a price merely because one advanced producer becomes more efficient. A later economy-wide technological transition may justify structural repricing, but only when Ironwood deliberately changes eras or adopts the new route as normal infrastructure.
-
-## Interpretation
-
-Ironwood is deliberately creating an economy where specialization can reproduce itself.
-
-**Raw gathering anchors stay cheap and stable. Cross-profession purchases preserve upstream margins. A specialty's own components flow downstream at internal production cost, so commercial markup is realized when an item is actually sold rather than recursively charged inside one workshop. The largest deliberate windfalls remain concentrated in terminal goods.**
-
-For the active run, **current-era prices are the rule**. Future-era efficiencies are planning information, not present-day price setters.
