@@ -1,5 +1,5 @@
 {
-  "schema_version": 1,
+  "schema_version": 2,
   "run": "ironwood",
   "game_version": "Eco 14",
   "currency": "Ironwood credit",
@@ -13,64 +13,62 @@
       "minimum_rate": 0.08,
       "maximum_rate": 0.15,
       "status": "working_method",
-      "note": "A shallow base margin band for choosing clean shop prices. Efficiency is expected to increase realized margin later without raising the canonical output price."
+      "note": "Choose stable clean prices that give the first intended profession recipe a shallow margin at base efficiency. Later resource efficiency should increase realized margin without increasing the canonical output price."
+    },
+    "public_market_spread": {
+      "target_rate": 0.12,
+      "status": "working_method",
+      "note": "Approximate target only; low-value commodities are rounded to practical two-decimal prices."
     }
   },
   "anchors": {
-    "Log": {
-      "unit_value": 0.4,
-      "status": "locked",
-      "note": "Foundational Ironwood raw-material anchor."
-    },
-    "Rock": {
-      "unit_value": 0.15,
-      "status": "locked",
-      "note": "Ordinary stone/rock anchor. Limestone is intentionally not assumed to share this value."
-    }
+    "Wood": {"public_buy": 0.40, "public_sell": 0.45, "status": "working"},
+    "Basalt": {"public_buy": 0.15, "public_sell": 0.17, "status": "working"},
+    "Gneiss": {"public_buy": 0.15, "public_sell": 0.17, "status": "working"},
+    "Granite": {"public_buy": 0.15, "public_sell": 0.17, "status": "working"},
+    "Sandstone": {"public_buy": 0.15, "public_sell": 0.17, "status": "working"},
+    "Shale": {"public_buy": 0.15, "public_sell": 0.17, "status": "working"},
+    "Stone": {"public_buy": 0.15, "public_sell": 0.17, "status": "working"},
+    "Limestone": {"public_buy": 0.20, "public_sell": 0.23, "status": "working"},
+    "Clay": {"public_buy": 0.15, "public_sell": 0.17, "status": "working"},
+    "Sand": {"public_buy": 0.15, "public_sell": 0.17, "status": "working"},
+    "Peat": {"public_buy": 0.10, "public_sell": 0.12, "status": "working"},
+    "Coal": {"public_buy": 0.20, "public_sell": 0.23, "status": "working"},
+    "Sulfur": {"public_buy": 0.20, "public_sell": 0.23, "status": "working"},
+    "IronOre": {"public_buy": 0.30, "public_sell": 0.34, "status": "working"},
+    "CopperOre": {"public_buy": 0.35, "public_sell": 0.40, "status": "working"},
+    "GoldOre": {"public_buy": 0.40, "public_sell": 0.45, "status": "working"},
+    "PlantFibers": {"public_buy": 0.10, "public_sell": 0.12, "status": "working"},
+    "Kelp": {"public_buy": 0.15, "public_sell": 0.17, "status": "working"}
   },
   "items": {
     "StoneRoadItem": {
       "display_name": "Stone Road",
-      "public_buy": 0.3,
+      "public_buy": 0.30,
       "public_sell": 0.35,
       "status": "locked",
-      "note": "Public Exchange price. Placement/removal policy is a government incentive, not part of the item production price."
+      "note": "Existing public works price. Re-audit when Masonry is rebuilt."
     },
     "IronBarItem": {
       "display_name": "Iron Bar",
       "public_sell": 1.65,
-      "status": "working",
-      "note": "Current working downstream input value. Full mining/smelting chain audit will determine the canonical producer/public-buy value."
+      "status": "working_legacy_live",
+      "note": "Current live-server value only. Replace directly when Mining and Smelting are rebuilt from the new anchors."
     },
     "StampMillItem": {
       "display_name": "Stamp Mill",
       "public_buy": 42.0,
       "public_sell": 46.0,
-      "status": "working",
+      "status": "working_emergency",
       "source_recipe": "StampMillRecipe",
-      "note": "Immediate live-server price pending full Mechanics dependency audit. Based on 5 Iron Bars, 14 Screws, 8 Iron Gears, 14 WoodBoard-tag inputs, and 120 calories at Mechanics 2."
+      "note": "Immediate live-server price only. Replace directly after Mechanics dependencies are rebuilt."
     }
   },
   "government_incentives": {
-    "StoneRoadPlacement": {
-      "credit": 0.5,
-      "status": "locked"
-    },
-    "StoneRoadRemoval": {
-      "charge": 0.5,
-      "status": "locked"
-    },
-    "ForestryCleanupDeposit": {
-      "charge": 1.0,
-      "status": "locked"
-    },
-    "StumpRemovalReturn": {
-      "credit": 1.0,
-      "status": "locked"
-    },
-    "WoodlandDebrisCleanup": {
-      "credit": 0.05,
-      "status": "locked"
-    }
+    "StoneRoadPlacement": {"credit": 0.5, "status": "locked"},
+    "StoneRoadRemoval": {"charge": 0.5, "status": "locked"},
+    "ForestryCleanupDeposit": {"charge": 1.0, "status": "locked"},
+    "StumpRemovalReturn": {"credit": 1.0, "status": "locked"},
+    "WoodlandDebrisCleanup": {"credit": 0.05, "status": "locked"}
   }
 }
