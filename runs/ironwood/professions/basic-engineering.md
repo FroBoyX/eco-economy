@@ -1,6 +1,6 @@
-# Ironwood Basic Engineering — Early Infrastructure
+# Ironwood Basic Engineering — Current Early Infrastructure
 
-Rebuilt from Eco 14 Core using the current Ironwood Logging, Masonry, Mining and metal-chain prices.
+Rebuilt from the supplied Eco 14 Core using current Ironwood Logging, Masonry, Mining, Carpentry and metal-chain prices.
 
 Derived producer costs use Town Buy/producer values. The Exchange retail spread is applied afterward rather than compounded through every dependency.
 
@@ -12,84 +12,76 @@ Crushed Mixed Rock, Crushed Sandstone and Crushed Granite are abundant `CrushedR
 
 Crushed Limestone remains separate because exact-item recipes consume it.
 
-## Wooden Gear / Wooden Wheel — Basic Engineering 1
+## Exchange-ready Basic Engineering table
 
-Core: 4 Hewn Logs + 40 calories → 1.
+| Item | Basic Engineering | Entry cost | Town Buys | Town Sells | Notes |
+|---|---:|---:|---:|---:|---|
+| Wooden Gear | 1 | 2.816 | **2.96** | **3.11** | 4 Hewn Logs, skill-modified. |
+| Wooden Wheel | 1 | 2.816 | **2.96** | **3.11** | Same material burden as Wooden Gear. |
+| Arrastra | 1 | 6.840 | **7.18** | **7.54** | Includes static Mill Stone. |
+| Rocker Box | 1 | 4.080 | **4.28** | **4.49** | Boards + Wood. |
+| Stone Road | 1 | 0.224 | **0.24** | **0.25** | Cheap public-use sink for CrushedRock byproduct. |
+| Stone Road Tool | 1 | 4.240 | **4.45** | **4.67** | Wood + common Rock. |
+| **Basic Engineering Upgrade** | 2 | **20.010** | **21.01** | **22.06** | Six Wooden Gears are static; 2,250 effective labor calories. |
+| Stop Sign | 2 | 10.245 | **10.76** | **11.30** | 8 Iron Bars, skill-modified. |
+| Street Sign | 2 | 10.245 | **10.76** | **11.30** | Same recipe burden as Stop Sign. |
+| **Iron Wheel** | 3 | **7.210** | **7.57** | **7.95** | 6 Iron Bars at Basic Engineering 3. |
 
-At Basic Engineering 1:
+## Key calculations
 
-- 3.2 Hewn Logs × 0.87 = 2.784
-- 32 calories = 0.032
-- entry cost ≈ **2.816**
-
-**Wooden Gear: 2.96 Town Buy / 3.11 Town Sell.**
-
-**Wooden Wheel: 2.96 Town Buy / 3.11 Town Sell.**
-
-## Arrastra — Basic Engineering 1
-
-Entry-effective inputs:
-
-- 4 Wood × 0.40 = 1.600
-- 24 Rock × 0.10 = 2.400
-- 8 Boards × 0.26 = 2.080
-- 1 static Mill Stone × 0.52 = 0.520
-- 240 calories = 0.240
-- entry cost ≈ **6.840**
-
-**Arrastra: 7.18 Town Buy / 7.54 Town Sell.**
-
-## Rocker Box — Basic Engineering 1
-
-Entry-effective inputs:
-
-- 8 Boards × 0.26 = 2.080
-- 4.8 Wood × 0.40 = 1.920
-- 80 calories = 0.080
-- entry cost = **4.080**
-
-**Rocker Box: 4.28 Town Buy / 4.49 Town Sell.**
-
-## Stone Road — Basic Engineering 1
+### Basic Engineering Upgrade — level 2
 
 Core:
 
-- 3 Mortar
-- 2 `CrushedRock`
-- 60 calories
+- 6 Wooden Gears, **static**
+- 3000 calories, skill-modified
 
-At Basic Engineering 1:
+At Basic Engineering 2:
 
-- 2.4 Mortar × 0.04 = 0.096
-- 1.6 CrushedRock × 0.05 = 0.080
-- 48 calories = 0.048
-- entry cost ≈ **0.224**
+- 6 × 2.96 = 17.760
+- 2250 calories = 2.250
+- total = **20.010**
 
-**Stone Road: 0.24 Town Buy / 0.25 Town Sell.**
+**21.01 Town Buy / 22.06 Town Sell.**
 
-This is intentionally cheap because the road recipe is a public-use sink for abundant crushed-rock byproduct.
+### Stop Sign / Street Sign — level 2
 
-## Stone Road Tool — Basic Engineering 1
+Core: 8 Iron Bars + 60 calories.
 
-Entry-effective inputs:
+At level 2:
 
-- 6.4 Wood × 0.40 = 2.560
-- 16 Rock × 0.10 = 1.600
-- 80 calories = 0.080
-- entry cost = **4.240**
+- 6 Iron Bars × 1.70 = 10.200
+- 45 calories = 0.045
+- cost = **10.245**
 
-**Stone Road Tool: 4.45 Town Buy / 4.67 Town Sell.**
+**10.76 / 11.30** each.
 
-## Exchange-ready Basic Engineering table
+### Iron Wheel — level 3
 
-| Item | Town Buys | Town Sells |
-|---|---:|---:|
-| Common CrushedRock | **0.05** | **0.06** |
-| Wooden Gear | **2.96** | **3.11** |
-| Wooden Wheel | **2.96** | **3.11** |
-| Arrastra | **7.18** | **7.54** |
-| Rocker Box | **4.28** | **4.49** |
-| Stone Road | **0.24** | **0.25** |
-| Stone Road Tool | **4.45** | **4.67** |
+Core: 6 Iron Bars + 100 calories.
 
-Later Engineering products will be added as their dependencies become canonical.
+At level 3:
+
+- 4.2 Iron Bars × 1.70 = 7.140
+- 70 calories = 0.070
+- cost = **7.210**
+
+**7.57 / 7.95.**
+
+## Deferred Basic Engineering rows
+
+These are source-confirmed recipes but still depend on unpriced chains:
+
+- Waterwheel — Wooden Hull Planks + Lubricant;
+- Windmill — Linen Fabric + Lubricant;
+- Wood Cart — Lubricant;
+- Wood Shop Cart — Cotton Fabric, Wood Cart, Store, Lubricant;
+- Wooden Elevator — Hemp Mooring Rope + Lubricant;
+- Hand Plow — Lubricant;
+- Iron Road Tool — Leather Hide;
+- Wooden Liquid Tank — Iron Pipe;
+- Powered Cart — Fabric, Cast Iron Stove, Lubricant;
+- Carbon Filter — Linen Fabric + Charcoal Powder;
+- Mechanical Water Pump — Iron Pipe;
+- Asphalt Concrete — Cement;
+- Engineering research outputs — research-economy inputs.
