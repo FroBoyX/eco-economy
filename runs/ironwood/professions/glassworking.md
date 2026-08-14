@@ -1,16 +1,16 @@
-# Ironwood Glassworking — Current Glass Foundation
+# Ironwood Glassworking — Current Steam-Era Table
 
 Rebuilt from Eco 14 Core after the Mining/Masonry fuel and commercial-margin corrections.
 
-Glass remains a Tier-3 bulk construction material. Its accepted structural band is preserved, but Town Buy also clears the actual cash cost of buying Sand, Crushed Limestone and fuel through the Exchange.
+Glass remains a Tier-3 bulk construction material. The current table uses only Steam-entry routes; later advanced materials do not set the live price.
 
 ## Current inputs
 
-- Sand: **0.10 / 0.11**
-- Crushed Limestone: **0.76 / 0.80**
-- Quicklime: **0.80 / 0.84**
-- Charcoal: **1.24 / 1.30**, 20,000 J
-- Copper Wiring: **1.62 / 1.70**
+- Sand **0.10 / 0.11**
+- Crushed Limestone **0.76 / 0.80**
+- Quicklime **0.80 / 0.84**
+- Charcoal **1.24 / 1.30**, 20,000 J
+- Copper Wiring **1.62 / 1.70**
 - Glassworks fuel: 50 W
 
 ## Basic Glass — Glassworking 1
@@ -21,33 +21,36 @@ Core:
 - 1 Crushed Limestone, static
 - 30 calories
 - base craft time 1.2 minutes
-- → 1 Glass
+- -> 1 Glass
 
-At Glassworking 1:
-
-- 3.2 Sand × 0.11 = 0.352
-- 1 static Crushed Limestone × 0.80 = 0.800
-- 24 calories = 0.024
-- 0.96 effective minutes of 50 W fuel = 2,880 J = 0.144 Charcoal × 1.30 = 0.187
-- Exchange cash cost ≈ **1.363**
+At Glassworking 1, Exchange cash cost is about **1.363**.
 
 **Glass: 1.57 Town Buy / 1.65 Town Sell.**
 
-This satisfies both the commercial floor and the accepted Tier-3 construction band.
-
-## Quicklime Glass — Glassworking 4
+## Glass Lens — Glassworking 1
 
 Core:
 
-- 3 Sand
-- 2 Quicklime
-- 45 calories
-- base time 1 minute
-- → 1 Glass
+- 6 Glass
+- 30 calories
+- -> 2 Glass Lens
 
-At level 4 (0.65), public input cash cost is about **1.463**. The route includes the Mason's Quicklime margin, so it is not necessarily cheaper for a Glassworker buying every upstream good at retail. Vertically integrated/direct-supplier production recaptures that margin.
+At Glassworking 1:
 
-The market Glass price remains **1.57 / 1.65**.
+- 4.8 Glass × 1.65 = 7.920
+- 24 calories = 0.024
+- cash cost/craft = 7.944
+- cost/Lens = **3.972**
+
+As a multi-step optical component:
+
+**Glass Lens: 4.57 Town Buy / 4.80 Town Sell.**
+
+This opens the current Mechanics Tripod Camera without future Electronics.
+
+## Quicklime Glass — Glassworking 4
+
+At level 4, public input cash cost is about **1.463**. The route does not force a live price reduction because the current Glass market remains **1.57 / 1.65** and higher-skill efficiency becomes producer profit.
 
 ## Light Bulb — Glassworking 2
 
@@ -57,21 +60,11 @@ Core:
 - 6 Copper Wiring
 - 60 calories
 - base craft time 2 minutes
-- → 1 Light Bulb
+- -> 1 Light Bulb
 
-At Glassworking 2 (0.75):
-
-- 1.5 Glass × 1.65 = 2.475
-- 4.5 Copper Wiring × 1.70 = 7.650
-- 45 calories = 0.045
-- 1.5 effective minutes of 50 W fuel = 4,500 J = 0.225 Charcoal × 1.30 = 0.293
-- Exchange cash cost ≈ **10.463**
-
-As a multi-step industrial/electrical component:
+At Glassworking 2, Exchange cash cost ≈ **10.463**.
 
 **Light Bulb: 12.35 Town Buy / 12.97 Town Sell.**
-
-This resolves the last non-terminal material dependency in the current Steam Truck/Steam Tractor recipe.
 
 ## Glassworks — Pottery dependency
 
@@ -85,12 +78,15 @@ This resolves the last non-terminal material dependency in the current Steam Tru
 | Glass | **1.57** | **1.65** |
 | Lumber | **1.62** | **1.70** |
 
-## Exchange-ready Glassworking foundation
+## Exchange-ready current Glassworking foundation
 
 | Item | Town Buys | Town Sells |
 |---|---:|---:|
 | Crushed Limestone | **0.76** | **0.80** |
 | Quicklime | **0.80** | **0.84** |
 | Glass | **1.57** | **1.65** |
+| Glass Lens | **4.57** | **4.80** |
 | Light Bulb | **12.35** | **12.97** |
 | Glassworks | **50.01** | **52.51** |
+
+Decorative buoys, framed glass and remaining Glassworking housing objects still need the final profession-output normalization pass; their foundation inputs are now canonical.
