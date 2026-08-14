@@ -1,112 +1,95 @@
 # Ironwood Basic Engineering — Early Infrastructure
 
-Rebuilt from Eco 14 Core using current Ironwood Logging, Masonry, Mining and metal-chain prices.
+Rebuilt from Eco 14 Core using the current Ironwood Logging, Masonry, Mining and metal-chain prices.
 
-A critical pricing rule here is that **Crushed Mixed Rock is an abundant Mining byproduct/waste stream**, not a premium dedicated-crushing product. Recipes accepting the generic `CrushedRock` tag should use the cheapest practical valid input when that byproduct is available.
+Derived producer costs use Town Buy/producer values. The Exchange retail spread is applied afterward rather than compounded through every dependency.
 
 ## Reusable Mining byproduct
 
-### Crushed Mixed Rock
+Crushed Mixed Rock, Crushed Sandstone and Crushed Granite are abundant `CrushedRock` byproduct streams.
 
-Eco 14 Core describes Crushed Mixed Rock as a mixture usable in recipes or simply as landfill. It is produced as a byproduct while crushing Coal and Sulfur and later appears as a Recycling output from reprocessed Tailings.
+**Common CrushedRock reuse value: 0.05 Town Buy / 0.06 Town Sell.**
 
-It therefore receives a low reuse value rather than a dedicated production-cost price:
+Crushed Limestone remains separate because exact-item recipes consume it.
 
-**Crushed Mixed Rock: 0.05 Town Buy / 0.06 Town Sell.**
-
-This creates an economic sink for a bulky byproduct without pretending it has the same value as clean crushed stone.
-
-## Utility components
-
-### Wooden Gear / Wooden Wheel — Basic Engineering 1
+## Wooden Gear / Wooden Wheel — Basic Engineering 1
 
 Core: 4 Hewn Logs + 40 calories → 1.
 
-At Basic Engineering 1 (0.80 multiplier):
+At Basic Engineering 1:
 
-- 3.2 Hewn Logs;
-- 32 calories;
-- entry cost ≈ **2.94**.
+- 3.2 Hewn Logs × 0.87 = 2.784
+- 32 calories = 0.032
+- entry cost ≈ **2.816**
 
-**Wooden Gear: 3.10 Town Buy / 3.26 Town Sell.**
+**Wooden Gear: 2.96 Town Buy / 3.11 Town Sell.**
 
-**Wooden Wheel: 3.10 Town Buy / 3.26 Town Sell.**
+**Wooden Wheel: 2.96 Town Buy / 3.11 Town Sell.**
 
-## Mining infrastructure
-
-### Arrastra — Basic Engineering 1
+## Arrastra — Basic Engineering 1
 
 Entry-effective inputs:
 
-- 4 Wood;
-- 24 Rock;
-- 8 Boards;
-- 1 Mill Stone, static;
-- 240 calories.
+- 4 Wood × 0.40 = 1.600
+- 24 Rock × 0.10 = 2.400
+- 8 Boards × 0.26 = 2.080
+- 1 static Mill Stone × 0.52 = 0.520
+- 240 calories = 0.240
+- entry cost ≈ **6.840**
 
-Entry cost ≈ **9.15**.
+**Arrastra: 7.18 Town Buy / 7.54 Town Sell.**
 
-**Arrastra: 9.60 Town Buy / 10.08 Town Sell.**
-
-### Rocker Box — Basic Engineering 1
+## Rocker Box — Basic Engineering 1
 
 Entry-effective inputs:
 
-- 8 Boards;
-- 4.8 Wood;
-- 80 calories.
+- 8 Boards × 0.26 = 2.080
+- 4.8 Wood × 0.40 = 1.920
+- 80 calories = 0.080
+- entry cost = **4.080**
 
-Entry cost ≈ **4.40**.
-
-**Rocker Box: 4.62 Town Buy / 4.85 Town Sell.**
+**Rocker Box: 4.28 Town Buy / 4.49 Town Sell.**
 
 ## Stone Road — Basic Engineering 1
 
 Core:
 
-- 3 Mortar;
-- 2 `CrushedRock`;
-- 60 calories;
-- 1 Stone Road.
+- 3 Mortar
+- 2 `CrushedRock`
+- 60 calories
 
 At Basic Engineering 1:
 
-- 2.4 Mortar;
-- 1.6 CrushedRock;
-- 48 calories.
+- 2.4 Mortar × 0.04 = 0.096
+- 1.6 CrushedRock × 0.05 = 0.080
+- 48 calories = 0.048
+- entry cost ≈ **0.224**
 
-Because Crushed Mixed Rock satisfies `CrushedRock` and is the practical low-value byproduct stream, use its **0.06 retail value**, not the dedicated production cost of clean Crushed Sandstone/Granite.
+**Stone Road: 0.24 Town Buy / 0.25 Town Sell.**
 
-Using Mortar retail 0.07:
-
-`2.4 × 0.07 + 1.6 × 0.06 + 0.048 ≈ 0.312`
-
-**Stone Road: 0.33 Town Buy / 0.35 Town Sell.**
-
-This essentially validates the old Ironwood 0.35 retail Stone Road price from first principles. The earlier 1.59 rebuild was wrong because it priced a waste/byproduct tag input as premium clean crushed rock.
+This is intentionally cheap because the road recipe is a public-use sink for abundant crushed-rock byproduct.
 
 ## Stone Road Tool — Basic Engineering 1
 
 Entry-effective inputs:
 
-- 6.4 Wood;
-- 16 Rock;
-- 80 calories.
+- 6.4 Wood × 0.40 = 2.560
+- 16 Rock × 0.10 = 1.600
+- 80 calories = 0.080
+- entry cost = **4.240**
 
-Entry cost ≈ **5.68**.
+**Stone Road Tool: 4.45 Town Buy / 4.67 Town Sell.**
 
-**Stone Road Tool: 5.97 Town Buy / 6.27 Town Sell.**
-
-## Current Exchange-ready Basic Engineering table
+## Exchange-ready Basic Engineering table
 
 | Item | Town Buys | Town Sells |
 |---|---:|---:|
-| Crushed Mixed Rock | **0.05** | **0.06** |
-| Wooden Gear | **3.10** | **3.26** |
-| Wooden Wheel | **3.10** | **3.26** |
-| Arrastra | **9.60** | **10.08** |
-| Rocker Box | **4.62** | **4.85** |
-| Stone Road | **0.33** | **0.35** |
-| Stone Road Tool | **5.97** | **6.27** |
+| Common CrushedRock | **0.05** | **0.06** |
+| Wooden Gear | **2.96** | **3.11** |
+| Wooden Wheel | **2.96** | **3.11** |
+| Arrastra | **7.18** | **7.54** |
+| Rocker Box | **4.28** | **4.49** |
+| Stone Road | **0.24** | **0.25** |
+| Stone Road Tool | **4.45** | **4.67** |
 
 Later Engineering products will be added as their dependencies become canonical.
