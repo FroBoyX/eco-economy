@@ -4,7 +4,7 @@ This file defines the pricing method used by Eco server/run profiles. It does no
 
 ## Objective
 
-Set stable prices that allow a producer using the base recipe quantities to make a shallow positive margin, while allowing specialization, resource efficiency, modules, improved workstations, logistics, and organization to increase that producer's effective margin over time.
+Set stable prices that allow a producer using the **first intended profession recipe at base efficiency** to make a shallow positive margin, while allowing specialization, resource efficiency, modules, improved workstations, logistics, and organization to increase that producer's effective margin over time.
 
 Prices should not automatically rise because a player becomes more efficient.
 
@@ -19,6 +19,16 @@ Every run may distinguish four values:
 
 A run does not need to use public buy/sell prices for every item. They are separate from the underlying producer value so public-market spreads do not accidentally become recipe costs everywhere.
 
+## Canonical Recipe Baseline
+
+For profession pricing, use the **first intended specialized recipe for that profession at its base, unmodified resource efficiency** unless there is a specific design reason to use another path.
+
+Do not price a professional good from an unskilled or primitive fallback merely because the fallback exists. Such recipes may intentionally be convenience paths that are economically inferior to specialization.
+
+When several intended professional recipes make the same output, use the cheapest credible path available at that progression stage as the arbitrage floor. More expensive alternative recipes do not automatically receive their own higher output price.
+
+Later recipes, resource-efficiency bonuses, modules, talents, and improved logistics may reduce effective production cost while the canonical output price stays fixed. That is the intended source of growing professional profit.
+
 ## Base Cost
 
 For one base craft:
@@ -27,7 +37,7 @@ For one base craft:
 
 Where:
 
-- input quantities use the unmodified Eco recipe quantities unless a run explicitly selects another baseline;
+- input quantities use the unmodified Eco recipe quantities for the selected profession baseline;
 - labor is valued using the run's calorie anchor;
 - garbage is a cost when disposal has a negative value;
 - useful byproducts may reduce effective cost only when there is a credible buyer/use for them;
@@ -37,7 +47,7 @@ Where:
 
 The initial producer value should normally be only modestly above base cost.
 
-The exact target is a run policy. The important rule is that the producer can participate without needing late-game efficiency, but the base recipe should not create excessive profit.
+The exact target is a run policy. The important rule is that the producer can participate at entry professional efficiency without needing late-game bonuses, but the base recipe should not create excessive profit.
 
 As resource efficiency improves, fewer inputs are consumed for the same output. The output price remains stable, so the producer's profit grows naturally.
 
