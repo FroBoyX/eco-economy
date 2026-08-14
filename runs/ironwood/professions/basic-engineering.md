@@ -2,6 +2,8 @@
 
 Rebuilt from the supplied Eco 14 Core after canonicalizing Lubricant, Leather, textiles, Shipwright materials, Pipes, Store and the commercially viable metal/wood chains.
 
+The Campfire/Butchery cross-audit corrected early Lubricant from the provisional 0.28/0.29 to **0.14/0.15**. All Lubricant-dependent Basic Engineering prices below have been propagated from that correction.
+
 ## Current key inputs
 
 - Hewn Log **0.93 / 0.98**
@@ -14,7 +16,7 @@ Rebuilt from the supplied Eco 14 Core after canonicalizing Lubricant, Leather, t
 - Lumber **1.62 / 1.70**
 - Linen Fabric **0.68 / 0.71**
 - Cotton Fabric **0.86 / 0.90**
-- Lubricant **0.28 / 0.29**
+- **Lubricant 0.14 / 0.15**
 - Wooden Hull Planks **1.10 / 1.16**
 - Hemp Mooring Rope **1.05 / 1.10**
 - Charcoal Powder **0.22 / 0.23**
@@ -31,81 +33,77 @@ Rebuilt from the supplied Eco 14 Core after canonicalizing Lubricant, Leather, t
 | Rocker Box | 1 | 4.480 | **5.82** | **6.11** | capital workstation |
 | Stone Road | 1 | ~0.264 | **0.30** | **0.32** | public/byproduct sink |
 | Stone Road Tool | 1 | 4.720 | **5.57** | **5.85** | durable tool |
-| Waterwheel | 1 | 16.336 | **21.24** | **22.30** | power infrastructure |
-| Windmill | 1 | 19.648 | **25.54** | **26.82** | power infrastructure |
-| Wood Cart | 1 | 12.798 | **16.64** | **17.47** | early vehicle |
-| **Wood Shop Cart** | 1 | 45.530 | **63.74** | **66.93** | late/deep shop vehicle |
+| Waterwheel | 1 | 15.888 | **20.65** | **21.68** | power infrastructure |
+| Windmill | 1 | 19.200 | **24.96** | **26.21** | power infrastructure |
+| Wood Cart | 1 | 12.658 | **16.46** | **17.28** | early vehicle |
+| Wood Shop Cart | 1 | 45.250 | **63.35** | **66.52** | late/deep shop vehicle |
 | Mechanical Water Pump | 1 | 33.328 | **43.33** | **45.50** | capital machine |
 | Carbon Filter | 1 | 5.648 ea | **6.66** | **6.99** | multi-step component |
-| Wooden Elevator | 1 | 80.100 | **112.14** | **117.75** | late infrastructure |
+| Wooden Elevator | 1 | 79.820 | **111.75** | **117.34** | late infrastructure |
 | Basic Engineering Upgrade | 2 | 24.630 | **32.02** | **33.62** | capital/upgrade |
 | Stop Sign | 2 | 16.065 | **18.47** | **19.39** | ordinary finished |
 | Street Sign | 2 | 16.065 | **18.47** | **19.39** | ordinary finished |
-| Hand Plow | 2 | 32.520 | **42.28** | **44.39** | vehicle/tool capital |
+| Hand Plow | 2 | 32.380 | **42.09** | **44.19** | vehicle/tool capital |
 | Iron Wheel | 3 | 11.284 | **12.64** | **13.27** | industrial component |
 | Iron Road Tool | 3 | 59.154 | **73.94** | **77.64** | deep durable tool |
 | Wooden Liquid Tank | 4 | 52.728 | **68.55** | **71.98** | capital infrastructure |
-| **Powered Cart** | 5 | 92.760 | **129.86** | **136.35** | late vehicle/capital good |
+| Powered Cart | 5 | 92.480 | **129.47** | **135.94** | late vehicle/capital good |
 
-## Newly completed shop/vehicle loop
+## Corrected Lubricant examples
 
-### Wood Shop Cart — Basic Engineering 1
+### Waterwheel — Basic Engineering 1
 
-Core:
-
-- 12 Cotton Fabric
-- 8 Lumber
-- 1 Wood Cart, static
-- 1 Store, static
-- 2 Lubricant, static
-- 225 calories
+Core: 8 Wooden Hull Planks + 4 Lubricant + 10 Hewn Logs + 180 calories.
 
 At level 1:
 
-- 9.6 Cotton Fabric × 0.90 = 8.640
-- 6.4 Lumber × 1.70 = 10.880
-- Wood Cart = 17.47
-- Store = 7.78
-- 2 Lubricant = 0.58
-- 180 calories = 0.180
-- cash cost = **45.530**
+- 6.4 Hull Planks × 1.16 = 7.424
+- 3.2 Lubricant × 0.15 = 0.480
+- 8 Hewn Logs × 0.98 = 7.840
+- 144 calories = 0.144
+- cash cost = **15.888**
 
-This is both a vehicle and mobile retail-capital object, so it receives the ~40% late-capital treatment:
+**Waterwheel: 20.65 / 21.68.**
 
-**Wood Shop Cart: 63.74 / 66.93.**
+### Windmill — Basic Engineering 1
+
+At level 1:
+
+- 9.6 Linen Fabric × 0.71 = 6.816
+- 3.2 Lubricant × 0.15 = 0.480
+- 12 Hewn Logs × 0.98 = 11.760
+- 144 calories = 0.144
+- cash cost = **19.200**
+
+**Windmill: 24.96 / 26.21.**
+
+### Wood Cart — Basic Engineering 1
+
+Core uses two static Wooden Wheels and one static Lubricant.
+
+Current cash cost = **12.658**.
+
+**Wood Cart: 16.46 / 17.28.**
+
+### Wooden Elevator — Basic Engineering 1
+
+The only corrected input is its two static Lubricant. Cash cost falls slightly from 80.10 to **79.82**.
+
+The late-capital treatment remains appropriate:
+
+**Wooden Elevator: 111.75 / 117.34.**
+
+### Wood Shop Cart — Basic Engineering 1
+
+Current cash cost = **45.25** after the two static Lubricant correction.
+
+**Wood Shop Cart: 63.35 / 66.52.**
 
 ### Powered Cart — Basic Engineering 5
 
-Core:
+Current cash cost = **92.48** after the two static Lubricant correction.
 
-- 30 Boards
-- 20 generic `Fabric`
-- 1 Cast Iron Stove, static
-- 3 Iron Wheels, static
-- 2 Lubricant, static
-- 200 calories
-
-At level 5 (0.60), using Linen Fabric as the cheapest current public `Fabric` input:
-
-- 18 Boards × 0.28 = 5.040
-- 12 Fabric × 0.71 = 8.520
-- Cast Iron Stove = 38.69
-- 3 Iron Wheels × 13.27 = 39.810
-- 2 Lubricant = 0.580
-- 120 calories = 0.120
-- cash cost = **92.760**
-
-**Powered Cart: 129.86 / 136.35.**
-
-## Important capital examples
-
-- Waterwheel: **21.24 / 22.30**
-- Windmill: **25.54 / 26.82**
-- Wood Cart: **16.64 / 17.47**
-- Wooden Elevator: **112.14 / 117.75**
-- Powered Cart: **129.86 / 136.35**
-
-The deeper goods create larger absolute currency injections because they tie up more player-shop inventory and upstream production value.
+**Powered Cart: 129.47 / 135.94.**
 
 ## Still deferred
 
