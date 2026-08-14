@@ -1,0 +1,76 @@
+{
+  "schema_version": 1,
+  "run": "ironwood",
+  "game_version": "Eco 14",
+  "currency": "Ironwood credit",
+  "labor": {
+    "credits_per_1000_calories": 1.0,
+    "credits_per_calorie": 0.001,
+    "status": "locked"
+  },
+  "pricing_policy": {
+    "base_recipe_margin_band": {
+      "minimum_rate": 0.08,
+      "maximum_rate": 0.15,
+      "status": "working_method",
+      "note": "A shallow base margin band for choosing clean shop prices. Efficiency is expected to increase realized margin later without raising the canonical output price."
+    }
+  },
+  "anchors": {
+    "Log": {
+      "unit_value": 0.4,
+      "status": "locked",
+      "note": "Foundational Ironwood raw-material anchor."
+    },
+    "Rock": {
+      "unit_value": 0.15,
+      "status": "locked",
+      "note": "Ordinary stone/rock anchor. Limestone is intentionally not assumed to share this value."
+    }
+  },
+  "items": {
+    "StoneRoadItem": {
+      "display_name": "Stone Road",
+      "public_buy": 0.3,
+      "public_sell": 0.35,
+      "status": "locked",
+      "note": "Public Exchange price. Placement/removal policy is a government incentive, not part of the item production price."
+    },
+    "IronBarItem": {
+      "display_name": "Iron Bar",
+      "public_sell": 1.65,
+      "status": "working",
+      "note": "Current working downstream input value. Full mining/smelting chain audit will determine the canonical producer/public-buy value."
+    },
+    "StampMillItem": {
+      "display_name": "Stamp Mill",
+      "public_buy": 42.0,
+      "public_sell": 46.0,
+      "status": "working",
+      "source_recipe": "StampMillRecipe",
+      "note": "Immediate live-server price pending full Mechanics dependency audit. Based on 5 Iron Bars, 14 Screws, 8 Iron Gears, 14 WoodBoard-tag inputs, and 120 calories at Mechanics 2."
+    }
+  },
+  "government_incentives": {
+    "StoneRoadPlacement": {
+      "credit": 0.5,
+      "status": "locked"
+    },
+    "StoneRoadRemoval": {
+      "charge": 0.5,
+      "status": "locked"
+    },
+    "ForestryCleanupDeposit": {
+      "charge": 1.0,
+      "status": "locked"
+    },
+    "StumpRemovalReturn": {
+      "credit": 1.0,
+      "status": "locked"
+    },
+    "WoodlandDebrisCleanup": {
+      "credit": 0.05,
+      "status": "locked"
+    }
+  }
+}
