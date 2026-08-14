@@ -20,8 +20,8 @@ Iron and Copper Bloomery recipes require Smelting 1. Gold requires Smelting 4.
 
 ## Supporting inputs and environmental costs
 
-- Clay: **0.02 Town Buy / 0.03 Town Sell**;
-- Clay Mold: **0.02 Town Buy / 0.03 Town Sell**;
+- Clay: **0.05 Town Buy / 0.06 Town Sell**;
+- Clay Mold: **0.03 Town Buy / 0.04 Town Sell**;
 - Slag: **0.05 Town Buy / 0.08 Town Sell**;
 - Ceramic Scrap disposal: **0.15/unit**;
 - Tailings disposal is already included upstream in concentrate prices;
@@ -33,14 +33,14 @@ Core Gathering 1 recipe: 1 Clay + 50 calories → 4 Clay Molds.
 
 At Gathering 1:
 
-- 0.8 Clay × 0.03 retail = 0.024;
+- 0.8 Clay × 0.06 retail = 0.048;
 - 40 calories = 0.040;
-- total craft cost ≈ 0.064;
-- cost per mold ≈ **0.016**.
+- total craft cost ≈ 0.088;
+- cost per mold ≈ **0.022**.
 
-Practical Exchange rounding gives **0.02 Town Buy / 0.03 Town Sell**.
+Practical Exchange rounding gives **0.03 Town Buy / 0.04 Town Sell**.
 
-The lower Clay price slightly reduces Bloomery cost but does not move the current rounded bar prices.
+Clay has moved upward from its day-one near-waste value because Pottery, Brick, Cement and other uses now create recurring demand. The effect on metal bars remains very small.
 
 ## Iron Bar
 
@@ -54,7 +54,7 @@ Smelting 1 effective Bloomery recipe:
 - 1.5 Ceramic Scrap;
 - Bloomery fuel.
 
-Using Iron Concentrate retail **5.20**, entry cost remains about **1.46–1.47 per bar** after the Clay correction.
+Using Iron Concentrate retail **5.20**, entry cost remains about **1.47 per bar**.
 
 **Iron Bar: 1.55 Town Buy / 1.65 Town Sell.**
 
@@ -70,7 +70,7 @@ Smelting 1 effective Bloomery recipe:
 - 1.5 Ceramic Scrap;
 - Bloomery fuel.
 
-Using Copper Concentrate retail **11.75**, entry cost remains about **3.22–3.23 per bar** after the Clay correction.
+Using Copper Concentrate retail **11.75**, entry cost remains about **3.23 per bar**.
 
 **Copper Bar: 3.40 Town Buy / 3.60 Town Sell.**
 
@@ -88,7 +88,7 @@ Entry-effective recipe:
 - **1.5 Ceramic Scrap**;
 - Bloomery fuel.
 
-Using Gold Concentrate retail **18.00**, total craft cost remains just under **8 credits per Gold Bar** after the Clay correction.
+Using Gold Concentrate retail **18.00**, total craft cost remains just under **8 credits per Gold Bar**.
 
 **Gold Bar: 8.35 Town Buy / 8.70 Town Sell.**
 
