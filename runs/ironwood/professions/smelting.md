@@ -2,7 +2,7 @@
 
 This file contains the currently validated Smelting portion of the Ironwood metal economy.
 
-It uses the corrected Mining chain from `mining.md` and Eco 14 Core. Other Smelting products are intentionally omitted until recalculated from these bar values.
+It uses the corrected Mining chain from `mining.md` and Eco 14 Core. Derived producer costs use Town Buy/producer values for intermediate inputs so the public Exchange spread is not recursively compounded through every stage.
 
 ## Entry-skill rule
 
@@ -20,86 +20,107 @@ Iron and Copper Bloomery recipes require Smelting 1. Gold requires Smelting 4.
 
 ## Supporting inputs and environmental costs
 
-- Clay: **0.10 Town Buy / 0.11 Town Sell**;
-- Clay Mold: **0.04 Town Buy / 0.05 Town Sell**;
-- Slag: **0.05 Town Buy / 0.08 Town Sell**;
-- Ceramic Scrap disposal: **0.15/unit**;
-- Tailings disposal is already included upstream in concentrate prices;
-- Bloomery fuel is included as a small operating cost using conservative Charcoal pricing.
+- Clay: **0.10 Town Buy / 0.11 Town Sell**
+- Clay Mold: **0.04 / 0.05**
+- Slag: **0.05 / 0.08** working byproduct value
+- Ceramic Scrap disposal: **0.15/unit**
+- Tailings disposal is already included upstream in concentrate values
+- Charcoal producer value: **1.17**, 20,000 J fuel value
+- Bloomery fuel consumption: **10 W**
 
-### Clay Mold check
+## Iron Bar — Bloomery, Smelting 1
 
-Core Gathering 1 recipe: 1 Clay + 50 calories → 4 Clay Molds.
+Effective recipe:
 
-At Gathering 1:
+- 1.6 Iron Concentrate
+- 1.6 Clay Molds
+- 48 calories
+- 6 Iron Bars
+- 1.6 Slag
+- 1.5 Ceramic Scrap
+- about 4 effective craft minutes
 
-- 0.8 Clay × 0.11 retail = 0.088;
-- 40 calories = 0.040;
-- total craft cost ≈ 0.128;
-- cost per mold ≈ **0.032**.
+Producer-value cost:
 
-Practical Exchange rounding gives **0.04 Town Buy / 0.05 Town Sell**.
+- 1.6 × 5.84 Iron Concentrate = 9.344
+- 1.6 × 0.04 Clay Mold = 0.064
+- labor = 0.048
+- Ceramic Scrap disposal = 0.225
+- Bloomery fuel ≈ 0.140
+- Slag credit = −0.080
+- total ≈ 9.741
+- cost/bar ≈ **1.624**
 
-The current-era Clay value is higher than the original day-one spoil price because Clay now has recurring uses in molds, Pottery, Brick, Cement and later industry. The effect on metal bars remains too small to change their rounded prices.
+**Iron Bar: 1.70 Town Buy / 1.79 Town Sell.**
 
-## Iron Bar
+## Copper Bar — Bloomery, Smelting 1
 
-Smelting 1 effective Bloomery recipe:
+Effective recipe:
 
-- 1.6 Iron Concentrate;
-- 1.6 Clay Molds;
-- 48 calories;
-- 6 Iron Bars;
-- 1.6 Slag;
-- 1.5 Ceramic Scrap;
-- Bloomery fuel.
+- 1.6 Copper Concentrate
+- 1.6 Clay Molds
+- 48 calories
+- 6 Copper Bars
+- 1.6 Slag
+- 1.5 Ceramic Scrap
+- about 4.8 effective craft minutes
 
-Using Iron Concentrate retail **5.20**, entry cost remains about **1.47 per bar**.
+Producer-value cost:
 
-**Iron Bar: 1.55 Town Buy / 1.65 Town Sell.**
+- 1.6 × 11.98 Copper Concentrate = 19.168
+- molds = 0.064
+- labor = 0.048
+- Ceramic Scrap disposal = 0.225
+- fuel ≈ 0.168
+- Slag credit = −0.080
+- total ≈ 19.593
+- cost/bar ≈ **3.266**
 
-## Copper Bar
+**Copper Bar: 3.43 Town Buy / 3.60 Town Sell.**
 
-Smelting 1 effective Bloomery recipe:
+## Gold Bar — Bloomery, Smelting 4
 
-- 1.6 Copper Concentrate;
-- 1.6 Clay Molds;
-- 48 calories;
-- 6 Copper Bars;
-- 1.6 Slag;
-- 1.5 Ceramic Scrap;
-- Bloomery fuel.
+Gold unlocks at Smelting 4, so skill-modified resources use the 0.65 multiplier.
 
-Using Copper Concentrate retail **11.75**, entry cost remains about **3.23 per bar**.
+Effective recipe:
 
-**Copper Bar: 3.40 Town Buy / 3.60 Town Sell.**
+- 1.3 Gold Concentrate
+- 1.3 Clay Molds
+- 39 calories
+- 3 Gold Bars
+- 1.3 Slag
+- 1.5 Ceramic Scrap
+- about 3.9 effective craft minutes
 
-## Gold Bar
+Producer-value cost:
 
-Gold unlocks at Smelting 4, so the Bloomery uses the 0.65 resource multiplier.
+- 1.3 × 17.02 Gold Concentrate = 22.126
+- molds = 0.052
+- labor = 0.039
+- Ceramic Scrap disposal = 0.225
+- fuel ≈ 0.137
+- Slag credit = −0.065
+- total ≈ 22.514
+- cost/bar ≈ **7.505**
 
-Entry-effective recipe:
+**Gold Bar: 7.88 Town Buy / 8.27 Town Sell.**
 
-- **1.3 Gold Concentrate**;
-- **1.3 Clay Molds**;
-- **39 calories**;
-- **3 Gold Bars**;
-- **1.3 Slag**;
-- **1.5 Ceramic Scrap**;
-- Bloomery fuel.
+Gold remains substantially more expensive than Copper because the complete first-unlock chain requires about 20.8 Gold Ore per finished bar versus 8.96 Copper Ore and 6.4 Iron Ore.
 
-Using Gold Concentrate retail **18.00**, total craft cost remains just under **8 credits per Gold Bar**.
+## Exchange-ready bar table
 
-**Gold Bar: 8.35 Town Buy / 8.70 Town Sell.**
+| Item | Town Buys | Town Sells | Entry cost/unit |
+|---|---:|---:|---:|
+| Iron Bar | **1.70** | **1.79** | ~1.624 |
+| Copper Bar | **3.43** | **3.60** | ~3.266 |
+| Gold Bar | **7.88** | **8.27** | ~7.505 |
 
-## Validated bar table
+## Why these shifted
 
-| Item | Town Buys | Town Sells |
-|---|---:|---:|
-| **Iron Bar** | **1.55** | **1.65** |
-| **Copper Bar** | **3.40** | **3.60** |
-| **Gold Bar** | **8.35** | **8.70** |
+The previous chain gave Crushed Sandstone/Granite a large byproduct credit based on their hypothetical dedicated crushing cost. Core shows they are generic `CrushedRock`/`Silica` byproducts with no exact-item consumer, so Ironwood now values them as low-value reuse material instead.
+
+At the same time, the corrected pricing model no longer compounds the Exchange retail spread through every industrial stage. Those two corrections largely offset one another: Copper remains at **3.60 retail**, Iron rises modestly, and Gold falls slightly.
 
 ## Progression
 
-Later Blast Furnace production, higher skill, modules, talents, and Recycling should reduce effective costs and raise producer margins while these fixed bar prices remain stable unless Ironwood deliberately passes technological deflation downstream.
+Later Blast Furnace production, higher skill, modules, talents and Recycling should reduce effective costs and raise producer margins. Civilization-wide technology transitions may later pass part of those gains downstream through deliberate repricing.
