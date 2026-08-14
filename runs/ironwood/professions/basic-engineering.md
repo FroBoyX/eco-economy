@@ -1,8 +1,6 @@
-# Ironwood Basic Engineering — Current Infrastructure Table
+# Ironwood Basic Engineering — Current Steam-Era Infrastructure Table
 
-Rebuilt from the supplied Eco 14 Core after canonicalizing Lubricant, Leather, textiles, Shipwright materials, Pipes, Store and the commercially viable metal/wood chains.
-
-The Campfire/Butchery cross-audit corrected early Lubricant to **0.14/0.15**. The current Milling pass also resolves **Iron Oxide at 0.16/0.17**, opening the Magnet recipe without future chemistry.
+Rebuilt from the supplied Eco 14 Core using current Lubricant, Leather, textiles, Shipwright materials, Pipes, Store, Iron Oxide and Cement.
 
 ## Current key inputs
 
@@ -18,6 +16,7 @@ The Campfire/Butchery cross-audit corrected early Lubricant to **0.14/0.15**. Th
 - Cotton Fabric **0.86 / 0.90**
 - Lubricant **0.14 / 0.15**
 - Iron Oxide **0.16 / 0.17**
+- Cement **0.94 / 0.99**
 - Wooden Hull Planks **1.10 / 1.16**
 - Hemp Mooring Rope **1.05 / 1.10**
 - Charcoal Powder **0.22 / 0.23**
@@ -26,95 +25,80 @@ The Campfire/Butchery cross-audit corrected early Lubricant to **0.14/0.15**. Th
 
 ## Exchange-ready Basic Engineering outputs
 
-| Item | Level | Cash cost | Town Buys | Town Sells | Class |
-|---|---:|---:|---:|---:|---|
-| Wooden Gear | 1 | 3.168 | **3.55** | **3.73** | simple component |
-| Wooden Wheel | 1 | 3.168 | **3.55** | **3.73** | simple component |
-| **Magnet** | 1 | 4.580 ea | **5.27** | **5.53** | multi-step component |
-| Arrastra | 1 | 7.570 | **9.84** | **10.33** | capital workstation |
-| Rocker Box | 1 | 4.480 | **5.82** | **6.11** | capital workstation |
-| Stone Road | 1 | ~0.264 | **0.30** | **0.32** | public/byproduct sink |
-| Stone Road Tool | 1 | 4.720 | **5.57** | **5.85** | durable tool |
-| Waterwheel | 1 | 15.888 | **20.65** | **21.68** | power infrastructure |
-| Windmill | 1 | 19.200 | **24.96** | **26.21** | power infrastructure |
-| Wood Cart | 1 | 12.658 | **16.46** | **17.28** | early vehicle |
-| Wood Shop Cart | 1 | 45.250 | **63.35** | **66.52** | late/deep shop vehicle |
-| Mechanical Water Pump | 1 | 33.328 | **43.33** | **45.50** | capital machine |
-| Carbon Filter | 1 | 5.648 ea | **6.66** | **6.99** | multi-step component |
-| Wooden Elevator | 1 | 79.820 | **111.75** | **117.34** | late infrastructure |
-| Basic Engineering Upgrade | 2 | 24.630 | **32.02** | **33.62** | capital/upgrade |
-| Stop Sign | 2 | 16.065 | **18.47** | **19.39** | ordinary finished |
-| Street Sign | 2 | 16.065 | **18.47** | **19.39** | ordinary finished |
-| Hand Plow | 2 | 32.380 | **42.09** | **44.19** | vehicle/tool capital |
-| Iron Wheel | 3 | 11.284 | **12.64** | **13.27** | industrial component |
-| Iron Road Tool | 3 | 59.154 | **73.94** | **77.64** | deep durable tool |
-| Wooden Liquid Tank | 4 | 52.728 | **68.55** | **71.98** | capital infrastructure |
-| Powered Cart | 5 | 92.480 | **129.47** | **135.94** | late vehicle/capital good |
+| Item | Level | Town Buys | Town Sells |
+|---|---:|---:|---:|
+| Wooden Gear | 1 | **3.55** | **3.73** |
+| Wooden Wheel | 1 | **3.55** | **3.73** |
+| Magnet | 1 | **5.27** | **5.53** |
+| Arrastra | 1 | **9.84** | **10.33** |
+| Rocker Box | 1 | **5.82** | **6.11** |
+| Stone Road | 1 | **0.30** | **0.32** |
+| **Asphalt Concrete** | 1 | **0.78** | **0.82** |
+| Stone Road Tool | 1 | **5.57** | **5.85** |
+| Waterwheel | 1 | **20.65** | **21.68** |
+| Windmill | 1 | **24.96** | **26.21** |
+| Wood Cart | 1 | **16.46** | **17.28** |
+| Wood Shop Cart | 1 | **63.35** | **66.52** |
+| Mechanical Water Pump | 1 | **43.33** | **45.50** |
+| Carbon Filter | 1 | **6.66** | **6.99** |
+| Wooden Elevator | 1 | **111.75** | **117.34** |
+| Basic Engineering Upgrade | 2 | **32.02** | **33.62** |
+| Stop Sign | 2 | **18.47** | **19.39** |
+| Street Sign | 2 | **18.47** | **19.39** |
+| Hand Plow | 2 | **42.09** | **44.19** |
+| Iron Wheel | 3 | **12.64** | **13.27** |
+| Iron Road Tool | 3 | **73.94** | **77.64** |
+| Wooden Liquid Tank | 4 | **68.55** | **71.98** |
+| Powered Cart | 5 | **129.47** | **135.94** |
 
-## Magnet — Basic Engineering 1
+## Asphalt Concrete — Basic Engineering 1
 
 Core:
 
-- 4 Iron Bars
-- 4 Iron Oxide
-- 90 calories
-- -> 2 Magnets
+- 1 Cement
+- 2 Sand
+- 5 `CrushedRock`
+- 180 calories
+- -> 2 Asphalt Concrete
 
-At level 1:
+At Basic Engineering 1:
 
-- 3.2 Iron Bars × 2.67 = 8.544
-- 3.2 Iron Oxide × 0.17 = 0.544
-- 72 calories = 0.072
-- craft cash cost = 9.160
-- cost/Magnet = **4.580**
+- 0.8 Cement × 0.99 = 0.792
+- 1.6 Sand × 0.11 = 0.176
+- 4 Crushed Rock × 0.06 = 0.240
+- 144 calories = 0.144
+- craft cash cost = 1.352
+- cash cost/block = **0.676**
 
-**Magnet: 5.27 Town Buy / 5.53 Town Sell.**
+With an ordinary current construction-material margin:
 
-This opens the current Mechanics Electrostatic Filter without Electronics or Oil Drilling.
+**Asphalt Concrete: 0.78 Town Buy / 0.82 Town Sell.**
 
-## Corrected Lubricant examples
+This is current because Cement is Masonry 4, not Advanced Masonry. Reinforced Concrete remains future because its current recipe requires Fiberglass.
 
-### Waterwheel — Basic Engineering 1
+## Magnet — Basic Engineering 1
 
-Core: 8 Wooden Hull Planks + 4 Lubricant + 10 Hewn Logs + 180 calories.
+4 Iron Bars + 4 Iron Oxide + 90 calories -> 2. Current cash cost = **4.580 per Magnet**.
 
-Current cash cost = **15.888**.
+**Magnet: 5.27 / 5.53.**
 
-**Waterwheel: 20.65 / 21.68.**
+## Major current infrastructure
 
-### Windmill — Basic Engineering 1
+- Waterwheel **20.65 / 21.68**
+- Windmill **24.96 / 26.21**
+- Wood Cart **16.46 / 17.28**
+- Wood Shop Cart **63.35 / 66.52**
+- Mechanical Water Pump **43.33 / 45.50**
+- Wooden Elevator **111.75 / 117.34**
+- Hand Plow **42.09 / 44.19**
+- Wooden Liquid Tank **68.55 / 71.98**
+- Powered Cart **129.47 / 135.94**
 
-Current cash cost = **19.200**.
+All use the corrected current animal-fat Lubricant **0.14 / 0.15** where applicable.
 
-**Windmill: 24.96 / 26.21.**
+## Still special / future
 
-### Wood Cart — Basic Engineering 1
-
-Core uses two static Wooden Wheels and one static Lubricant. Current cash cost = **12.658**.
-
-**Wood Cart: 16.46 / 17.28.**
-
-### Wooden Elevator — Basic Engineering 1
-
-Current cash cost = **79.82**.
-
-**Wooden Elevator: 111.75 / 117.34.**
-
-### Wood Shop Cart — Basic Engineering 1
-
-Current cash cost = **45.25**.
-
-**Wood Shop Cart: 63.35 / 66.52.**
-
-### Powered Cart — Basic Engineering 5
-
-Current cash cost = **92.48**.
-
-**Powered Cart: 129.47 / 135.94.**
-
-## Still deferred / special
-
-- Asphalt Concrete — Cement/Advanced Masonry outside the current Steam-entry price boundary;
+- Reinforced Concrete — Fiberglass/Plastic route;
 - research outputs — research-economy policy;
-- Engineer Sign is a tag-product/decorative variant and can be normalized with its parent Store Sign during final presentation;
-- electrical/industrial Engineering requiring future specialty workstations stays outside the current run scope.
+- Engineer Sign — normalize with parent Store Sign **4.72 / 4.96** during final presentation;
+- later electrical/industrial Engineering requiring future specialty workstations stays outside this run's current pricing scope.
