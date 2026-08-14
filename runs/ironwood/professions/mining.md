@@ -1,74 +1,186 @@
-# Ironwood Mining Prices
+# Ironwood Mining — Metal Chain
 
-Ground-up Mining table derived from Ironwood raw anchors and Eco 14 Core.
+This file contains the currently validated Mining portion of the Ironwood metal economy.
 
-## Pricing baseline
+It is derived from Eco 14 Core and the Ironwood raw anchors. Other Mining outputs are intentionally omitted until audited with the corrected skill-efficiency model.
 
-The earliest intended Mining infrastructure sets the entry price when it exists:
+## Core mechanic that controls the math
 
-- **Arrastra** for early crushing;
-- **Rocker Box** for early concentrating;
-- later Stamp Mill, Jaw Crusher, Screening Machine, Froth Flotation and sensor sorting recipes keep the same output price and create progression margin.
+Mining's multiplicative resource strategy is:
 
-Inputs are costed at their current Exchange **sell** price. Labor is 0.001 credit/calorie. Useful byproducts receive their current Exchange **buy** value as a credit.
+- level 0: 1.00
+- level 1: 0.80
+- level 2: 0.75
+- level 3: 0.70
+- level 4: 0.65
+- level 5: 0.60
+- level 6: 0.55
+- level 7: 0.50
 
-## Crushed rock family
+However, Eco recipes may deliberately declare an ingredient as `staticIngredient`.
 
-| Output | Entry Core recipe | Base cost / output | Exchange buys | Exchange sells |
+The Arrastra metal-crushing recipes use:
+
+`new IngredientElement(<Ore>, 12, true)`
+
+So the **12 raw ore is static and does not receive Mining's resource reduction**.
+
+The Rocker Box concentrate recipes use `typeof(MiningSkill)`, so their crushed-ore input **does** receive the Mining multiplier. At Mining 1, that input is 80% of the printed amount.
+
+This distinction is mandatory for pricing.
+
+## Assumptions
+
+- labor value: 0.001 credit/calorie;
+- entry recipes evaluated at Mining 1;
+- Tailings disposal charge: 0.35/unit;
+- useful rock byproducts receive Town Buy credit;
+- target producer margin on industrial intermediates: roughly 5–6%;
+- intermediate Exchange spread: roughly 4%, rounded to practical values.
+
+## Supporting crushed rock
+
+| Product | Core entry recipe | Entry cost | Town Buys | Town Sells |
 |---|---|---:|---:|---:|
-| Crushed Sandstone | 12 Sandstone + 30 cal → 3 | 0.690 | **0.76** | **0.85** |
-| Crushed Shale | 12 Shale + 30 cal → 3 | 0.690 | **0.76** | **0.85** |
-| Crushed Granite | 12 Granite + 70 cal → 3 | 0.703 | **0.78** | **0.88** |
-| Crushed Limestone | 12 Limestone + 50 cal → 3 | 0.937 | **1.03** | **1.16** |
-| Crushed Basalt | Stamp Mill: 20 Basalt + 150 cal → 5 | 0.710 | **0.78** | **0.88** |
-| Crushed Gneiss | Stamp Mill: 20 Gneiss + 120 cal → 5 | 0.704 | **0.78** | **0.88** |
-| Crushed Mixed Rock | Byproduct/reference value | — | **0.70** | **0.80** |
+| Crushed Sandstone | 12 Sandstone static + 24 effective cal → 3 | ~0.688 | **0.73** | **0.76** |
+| Crushed Granite | 12 Granite static + 56 effective cal → 3 | ~0.699 | **0.74** | **0.77** |
 
-Crushed Mixed Rock is deliberately slightly cheaper than clean single-rock crushed products. It is commonly a byproduct and later Recycling output rather than a premium dedicated material.
+These values supply the byproduct credit for ore crushing.
 
-## Ore processing
+## Ore → crushed ore
 
-The entry ore crushers produce a useful rock byproduct. That byproduct is credited at its Exchange buy value rather than treated as free waste.
+### Iron
 
-| Output | Entry Core recipe | Byproduct credit | Base cost / output | Exchange buys | Exchange sells |
-|---|---|---:|---:|---:|---:|
-| **Crushed Iron Ore** | 12 Iron Ore + 50 cal → 2 | 1 Crushed Sandstone @ 0.76 | 0.845 | **0.93** | **1.04** |
-| **Crushed Copper Ore** | 12 Copper Ore + 70 cal → 2 | 1 Crushed Granite @ 0.78 | 1.145 | **1.26** | **1.41** |
-| **Crushed Gold Ore** | 12 Gold Ore + 70 cal → 2 | 1 Crushed Granite @ 0.78 | 1.325 | **1.46** | **1.64** |
-| **Crushed Coal** | 12 Coal + 50 cal → 2 | 1 Crushed Mixed Rock @ 0.70 | 1.055 | **1.17** | **1.31** |
-| **Crushed Sulfur** | 12 Sulfur + 70 cal → 2 | 1 Crushed Mixed Rock @ 0.70 | 1.065 | **1.18** | **1.32** |
+Core at Arrastra, Mining 1:
 
-## Concentrates
+- 12 Iron Ore — **static**;
+- 40 effective calories;
+- outputs 2 Crushed Iron Ore;
+- outputs 1 Crushed Sandstone byproduct.
 
-| Output | Entry Core recipe | Conservative cost | Exchange buys | Exchange sells |
-|---|---|---:|---:|---:|
-| **Iron Concentrate** | 5 Crushed Iron + 50 cal → 1 | 5.25 | **5.80** | **6.50** |
-| **Copper Concentrate** | 7 Crushed Copper + 50 cal → 1 | 9.92 | **10.90** | **12.20** |
-| **Gold Concentrate** | 10 Crushed Gold + 50 cal → 1 | 16.45 | **18.10** | **20.30** |
+Using Iron Ore retail 0.22 and Crushed Sandstone Town Buy 0.73:
 
-Later concentration recipes produce more output from similar inputs. They do not lower the fixed concentrate price; that improved yield is the Mining progression profit.
+`(12 × 0.22 + 0.04 - 0.73) / 2 ≈ 0.975 per Crushed Iron Ore`
 
-## Other Mining outputs priced now
+**Price: 1.03 Town Buy / 1.08 Town Sell.**
 
-| Product | Core basis | Conservative cost | Exchange buys | Exchange sells | Notes |
-|---|---|---:|---:|---:|---|
-| Garden Gravel | 4 Rock + 50 cal → 2 | 0.365 | **0.40** | **0.45** | Uses generic Rock. |
-| Geology Research Paper Basic | 30 Rock + 30 cal → 1 | 5.13 | **5.65** | **6.35** | Production floor; research policy may later override public treatment. |
-| Mining Basic Upgrade | 30 Crushed Iron + 10 Crushed Rock + 6000 cal | 45.20 | **49.75** | **55.75** | Uses Crushed Mixed Rock as the cheapest valid CrushedRock reference. |
-| Mining Advanced Upgrade | 30 Crushed Copper + 10 Crushed Rock + 6000 cal | 56.30 | **61.95** | **69.40** | Same methodology. |
-| Mining Modern Upgrade | 30 Crushed Gold + 10 Crushed Rock + 9000 cal | 66.20 | **72.80** | **81.55** | Same methodology. |
+### Copper
 
-## Recipes that do not set a new price
+Core at Arrastra, Mining 1:
 
-- later crushed-rock recipes at Stamp Mill/Jaw Crusher;
-- later ore crushing recipes;
-- later iron/copper/gold concentration recipes;
-- Sand Concentrate recipes: natural high-quality Sand is already available at 0.15/0.17; converting valuable Silica-tag crushed rock back into Sand is a contextual fallback and does not raise the Sand commodity price;
-- Crushed Mortared Stone: same Crushed Mixed Rock output;
-- dry/wet tailings reprocessing later feeds the same Crushed Mixed Rock price through Recycling.
+- 12 Copper Ore — **static**;
+- 56 effective calories;
+- outputs 2 Crushed Copper Ore;
+- outputs 1 Crushed Granite byproduct.
 
-## Dependencies not yet priced
+Using Copper Ore retail 0.35 and Crushed Granite Town Buy 0.74:
 
-- Crushed Slag — wait for the Smelting/slag value;
-- Dynamite and Mining Charge — wait for black powder, paper, plastics, electronics and related chains;
-- Smelting/Masonry skill books — wait for the research economy.
+`(12 × 0.35 + 0.056 - 0.74) / 2 ≈ 1.758`
+
+**Price: 1.86 Town Buy / 1.94 Town Sell.**
+
+### Gold
+
+Core at Arrastra, Mining 1:
+
+- 12 Gold Ore — **static**;
+- 56 effective calories;
+- outputs 2 Crushed Gold Ore;
+- outputs 1 Crushed Granite byproduct.
+
+Using Gold Ore retail 0.60 and Crushed Granite Town Buy 0.74:
+
+`(12 × 0.60 + 0.056 - 0.74) / 2 ≈ 3.258`
+
+**Price: 3.45 Town Buy / 3.60 Town Sell.**
+
+## Crushed ore → concentrate
+
+These Rocker Box inputs are skill-modified. At Mining 1 the printed input is multiplied by 0.80.
+
+Tailings are a real disposal cost and remain at their printed garbage quantity.
+
+### Iron Concentrate
+
+Core printed recipe:
+
+- 5 Crushed Iron Ore;
+- 50 calories;
+- 1 Iron Concentrate;
+- 1.5 Tailings.
+
+Mining 1 effective input:
+
+- **4.0 Crushed Iron Ore**;
+- **40 calories**;
+- **1.5 Tailings**.
+
+Cost:
+
+`4 × 1.08 + 0.04 + (1.5 × 0.35) = 4.885`
+
+**Price: 5.15 Town Buy / 5.35 Town Sell.**
+
+### Copper Concentrate
+
+Core printed recipe:
+
+- 7 Crushed Copper Ore;
+- 50 calories;
+- 1 Copper Concentrate;
+- 2.25 Tailings.
+
+Mining 1 effective input:
+
+- **5.6 Crushed Copper Ore**;
+- **40 calories**;
+- **2.25 Tailings**.
+
+Cost:
+
+`5.6 × 1.94 + 0.04 + (2.25 × 0.35) ≈ 11.692`
+
+**Price: 12.40 Town Buy / 12.90 Town Sell.**
+
+### Gold Concentrate
+
+Core printed recipe:
+
+- 10 Crushed Gold Ore;
+- 50 calories;
+- 1 Gold Concentrate;
+- 3 Tailings.
+
+Mining 1 effective input:
+
+- **8.0 Crushed Gold Ore**;
+- **40 calories**;
+- **3 Tailings**.
+
+Cost:
+
+`8 × 3.60 + 0.04 + (3 × 0.35) = 29.89`
+
+**Price: 31.60 Town Buy / 32.90 Town Sell.**
+
+## Validated Mining metal table
+
+| Item | Town Buys | Town Sells |
+|---|---:|---:|
+| Iron Ore | **0.20** | **0.22** |
+| Copper Ore | **0.30** | **0.35** |
+| Gold Ore | **0.50** | **0.60** |
+| Crushed Iron Ore | **1.03** | **1.08** |
+| Crushed Copper Ore | **1.86** | **1.94** |
+| Crushed Gold Ore | **3.45** | **3.60** |
+| Iron Concentrate | **5.15** | **5.35** |
+| Copper Concentrate | **12.40** | **12.90** |
+| Gold Concentrate | **31.60** | **32.90** |
+
+## Progression behavior
+
+Later Mining recipes, better machines, higher skill levels, modules, and talents should not automatically reduce these fixed prices.
+
+They reduce the miner's cost and therefore increase profit. That is intentional.
+
+If Tailings later become positive-value Recycling feedstock, the concentrate stage should become more profitable or be deliberately repriced as part of that technology transition.
