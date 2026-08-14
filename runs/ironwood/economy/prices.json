@@ -1,5 +1,5 @@
 {
-  "schema_version": 6,
+  "schema_version": 7,
   "run": "ironwood",
   "game_version": "Eco 14",
   "currency": "Ironwood credit",
@@ -28,140 +28,31 @@
     }
   },
   "anchors": {
-    "Sandstone": {
-      "public_buy": 0.15,
-      "public_sell": 0.17,
-      "status": "validated_metal_chain"
-    },
-    "Granite": {
-      "public_buy": 0.15,
-      "public_sell": 0.17,
-      "status": "validated_metal_chain"
-    },
-    "Clay": {
-      "public_buy": 0.15,
-      "public_sell": 0.17,
-      "status": "working_metal_input",
-      "note": "Revisit with Gathering/Masonry; current value has little effect on bar price."
-    },
-    "IronOre": {
-      "public_buy": 0.20,
-      "public_sell": 0.22,
-      "status": "validated_metal_chain"
-    },
-    "CopperOre": {
-      "public_buy": 0.30,
-      "public_sell": 0.35,
-      "status": "validated_metal_chain"
-    },
-    "GoldOre": {
-      "public_buy": 0.50,
-      "public_sell": 0.60,
-      "status": "validated_metal_chain"
-    }
+    "Sandstone": {"public_buy": 0.15, "public_sell": 0.17, "status": "validated_metal_chain"},
+    "Granite": {"public_buy": 0.15, "public_sell": 0.17, "status": "validated_metal_chain"},
+    "Clay": {"public_buy": 0.15, "public_sell": 0.17, "status": "working_metal_input", "note": "Revisit with Gathering/Masonry; current value has little effect on bar price."},
+    "IronOre": {"public_buy": 0.20, "public_sell": 0.22, "status": "validated_metal_chain"},
+    "CopperOre": {"public_buy": 0.30, "public_sell": 0.33, "status": "validated_metal_chain"},
+    "GoldOre": {"public_buy": 0.30, "public_sell": 0.35, "status": "validated_metal_chain", "note": "Gold scarcity is supplied primarily by the poor Core conversion ratio rather than an additional raw-ore premium."}
   },
   "garbage_disposal": {
-    "Tailings": {
-      "price": -0.35,
-      "status": "working_pre_recycling"
-    },
-    "CeramicScrap": {
-      "price": -0.15,
-      "status": "working_pre_recycling"
-    }
+    "Tailings": {"price": -0.35, "status": "working_pre_recycling"},
+    "CeramicScrap": {"price": -0.15, "status": "working_pre_recycling"}
   },
   "items": {
-    "CrushedSandstoneItem": {
-      "display_name": "Crushed Sandstone",
-      "public_buy": 0.73,
-      "public_sell": 0.76,
-      "status": "validated_metal_chain",
-      "source_profession": "Mining"
-    },
-    "CrushedGraniteItem": {
-      "display_name": "Crushed Granite",
-      "public_buy": 0.74,
-      "public_sell": 0.77,
-      "status": "validated_metal_chain",
-      "source_profession": "Mining"
-    },
-    "CrushedIronOreItem": {
-      "display_name": "Crushed Iron Ore",
-      "public_buy": 1.03,
-      "public_sell": 1.08,
-      "status": "validated_metal_chain",
-      "source_profession": "Mining"
-    },
-    "CrushedCopperOreItem": {
-      "display_name": "Crushed Copper Ore",
-      "public_buy": 1.86,
-      "public_sell": 1.94,
-      "status": "validated_metal_chain",
-      "source_profession": "Mining"
-    },
-    "CrushedGoldOreItem": {
-      "display_name": "Crushed Gold Ore",
-      "public_buy": 3.45,
-      "public_sell": 3.60,
-      "status": "validated_metal_chain",
-      "source_profession": "Mining"
-    },
-    "IronConcentrateItem": {
-      "display_name": "Iron Concentrate",
-      "public_buy": 5.15,
-      "public_sell": 5.35,
-      "status": "validated_metal_chain",
-      "source_profession": "Mining"
-    },
-    "CopperConcentrateItem": {
-      "display_name": "Copper Concentrate",
-      "public_buy": 12.40,
-      "public_sell": 12.90,
-      "status": "validated_metal_chain",
-      "source_profession": "Mining"
-    },
-    "GoldConcentrateItem": {
-      "display_name": "Gold Concentrate",
-      "public_buy": 31.60,
-      "public_sell": 32.90,
-      "status": "validated_metal_chain",
-      "source_profession": "Mining"
-    },
-    "ClayMoldItem": {
-      "display_name": "Clay Mold",
-      "public_buy": 0.05,
-      "public_sell": 0.06,
-      "status": "validated_metal_chain",
-      "source_profession": "Gathering"
-    },
-    "SlagItem": {
-      "display_name": "Slag",
-      "public_buy": 0.05,
-      "public_sell": 0.08,
-      "status": "working_byproduct",
-      "source_profession": "Smelting"
-    },
-    "IronBarItem": {
-      "display_name": "Iron Bar",
-      "public_buy": 1.55,
-      "public_sell": 1.65,
-      "status": "validated_metal_chain",
-      "source_profession": "Smelting"
-    },
-    "CopperBarItem": {
-      "display_name": "Copper Bar",
-      "public_buy": 3.65,
-      "public_sell": 3.85,
-      "status": "validated_metal_chain",
-      "source_profession": "Smelting"
-    },
-    "GoldBarItem": {
-      "display_name": "Gold Bar",
-      "public_buy": 15.10,
-      "public_sell": 16.00,
-      "status": "validated_metal_chain",
-      "source_profession": "Smelting"
-    }
+    "CrushedSandstoneItem": {"display_name": "Crushed Sandstone", "public_buy": 0.73, "public_sell": 0.76, "status": "validated_metal_chain", "source_profession": "Mining"},
+    "CrushedGraniteItem": {"display_name": "Crushed Granite", "public_buy": 0.74, "public_sell": 0.77, "status": "validated_metal_chain", "source_profession": "Mining"},
+    "CrushedIronOreItem": {"display_name": "Crushed Iron Ore", "public_buy": 1.02, "public_sell": 1.06, "status": "validated_metal_chain", "source_profession": "Mining"},
+    "CrushedCopperOreItem": {"display_name": "Crushed Copper Ore", "public_buy": 1.72, "public_sell": 1.79, "status": "validated_metal_chain", "source_profession": "Mining"},
+    "CrushedGoldOreItem": {"display_name": "Crushed Gold Ore", "public_buy": 1.86, "public_sell": 1.94, "status": "validated_metal_chain", "source_profession": "Mining"},
+    "IronConcentrateItem": {"display_name": "Iron Concentrate", "public_buy": 5.00, "public_sell": 5.20, "status": "validated_metal_chain", "source_profession": "Mining"},
+    "CopperConcentrateItem": {"display_name": "Copper Concentrate", "public_buy": 11.30, "public_sell": 11.75, "status": "validated_metal_chain", "source_profession": "Mining"},
+    "GoldConcentrateItem": {"display_name": "Gold Concentrate", "public_buy": 17.25, "public_sell": 18.00, "status": "validated_metal_chain", "source_profession": "Mining"},
+    "ClayMoldItem": {"display_name": "Clay Mold", "public_buy": 0.05, "public_sell": 0.06, "status": "validated_metal_chain", "source_profession": "Gathering"},
+    "SlagItem": {"display_name": "Slag", "public_buy": 0.05, "public_sell": 0.08, "status": "working_byproduct", "source_profession": "Smelting"},
+    "IronBarItem": {"display_name": "Iron Bar", "public_buy": 1.55, "public_sell": 1.65, "status": "validated_metal_chain", "source_profession": "Smelting"},
+    "CopperBarItem": {"display_name": "Copper Bar", "public_buy": 3.40, "public_sell": 3.60, "status": "validated_metal_chain", "source_profession": "Smelting"},
+    "GoldBarItem": {"display_name": "Gold Bar", "public_buy": 8.35, "public_sell": 8.70, "status": "validated_metal_chain", "source_profession": "Smelting"}
   },
   "unpriced_dependencies": [
     "Logging outputs",
