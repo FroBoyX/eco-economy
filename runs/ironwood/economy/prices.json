@@ -1,5 +1,5 @@
 {
-  "schema_version": 14,
+  "schema_version": 15,
   "run": "ironwood",
   "game_version": "Eco 14",
   "currency": "Ironwood credit",
@@ -28,6 +28,12 @@
       "target_minimum_rate": 0.02,
       "target_maximum_rate": 0.06,
       "status": "working_method"
+    },
+    "bulk_construction_materials": {
+      "status": "locked_ironwood_policy",
+      "tier3_retail_target_minimum": 1.25,
+      "tier3_retail_target_maximum": 1.75,
+      "note": "Bare recipe cost is a floor, not the sole target for bulk structural blocks. Ironwood may add a logistics/handling valuation for repeated gathering, hauling, workstation throughput and bulk storage that Eco recipe calories poorly represent. Tier is a sanity band, not a universal fixed price."
     },
     "ironwood_exchange_spread": {
       "baseline_rate": 0.05,
@@ -67,8 +73,8 @@
     "HewnLogItem": {"display_name": "Hewn Log", "public_buy": 0.87, "public_sell": 0.91, "source_profession": "Logging"},
     "CharcoalItem": {"display_name": "Charcoal", "public_buy": 1.17, "public_sell": 1.23, "source_profession": "Logging"},
 
-    "FlaxseedOilItem": {"display_name": "Flaxseed Oil", "public_buy": 1.20, "public_sell": 1.26, "source_profession": "Milling", "status": "working_current_era", "note": "Milling 3 Mill route using Flax Seed 0.10 producer value; revisit with full Farming/Tailoring audit."},
-    "LumberItem": {"display_name": "Lumber", "public_buy": 1.45, "public_sell": 1.52, "source_profession": "Carpentry", "status": "validated_current_recipe_working_oil", "note": "Carpentry 1 Sawmill recipe; supersedes prior working value around 3 credits."},
+    "FlaxseedOilItem": {"display_name": "Flaxseed Oil", "public_buy": 1.20, "public_sell": 1.26, "source_profession": "Milling", "status": "working_current_era"},
+    "LumberItem": {"display_name": "Lumber", "public_buy": 1.60, "public_sell": 1.68, "source_profession": "Carpentry", "status": "validated_current_era", "note": "Tier-3 bulk construction value; modeled Carpentry floor is about 1.38 per Lumber."},
 
     "MortarItem": {"display_name": "Mortar", "public_buy": 0.04, "public_sell": 0.05, "source_profession": "Masonry"},
     "MortaredStoneItem": {"display_name": "Mortared Stone", "public_buy": 0.38, "public_sell": 0.40, "source_profession": "Masonry"},
@@ -98,10 +104,10 @@
     "GoldBarItem": {"display_name": "Gold Bar", "public_buy": 7.88, "public_sell": 8.27, "source_profession": "Smelting"},
 
     "WoodenMoldItem": {"display_name": "Wooden Mold", "public_buy": 0.44, "public_sell": 0.46, "source_profession": "Logging"},
-    "WetBrickItem": {"display_name": "Wet Brick", "public_buy": 0.43, "public_sell": 0.45, "source_profession": "Pottery"},
-    "BrickItem": {"display_name": "Brick", "public_buy": 0.56, "public_sell": 0.59, "source_profession": "Pottery"},
-    "GlassItem": {"display_name": "Glass", "public_buy": 1.21, "public_sell": 1.27, "source_profession": "Glassworking"},
-    "GlassworksItem": {"display_name": "Glassworks", "public_buy": 24.18, "public_sell": 25.39, "source_profession": "Pottery"},
+    "WetBrickItem": {"display_name": "Wet Brick", "public_buy": 0.43, "public_sell": 0.45, "source_profession": "Pottery", "note": "Process/intermediate value; finished Brick receives bulk-construction valuation."},
+    "BrickItem": {"display_name": "Brick", "public_buy": 1.20, "public_sell": 1.25, "source_profession": "Pottery", "status": "validated_current_era", "note": "Tier-3 bulk construction policy value; modeled recipe floor is about 0.53."},
+    "GlassItem": {"display_name": "Glass", "public_buy": 1.45, "public_sell": 1.52, "source_profession": "Glassworking", "status": "validated_current_era", "note": "Tier-3 bulk construction value; modeled entry floor is about 1.15."},
+    "GlassworksItem": {"display_name": "Glassworks", "public_buy": 32.80, "public_sell": 34.44, "source_profession": "Pottery", "note": "Recalculated after Brick construction revaluation."},
 
     "NailItem": {"display_name": "Nail", "public_buy": 0.09, "public_sell": 0.10, "source_profession": "Blacksmith"},
     "IronPlateItem": {"display_name": "Iron Plate", "public_buy": 1.48, "public_sell": 1.55, "source_profession": "Blacksmith"},
