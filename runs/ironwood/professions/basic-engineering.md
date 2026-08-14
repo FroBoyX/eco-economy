@@ -2,7 +2,7 @@
 
 Rebuilt from the supplied Eco 14 Core after canonicalizing Lubricant, Leather, textiles, Shipwright materials, Pipes, Store and the commercially viable metal/wood chains.
 
-The Campfire/Butchery cross-audit corrected early Lubricant from the provisional 0.28/0.29 to **0.14/0.15**. All Lubricant-dependent Basic Engineering prices below have been propagated from that correction.
+The Campfire/Butchery cross-audit corrected early Lubricant to **0.14/0.15**. The current Milling pass also resolves **Iron Oxide at 0.16/0.17**, opening the Magnet recipe without future chemistry.
 
 ## Current key inputs
 
@@ -16,7 +16,8 @@ The Campfire/Butchery cross-audit corrected early Lubricant from the provisional
 - Lumber **1.62 / 1.70**
 - Linen Fabric **0.68 / 0.71**
 - Cotton Fabric **0.86 / 0.90**
-- **Lubricant 0.14 / 0.15**
+- Lubricant **0.14 / 0.15**
+- Iron Oxide **0.16 / 0.17**
 - Wooden Hull Planks **1.10 / 1.16**
 - Hemp Mooring Rope **1.05 / 1.10**
 - Charcoal Powder **0.22 / 0.23**
@@ -29,6 +30,7 @@ The Campfire/Butchery cross-audit corrected early Lubricant from the provisional
 |---|---:|---:|---:|---:|---|
 | Wooden Gear | 1 | 3.168 | **3.55** | **3.73** | simple component |
 | Wooden Wheel | 1 | 3.168 | **3.55** | **3.73** | simple component |
+| **Magnet** | 1 | 4.580 ea | **5.27** | **5.53** | multi-step component |
 | Arrastra | 1 | 7.570 | **9.84** | **10.33** | capital workstation |
 | Rocker Box | 1 | 4.480 | **5.82** | **6.11** | capital workstation |
 | Stone Road | 1 | ~0.264 | **0.30** | **0.32** | public/byproduct sink |
@@ -49,64 +51,70 @@ The Campfire/Butchery cross-audit corrected early Lubricant from the provisional
 | Wooden Liquid Tank | 4 | 52.728 | **68.55** | **71.98** | capital infrastructure |
 | Powered Cart | 5 | 92.480 | **129.47** | **135.94** | late vehicle/capital good |
 
+## Magnet — Basic Engineering 1
+
+Core:
+
+- 4 Iron Bars
+- 4 Iron Oxide
+- 90 calories
+- -> 2 Magnets
+
+At level 1:
+
+- 3.2 Iron Bars × 2.67 = 8.544
+- 3.2 Iron Oxide × 0.17 = 0.544
+- 72 calories = 0.072
+- craft cash cost = 9.160
+- cost/Magnet = **4.580**
+
+**Magnet: 5.27 Town Buy / 5.53 Town Sell.**
+
+This opens the current Mechanics Electrostatic Filter without Electronics or Oil Drilling.
+
 ## Corrected Lubricant examples
 
 ### Waterwheel — Basic Engineering 1
 
 Core: 8 Wooden Hull Planks + 4 Lubricant + 10 Hewn Logs + 180 calories.
 
-At level 1:
-
-- 6.4 Hull Planks × 1.16 = 7.424
-- 3.2 Lubricant × 0.15 = 0.480
-- 8 Hewn Logs × 0.98 = 7.840
-- 144 calories = 0.144
-- cash cost = **15.888**
+Current cash cost = **15.888**.
 
 **Waterwheel: 20.65 / 21.68.**
 
 ### Windmill — Basic Engineering 1
 
-At level 1:
-
-- 9.6 Linen Fabric × 0.71 = 6.816
-- 3.2 Lubricant × 0.15 = 0.480
-- 12 Hewn Logs × 0.98 = 11.760
-- 144 calories = 0.144
-- cash cost = **19.200**
+Current cash cost = **19.200**.
 
 **Windmill: 24.96 / 26.21.**
 
 ### Wood Cart — Basic Engineering 1
 
-Core uses two static Wooden Wheels and one static Lubricant.
-
-Current cash cost = **12.658**.
+Core uses two static Wooden Wheels and one static Lubricant. Current cash cost = **12.658**.
 
 **Wood Cart: 16.46 / 17.28.**
 
 ### Wooden Elevator — Basic Engineering 1
 
-The only corrected input is its two static Lubricant. Cash cost falls slightly from 80.10 to **79.82**.
-
-The late-capital treatment remains appropriate:
+Current cash cost = **79.82**.
 
 **Wooden Elevator: 111.75 / 117.34.**
 
 ### Wood Shop Cart — Basic Engineering 1
 
-Current cash cost = **45.25** after the two static Lubricant correction.
+Current cash cost = **45.25**.
 
 **Wood Shop Cart: 63.35 / 66.52.**
 
 ### Powered Cart — Basic Engineering 5
 
-Current cash cost = **92.48** after the two static Lubricant correction.
+Current cash cost = **92.48**.
 
 **Powered Cart: 129.47 / 135.94.**
 
-## Still deferred
+## Still deferred / special
 
-- Asphalt Concrete — Cement/Advanced Masonry;
+- Asphalt Concrete — Cement/Advanced Masonry outside the current Steam-entry price boundary;
 - research outputs — research-economy policy;
-- advanced electrical/industrial Engineering — later profession families.
+- Engineer Sign is a tag-product/decorative variant and can be normalized with its parent Store Sign during final presentation;
+- electrical/industrial Engineering requiring future specialty workstations stays outside the current run scope.
