@@ -20,8 +20,8 @@ Iron and Copper Bloomery recipes require Smelting 1. Gold requires Smelting 4.
 
 ## Supporting inputs and environmental costs
 
-- Clay: **0.05 Town Buy / 0.06 Town Sell**;
-- Clay Mold: **0.03 Town Buy / 0.04 Town Sell**;
+- Clay: **0.10 Town Buy / 0.11 Town Sell**;
+- Clay Mold: **0.04 Town Buy / 0.05 Town Sell**;
 - Slag: **0.05 Town Buy / 0.08 Town Sell**;
 - Ceramic Scrap disposal: **0.15/unit**;
 - Tailings disposal is already included upstream in concentrate prices;
@@ -33,14 +33,14 @@ Core Gathering 1 recipe: 1 Clay + 50 calories → 4 Clay Molds.
 
 At Gathering 1:
 
-- 0.8 Clay × 0.06 retail = 0.048;
+- 0.8 Clay × 0.11 retail = 0.088;
 - 40 calories = 0.040;
-- total craft cost ≈ 0.088;
-- cost per mold ≈ **0.022**.
+- total craft cost ≈ 0.128;
+- cost per mold ≈ **0.032**.
 
-Practical Exchange rounding gives **0.03 Town Buy / 0.04 Town Sell**.
+Practical Exchange rounding gives **0.04 Town Buy / 0.05 Town Sell**.
 
-Clay has moved upward from its day-one near-waste value because Pottery, Brick, Cement and other uses now create recurring demand. The effect on metal bars remains very small.
+The current-era Clay value is higher than the original day-one spoil price because Clay now has recurring uses in molds, Pottery, Brick, Cement and later industry. The effect on metal bars remains too small to change their rounded prices.
 
 ## Iron Bar
 
@@ -92,19 +92,6 @@ Using Gold Concentrate retail **18.00**, total craft cost remains just under **8
 
 **Gold Bar: 8.35 Town Buy / 8.70 Town Sell.**
 
-This keeps a shallow entry margin while relying on Gold's poor Core conversion ratio—not an oversized raw Gold Ore premium—to create scarcity.
-
-## Why Gold Concentrate can cost more than a Gold Bar
-
-The item units are not one-to-one.
-
-At the first Gold-smelting skill level:
-
-- 1.3 Gold Concentrate → 3 Gold Bars;
-- therefore 1 Gold Concentrate → about **2.31 Gold Bars**.
-
-At 18.00 retail, one Gold Concentrate carries about **7.80 credits of concentrate cost per eventual bar**. Smelting adds molds, labor, fuel, waste handling, and a shallow producer margin to reach the 8.70 Gold Bar retail price.
-
 ## Validated bar table
 
 | Item | Town Buys | Town Sells |
@@ -112,16 +99,6 @@ At 18.00 retail, one Gold Concentrate carries about **7.80 credits of concentrat
 | **Iron Bar** | **1.55** | **1.65** |
 | **Copper Bar** | **3.40** | **3.60** |
 | **Gold Bar** | **8.35** | **8.70** |
-
-## Why Gold is still meaningfully expensive
-
-The complete first-unlock chain consumes roughly:
-
-- 6.4 Iron Ore per Iron Bar;
-- 8.96 Copper Ore per Copper Bar;
-- **20.8 Gold Ore per Gold Bar**.
-
-Gold therefore remains much more expensive than Iron and Copper even when Gold Ore itself is priced close to Copper Ore.
 
 ## Progression
 
