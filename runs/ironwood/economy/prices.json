@@ -1,5 +1,5 @@
 {
-  "schema_version": 2,
+  "schema_version": 3,
   "run": "ironwood",
   "game_version": "Eco 14",
   "currency": "Ironwood credit",
@@ -13,12 +13,17 @@
       "minimum_rate": 0.08,
       "maximum_rate": 0.15,
       "status": "working_method",
-      "note": "Choose stable clean prices that give the first intended profession recipe a shallow margin at base efficiency. Later resource efficiency should increase realized margin without increasing the canonical output price."
+      "note": "Choose stable clean prices that give the first intended profession recipe a shallow margin at base recipe quantities. Later resource efficiency, infrastructure and talents should increase realized margin without increasing canonical output price."
     },
     "public_market_spread": {
       "target_rate": 0.12,
       "status": "working_method",
       "note": "Approximate target only; low-value commodities are rounded to practical two-decimal prices."
+    },
+    "downstream_input_basis": {
+      "value": "public_sell",
+      "status": "working_method",
+      "note": "Profession profitability is tested conservatively assuming the producer purchases required inputs at the Exchange consumer price."
     }
   },
   "anchors": {
@@ -32,12 +37,12 @@
     "Limestone": {"public_buy": 0.20, "public_sell": 0.23, "status": "working"},
     "Clay": {"public_buy": 0.15, "public_sell": 0.17, "status": "working"},
     "Sand": {"public_buy": 0.15, "public_sell": 0.17, "status": "working"},
-    "Peat": {"public_buy": 0.10, "public_sell": 0.12, "status": "working"},
+    "Peat": {"public_buy": 5.55, "public_sell": 6.25, "status": "working_constrained", "note": "Constrained by the Logging 4 Peat Charcoal conversion; review environmental quantity controls separately."},
     "Coal": {"public_buy": 0.20, "public_sell": 0.23, "status": "working"},
     "Sulfur": {"public_buy": 0.20, "public_sell": 0.23, "status": "working"},
-    "IronOre": {"public_buy": 0.30, "public_sell": 0.34, "status": "working"},
-    "CopperOre": {"public_buy": 0.35, "public_sell": 0.40, "status": "working"},
-    "GoldOre": {"public_buy": 0.40, "public_sell": 0.45, "status": "working"},
+    "IronOre": {"public_buy": 0.18, "public_sell": 0.20, "status": "working"},
+    "CopperOre": {"public_buy": 0.22, "public_sell": 0.25, "status": "working"},
+    "GoldOre": {"public_buy": 0.25, "public_sell": 0.28, "status": "working"},
     "PlantFibers": {"public_buy": 0.10, "public_sell": 0.12, "status": "working"},
     "Kelp": {"public_buy": 0.15, "public_sell": 0.17, "status": "working"}
   },
