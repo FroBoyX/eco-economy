@@ -1,79 +1,59 @@
 # Ironwood Raw Commodity Anchors
 
-These are the first ground-up commodity anchors for the current Ironwood rebuild.
+These are the currently validated raw anchors for the Ironwood Eco 14 run.
 
-They are intentionally limited to resources that enter the economy through harvesting, digging, mining, or gathering rather than through a priced profession recipe.
-
-All downstream processed goods should be derived from these values and Eco 14 Core recipes.
+Raw anchors are design inputs. Processed goods must be checked through their complete Core production chain before the anchor is accepted.
 
 ## Public Exchange convention
 
-For these foundational commodities:
+- **Town Buys** = what Ironwood pays a player supplying the resource.
+- **Town Sells** = what Ironwood charges a player consuming the resource.
+- downstream profitability is tested using Town Sell prices for purchased inputs;
+- prices are evaluated at the recipe's minimum required skill level;
+- `staticIngredient` recipe inputs are not reduced by skill efficiency;
+- the Exchange spread is deliberately shallow so repeated processing stages do not inflate deep production chains excessively.
 
-- **Buy** is the value paid by the Ironwood Exchange to a player supplying the resource.
-- **Sell** is the Exchange resale/import price to a player consuming the resource.
-- the spread is deliberately shallow and exists for liquidity and anti-cycling rather than profit maximization;
-- downstream recipe calculations use the **Exchange sell / consumer acquisition price** when testing whether a profession remains profitable while buying its inputs;
-- an extraction anchor may be revised when a direct transformation proves that a low raw price would create obvious arbitrage.
+## Validated metal-chain anchors
 
-## Phase-one industrial anchors
+| Resource | Town Buys | Town Sells | Status | Reason |
+|---|---:|---:|---|---|
+| Sandstone | **0.15** | **0.17** | validated | Arrastra byproduct/reference rock for Iron Ore processing. |
+| Granite | **0.15** | **0.17** | validated | Arrastra byproduct/reference rock for Copper and Gold processing. |
+| Clay | **0.15** | **0.17** | working | Used for Clay Molds. Its effect on bar cost is small; revisit with Gathering/Masonry. |
+| **Iron Ore** | **0.20** | **0.22** | validated | Full ore → crushed → concentrate → Bloomery chain supports the intended ~1.65 Iron Bar retail price. |
+| **Copper Ore** | **0.30** | **0.35** | validated | Higher scarcity/extraction anchor plus the less favorable Copper concentration ratio supports ~3.85 Copper Bar retail. |
+| **Gold Ore** | **0.50** | **0.60** | validated | Scarcity anchor plus the much poorer Gold concentration/smelting ratio supports ~16 Gold Bar retail. |
 
-| Resource | Exchange buys | Exchange sells | Role |
-|---|---:|---:|---|
-| Permitted Logs / `Wood` | 0.40 | 0.45 | Core Logging input. Higher than ordinary stone because cutting, hauling, regrowth, and forestry participation should remain worthwhile. |
-| Basalt | 0.15 | 0.17 | Ordinary rock family. |
-| Gneiss | 0.15 | 0.17 | Ordinary rock family. |
-| Granite | 0.15 | 0.17 | Ordinary rock family. |
-| Sandstone | 0.15 | 0.17 | Ordinary rock family. |
-| Shale | 0.15 | 0.17 | Ordinary rock family. |
-| Stone / generic rock | 0.15 | 0.17 | Ordinary rock family. |
-| Limestone | 0.20 | 0.23 | Strategic mineral with dedicated downstream quicklime/cement/steel use; kept distinct from ordinary rock. |
-| Clay | 0.15 | 0.17 | Shovel-extracted foundational masonry, mold, and ceramic input. |
-| Sand | 0.15 | 0.17 | High-quality construction/glass sand; Core explicitly describes it as sought after rather than treating all desert sand as equivalent. |
-| **Peat** | **5.55** | **6.25** | Constrained by Logging 4: Core converts 1 Peat + 50 calories into 4 Charcoal. A dirt-like peat price would make Charcoal arbitrage enormous. This unusually high value is deliberate and should be paired with environmental/quantity policy if peat harvesting becomes destructive. |
-| Coal | 0.20 | 0.23 | Fuel and advanced industrial feedstock. |
-| Sulfur | 0.20 | 0.23 | Chemical/explosive industrial feedstock. |
-| **Iron Ore** | **0.18** | **0.20** | Kept close to common rock so most metal value is created by Mining and Smelting rather than front-loaded into ore extraction. |
-| **Copper Ore** | **0.22** | **0.25** | Moderate scarcity premium over iron; Core's less favorable processing ratio supplies much of the eventual copper-bar premium. |
-| **Gold Ore** | **0.25** | **0.28** | Moderate raw premium only. Core's poor gold processing ratio should create the much larger downstream gold value. |
-| Plant Fibers | 0.10 | 0.12 | Generic gathered natural-fiber input. |
-| Kelp | 0.15 | 0.17 | Gathered marine input used in both production and food chains; kept above generic fiber because it requires a distinct gathering environment. |
+These ore anchors are not being retained because they appeared in an older table. They were re-adopted because the Eco 14 Core chain validates them against the current shallow-margin objective.
 
-## Why ore stays cheap
+## Why the ore anchors differ
 
-Raw ore is not intended to capture the miner's entire economic contribution. Mining adds value through crushing, separating and concentrating. Smelting adds another production step.
+The three metals do not need identical raw-resource values.
 
-If raw ore is priced too highly, every tool, workstation, machine and downstream metal product inherits that inflation before a specialist has added any work. The current ore anchors therefore stay deliberately close to ordinary rock and allow the profession chain to create the value.
+Iron is deliberately inexpensive because it becomes the foundational industrial metal.
 
-## Why peat is different
+Copper receives a larger extraction/scarcity premium and also requires more Crushed Copper Ore per concentrate than Iron.
 
-Peat cannot be priced as cheap generic soil while Charcoal has a positive fixed price. Eco 14 Core provides a Logging 4 recipe that turns 1 Peat into 4 Charcoal with only 50 calories of recipe labor.
+Gold receives the largest raw-resource premium and then compounds that scarcity through the least favorable concentration and Bloomery output ratio.
 
-The current peat price is therefore constrained by the Charcoal economy rather than by visual similarity to Dirt. If this creates undesirable peat extraction pressure, the preferred correction is environmental or quantity policy, or removal of an unlimited public buy order—not pretending the transformation value does not exist.
+This places meaningful value in both extraction and specialist processing instead of forcing all scarcity premium into the final Smelter.
 
-## Not anchored here
+## Current metal-chain checks
 
-The following should **not** be assigned arbitrary values in this sheet:
+The validated chain currently uses:
 
-- Boards, Hewn Logs, Lumber and Charcoal — Logging outputs;
-- Crushed ores, concentrates and bars — Mining/Smelting outputs;
-- Mortar, bricks, quicklime and glass — processing outputs;
-- Flax Stem, Cotton Boll, crops and cultivated seeds — Farming/Gathering progression requiring a dedicated agriculture table;
-- carcasses, raw meat, hides and fish — Hunting/Fishing chains;
-- petroleum and late industrial resources — price when the relevant progression chain is built;
-- garbage and scrap — value through the Recycling/disposal model;
-- Dirt and Water — no default central commodity market unless a concrete server need appears.
+- Mining 1 Arrastra ore crushing;
+- Mining 1 Rocker Box concentration;
+- Smelting 1 Bloomery for Iron and Copper;
+- Smelting 4 Bloomery for Gold;
+- 1 credit per 1,000 calories;
+- current Tailings disposal cost of **0.35 per unit**;
+- current Ceramic Scrap disposal cost of **0.15 per unit**;
+- a small Slag byproduct credit;
+- Bloomery fuel consumption as a real but minor operating cost.
 
-## Sanity checks these anchors must pass
+The current prices are valid only while those assumptions remain current. If Recycling turns Tailings or Ceramic Scrap into positive-value feedstock, recalculate the chain directly.
 
-The anchors are retained only if the profession tables built from Core remain coherent. In particular:
+## Other raw anchors
 
-1. Logging 1 should profit slightly on early processed wood at base recipe quantities.
-2. Mining should profit on crushing/concentrating rather than having raw ore capture all value.
-3. Smelting should profit on bars without making iron tools unaffordable.
-4. Copper and Gold should become more valuable substantially through their worse processing ratios, not only by assigning huge raw-ore premiums.
-5. Limestone should support Quicklime and later steel/glass without overwhelming those prices.
-6. Coal and Peat should not create a trivial infinite-profit charcoal path.
-7. Recycling outputs must later be priced against these virgin-resource values rather than independently.
-
-If one of those tests fails, change the anchor directly and propagate the correction. Do not preserve it for continuity.
+Other commodities are intentionally omitted from this validation file until their own profession chain is rebuilt. Ironwood-specific prices for Logging, agriculture, food, Masonry, and later industry should not be inferred from the metal chain.
