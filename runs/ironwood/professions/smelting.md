@@ -58,8 +58,6 @@ Using Copper Concentrate retail **11.75**, entry cost is about **3.23 per bar**.
 
 **Copper Bar: 3.40 Town Buy / 3.60 Town Sell.**
 
-This is slightly below the earlier 3.85 retail value because the corrected model removes an unnecessarily wide raw Copper Ore Exchange spread.
-
 ## Gold Bar
 
 Gold unlocks at Smelting 4, so the Bloomery uses the 0.65 resource multiplier.
@@ -74,9 +72,20 @@ Entry-effective recipe:
 - **1.5 Ceramic Scrap**;
 - Bloomery fuel.
 
-Using Gold Concentrate retail **29.00**, total craft cost is about **38.2**, or roughly **12.74 per Gold Bar**.
+Using Gold Concentrate retail **18.00**:
 
-**Gold Bar: 13.40 Town Buy / 14.00 Town Sell.**
+- concentrate: 23.40;
+- molds: 0.078;
+- labor: 0.039;
+- Ceramic Scrap disposal: 0.225;
+- conservative Bloomery fuel: ~0.23;
+- Slag credit: -0.065.
+
+Total craft cost is about **23.91**, or roughly **7.97 per Gold Bar**.
+
+**Gold Bar: 8.35 Town Buy / 8.70 Town Sell.**
+
+This keeps a shallow entry margin while relying on Gold's poor Core conversion ratio—not an oversized raw Gold Ore premium—to create scarcity.
 
 ## Why Gold Concentrate can cost more than a Gold Bar
 
@@ -87,9 +96,7 @@ At the first Gold-smelting skill level:
 - 1.3 Gold Concentrate → 3 Gold Bars;
 - therefore 1 Gold Concentrate → about **2.31 Gold Bars**.
 
-At 29.00 retail, one Gold Concentrate carries about **12.57 credits of concentrate cost per eventual bar**. Smelting then adds molds, labor, fuel, waste handling, and a shallow producer margin to reach the 14.00 Gold Bar retail price.
-
-So the nominal comparison `29 concentrate vs 14 bar` is misleading; the economically relevant comparison is **29 concentrate vs ~32.3 credits of finished bars produced from one concentrate-equivalent**.
+At 18.00 retail, one Gold Concentrate carries about **7.80 credits of concentrate cost per eventual bar**. Smelting adds molds, labor, fuel, waste handling, and a shallow producer margin to reach the 8.70 Gold Bar retail price.
 
 ## Validated bar table
 
@@ -97,13 +104,17 @@ So the nominal comparison `29 concentrate vs 14 bar` is misleading; the economic
 |---|---:|---:|---:|
 | **Iron Bar** | **1.55** | **1.65** | ~1.47 |
 | **Copper Bar** | **3.40** | **3.60** | ~3.23 |
-| **Gold Bar** | **13.40** | **14.00** | ~12.74 |
+| **Gold Bar** | **8.35** | **8.70** | ~7.97 |
 
-## Downstream reason not to overprice Gold
+## Why Gold is still meaningfully expensive
 
-Gold Bars feed Electronics, Mechanics, advanced Masonry, banking/currency infrastructure, Country/Federation foundations, and later high-volume products such as the Laser. Core includes recipes consuming dozens of Gold Bars at once.
+The complete first-unlock chain consumes roughly:
 
-The Gold ore-to-bar conversion already creates strong scarcity. An additional large Exchange spread would magnify every later technology and government structure unnecessarily.
+- 6.4 Iron Ore per Iron Bar;
+- 8.96 Copper Ore per Copper Bar;
+- **20.8 Gold Ore per Gold Bar**.
+
+Gold therefore remains much more expensive than Iron and Copper even when Gold Ore itself is priced close to Copper Ore.
 
 ## Progression
 
