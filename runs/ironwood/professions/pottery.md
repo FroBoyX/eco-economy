@@ -61,6 +61,8 @@ At Pottery 1:
 
 **Wet Brick: 0.43 Town Buy / 0.45 Town Sell.**
 
+Wet Brick remains a process/intermediate value. The finished Brick receives an Ironwood bulk-construction valuation premium; do not infer finished Brick price only from the Wet Brick public price.
+
 ## Brick — Pottery 1, Kiln
 
 Core recipe:
@@ -71,25 +73,35 @@ Core recipe:
 - output 1 Brick
 - base craft time 0.32 minutes
 
-At Pottery 1:
+At Pottery 1, the mechanically modeled entry floor is:
 
 - 0.8 Wet Brick × 0.43 = 0.344
 - 3.2 Mortar × 0.04 = 0.128
 - 12 calories = 0.012
 - effective craft time = 0.256 minutes
 - 50 W Kiln fuel ≈ 0.045
-- total entry cost ≈ **0.529**
+- modeled entry floor ≈ **0.529**
 
-**Brick: 0.56 Town Buy / 0.59 Town Sell.**
+The modeled floor understates the practical burden of Brick supply. Brick is a bulk Tier-3 construction block assembled from large quantities of hand-shoveled Sand and Clay, then moved through molds, intermediate Wet Bricks, Mortar, Kiln throughput, storage, and repeated hauling. Those burdens are only weakly represented by recipe calories.
+
+Ironwood therefore applies a deliberate **bulk construction valuation premium** rather than pricing Brick as an ordinary low-friction intermediate.
+
+**Brick: 1.20 Town Buy / 1.25 Town Sell.**
+
+This is a policy value, not a claim that the recipe consumes 1.20 credits of modeled ingredients. It rewards the real logistics burden while keeping Brick below Glass and Lumber in the Tier-3 structural band.
+
+A materially higher value such as 1.50–2.00 should be used only if actual supply remains weak, because at the current recipe floor it would create an extremely large guaranteed Exchange margin for producers.
 
 ## Construction comparison
 
-| Material | Town Buys | Town Sells |
-|---|---:|---:|
-| Mortared Stone | **0.38** | **0.40** |
-| Brick | **0.56** | **0.59** |
+| Material | Tier | Town Buys | Town Sells |
+|---|---:|---:|---:|
+| Mortared Stone | 2 | **0.38** | **0.40** |
+| Brick | 3 | **1.20** | **1.25** |
+| Glass | 3 | **1.45** | **1.52** |
+| Lumber | 3 | **1.60** | **1.68** |
 
-Brick carries a modest premium because it adds mold-making, Pottery processing and Kiln fuel rather than because Clay itself is expensive.
+This creates a clear Tier-3 structural band rather than letting Brick appear to be only marginally more valuable than Tier-2 Mortared Stone.
 
 ## Exchange-ready Pottery foundation
 
@@ -97,6 +109,6 @@ Brick carries a modest premium because it adds mold-making, Pottery processing a
 |---|---:|---:|
 | Wooden Mold | **0.44** | **0.46** |
 | Wet Brick | **0.43** | **0.45** |
-| Brick | **0.56** | **0.59** |
+| **Brick** | **1.20** | **1.25** |
 
 Ceramics, pottery furniture and advanced Pottery remain to be audited from this corrected foundation.
