@@ -1,10 +1,8 @@
 # Ironwood Mechanics — Current Steam-Era Industrial Table
 
-Rebuilt directly from the supplied Eco 14 Core after canonicalizing commercially viable Metals, Blacksmithing, Basic Engineering, Lubricant, Pipes, Leather, Lumber, Glass and Shipwright components.
+Rebuilt directly from the supplied Eco 14 Core using only production routes available in the current Steam-entry economy.
 
-The Campfire/Butchery audit corrected early Lubricant to **0.14 Town Buy / 0.15 Town Sell**. Every current Mechanics recipe using Lubricant or a Lubricant-dependent Gearbox is propagated below.
-
-Mechanics uses Ironwood's depth ladder: simple components shallow margins; deep machinery 25–40%; completed Steam vehicles 50% terminal-good windfall.
+Mechanics uses Ironwood's depth ladder: simple components receive shallow margins; multi-step parts receive moderate margins; capital machines receive ~30–40%; completed end-use vehicles receive the approved ~50% terminal windfall.
 
 ## Current key inputs
 
@@ -20,177 +18,189 @@ Mechanics uses Ironwood's depth ladder: simple components shallow margins; deep 
 - Leather Hide **0.60 / 0.63**
 - Lumber **1.62 / 1.70**
 - Board **0.27 / 0.28**
-- Hewn Log **0.93 / 0.98**
-- **Lubricant 0.14 / 0.15**
+- Hemp Mooring Rope **1.05 / 1.10**
+- Lubricant **0.14 / 0.15**
 - Light Bulb **12.35 / 12.97**
+- Glass Lens **4.57 / 4.80**
+- Paper **0.15 / 0.16**
+- Magnet **5.27 / 5.53**
 
-## Simple Mechanics components
+## Simple and intermediate Mechanics outputs
+
+| Item | Level | Town Buys | Town Sells |
+|---|---:|---:|---:|
+| Screws | 1 | **0.60** | **0.63** |
+| Iron Gear | 1 | **2.46** | **2.58** |
+| Copper Wiring | 1 | **1.62** | **1.70** |
+| Iron Axle | 1 | **4.85** | **5.09** |
+| Piston | 1 | **9.87** | **10.36** |
+| Gearbox | 1 | **14.97** | **15.72** |
+| Camera Film | 1 | **1.34** | **1.41** |
+| Electrostatic Filter | 1 | **8.63** | **9.06** |
+| Heat Sink | 2 | **45.40** | **47.67** |
+| Gold Wiring | 4 | **4.80** | **5.04** |
+| Metal Keel | 4 | **16.48** | **17.30** |
+
+### Camera Film — Mechanics 1
+
+Core: 10 Paper + 1 Light Bulb + 45 calories -> 10 Camera Film.
+
+At Mechanics 1, cash cost is about **1.169 per Film**.
+
+**Camera Film: 1.34 / 1.41.**
+
+### Electrostatic Filter — Mechanics 1
+
+Core: 4 Magnets + 8 Copper Wiring + 1 Linen Fabric + 120 calories -> 4 Filters.
+
+At Mechanics 1, current cash cost is **7.31 per Filter**.
+
+**Electrostatic Filter: 8.63 / 9.06.**
+
+## Core Steam machinery and workstations
 
 | Item | Level | Exchange cash cost | Town Buys | Town Sells |
 |---|---:|---:|---:|---:|
-| Screws | 1 | 0.539 ea | **0.60** | **0.63** |
-| Iron Gear | 1 | 2.196 | **2.46** | **2.58** |
-| Copper Wiring | 1 | 1.444 ea | **1.62** | **1.70** |
-| Iron Axle | 1 | 4.332 | **4.85** | **5.09** |
-| Piston | 1 | 8.368 | **9.87** | **10.36** |
-| **Gearbox** | 1 | **12.684** | **14.97** | **15.72** |
-| Gold Wiring | 4 | 4.290 ea | **4.80** | **5.04** |
-| Metal Keel | 4 | 13.962 | **16.48** | **17.30** |
+| Boiler | 1 | 52.440 | **65.55** | **68.83** |
+| Screw Press | 1 | 30.880 | **40.14** | **42.15** |
+| Lathe | 1 | 67.256 | **87.43** | **91.80** |
+| Recycler | 2 | 8.190 | **10.65** | **11.18** |
+| Stamp Mill | 2 | 35.138 | **45.68** | **47.96** |
+| Desalinator | 1 | 73.312 | **95.31** | **100.08** |
+| Water Filter | 4 | 45.656 | **59.35** | **62.32** |
+| **Shaper** | 1 | 165.744 | **215.47** | **225.47** |
+| **Laboratory** | 1 | 76.056 | **98.87** | **103.81** |
+| **Printing Press** | 3 | 72.772 | **94.60** | **99.33** |
+| **Medium Shipyard** | 1 | 26.128 | **33.97** | **35.67** |
+| **Tripod Camera** | 3 | 62.325 | **81.02** | **85.07** |
 
-### Gearbox — corrected
+### Shaper
 
-Core: 2 Iron Bars + 4 Iron Gears + 1 Lubricant + 45 calories.
+Core: 16 Iron Plates + 16 Pistons + 300 calories at Mechanics 1.
 
-At Mechanics 1:
+Current cash cost = **165.744**.
 
-- 1.6 Iron Bars × 2.67 = 4.272
-- 3.2 Iron Gears × 2.58 = 8.256
-- 0.8 Lubricant × 0.15 = 0.120
-- 36 calories = 0.036
-- cash cost = **12.684**
+As a major capital workstation:
 
-**Gearbox: 14.97 / 15.72.**
+**Shaper: 215.47 / 225.47.**
 
-## Deep components and ordinary capital machines
+### Laboratory
 
-| Item | Level | Exchange cash cost | Town Buys | Town Sells | Margin class |
-|---|---:|---:|---:|---:|---|
-| Boiler | 1 | 52.440 | **65.55** | **68.83** | deep component |
-| Heat Sink | 2 | 38.475 | **45.40** | **47.67** | multi-step |
-| Screw Press | 1 | 30.880 | **40.14** | **42.15** | capital |
-| Lathe | 1 | 67.256 | **87.43** | **91.80** | capital |
-| Recycler | 2 | 8.190 | **10.65** | **11.18** | capital |
-| Stamp Mill | 2 | 35.138 | **45.68** | **47.96** | capital |
-| **Desalinator** | 1 | **73.312** | **95.31** | **100.08** | capital; Gearbox correction |
-| Water Filter | 4 | 45.656 | **59.35** | **62.32** | capital |
+Core: 20 Iron Bars + 15 Glass + 20 Paper + 8 Lumber + 120 calories.
 
-## Late steam machinery
+At Mechanics 1 cash cost = **76.056**.
 
-### Steam Engine — Mechanics 1
+**Laboratory: 98.87 / 103.81.**
 
-Core: 16 Iron Bars + 12 Iron Pipes + 4 Lubricant + 2 static Boilers + 450 calories.
+### Printing Press
 
-At level 1:
+Core, Mechanics 3:
 
-- 12.8 Iron Bars × 2.67 = 34.176
-- 9.6 Iron Pipes × 2.53 = 24.288
-- 3.2 Lubricant × 0.15 = 0.480
-- 2 Boilers × 68.83 = 137.660
-- 360 calories = 0.360
-- cash cost = **196.964**
-
-**Steam Engine: 275.75 Town Buy / 285.75 Town Sell.**
-
-### Portable Steam Engine — Mechanics 1
-
-No Lubricant or Gearbox dependency in the current recipe. It remains:
-
-**Portable Steam Engine: 439.48 / 449.48.**
-
-### Assembly Line — Mechanics 1
-
-Uses Portable Steam Engine rather than Lubricant directly and remains:
-
-**Assembly Line: 682.23 / 692.23.**
-
-### Power Hammer — Mechanics 1
-
-Uses 4 Gearboxes. With the corrected Gearbox public price, Exchange cash cost is **74.720**.
-
-**Power Hammer: 104.61 / 109.84.**
-
-### Blast Furnace — Mechanics 3
-
-No Lubricant/Gearbox dependency in the current recipe.
-
-**Blast Furnace: 105.13 / 110.39.**
-
-### Mechanics Advanced Upgrade
-
-Uses Copper Wiring and Boiler; unchanged:
-
-**Mechanics Advanced Upgrade: 116.94 / 122.79.**
-
-## Vehicle attachments
-
-These are late-capital parts, not completed vehicles.
-
-| Item | Town Buys | Town Sells |
-|---|---:|---:|
-| Steam Tractor Plow | **33.62** | **35.30** |
-| Steam Tractor Scoop | **33.62** | **35.30** |
-| Steam Tractor Tree Cutter | **82.50** | **86.63** |
-| Steam Truck Flatbed | **36.67** | **38.50** |
-| Steam Truck Garbage Collector | **24.65** | **25.88** |
-
-## Screening Machine — Mechanics 3
-
-**Screening Machine: 139.50 / 146.48.**
-
-## Completed Steam Truck and Steam Tractor — Mechanics 2
-
-Current Core gives both vehicles the same manufacturing recipe:
-
+- 2 Gearboxes
+- 4 Pistons
 - 12 Iron Plates
-- 8 Iron Pipes
-- 24 Screws
-- 20 Leather Hide
-- 30 Lumber
-- 1 Portable Steam Engine, static
-- 4 Iron Wheels, static
-- 2 Iron Axles, static
-- 2 Light Bulbs, static
-- 2 Lubricant, static
-- 1,000 calories
+- 240 calories
 
-With Lubricant corrected to 0.15 public Sell, Exchange-sourced cash cost is **637.08**.
+At level 3 cash cost = **72.772**.
 
-At the approved 50% terminal/end-use windfall:
+**Printing Press: 94.60 / 99.33.**
 
-**Steam Truck: 955.62 Town Buy / 965.62 Town Sell.**
+This completes the current Paper Milling poster production loop.
 
-**Steam Tractor: 955.62 Town Buy / 965.62 Town Sell.**
+### Medium Shipyard
 
-An entry-level Mechanic buying the full input chain publicly retains about **318.54 credits of gross wholesale surplus per completed vehicle**. The tiny reduction from the earlier 956.04 price is the correct propagation of the Tallow/Lubricant audit; the intended late-game windfall remains intact.
+Core: 6 Iron Plates + 4 Paper + 2 Hemp Mooring Rope + 8 Lumber + 800 calories.
 
-## Exchange-ready Mechanics table
+At Mechanics 1 cash cost = **26.128**.
+
+**Medium Shipyard: 33.97 / 35.67.**
+
+## Late Steam machinery
 
 | Item | Town Buys | Town Sells |
 |---|---:|---:|
-| Screws | **0.60** | **0.63** |
-| Iron Gear | **2.46** | **2.58** |
-| Copper Wiring | **1.62** | **1.70** |
-| Iron Axle | **4.85** | **5.09** |
-| Piston | **9.87** | **10.36** |
-| Gearbox | **14.97** | **15.72** |
-| Boiler | **65.55** | **68.83** |
-| Screw Press | **40.14** | **42.15** |
-| Lathe | **87.43** | **91.80** |
-| Heat Sink | **45.40** | **47.67** |
-| Recycler | **10.65** | **11.18** |
-| Stamp Mill | **45.68** | **47.96** |
-| Desalinator | **95.31** | **100.08** |
-| Water Filter | **59.35** | **62.32** |
 | Steam Engine | **275.75** | **285.75** |
 | Portable Steam Engine | **439.48** | **449.48** |
 | Assembly Line | **682.23** | **692.23** |
 | Power Hammer | **104.61** | **109.84** |
 | Blast Furnace | **105.13** | **110.39** |
 | Mechanics Advanced Upgrade | **116.94** | **122.79** |
-| Steam Tractor Plow | **33.62** | **35.30** |
-| Steam Tractor Scoop | **33.62** | **35.30** |
-| Steam Tractor Tree Cutter | **82.50** | **86.63** |
+| Screening Machine | **139.50** | **146.48** |
+
+### Steam Engine
+
+Current Exchange cash cost = **196.964** using the corrected animal-fat Lubricant route.
+
+**Steam Engine: 275.75 / 285.75.**
+
+### Portable Steam Engine
+
+**439.48 / 449.48.**
+
+### Assembly Line
+
+**682.23 / 692.23.**
+
+## Steam Tractor attachments
+
+| Attachment | Exchange cash cost | Town Buys | Town Sells |
+|---|---:|---:|---:|
+| Steam Tractor Plow | 24.015 | **33.62** | **35.30** |
+| Steam Tractor Scoop | 24.015 | **33.62** | **35.30** |
+| **Steam Tractor Harvester** | 44.070 | **61.70** | **64.79** |
+| **Steam Tractor Sower** | 39.195 | **54.87** | **57.61** |
+| Steam Tractor Tree Cutter | 58.930 | **82.50** | **86.63** |
+
+These are late-capital components and use the ~40% attachment margin rather than the full terminal-vehicle windfall.
+
+## Steam Truck attachments
+
+| Attachment | Town Buys | Town Sells |
+|---|---:|---:|
 | Steam Truck Flatbed | **36.67** | **38.50** |
 | Steam Truck Garbage Collector | **24.65** | **25.88** |
-| Screening Machine | **139.50** | **146.48** |
-| Gold Wiring | **4.80** | **5.04** |
-| Metal Keel | **16.48** | **17.30** |
-| **Steam Truck** | **955.62** | **965.62** |
-| **Steam Tractor** | **955.62** | **965.62** |
 
-## Still deferred
+## Completed Steam vehicles
 
-- Paper/research machines;
-- Steel/circuit/electric-motor machines;
-- later Recycling/Industry equipment;
-- post-steam industrial vehicles and machinery.
+### Steam Truck / Steam Tractor — Mechanics 2
+
+Current Core gives both the same manufacturing burden. Exchange-sourced cash cost is **637.08**.
+
+At the approved ~50% terminal windfall:
+
+**Steam Truck: 955.62 Town Buy / 965.62 Town Sell.**
+
+**Steam Tractor: 955.62 Town Buy / 965.62 Town Sell.**
+
+The assembler retains about **318.54 credits** of gross wholesale surplus when buying the entire input chain publicly.
+
+### Crane — Mechanics 5
+
+Core consumes skill-reduced Gearboxes, Iron Plates and Cotton Fabric plus static:
+
+- Portable Steam Engine;
+- 4 Iron Wheels;
+- 2 Heat Sinks;
+- 2 Iron Axles;
+- 2 Lubricant;
+- 3,000 calories.
+
+At Mechanics 5 current public cash cost is **689.548**.
+
+As a true terminal heavy vehicle:
+
+**Crane: 1,034.32 Town Buy / 1,044.32 Town Sell.**
+
+This gives the builder about **344.77 credits** of gross wholesale surplus at minimum unlock efficiency.
+
+## Currently craftable but not normal current Exchange targets
+
+Some Mechanics recipes can technically be assembled from current inputs but have no normal Steam-entry use until a later system opens. Ironwood should not accumulate them through unlimited public Buy orders yet:
+
+- Combustion Engine / Combustion Generator — useful only once liquid-fuel infrastructure exists;
+- Cement Kiln — its major Cement/Advanced Masonry economy is beyond the current scope;
+- future-electric machines whose recipe itself requires Electric Machinist Table, circuits or Steel infrastructure;
+- sorter families requiring Reinforced Concrete;
+- research skill books/papers — separate research policy.
+
+The current table therefore prices the machinery that has a legitimate Steam-entry production or use case rather than paying unlimited imports for dormant future stock.
