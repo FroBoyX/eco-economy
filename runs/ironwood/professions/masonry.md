@@ -1,8 +1,8 @@
 # Ironwood Masonry — Current-Era Foundation
 
-Rebuilt from Eco 14 Core using entry skill efficiency and the current Ironwood raw hierarchy.
+Rebuilt from Eco 14 Core using current raw anchors and the approved depth-sensitive commercial margins.
 
-Derived producer costs use Town Buy/producer values for intermediate inputs. The Exchange retail spread is applied afterward rather than compounded through every recipe stage.
+Raw Rock/Sand/Limestone remain Depth-0 anchors. Mortar and Quicklime are shallow processed commodities; finished stone goods receive ordinary margins; workstations receive capital-good margins.
 
 ## Raw inputs
 
@@ -12,80 +12,123 @@ Derived producer costs use Town Buy/producer values for intermediate inputs. The
 | Sand | **0.10** | **0.11** |
 | Limestone | **0.15** | **0.17** |
 
-Limestone remains the strategic exception to the common 0.10 earth/rock tier.
-
 ## Mortar — Masonry 1
 
 Core: 1 Sand + 25 calories → 3 Mortar.
 
 At Masonry 1:
 
-- 0.8 Sand × 0.10 = 0.080
+- 0.8 Sand × 0.11 = 0.088
 - 20 calories = 0.020
-- total craft cost = 0.100
-- cost ≈ **0.033 per Mortar**
+- cash cost/craft = 0.108
+- cash cost/Mortar = 0.036
 
 **Mortar: 0.04 Town Buy / 0.05 Town Sell.**
 
 ## Mortared Stone — Masonry 1
 
-Core: 1 Mortar + 4 Rock + 15 calories → 1 Mortared Stone.
+Core: 1 Mortar + 4 Rock + 15 calories → 1.
 
-At Masonry 1:
+At Masonry 1 using Exchange inputs:
 
-- 0.8 Mortar × 0.04 = 0.032
-- 3.2 Rock × 0.10 = 0.320
+- 0.8 Mortar × 0.05 = 0.040
+- 3.2 Rock × 0.11 = 0.352
 - 12 calories = 0.012
-- cost ≈ **0.364**
+- cash cost = **0.404**
 
-**Mortared Stone: 0.38 Town Buy / 0.40 Town Sell.**
+Mortared Stone is the Tier-2 structural baseline and receives enough construction margin to remain profitable at public input prices:
 
-## Crushed Limestone — Mining 1 dependency
+**Mortared Stone: 0.46 Town Buy / 0.48 Town Sell.**
 
-Core Arrastra recipe: 12 static Limestone + 50 calories → 3 Crushed Limestone.
+## Crushed Limestone — Mining dependency
 
-At Mining 1:
+Current Mining price:
 
-- 12 Limestone × 0.15 = 1.800
-- 40 calories = 0.040
-- cost/output ≈ **0.613**
-
-**Crushed Limestone: 0.64 Town Buy / 0.67 Town Sell.**
-
-Unlike Crushed Sandstone/Granite, Crushed Limestone has exact downstream consumers and is not priced as generic waste rock.
+**Crushed Limestone: 0.76 / 0.80.**
 
 ## Quicklime — Masonry 1, Blast Furnace
 
 Core: 1 Crushed Limestone + 50 calories → 1 Quicklime.
 
-At Masonry 1, using producer-value inputs and 50 W Blast Furnace fuel:
+At Masonry 1:
 
-- 0.8 Crushed Limestone × 0.64 = 0.512
+- 0.8 Crushed Limestone × 0.80 = 0.640
 - 40 calories = 0.040
-- fuel ≈ 0.028
-- cost ≈ **0.580**
+- effective Blast Furnace fuel ≈ 0.031 at Charcoal 1.30
+- cash cost ≈ **0.711**
 
-**Quicklime: 0.61 Town Buy / 0.64 Town Sell.**
+With shallow processing margin:
 
-## Other core Masonry goods
+**Quicklime: 0.80 Town Buy / 0.84 Town Sell.**
 
-| Item | Entry cost | Town Buys | Town Sells |
-|---|---:|---:|---:|
-| Whetstone | ~0.264 | **0.28** | **0.29** |
-| Mill Stone | ~0.496 | **0.52** | **0.55** |
-| Stone Brazier | ~1.220 | **1.28** | **1.34** |
-| Grindstone | ~8.904 | **9.35** | **9.82** |
-| Kiln | ~3.648 | **3.83** | **4.02** |
-| Mill | ~9.608 | **10.09** | **10.59** |
+## Other Masonry outputs
 
-### Source checks
+### Whetstone — Masonry 1
 
-- Whetstone: 3 skill-modified Rock + 30 calories.
-- Mill Stone: 5 skill-modified Rock + 120 calories.
-- Stone Brazier: 15 skill-modified Rock + 25 calories.
-- Grindstone: 5 Hewn Logs + 10 Boards + 40 Rock + 180 calories, all skill-modified.
-- Kiln: 10 Mortar + 10 Mortared Stone + 360 calories, all skill-modified.
-- Mill: 30 Rock + 20 Wood skill-modified, plus 1 static Mill Stone and 360 calories.
+- 2.4 Rock × 0.11 + 24 calories = **0.288 cash cost**
+
+**Whetstone: 0.32 / 0.34.**
+
+### Mill Stone — Masonry 1
+
+- 4 Rock × 0.11 + 96 calories = **0.536 cash cost**
+
+**Mill Stone: 0.62 / 0.65.**
+
+### Stone Brazier — Masonry 1
+
+- 12 Rock × 0.11 + 20 calories = **1.340 cash cost**
+
+**Stone Brazier: 1.54 / 1.62.**
+
+## Masonry capital workstations
+
+### Grindstone — Masonry 1
+
+Core printed inputs: 5 Hewn Logs + 10 Boards + 40 Rock + 180 calories, skill-modified.
+
+At Masonry 1:
+
+- 4 Hewn Logs × 0.98 = 3.920
+- 8 Boards × 0.28 = 2.240
+- 32 Rock × 0.11 = 3.520
+- 144 calories = 0.144
+- cash cost = **9.824**
+
+As a low-volume workstation:
+
+**Grindstone: 12.77 Town Buy / 13.41 Town Sell.**
+
+### Kiln — Masonry 1
+
+Core: 10 Mortar + 10 Mortared Stone + 360 calories, skill-modified.
+
+At Masonry 1:
+
+- 8 Mortar × 0.05 = 0.400
+- 8 Mortared Stone × 0.48 = 3.840
+- 288 calories = 0.288
+- cash cost = **4.528**
+
+**Kiln: 5.89 / 6.18.**
+
+### Mill — Masonry 1
+
+Core:
+
+- 30 Rock + 20 Wood, skill-modified;
+- 1 Mill Stone, static;
+- 360 calories.
+
+At Masonry 1:
+
+- 24 Rock × 0.11 = 2.640
+- 16 Wood × 0.45 = 7.200
+- 1 static Mill Stone × 0.65 = 0.650
+- 288 calories = 0.288
+- cash cost = **10.778**
+
+**Mill: 14.01 / 14.71.**
 
 ## Exchange-ready Masonry table
 
@@ -95,14 +138,14 @@ At Masonry 1, using producer-value inputs and 50 W Blast Furnace fuel:
 | Sand | **0.10** | **0.11** |
 | Limestone | **0.15** | **0.17** |
 | Mortar | **0.04** | **0.05** |
-| Mortared Stone | **0.38** | **0.40** |
-| Crushed Limestone | **0.64** | **0.67** |
-| Quicklime | **0.61** | **0.64** |
-| Whetstone | **0.28** | **0.29** |
-| Mill Stone | **0.52** | **0.55** |
-| Stone Brazier | **1.28** | **1.34** |
-| Grindstone | **9.35** | **9.82** |
-| Kiln | **3.83** | **4.02** |
-| Mill | **10.09** | **10.59** |
+| Mortared Stone | **0.46** | **0.48** |
+| Crushed Limestone | **0.76** | **0.80** |
+| Quicklime | **0.80** | **0.84** |
+| Whetstone | **0.32** | **0.34** |
+| Mill Stone | **0.62** | **0.65** |
+| Stone Brazier | **1.54** | **1.62** |
+| Grindstone | **12.77** | **13.41** |
+| Kiln | **5.89** | **6.18** |
+| Mill | **14.01** | **14.71** |
 
-Brick is owned by Pottery and Glass by Glassworking; both are priced from this corrected foundation.
+Mortared Stone's increase from 0.38/0.40 is not raw-material inflation; it simply prevents a Mason from losing money when buying Mortar/Rock through the Exchange.
