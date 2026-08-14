@@ -1,5 +1,5 @@
 {
-  "schema_version": 13,
+  "schema_version": 14,
   "run": "ironwood",
   "game_version": "Eco 14",
   "currency": "Ironwood credit",
@@ -51,6 +51,7 @@
     "Sandstone": {"public_buy": 0.10, "public_sell": 0.11, "status": "validated_current_era"},
     "Granite": {"public_buy": 0.10, "public_sell": 0.11, "status": "validated_current_era"},
     "Limestone": {"public_buy": 0.15, "public_sell": 0.17, "status": "validated_strategic_rock"},
+    "FlaxSeed": {"public_buy": 0.10, "public_sell": 0.11, "status": "working_current_era", "note": "Working procurement anchor used to price Flaxseed Oil and Lumber; revisit with full Farming/Tailoring audit."},
     "IronOre": {"public_buy": 0.20, "public_sell": 0.22, "status": "validated_metal_chain"},
     "CopperOre": {"public_buy": 0.30, "public_sell": 0.33, "status": "validated_metal_chain"},
     "GoldOre": {"public_buy": 0.30, "public_sell": 0.35, "status": "validated_metal_chain"}
@@ -65,6 +66,9 @@
     "BoardItem": {"display_name": "Board", "public_buy": 0.26, "public_sell": 0.27, "source_profession": "Logging", "note": "Current Sawmill-era structural price."},
     "HewnLogItem": {"display_name": "Hewn Log", "public_buy": 0.87, "public_sell": 0.91, "source_profession": "Logging"},
     "CharcoalItem": {"display_name": "Charcoal", "public_buy": 1.17, "public_sell": 1.23, "source_profession": "Logging"},
+
+    "FlaxseedOilItem": {"display_name": "Flaxseed Oil", "public_buy": 1.20, "public_sell": 1.26, "source_profession": "Milling", "status": "working_current_era", "note": "Milling 3 Mill route using Flax Seed 0.10 producer value; revisit with full Farming/Tailoring audit."},
+    "LumberItem": {"display_name": "Lumber", "public_buy": 1.45, "public_sell": 1.52, "source_profession": "Carpentry", "status": "validated_current_recipe_working_oil", "note": "Carpentry 1 Sawmill recipe; supersedes prior working value around 3 credits."},
 
     "MortarItem": {"display_name": "Mortar", "public_buy": 0.04, "public_sell": 0.05, "source_profession": "Masonry"},
     "MortaredStoneItem": {"display_name": "Mortared Stone", "public_buy": 0.38, "public_sell": 0.40, "source_profession": "Masonry"},
@@ -118,7 +122,7 @@
     "StampMillItem": {"display_name": "Stamp Mill", "public_buy": 23.01, "public_sell": 24.16, "source_profession": "Mechanics"}
   },
   "unpriced_dependencies": [
-    "Carpentry and Lumber",
+    "full Farming/Tailoring audit for Flax Seed and Flaxseed Oil",
     "Tailoring and Linen",
     "Iron tools requiring Leather Hide",
     "Lubricant",
