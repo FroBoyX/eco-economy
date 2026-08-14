@@ -1,0 +1,29 @@
+{
+  "schema_version": 1,
+  "source_sha256": "de214e1a89ea9c47d4ffc98e90a5a50c885bd34bcaa0e824e42461917cbf9daf",
+  "source_path": "__core__\\AutoGen\\WorldObject\\StampMill.cs",
+  "recipe_class": "StampMillRecipe",
+  "display_name": "Stamp Mill",
+  "required_skill": "MechanicsSkill",
+  "required_level": 2,
+  "labor_calories_base": 120,
+  "craft_minutes_base": 5,
+  "workstation": "MachinistTableObject",
+  "ingredients": [
+    { "item": "IronBarItem", "amount": 5, "skill": "MechanicsSkill" },
+    { "item": "ScrewsItem", "amount": 14, "skill": "MechanicsSkill" },
+    { "item": "IronGearItem", "amount": 8, "skill": "MechanicsSkill" },
+    { "tag": "WoodBoard", "amount": 14, "skill": "MechanicsSkill" }
+  ],
+  "garbage_outputs": [],
+  "outputs": [
+    { "item": "StampMillItem", "amount": 1 }
+  ],
+  "item_mechanics": {
+    "weight": 5000,
+    "salvage": { "item": "IronScrap", "amount": 7.8 },
+    "power_consumption_watts": 500,
+    "power_type": "MechanicalPower",
+    "repair_part": { "item": "IronGearItem", "amount": 1 }
+  }
+}
