@@ -1,147 +1,142 @@
-# Ironwood Milling — Current Agricultural Processing Foundation
+# Ironwood Milling — Current Steam-Era Processing Table
 
 Derived from the supplied Eco 14 Core using current Gathering/Farming anchors and the depth-sensitive commercial policy.
 
-Milling is the first agricultural specialty where purchased input value begins to matter. Most manual Mill outputs are Depth 1–2: they receive a real specialist margin, but not the 25–50% deep-capital uplift.
+Current prices use the ordinary **Mill** routes. `Processed...` Industrial Mill recipes are future Industry-era efficiencies and do not set this run's prices.
 
 ## Cereal Germ byproduct
 
-Flour, Cornmeal and Rice Flour produce Cereal Germ. Cereal Germ is edible (20 calories) and is the early feedstock for generic Oil.
-
-Because it is produced abundantly as a byproduct rather than through dedicated production, Ironwood values it by practical demand:
+Flour, Cornmeal and Rice Flour produce Cereal Germ. Because it is abundant and is the early feedstock for generic Oil:
 
 **Cereal Germ: 0.05 Town Buy / 0.06 Town Sell.**
 
-## Current Milling foundation
+## Current food / agricultural Milling outputs
 
 | Item | Milling | Town Buys | Town Sells | Notes |
 |---|---:|---:|---:|---|
 | Flour | 1 | **0.24** | **0.25** | Wheat; produces Cereal Germ |
-| Cornmeal | 1 | **0.76** | **0.80** | Corn; produces Cereal Germ |
+| Cornmeal | 1 | **0.76** | **0.80** | Corn; produces 2 Cereal Germ |
 | Rice Flour | 1 | **0.24** | **0.25** | Rice; produces Cereal Germ |
-| Sugar — Huckleberry era | 1 | **1.16** | **1.22** | early structural route |
-| Oil — Cereal Germ route | 1 | **0.44** | **0.46** | early generic edible Oil |
+| Sugar — Huckleberry era | 1 | **1.16** | **1.22** | current structural Sugar route |
+| Oil — Cereal Germ route | 1 | **0.44** | **0.46** | current generic Oil |
 | Camas Paste | 2 | **0.56** | **0.59** | Camas concentrate |
 | Huckleberry Extract | 2 | **2.77** | **2.91** | vitamin concentrate |
-| **Charcoal Powder** | 2 | **0.22** | **0.23** | Engineering/industrial input |
-| Bean Paste | 3 | **0.78** | **0.82** | Beans concentrate |
-| **Flaxseed Oil** | 3 | **0.66** | **0.69** | Carpentry input |
-| **Sun Cheese** | 3 | **4.57** | **4.80** | early Yeast era |
-| Cottonseed Oil | 4 | **1.87** | **1.96** | alternative oil route |
-| **Yeast** | 4 | **1.84** | **1.93** | early Huckleberry-Sugar era |
-| Sunflower Oil | 4 | **0.38** | **0.40** | later cheap generic Oil route |
-| Fish Oil | 6 | **0.83** | **0.87** | Raw Fish route |
-| Beet Sugar | 6 | **0.32** | **0.34** | later structural Sugar route |
+| Simple Syrup | 2 | **10.54** | **11.07** | expensive because current Sugar is expensive |
+| Bean Paste | 3 | **0.78** | **0.82** | Bean concentrate |
+| Flaxseed Oil | 3 | **0.66** | **0.69** | current Carpentry input |
+| Sun Cheese | 3 | **4.57** | **4.80** | current Yeast era |
+| Yeast | 4 | **1.84** | **1.93** | current Huckleberry-Sugar era |
 
-## Key calculations
+Later same-specialty routes such as Beet Sugar and Sunflower Oil remain documented transition candidates, but they do not lower the live price until those higher-efficiency routes become normal across Ironwood.
 
-### Flour — Milling 1
+## Current Mill powders / chemistry
 
-Core: 2 Wheat + 15 calories -> 1 Flour + 1 Cereal Germ.
+| Item | Milling | Town Buys | Town Sells | Current controlling route |
+|---|---:|---:|---:|---|
+| White Powder | 2 | **0.02** | **0.03** | Trillium Flower -> 5 |
+| Blue Powder | 2 | **0.03** | **0.04** | Huckleberries -> 5 |
+| Yellow Powder | 2 | **0.02** | **0.03** | Sunflower -> 5 |
+| Magenta Powder | 2 | **0.02** | **0.03** | Urchin -> 5 |
+| Colored Powder | 2 | **0.22** | **0.23** | 4 `Petals` -> 1 |
+| Charcoal Powder | 2 | **0.22** | **0.23** | Charcoal -> 5 |
+| Iron Oxide | 2 | **0.16** | **0.17** | Crushed Iron Ore -> 8 |
+| Copper Hydroxide | 2 | **0.16** | **0.17** | Crushed Copper Ore -> 12 |
+| Cyan Powder | 3 | **0.13** | **0.14** | Copper Hydroxide + Blue + White |
 
-At level 1:
+### Iron Oxide — Milling 2
 
-- 1.6 Wheat × 0.16 = 0.256
-- 12 calories = 0.012
-- less 0.05 Cereal Germ byproduct value
-- net = 0.218
+Core:
 
-**Flour: 0.24 / 0.25.** Rice Flour is mechanically equivalent at the current Rice/Wheat anchors.
-
-### Cornmeal — Milling 1
-
-Core: 4 Corn + 15 calories -> 1 Cornmeal + 2 Cereal Germ.
-
-At level 1:
-
-- 3.2 Corn × 0.24 = 0.768
-- 12 calories = 0.012
-- less 0.10 byproduct value
-- net = 0.680
-
-**Cornmeal: 0.76 / 0.80.**
-
-### Early Sugar — Milling 1
-
-Core: 8 Huckleberries + 15 calories -> 1 Sugar.
-
-At level 1 cash cost is about 1.036.
-
-**Sugar: 1.16 / 1.22** in the current early Huckleberry-Sugar era.
-
-### Beet Sugar — Milling 6
-
-Core: 6 Beet + 50 calories -> 3 Sugar.
-
-At level 6 cash cost is about 0.273 per Sugar.
-
-**Later Beet Sugar supports roughly 0.32 / 0.34 Sugar.** Once this route becomes broadly available, Sugar and its downstream Yeast/Baking/Cooking chains should undergo a structural economy-wide repricing.
-
-### Flaxseed Oil — Milling 3
-
-Core: 16 Flax Seeds + 25 calories -> 1 Flaxseed Oil.
-
-At level 3 using corrected Flax Seed 0.05 public Sell:
-
-- 11.2 seeds × 0.05 = 0.560
-- 17.5 calories = 0.018
-- cash cost ≈ 0.578
-
-**Flaxseed Oil: 0.66 / 0.69.**
-
-Lumber remains **1.62 / 1.70** because Lumber is a Tier-3 bulk construction commodity; the cheaper agricultural input improves the carpenter's economics rather than collapsing the construction band.
-
-### Charcoal Powder — Milling 2
-
-Core: 1 Charcoal -> 5 Charcoal Powder with 25 calories.
+- 1 Crushed Iron Ore
+- 24 calories
+- -> 8 Iron Oxide
 
 At Milling 2:
 
-- 0.75 Charcoal × 1.30 = 0.975
-- 18.75 calories ≈ 0.019
-- cash cost/powder ≈ 0.199
+- 0.75 Crushed Iron Ore × 1.52 = 1.140
+- 18 calories = 0.018
+- cost/output ≈ 0.145
+
+**Iron Oxide: 0.16 / 0.17.**
+
+This is a current Steam-era input and unlocks Basic Engineering Magnets; it does not require advanced chemistry.
+
+### Copper Hydroxide — Milling 2
+
+Core:
+
+- 1 Crushed Copper Ore
+- 24 calories
+- -> 12 Copper Hydroxide
+
+At current public inputs, cash cost/output ≈ 0.145.
+
+**Copper Hydroxide: 0.16 / 0.17.**
+
+Its major downstream uses are later, but the material itself is already craftable now.
+
+### Colored Powder — Milling 2
+
+Core: 4 `Petals` + 24 calories -> 1. With current gathered flowers at about 0.06 public Sell, cash cost is 0.198.
+
+**Colored Powder: 0.22 / 0.23.**
+
+This is the current Painting pigment input.
+
+## Milling Upgrade — level 2
+
+Core uses 6 Cornmeal + 4 Sugar + 2 Oil as **static** ingredients plus 3,000 calories.
+
+At current public inputs:
+
+- Cornmeal = 4.80
+- Sugar = 4.88
+- Oil = 0.92
+- effective labor = 2.25
+- cash cost = **12.85**
+
+As a skill/capital upgrade:
+
+**Milling Upgrade: 16.71 Town Buy / 17.55 Town Sell.**
+
+## Important current calculations
+
+### Flour
+
+2 Wheat + 15 calories -> 1 Flour + 1 Cereal Germ. At Milling 1 net cash cost after byproduct credit is 0.218.
+
+**Flour: 0.24 / 0.25.**
+
+### Early Sugar
+
+8 Huckleberries + 15 calories -> 1 Sugar. At Milling 1 cash cost is about 1.036.
+
+**Sugar: 1.16 / 1.22.**
+
+### Flaxseed Oil
+
+16 Flax Seeds + 25 calories -> 1 at Milling 3. Current cash cost ≈ 0.578.
+
+**Flaxseed Oil: 0.66 / 0.69.**
+
+### Charcoal Powder
+
+1 Charcoal -> 5 with 24 calories. Current cost/output ≈ 0.199.
 
 **Charcoal Powder: 0.22 / 0.23.**
 
-This resolves the Basic Engineering Carbon Filter dependency.
+### Yeast
 
-### Yeast — Milling 4
-
-Core: 2 Sugar + 15 calories -> 1 Yeast.
-
-At Milling 4 in the current early Sugar era:
-
-- 1.3 Sugar × 1.22 = 1.586
-- 9.75 calories ≈ 0.010
-- cash cost ≈ 1.596
+2 Sugar + 15 calories -> 1. At Milling 4 in the current Huckleberry-Sugar era, cost ≈ 1.596.
 
 **Yeast: 1.84 / 1.93.**
 
-Yeast is intentionally expensive now because Huckleberry Sugar is expensive. Beet Sugar later creates a real agricultural technology transition.
+## Transition routes deliberately not controlling current prices
 
-### Sun Cheese — Milling 3
+- Beet Sugar can eventually support roughly **0.32 / 0.34** Sugar;
+- Sunflower Oil can eventually support roughly **0.38 / 0.40** generic Oil;
+- Industrial Mill recipes materially improve many Milling outputs.
 
-Current Core consumes Sunflower Seed, Yeast, Rice and Oil. At current public inputs, the level-3 cash cost is about **3.97**.
+Those are future transition inputs, not current price setters for this Steam-entry run.
 
-**Sun Cheese: 4.57 / 4.80.**
-
-This explains why some current-era Cooking recipes such as Pupusas and Loaded Taro Fries are expensive before the Beet-Sugar transition.
-
-## Generic Oil routes
-
-Generic Oil is route-sensitive:
-
-- early Cereal Germ route: **0.44 / 0.46**;
-- later Sunflower Seed route: about **0.38 / 0.40**;
-- Cottonseed and Fish routes are more expensive alternatives.
-
-When Sunflower Oil becomes the normal economy-wide supply, generic Oil may settle around 0.38–0.40.
-
-## Later Industrial Mill routes
-
-Industrial Mill recipes can materially improve efficiency. Ironwood applies the existing transition rule:
-
-- personal access to better machinery becomes producer profit;
-- widespread economy-wide adoption can justify structural repricing.
-
-Pigments, Wax/Paraffin and remaining later Milling outputs stay pending for the full profession-output pass.
+Acorn Powder and a few niche food/pigment substitutions can be added if they develop actual current demand; they do not currently control a downstream commodity price.
