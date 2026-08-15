@@ -1,15 +1,18 @@
 # Ironwood Exchange — Steam-Era Shop Tables
 
-Current-run prices derived from Eco 14 Core under the same-specialty integrated-workshop rule.
+Rebuilt from the supplied Eco 14 Core and the current Ironwood pricing doctrine. This is the shop-facing publication for the **current Steam-entry economy**.
 
 **Columns:** Projected Cost → Ironwood Town Buy → Ironwood Town Sell.
 
-- Same-specialty crafted components enter downstream recipes at Projected Cost.
-- Cross-specialty inputs enter at Town Sell.
-- Same-specialty raw anchors carry Town Buy as internal opportunity value.
-- Future Oil/Electronics/Industry efficiencies do not set this run’s prices.
-- Bulk-policy materials (Brick, Glass, Lumber) retain direct-sale policy values even when Projected Cost is lower.
-- Paraffin is current-era via the Milling 4 **Wax** recipe at the Mill; the Oil Drilling route is only a later alternative.
+- Same-specialty crafted components enter downstream recipes at **Projected Cost**.
+- Cross-specialty inputs enter at **Town Sell**.
+- Same-specialty raw anchors carry **Town Buy/opportunity value**.
+- Direct-sale markup is applied once; it is not recursively compounded inside the same specialty.
+- Future Oil/Electronics/Industry efficiencies do not set current prices until those routes become normal in the run.
+- Bulk-policy materials (Brick, Glass, Lumber) retain their direct-sale policy prices even when Projected Cost is lower.
+- Paraffin is current via Milling 4 **Wax** at the Mill; Waxed Paper is therefore current via Paper Milling.
+- Research papers use capped Library procurement rather than unlimited government demand.
+- Current Tailoring is published exhaustively for player-facing Tailoring Table/Loom outputs; hidden internal objects and Advanced Tailoring Table/Industry-gated recipes are excluded.
 
 ## Raw / Gathering Anchors
 
@@ -194,21 +197,77 @@ Current-run prices derived from Eco 14 Core under the same-specialty integrated-
 
 ## Tailoring
 
+Current Tailoring Table and Loom outputs are listed here exhaustively. Cosmetic/tag-product variants are grouped only when they have the same material burden. `Paper Streamers` is a hidden/internal object and is not a player-facing Exchange item. Advanced Tailoring Table and Industry-gated outputs are not current price setters.
+
+### Textile foundation and intermediates
+
 | Item | Projected Cost | Town Buys | Town Sells |
 |---|---:|---:|---:|
 | Linen Yarn | 0.12 | **0.14** | **0.15** |
-| Linen Fabric | 0.48 | **0.55** | **0.58** |
 | Cotton Thread | 0.16 | **0.18** | **0.19** |
+| Wool Yarn | 1.18 | **1.32** | **1.39** |
+| Linen Fabric | 0.48 | **0.55** | **0.58** |
 | Cotton Fabric | 0.59 | **0.68** | **0.71** |
 | Wool Fabric | 3.84 | **4.42** | **4.64** |
 | Canvas | 2.19 | **2.52** | **2.65** |
+| Mesh Filter | 0.84 | **0.96** | **1.01** |
+
+### Clothing, carry, and utility
+
+| Item | Projected Cost | Town Buys | Town Sells |
+|---|---:|---:|---:|
 | Campsite | 20.46 | **24.55** | **25.78** |
+| Capris | 3.45 | **3.97** | **4.17** |
+| Cloth Belt | 1.94 | **2.23** | **2.34** |
+| Derpy Hat | 2.95 | **3.39** | **3.56** |
+| Garden Boots | 3.38 | **3.89** | **4.08** |
+| Gigot Sleeve Shirt | 1.47 | **1.69** | **1.77** |
+| Henley | 1.74 | **2.00** | **2.10** |
+| Low Top Shoes | 2.14 | **2.46** | **2.58** |
+| Sandals | 5.16 | **5.93** | **6.23** |
+| Shorts | 3.96 | **4.55** | **4.78** |
+| Square Belt | 1.04 | **1.20** | **1.26** |
+| Tall Boots | 3.01 | **3.46** | **3.63** |
+| Trousers | 2.94 | **3.38** | **3.55** |
 | Big Backpack | 13.48 | **16.17** | **16.98** |
+| Camo Pants | 17.05 | **19.61** | **20.59** |
+| Running Shoes | 6.96 | **8.01** | **8.41** |
+| Bandana | 10.37 | **11.93** | **12.53** |
+| Camo Shirt | 15.92 | **18.31** | **19.23** |
+| Cloth Cape | 20.33 | **23.38** | **24.55** |
 | Light Backpack | 14.10 | **16.91** | **17.76** |
-| Farmer Shirt | 69.90 | **80.38** | **84.40** |
 | Work Boots | 19.41 | **22.33** | **23.44** |
+| Oil Head Lamp | 3.86 | **4.44** | **4.66** |
+
+### Furniture and decorations
+
+| Item | Projected Cost | Town Buys | Town Sells |
+|---|---:|---:|---:|
+| Kite / Fish Kites | 17.85 | **21.42** | **22.49** |
+| Padded Chair | 14.66 | **17.60** | **18.48** |
+| Couch | 19.65 | **23.57** | **24.75** |
+| Washboard | 1.83 | **2.20** | **2.31** |
+| Cotton Curtains — each | 0.89 | **1.07** | **1.12** |
+| Wool Curtains — each | 3.74 | **4.48** | **4.70** |
+| Cotton Streamer Stars / Stripes | 1.74 | **2.09** | **2.19** |
+| Small Cotton Bunting — Red/Festive/Regal/Vibrant | 1.80 | **2.16** | **2.27** |
+| Large Cotton Bunting — Red/Festive/Regal/Vibrant | 3.22 | **3.86** | **4.05** |
+| Tapestry / Fish / Sunset | 4.52 | **5.42** | **5.69** |
+| Rug Small / Banana Rug | 18.84 | **22.61** | **23.74** |
+| Rug Medium | 21.63 | **25.96** | **27.26** |
+| Rug Large | 35.39 | **42.47** | **44.59** |
+| Small Bath Mat | 8.31 | **9.97** | **10.47** |
+| Large Bath Mat | 19.92 | **23.91** | **25.11** |
 | Cast Iron Bed | 32.13 | **38.56** | **40.49** |
 | Cast Iron Royal Bed | 79.63 | **95.56** | **100.33** |
+
+### Tailoring upgrade
+
+| Item | Projected Cost | Town Buys | Town Sells |
+|---|---:|---:|---:|
+| Tailoring Basic Upgrade | 6.07 | **7.89** | **8.28** |
+
+**Not current:** Farmer/Smith/Shipwright/Tailor profession outfits and other recipes that require the **Advanced Tailoring Table**, plus Nylon/Plastic/Epoxy/Steel-Spring routes.
 
 ## Mining
 
@@ -454,6 +513,60 @@ Current-run prices derived from Eco 14 Core under the same-specialty integrated-
 |---|---:|---:|---:|
 | Compost | 0.05 | **0.05** | **0.06** |
 
+## Library Research Papers
+
+Research papers use **capped civic procurement**. The ordinary rule is Town Buy = Projected Cost + 20%, with the Engineering Advanced paper carrying the agreed capital-sacrifice policy override.
+
+### Basic Research
+
+| Research Paper | Projected Cost | Town Buys | Town Sells |
+|---|---:|---:|---:|
+| Agriculture Research Paper Basic | 2.79 | **3.35** | **3.52** |
+| Culinary Research Paper Basic | 1.03 | **1.24** | **1.30** |
+| Dendrology Research Paper Basic | 6.42 | **7.71** | **8.10** |
+| Gathering Research Paper Basic | 1.46 | **1.76** | **1.85** |
+| Geology Research Paper Basic | 2.42 | **2.91** | **3.06** |
+| Metallurgy Research Paper Basic | 6.23 | **7.48** | **7.85** |
+
+### Advanced Research
+
+| Research Paper | Projected / Opportunity Cost | Town Buys | Town Sells |
+|---|---:|---:|---:|
+| Agriculture Research Paper Advanced | 24.74 | **29.68** | **31.16** |
+| Culinary Research Paper Advanced | 19.71 | **23.65** | **24.83** |
+| Dendrology Research Paper Advanced | 15.88 | **19.05** | **20.00** |
+| Engineering Research Paper Advanced | 37.45 | **45.00** | **47.25** |
+| Gathering Research Paper Advanced | 5.02 | **6.02** | **6.32** |
+| Geology Research Paper Advanced | 6.90 | **8.28** | **8.69** |
+| Metallurgy Research Paper Advanced | 20.15 | **24.18** | **25.39** |
+
+Engineering Advanced is intentionally valued above pure same-specialty component cost because the recipe destroys commercially useful finished capital (Waterwheel, Windmill, Wooden Gears). The **45.00** research transfer value is used as the Advanced-paper input in Engineering Modern.
+
+### Modern Research
+
+| Research Paper | Projected Cost | Town Buys | Town Sells |
+|---|---:|---:|---:|
+| Agriculture Research Paper Modern | 56.25 | **67.50** | **70.88** |
+| Culinary Research Paper Modern | 57.02 | **68.42** | **71.84** |
+| Dendrology Research Paper Modern | 44.15 | **52.98** | **55.63** |
+| Engineering Research Paper Modern | 70.60 | **84.72** | **88.95** |
+| Geology Research Paper Modern | 23.66 | **28.39** | **29.81** |
+| Metallurgy Research Paper Modern | 74.04 | **88.84** | **93.28** |
+
+There is no Engineering Research Paper Basic and no Gathering Research Paper Modern in the supplied Core.
+
+## Generic Research Upgrades
+
+These are the Self Improvement **Basic Upgrade / Advanced Upgrade / Modern Upgrade** modules. They are reusable capital goods and use the ordinary 30% upgrade margin.
+
+| Upgrade | Projected Cost | Town Buys | Town Sells |
+|---|---:|---:|---:|
+| Basic Upgrade | 52.50 | **68.25** | **71.66** |
+| Advanced Upgrade | 278.70 | **362.31** | **372.31** |
+| Modern Upgrade | 526.06 | **683.88** | **693.88** |
+
+The Advanced Upgrade was recalculated after Engineering Research Paper Modern moved to **88.95 Town Sell**.
+
 ## Special / Non-Unlimited Reference Prices
 
 | Item | Projected Cost | Reference Buy | Reference Sell | Status |
@@ -501,4 +614,6 @@ Negative intake means the player pays Ironwood to accept the waste.
 
 - These are current Steam-entry values, not a future-era equilibrium.
 - Projected Cost is deliberately exposed so Town Buy can be tuned manually without losing the recipe-cost baseline.
-- Research/skill-book pricing remains a separate civic/research policy lane.
+- Research papers are included here for shop posting but remain a **capped Library procurement** lane, not unlimited Exchange imports.
+- Skill-book and scroll access policy remains separate from the paper prices above.
+- Future Advanced Tailoring, Advanced Smelting, Oil Drilling, Electronics, Industry, Composites, Advanced Masonry, and advanced-food efficiencies do not back-propagate into current prices until Ironwood explicitly transitions.
