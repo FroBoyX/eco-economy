@@ -111,11 +111,19 @@ Current decisions:
 
 - existing FroBoyX Credit is permanently redeemable into Flakes at **1:1**;
 - no new FroBoyX Credit is issued after cutover;
-- each player Active at cutover receives a **one-time 180-Flake capitalization grant**;
-- a player not Active at cutover receives the same **one-time 180-Flake grant on first becoming Active**;
+- **1 physical Paper banknote represents 25 Flakes**; the Paper item is the note medium, not commodity backing;
+- each player Active at cutover receives a **one-time 175-Flake capitalization grant**;
+- a player not Active at cutover receives the same **one-time 175-Flake grant on first becoming Active**;
 - losing and regaining Active status does not create another grant;
+- Active is a server-wide status, not Ironwood residency; the current Active population is **114 players**;
+- the observed legacy FroBoyX Credit economy is **9,236.39**;
+- 114 × 175 capitalization = **19,950 Flakes**;
+- combined conversion + capitalization requirement = **29,186.39 Flakes**;
+- minimum physical printing at 25 Flakes/Paper = **1,168 Paper (29,200 Flakes)**;
+- working initial print run = **1,600 Paper = 40,000 Flakes**, leaving about **10,813.61 Flakes** of unissued physical-note headroom after conversion and all initial grants;
 - the issuing authority limits net Flake circulation outside sterilized issuer reserves to **60% of the current face value of unsold sellable civic land instruments it actually controls**;
-- reserve capacity is a ceiling, not a requirement to print;
+- reserve capacity is a ceiling, not a requirement to issue;
+- unissued printed Paper held by the Treasury is not circulation;
 - land-sale receipts are sterilized/retired rather than immediately recycled as ordinary spending while required to preserve the reserve rule;
 - the Flake is intended to circulate outside Ironwood; other players and future Towns can acquire it through Exchange trade, procurement, public works, research, and other authorized transactions with the issuing authority.
 
@@ -158,29 +166,31 @@ Country claims and stakes are materially more flexible because they can be used 
 
 In-game Foundation screenshot:
 
-- non-abandoned citizens: `33`;
+- non-abandoned Ironwood citizens: `33`;
 - spawned Town Claim Papers: `330`;
 - spawned Homestead Support Claim Papers: `165`;
 - spawned Town Claim Stakes: `49`;
 - currently visible Foundation inventory: `167` Town Claim Papers, `140` Homestead Support Claim Papers, `35` Town Claim Stakes.
 
-At the locked prices, the visible issuer-controlled inventory has a face value of **74,050 Flakes** and a 60% printable reserve ceiling of **44,430 Flakes**.
+At the locked prices, the visible issuer-controlled inventory has a face value of **74,050 Flakes** and a 60% circulation ceiling of **44,430 Flakes**.
 
 This is a snapshot only; recalculate as inventory or prices change.
 
-## Future Country — unresolved pricing, resolved monetary treatment
+## Future Country — unresolved pricing, participation-dependent monetary treatment
 
 Country claim/stake prices are not yet set.
 
-When a Country forms:
+The Flake reserve does **not** automatically expand merely because any Country forms. It expands when a **Country with a stake in Flakes** formally commits its government-controlled claim/stake assets to the Flake reserve framework.
+
+When a Country takes a stake in Flakes:
 
 - its generated claims/stakes are additive to member-Town land resources;
 - Country claims/stakes may be usable across member Towns and therefore have greater jurisdictional flexibility;
-- only Country land assets actually controlled by the issuing authority and assigned published Country prices enter the reserve calculation;
-- 60% of that additional face value may increase the printable reserve ceiling;
+- only Country land assets actually controlled by that participating issuing authority and assigned published Country prices enter the reserve calculation;
+- 60% of that additional face value may increase the circulation ceiling;
 - additional reserve capacity permits but does not require additional issuance;
 - Country pricing/allocation must not make member-Town claims economically irrelevant or create cheap national inventory that bypasses local land policy.
 
 ## Next action
 
-Implement/publish the Flake cutover and Town real-estate schedule, then define Country claim/stake prices and allocation policy before Country reserve assets are placed into ordinary sale.
+Implement/publish the Flake cutover and Town real-estate schedule, including the physical note printing plan, then define Country claim/stake prices and allocation policy before participating Country reserve assets enter the Flake framework.
