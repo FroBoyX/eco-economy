@@ -4,6 +4,8 @@ Derived from the supplied Eco 14 Core using current Gathering/Farming anchors an
 
 Current prices use the ordinary **Mill** routes. `Processed...` Industrial Mill recipes are future Industry-era efficiencies and do not set this run's prices.
 
+> The schema-18/current Exchange ledger is authoritative where older explanatory calculations in this profession note differ. Paraffin is explicitly current-era via the Milling 4 `Wax` recipe described below.
+
 ## Cereal Germ byproduct
 
 Flour, Cornmeal and Rice Flour produce Cereal Germ. Because it is abundant and is the early feedstock for generic Oil:
@@ -26,6 +28,7 @@ Flour, Cornmeal and Rice Flour produce Cereal Germ. Because it is abundant and i
 | Flaxseed Oil | 3 | **0.66** | **0.69** | current Carpentry input |
 | Sun Cheese | 3 | **4.57** | **4.80** | current Yeast era |
 | Yeast | 4 | **1.84** | **1.93** | current Huckleberry-Sugar era |
+| **Paraffin** | **4** | **0.55** | **0.58** | Core recipe is named `Wax`; Bean Paste -> Paraffin at Mill |
 
 Later same-specialty routes such as Beet Sugar and Sunflower Oil remain documented transition candidates, but they do not lower the live price until those higher-efficiency routes become normal across Ironwood.
 
@@ -83,6 +86,30 @@ Core: 4 `Petals` + 24 calories -> 1. With current gathered flowers at about 0.06
 
 This is the current Painting pigment input.
 
+## Paraffin — Milling 4 (`Wax`)
+
+The Core recipe family is named **`Wax`**, but its output item is **Paraffin**. This naming mismatch previously caused the progression route to be missed.
+
+Core:
+
+- 1 Bean Paste
+- 50 calories
+- -> 1 Paraffin
+- workstation: **Mill**
+- requires **Milling 4**
+
+At Milling 4 the resource/labor multiplier is 0.65. Under the integrated-workshop rule, Bean Paste is a same-Milling component and therefore enters at its current **0.70 Projected Cost**, not its direct-sale price.
+
+- 0.65 Bean Paste × 0.70 = 0.455
+- 32.5 calories = 0.0325
+- Projected Cost = **0.4875 ≈ 0.49**
+
+As a shallow progression intermediate:
+
+**Paraffin: 0.55 Town Buy / 0.58 Town Sell.**
+
+Oil Drilling later provides an alternate Petroleum-based Paraffin route. That later efficiency may justify a future structural reprice, but Paraffin itself is **not Oil-gated**.
+
 ## Milling Upgrade — level 2
 
 Core uses 6 Cornmeal + 4 Sugar + 2 Oil as **static** ingredients plus 3,000 calories.
@@ -135,7 +162,8 @@ As a skill/capital upgrade:
 
 - Beet Sugar can eventually support roughly **0.32 / 0.34** Sugar;
 - Sunflower Oil can eventually support roughly **0.38 / 0.40** generic Oil;
-- Industrial Mill recipes materially improve many Milling outputs.
+- Industrial Mill recipes materially improve many Milling outputs;
+- Oil Drilling later provides a cheaper alternate route to Paraffin.
 
 Those are future transition inputs, not current price setters for this Steam-entry run.
 
