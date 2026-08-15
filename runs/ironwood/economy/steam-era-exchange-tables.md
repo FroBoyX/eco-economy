@@ -9,6 +9,7 @@ Current-run prices derived from Eco 14 Core under the same-specialty integrated-
 - Same-specialty raw anchors carry Town Buy as internal opportunity value.
 - Future Oil/Electronics/Industry efficiencies do not set this run’s prices.
 - Bulk-policy materials (Brick, Glass, Lumber) retain direct-sale policy values even when Projected Cost is lower.
+- Paraffin is current-era via the Milling 4 **Wax** recipe at the Mill; the Oil Drilling route is only a later alternative.
 
 ## Raw / Gathering Anchors
 
@@ -137,6 +138,7 @@ Current-run prices derived from Eco 14 Core under the same-specialty integrated-
 | Camas Paste | 0.50 | **0.56** | **0.59** |
 | Huckleberry Extract | 2.48 | **2.77** | **2.91** |
 | Bean Paste | 0.70 | **0.78** | **0.82** |
+| Paraffin | 0.49 | **0.55** | **0.58** |
 
 ## Fertilizers
 
@@ -338,6 +340,7 @@ Current-run prices derived from Eco 14 Core under the same-specialty integrated-
 | Large Paper Lantern | 16.90 | **19.43** | **20.40** |
 | Large Festive Paper Lantern | 16.90 | **19.43** | **20.40** |
 | Redwoods Poster | 6.11 | **7.02** | **7.37** |
+| Waxed Paper | 0.36 | **0.42** | **0.44** |
 
 ## Painting
 
