@@ -101,16 +101,37 @@ The active recipe-discovery problem is substantially complete. Remaining work is
 
 Do not reopen completed profession chains merely because an older table or chat used a different number. Reopen only when current Core evidence, run conditions, or Product Owner direction changes the model.
 
-## Active unresolved lane — land allocation and monetary reserve
+## Flake monetary policy — current
 
-The next policy/economy decision is pricing and distribution of settlement-generated land resources:
+Canonical policy: `economy/flake-monetary-policy.md`.
 
-- Town/Country Claim Papers;
-- Town/Country Claim Stakes;
-- Homestead Support Claim Papers;
-- the separately craftable Homestead Claim Stake item where relevant.
+The **Ironwood Flake** replaces FroBoyX Credit as the run's fiat currency under a land-reserve issuance rule.
 
-Settlement-generated claims and stakes are **high-value limited civic assets**. They must not be priced as ordinary commodities simply because they can appear in a store. The craftable Homestead Claim Stake remains a separate manufactured-good calculation.
+Current decisions:
+
+- existing FroBoyX Credit is permanently redeemable into Flakes at **1:1**;
+- no new FroBoyX Credit is issued after cutover;
+- each player Active at cutover receives a **one-time 180-Flake capitalization grant**;
+- a player not Active at cutover receives the same **one-time 180-Flake grant on first becoming Active**;
+- losing and regaining Active status does not create another grant;
+- the issuing authority limits net Flake circulation outside sterilized issuer reserves to **60% of the current face value of unsold sellable civic land instruments it actually controls**;
+- reserve capacity is a ceiling, not a requirement to print;
+- land-sale receipts are sterilized/retired rather than immediately recycled as ordinary spending while required to preserve the reserve rule;
+- the Flake is intended to circulate outside Ironwood; other players and future Towns can acquire it through Exchange trade, procurement, public works, research, and other authorized transactions with the issuing authority.
+
+### Current Town real-estate prices — LOCKED
+
+| Civic land instrument | Treasury Buy | Treasury Sell |
+|---|---:|---:|
+| Town Claim Paper | **150 Flakes** | **150 Flakes** |
+| Homestead Support Claim Paper | **100 Flakes** | **100 Flakes** |
+| Town Claim Stake | **1,000 Flakes** | **1,000 Flakes** |
+
+There is no Treasury spread on civic land instruments.
+
+A Town Claim Stake includes 5 claims. At 150 Flakes per Town Claim, 750 Flakes of the 1,000-Flake stake price is embedded claim value and **250 Flakes** is the stake/new-property premium.
+
+## Land mechanics and reserve scale
 
 ### Player and property mechanics — Product Owner confirmed in-game
 
@@ -120,8 +141,6 @@ Settlement-generated claims and stakes are **high-value limited civic assets**. 
 - A **new Claim Stake is required to create a new property**.
 - A settlement Claim Stake comes with **5 claims** of its own.
 - Additional Claim Papers expand claim capacity without themselves creating another property.
-
-This observed run behavior overrides prior recovery assumptions that starter land needed to be solved through cheap Town-issued claims.
 
 ### Settlement generation mechanics
 
@@ -145,36 +164,23 @@ In-game Foundation screenshot:
 - spawned Town Claim Stakes: `49`;
 - currently visible Foundation inventory: `167` Town Claim Papers, `140` Homestead Support Claim Papers, `35` Town Claim Stakes.
 
-The difference between spawned total and Foundation inventory is already outside the Foundation; do not assume all spawned assets remain available for new sale.
+At the locked prices, the visible issuer-controlled inventory has a face value of **74,050 Flakes** and a 60% printable reserve ceiling of **44,430 Flakes**.
 
-### Currency-policy relationship
+This is a snapshot only; recalculate as inventory or prices change.
 
-The Ironwood Flake is intended to become the fiat currency. The planned initial active-player capitalization remains **150 Flakes**.
+## Future Country — unresolved pricing, resolved monetary treatment
 
-The issuing authority must also provide a path for other Towns to acquire currency. Land claims/stakes therefore interact with monetary policy as well as land policy:
+Country claim/stake prices are not yet set.
 
-- currency is issued outward through useful spending, procurement, capitalization, public works, research, and inter-settlement activity;
-- scarce civic assets sold for Flakes can pull currency back toward the issuing authority;
-- claim pricing can create durable demand for the currency without relying on arbitrary recurring taxes;
-- claim sales must not remove so much liquidity that new players or member Towns cannot conduct ordinary trade.
+When a Country forms:
 
-A future Country's large portable claim reserve makes this monetary role more important, not less. Country claims should function as a strategic reserve/backstop and monetary sink rather than cheap national inventory that destroys the member Town claim market.
-
-Do **not** assume the current `FroBoyX Credit` report converts to Flakes at 1:1 until that conversion policy is explicitly decided.
-
-### Pricing status
-
-Current working proposal:
-
-- **Town Claim Paper: 150 Flakes**;
-- **Homestead Support Claim Paper: 100 Flakes**.
-
-These remain provisional until explicitly locked.
-
-Because each new settlement Claim Stake includes 5 claims, a Town Claim Stake has at least **750 Flakes of embedded claim-paper value** at the 150-Flake claim price before assigning any premium for the scarce right to create an additional property.
-
-Claim Stake and future Country prices remain unresolved.
+- its generated claims/stakes are additive to member-Town land resources;
+- Country claims/stakes may be usable across member Towns and therefore have greater jurisdictional flexibility;
+- only Country land assets actually controlled by the issuing authority and assigned published Country prices enter the reserve calculation;
+- 60% of that additional face value may increase the printable reserve ceiling;
+- additional reserve capacity permits but does not require additional issuance;
+- Country pricing/allocation must not make member-Town claims economically irrelevant or create cheap national inventory that bypasses local land policy.
 
 ## Next action
 
-Resolve the Town Claim Stake price from its 5 included claims plus the new-property premium, then define Country claim/stake prices and reserve policy so the additive cross-town Country supply cannot undercut member Town land policy.
+Implement/publish the Flake cutover and Town real-estate schedule, then define Country claim/stake prices and allocation policy before Country reserve assets are placed into ordinary sale.
