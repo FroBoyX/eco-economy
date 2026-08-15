@@ -6,7 +6,7 @@ This is a **separate research projection lane**. Modern-support materials are pr
 
 ## Naming and producer map
 
-Eco uses two related naming systems here, and they should not be conflated:
+Eco uses two related naming systems here:
 
 - the **Research Paper family** is the actual item name (`Agriculture`, `Culinary`, `Dendrology`, `Engineering`, `Gathering`, `Geology`, `Metallurgy`);
 - the **producing specialty** is the skill that crafts that tier of paper.
@@ -23,90 +23,92 @@ This matters especially for Engineering: **Basic Engineering is the specialty th
 | Geology | Mining | Masonry | Pottery / alternate Glassworking route |
 | Metallurgy | Smelting | Blacksmith | Advanced Smelting |
 
-The Core display names use **`Agriculture Research Paper ...`** and **`Dendrology Research Paper ...`** exactly. Ironwood may use friendlier labels in signage, but the ledger should preserve the source item names.
-
-## Pricing rule
+## Final pricing rule
 
 Research papers use the same integrated-specialty accounting as the rest of Ironwood:
 
 - same-specialty crafted components enter at **Projected Cost**;
 - cross-specialty inputs enter at **Town Sell**;
 - same-specialty raw anchors enter at Town Buy/opportunity value;
-- labor remains **1 credit / 1,000 calories**;
-- prior-tier papers are cross-specialty knowledge inputs when the next tier is made by a different specialty and therefore enter at their Town Sell price.
+- skill-based ingredient and labor reductions are evaluated at the recipe's minimum required skill;
+- prior-tier papers enter the next tier at their Town Sell price when the producing specialty changes;
+- labor remains **1 credit / 1,000 calories**.
 
-Research is finite civic demand, so Library purchases should be **quantity-capped procurement**, not unlimited government imports.
+Research papers are themselves **intermediate knowledge goods** used by later books rather than terminal goods. Their tier already appears in Projected Cost through deeper and more expensive ingredients. Ironwood therefore does **not** apply an additional escalating Basic/Advanced/Modern percentage.
 
-Recommended direct-sale research premiums:
+**Canonical research procurement premium: 20% over Projected Cost for every research paper.**
 
-- **Basic:** Projected Cost × 1.15
-- **Advanced:** Projected Cost × 1.20
-- **Modern:** Projected Cost × 1.25
+`Town Buy = Projected Cost × 1.20`
 
 Town Sell then uses Ironwood's ordinary Exchange spread.
 
+Library demand remains **quantity-capped civic procurement**, not an unlimited government buy order.
+
 ## Basic Research Papers
 
-| Research Paper | Producing Specialty / Route | Projected Cost | Town Buys | Town Sells |
+| Research Paper | Producing Specialty / Cheapest Route | Projected Cost | Town Buys | Town Sells |
 |---|---|---:|---:|---:|
-| Agriculture Research Paper Basic | Farming 1 | **2.90** | **3.33** | **3.50** |
-| Culinary Research Paper Basic | Campfire Cooking route | **1.12** | **1.29** | **1.35** |
-| Dendrology Research Paper Basic | Logging 1 | **6.42** | **7.39** | **7.76** |
-| Gathering Research Paper Basic | Gathering 1 | **1.46** | **1.68** | **1.76** |
-| Geology Research Paper Basic | Mining 1 | **2.42** | **2.79** | **2.93** |
-| Metallurgy Research Paper Basic | Smelting 1 | **6.23** | **7.16** | **7.52** |
+| Agriculture Research Paper Basic | Farming 1 | **2.79** | **3.35** | **3.52** |
+| Culinary Research Paper Basic | Campfire Cooking route | **1.03** | **1.24** | **1.30** |
+| Dendrology Research Paper Basic | Logging 1 | **6.42** | **7.71** | **8.10** |
+| Gathering Research Paper Basic | Gathering 1 | **1.46** | **1.76** | **1.85** |
+| Geology Research Paper Basic | Mining 1 | **2.42** | **2.91** | **3.06** |
+| Metallurgy Research Paper Basic | Smelting 1 | **6.23** | **7.48** | **7.85** |
 
-### Basic route notes
+### Basic cost notes
 
-- Agriculture Basic uses the cheapest legitimate current `Raw Food` and `Crop Seed` inputs. `Sunflower Seed` is the least-cost current Farming-produced Crop Seed at about **0.024 projected cost each**.
-- Culinary Basic has three Core routes. The Campfire Cooking route is cheaper than the Dried Fish and Dried Meat Hunting routes under current prices.
-- Gathering Basic uses cheap raw food plus `NaturalFiber`; Kelp is a valid Natural Fiber.
-- Metallurgy Basic uses Iron Bar as the cheapest current `Metal` and low-value crushed rock for `CrushedRock`.
-- There is no Engineering-family Basic paper in the supplied Core. **Basic Engineering appears one tier later as the producer of Engineering Research Paper Advanced.**
+- **Agriculture Basic:** Farming 1; 5 Dirt, 3 Crushed Limestone, 10 `Raw Food`, 10 `Crop Seed`, 30 calories. Cheapest current Raw Food opportunity value is **0.10**. Sunflower Seed is the cheapest Farming-produced Crop Seed route at about **0.021 projected cost each**. Crushed Limestone crosses from Mining at Town Sell.
+- **Culinary Basic:** the Campfire Cooking route is cheapest. The lowest current `FriedVegetable` is Fried Hearts of Palm at about **0.167 projected cost** and the lowest `CampfireSalad` is Beet Campfire Salad at about **0.38 projected cost**. The Dried Fish and Dried Meat Hunting routes are more expensive.
+- **Dendrology Basic:** Logging 1; 20 Wood plus 30 calories. Wood is carried at its **0.40** Logging opportunity value.
+- **Gathering Basic:** cheapest current `Raw Food` opportunity value is **0.10** and Kelp supplies `NaturalFiber` at **0.03** opportunity value.
+- **Geology Basic:** 30 Rock plus labor, with Rock carried at the **0.10** Mining raw anchor.
+- **Metallurgy Basic:** Iron Bar is the cheapest current `Metal` and Crushed Mixed Rock is the cheapest normal `CrushedRock` market input.
 
 ## Advanced Research Papers
 
-| Research Paper | Producing Specialty / Cheapest Core Route | Projected Cost | Town Buys | Town Sells |
+| Research Paper | Producing Specialty / Cheapest Route | Projected Cost | Town Buys | Town Sells |
 |---|---|---:|---:|---:|
-| Agriculture Research Paper Advanced | Fertilizers 1 | **24.72** | **29.66** | **31.14** |
-| Culinary Research Paper Advanced | Baking meat route | **19.76** | **23.71** | **24.90** |
-| Dendrology Research Paper Advanced | Shipwright hull-plank route | **15.54** | **18.64** | **19.57** |
+| Agriculture Research Paper Advanced | Fertilizers 1 | **24.74** | **29.68** | **31.16** |
+| Culinary Research Paper Advanced | Baking meat route | **19.71** | **23.65** | **24.83** |
+| Dendrology Research Paper Advanced | Shipwright hull-plank route | **15.88** | **19.05** | **20.00** |
 | Engineering Research Paper Advanced | **Basic Engineering 1** | **29.44** | **35.33** | **37.10** |
-| Gathering Research Paper Advanced | Tailoring 1 | **4.91** | **5.89** | **6.18** |
-| Geology Research Paper Advanced | Masonry 1 | **6.80** | **8.16** | **8.57** |
-| Metallurgy Research Paper Advanced | Blacksmith 1 | **19.82** | **23.79** | **24.98** |
+| Gathering Research Paper Advanced | Tailoring 1 | **5.02** | **6.02** | **6.32** |
+| Geology Research Paper Advanced | Masonry 1 | **6.90** | **8.28** | **8.69** |
+| Metallurgy Research Paper Advanced | Blacksmith 1 | **20.15** | **24.18** | **25.39** |
 
-### Advanced route notes
+### Advanced cost notes
 
-- Agriculture Advanced is expensive because five Berry Extract Fertilizer are required before skill reduction. Spoiled Food is treated at **0 acquisition cost** for the projection rather than assuming a speculative disposal subsidy; any paid waste intake only improves the producer's realized margin.
-- Culinary Advanced has a Cooking route and a Baking/meat route. The Baking route is cheaper under current Ironwood inputs.
-- Dendrology Advanced has Carpentry/Hewn Log and Shipwright/Wooden Hull Planks routes. The Shipwright route is cheaper under the integrated-specialty rule.
-- Gathering Advanced uses Linen Fabric as the cheapest current `Fabric` route.
+- **Agriculture Advanced:** five Berry Extract Fertilizer are carried at Fertilizers' internal Projected Cost; Fur Pelt and Leather Hide cross from Butchery. Spoiled Food is assigned **0 acquisition cost** rather than assuming a speculative waste subsidy. The Basic Agriculture paper enters at Library Town Sell.
+- **Culinary Advanced:** the alternate Baking route is cheaper than the Cooking route. Baked Meat is a same-Baking component at Projected Cost; Simmered Meat and Cooking Utensils cross specialty boundaries; the Basic Culinary paper enters at Library Town Sell.
+- **Dendrology Advanced:** the Shipwright Wooden Hull Planks route is cheaper than the Carpentry/Hewn Log route under the integrated-workshop rule.
+- **Engineering Advanced:** Waterwheel, Windmill and Wooden Gear are all Basic Engineering outputs and therefore enter at their internal Projected Costs.
+- **Gathering Advanced:** Linen Fabric is the cheapest current `Fabric` and is carried at Tailoring's Projected Cost.
+- **Geology Advanced:** Mortared Stone is a same-Masonry component at Projected Cost.
+- **Metallurgy Advanced:** Iron Plate, Copper Plate and Nails are same-Blacksmith components at Projected Cost.
 
 ## Modern Research Papers
 
 | Research Paper | Producing Specialty / Cheapest Route | Projected Cost | Town Buys | Town Sells |
 |---|---|---:|---:|---:|
-| Agriculture Research Paper Modern | Oil Drilling 1 | **56.23** | **70.29** | **73.80** |
-| Culinary Research Paper Modern | Advanced Cooking 2 | **57.09** | **71.36** | **74.93** |
-| Dendrology Research Paper Modern | Paper Milling 1 | **43.49** | **54.36** | **57.08** |
-| Engineering Research Paper Modern | Mechanics 1 | **62.72** | **78.40** | **82.32** |
-| Geology Research Paper Modern | Pottery/Brick route | **23.54** | **29.42** | **30.89** |
-| Metallurgy Research Paper Modern | Advanced Smelting 1 | **73.23** | **91.54** | **96.12** |
+| Agriculture Research Paper Modern | Oil Drilling 1 | **56.25** | **67.50** | **70.88** |
+| Culinary Research Paper Modern | Advanced Cooking 2 | **57.02** | **68.42** | **71.84** |
+| Dendrology Research Paper Modern | Paper Milling 1 | **43.92** | **52.70** | **55.34** |
+| Engineering Research Paper Modern | Mechanics 1 | **62.72** | **75.26** | **79.02** |
+| Geology Research Paper Modern | Pottery / Brick route | **23.66** | **28.39** | **29.81** |
+| Metallurgy Research Paper Modern | Advanced Smelting 1 | **74.04** | **88.84** | **93.28** |
 
-### Modern route notes
+### Modern cost notes
 
-- Agriculture Modern requires Sulfuric Acid, Phosphate Fertilizer, Bio Residue, Compost Fertilizer, Ink, Paper and the Advanced Agriculture paper. Bio Residue is carried at **0 input acquisition cost** rather than using a speculative negative subsidy.
-- Culinary Modern requires Boiled Sausage, Bread, Worldly Donut, Smooth Gut Noodle Roll, Ink, Paper and the Advanced Culinary paper.
-- Dendrology Modern requires Waxed Paper, Lumber, Ink, Paper and the Advanced Dendrology paper. Paper and Waxed Paper are both Paper Milling outputs and therefore carry internal Projected Cost rather than Paper Milling's own direct-sale markup.
-- Engineering Modern uses Mechanics-produced Iron Axles and Iron Gears at Mechanics Projected Cost, while Lubricant, Ink, Paper and the Advanced Engineering paper remain cross-specialty purchases.
-- Geology Modern has Pottery/Brick and Glassworking/Glass routes. The **Brick route is materially cheaper** under current Ironwood policy because Pottery carries its own Brick at Brick's Projected Cost rather than the 1.20/1.25 bulk direct-sale policy price.
-- Metallurgy Modern uses Steel Bar and Rebar internally inside Advanced Smelting, so neither Steel nor Rebar direct-sale markup is compounded into the paper.
-- The supplied Core defines no Gathering Research Paper Modern.
+- **Agriculture Modern:** Sulfuric Acid, Phosphate Fertilizer and Compost Fertilizer cross specialty boundaries. Bio Residue is assigned **0 acquisition cost**. Ink, Paper and the Advanced Agriculture paper enter at their applicable market values.
+- **Culinary Modern:** Boiled Sausage is an Advanced Cooking internal component; Bread, Worldly Donut and Smooth Gut Noodle Roll cross from Baking/Cooking; Ink, Paper and the Advanced Culinary paper are full-count inputs.
+- **Dendrology Modern:** Waxed Paper and Paper are Paper Milling internal components and therefore use Projected Cost. Lumber and Ink cross specialties. The Advanced Dendrology paper enters at Town Sell.
+- **Engineering Modern:** Iron Axle and Iron Gear are Mechanics internal components at Projected Cost; Lubricant, Ink, Paper and the Advanced Engineering paper cross specialty boundaries.
+- **Geology Modern:** the Pottery/Brick route remains cheaper than the Glassworking/Glass route because Brick is a Pottery internal component and therefore uses its **0.574 projected cost**, not the **1.20 / 1.25** direct-sale bulk policy price.
+- **Metallurgy Modern:** Rebar and Steel Bar are Advanced Smelting internal components and therefore do not recursively carry their own sale markups.
 
-## Future-support projections used only for Modern papers
+## Future-support projections used only for Modern research
 
-These are supporting calculations, **not current Steam-era Exchange prices**.
+These support the Modern-paper calculations only. They are **not current Steam-era Exchange price setters**.
 
 | Supporting item | Producing Specialty | Projected Cost | Reference Buy | Reference Sell |
 |---|---|---:|---:|---:|
@@ -116,17 +118,17 @@ These are supporting calculations, **not current Steam-era Exchange prices**.
 | Paraffin | Oil Drilling | **0.32** | **0.36** | **0.38** |
 | Waxed Paper | Paper Milling | **0.33** | **0.38** | **0.40** |
 | Ceramic Mold | Pottery | **0.05** | **0.05** | **0.06** |
-| Steel Bar — charcoal route | Advanced Smelting | **4.36** | **5.02** | **5.27** |
-| Rebar | Advanced Smelting | **1.10** | **1.23** | **1.29** |
+| Steel Bar — charcoal route | Advanced Smelting | **4.41** | **5.07** | **5.32** |
+| Rebar | Advanced Smelting | **1.11** | **1.24** | **1.30** |
 | Worldly Donut | Baking | **3.45** | **3.97** | **4.17** |
 | Smooth Gut Noodle Roll | Cooking | **3.75** | **4.32** | **4.54** |
-| Boiled Sausage | Advanced Cooking | **3.90** | — | — |
+| Boiled Sausage | Advanced Cooking | **3.90** | **4.49** | **4.71** |
 
-For foods above, the normal calorie floor was checked; recipe cost controls these three supporting values.
+The Steel projection uses the current Ironwood Charcoal baseline. If Ironwood deliberately reprices Charcoal, the future Metallurgy Modern projection should be recalculated; this does not alter the current Steam-era economy until that transition is adopted.
 
 ## Source-confirmed paper inventory
 
-The supplied Core contains **19 named Research Paper item classes** through Modern:
+The supplied Eco 14 Core contains **19 named Research Paper item classes** through Modern:
 
 - Agriculture: Basic, Advanced, Modern;
 - Culinary: Basic, Advanced, Modern;
@@ -136,22 +138,12 @@ The supplied Core contains **19 named Research Paper item classes** through Mode
 - Geology: Basic, Advanced, Modern;
 - Metallurgy: Basic, Advanced, Modern.
 
-Alternative Core recipe families also exist for:
+Alternative Core recipe families also exist for Culinary Basic via Dried Fish, Culinary Basic via Dried Meat, Culinary Advanced via the Baking/meat route, Dendrology Advanced via Wooden Hull Planks, and Geology Modern via Glass. The final tables use the cheapest legitimate route under Ironwood's established component-cost rules.
 
-- Culinary Basic via Dried Fish;
-- Culinary Basic via Dried Meat;
-- Culinary Advanced via the Baking/meat route;
-- Dendrology Advanced via Wooden Hull Planks;
-- Geology Modern via Glass.
+## Library policy
 
-The tables above use the cheapest legitimate route under the stated Ironwood pricing assumptions.
-
-## Market policy
-
-Recommended Library treatment:
-
-1. publish the **Projected Cost** so contributors can see the production burden;
-2. use the listed Town Buy as the default **capped procurement** reward;
-3. procure only the number of papers needed for an active research project plus a small replacement reserve;
-4. Town Sell is a fallback/reference value for surplus paper, not a reason for the Library to accumulate infinite stock;
-5. scroll and skill-book pricing remains a separate layer and should use these paper prices as its research inputs.
+1. The listed **Projected Cost** is the production baseline.
+2. **Town Buy = Projected Cost + 20%** is the default capped research reward.
+3. Procure only the quantity required for an active research project plus a small replacement reserve.
+4. Town Sell is a fallback/reference price for surplus papers, not a reason for the Library to accumulate unlimited inventory.
+5. Skill books and scrolls are a separate pricing layer and should use these paper prices as their research inputs.
