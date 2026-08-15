@@ -1,8 +1,8 @@
 # Ironwood Research Papers — Basic through Modern
 
-Source: supplied Eco 14 Core (`Eco14-Core(3).zip`) plus the current Ironwood schema-18 Steam-entry price ledger.
+Source: supplied Eco 14 Core (`Eco14-Core(3).zip`) plus the current Ironwood Steam-entry price ledger.
 
-This is a **separate research projection lane**. Modern-support materials are priced only far enough to calculate research-paper economics; they do **not** become current Steam-era Exchange price setters.
+This is a **research projection lane** built on the current Ironwood economy. Current progression materials use current-era routes where they exist; genuinely later Modern-support materials are projected only far enough to calculate research-paper economics and do **not** become current Steam-era Exchange price setters.
 
 ## Naming and producer map
 
@@ -92,7 +92,7 @@ Library demand remains **quantity-capped civic procurement**, not an unlimited g
 |---|---|---:|---:|---:|
 | Agriculture Research Paper Modern | Oil Drilling 1 | **56.25** | **67.50** | **70.88** |
 | Culinary Research Paper Modern | Advanced Cooking 2 | **57.02** | **68.42** | **71.84** |
-| Dendrology Research Paper Modern | Paper Milling 1 | **43.92** | **52.70** | **55.34** |
+| Dendrology Research Paper Modern | Paper Milling 1 | **44.15** | **52.98** | **55.63** |
 | Engineering Research Paper Modern | Mechanics 1 | **62.72** | **75.26** | **79.02** |
 | Geology Research Paper Modern | Pottery / Brick route | **23.66** | **28.39** | **29.81** |
 | Metallurgy Research Paper Modern | Advanced Smelting 1 | **74.04** | **88.84** | **93.28** |
@@ -101,22 +101,31 @@ Library demand remains **quantity-capped civic procurement**, not an unlimited g
 
 - **Agriculture Modern:** Sulfuric Acid, Phosphate Fertilizer and Compost Fertilizer cross specialty boundaries. Bio Residue is assigned **0 acquisition cost**. Ink, Paper and the Advanced Agriculture paper enter at their applicable market values.
 - **Culinary Modern:** Boiled Sausage is an Advanced Cooking internal component; Bread, Worldly Donut and Smooth Gut Noodle Roll cross from Baking/Cooking; Ink, Paper and the Advanced Culinary paper are full-count inputs.
-- **Dendrology Modern:** Waxed Paper and Paper are Paper Milling internal components and therefore use Projected Cost. Lumber and Ink cross specialties. The Advanced Dendrology paper enters at Town Sell.
+- **Dendrology Modern:** Paraffin is **not** Oil-gated. Core's Milling 4 recipe named `Wax` converts Bean Paste into Paraffin at the Mill. Paper Milling 2 then makes Waxed Paper on the Small Paper Machine. Waxed Paper and Paper are Paper Milling internal components and therefore use Projected Cost; Lumber and Ink cross specialties; the Advanced Dendrology paper enters at Town Sell.
 - **Engineering Modern:** Iron Axle and Iron Gear are Mechanics internal components at Projected Cost; Lubricant, Ink, Paper and the Advanced Engineering paper cross specialty boundaries.
 - **Geology Modern:** the Pottery/Brick route remains cheaper than the Glassworking/Glass route because Brick is a Pottery internal component and therefore uses its **0.574 projected cost**, not the **1.20 / 1.25** direct-sale bulk policy price.
 - **Metallurgy Modern:** Rebar and Steel Bar are Advanced Smelting internal components and therefore do not recursively carry their own sale markups.
 
+## Current progression-support materials used by Modern research
+
+These are current Steam-era commodities because their actual Core routes are available in current specialties/workstations.
+
+| Supporting item | Current route | Projected Cost | Town Buy | Town Sell |
+|---|---|---:|---:|---:|
+| Paraffin | Milling 4 `Wax`: Bean Paste → Paraffin at Mill | **0.49** | **0.55** | **0.58** |
+| Waxed Paper | Paper Milling 2 at Small Paper Machine | **0.36** | **0.42** | **0.44** |
+
+Oil Drilling later provides an alternate Paraffin route and may justify a future structural reprice, but it does not erase the current Milling progression route.
+
 ## Future-support projections used only for Modern research
 
-These support the Modern-paper calculations only. They are **not current Steam-era Exchange price setters**.
+These support the remaining Modern-paper calculations only. They are **not current Steam-era Exchange price setters** unless/until their technology becomes normal in the run.
 
 | Supporting item | Producing Specialty | Projected Cost | Reference Buy | Reference Sell |
 |---|---|---:|---:|---:|
 | Barrel | Advanced Smelting | **1.87** | **2.15** | **2.26** |
 | Sulfuric Acid | Recycling | **0.38** | **0.44** | **0.46** |
 | Petroleum | Oil Drilling | **2.31** | **2.58** | **2.71** |
-| Paraffin | Oil Drilling | **0.32** | **0.36** | **0.38** |
-| Waxed Paper | Paper Milling | **0.33** | **0.38** | **0.40** |
 | Ceramic Mold | Pottery | **0.05** | **0.05** | **0.06** |
 | Steel Bar — charcoal route | Advanced Smelting | **4.41** | **5.07** | **5.32** |
 | Rebar | Advanced Smelting | **1.11** | **1.24** | **1.30** |
