@@ -4,6 +4,8 @@ Rebuilt from the supplied Eco 14 Core using current Natural Fiber and Painting i
 
 Paper Milling is Tier 3 and is inside the current Steam-entry economy. Current Core explicitly tags Kelp and several other gathered plants as `NaturalFiber`, so Cellulose Fiber and Paper do not require future Wood Pulp or petroleum chemistry.
 
+> The current Exchange/schema ledger is authoritative where older explanatory calculations in this profession note differ. **Waxed Paper is current-era:** Paraffin is available from the Milling 4 `Wax` recipe at the Mill.
+
 ## Cellulose Fiber — Paper Milling 1
 
 Core:
@@ -35,6 +37,30 @@ At level 1:
 - cash cost/Paper = 0.136
 
 **Paper: 0.15 / 0.16.**
+
+## Waxed Paper — Paper Milling 2
+
+Core:
+
+- 10 Paper
+- 1 Paraffin
+- 180 calories
+- -> 4 Waxed Paper
+- workstation: **Small Paper Machine**
+
+At Paper Milling 2 the multiplier is 0.75. Under the integrated-workshop rule, Paper is a same-Paper-Milling component and enters at its current **0.1179 Projected Cost**. Paraffin crosses from Milling and enters at **0.58 Town Sell**.
+
+- 7.5 Paper × 0.1179 = 0.88425
+- 0.75 Paraffin × 0.58 = 0.435
+- 135 calories = 0.135
+- batch cost = 1.45425
+- /4 = **0.3636 projected cost per Waxed Paper**
+
+As a current research/progression intermediate:
+
+**Waxed Paper: 0.42 Town Buy / 0.44 Town Sell.**
+
+This directly unlocks the current material chain needed for Dendrology Research Paper Modern. A future Oil Drilling route can reduce Paraffin cost later, but Waxed Paper itself is not petroleum-gated.
 
 ## Printing Supplies — Paper Milling 1
 
@@ -122,10 +148,11 @@ Current cash cost = **21.338**.
 
 **Large Festive Paper Lantern: 24.54 / 25.77.**
 
-## Future-era / research blockers
+## Current progression status
 
-- Waxed Paper requires Paraffin and is outside the current Steam-entry scope;
-- Dendrology Research Paper Modern requires Waxed Paper plus the research chain.
+- Waxed Paper is **current**, using Milling-produced Paraffin;
+- Dendrology Research Paper Modern is therefore reachable through the current Paraffin/Waxed Paper material chain once its research prerequisites and Laboratory are available;
+- future Oil Drilling changes the efficient Paraffin route, not whether Paraffin/Waxed Paper exists in the current progression.
 
 ## Exchange-ready Paper Milling table
 
@@ -133,6 +160,7 @@ Current cash cost = **21.338**.
 |---|---:|---:|
 | Cellulose Fiber | **0.48** | **0.50** |
 | Paper | **0.15** | **0.16** |
+| **Waxed Paper** | **0.42** | **0.44** |
 | Printing Supplies | **5.72** | **6.01** |
 | Redwoods Poster | **10.20** | **10.71** |
 | Cart Blueprint Poster | **10.20** | **10.71** |
@@ -142,5 +170,3 @@ Current cash cost = **21.338**.
 | Small Paper Lantern | **19.75** | **20.74** |
 | Large Paper Lantern | **24.54** | **25.77** |
 | Large Festive Paper Lantern | **24.54** | **25.77** |
-
-Paper Milling is now current-era complete except for future petroleum/research outputs.
