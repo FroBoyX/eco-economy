@@ -1,6 +1,8 @@
-# Ironwood Cooking — Current Mid-Tier Food Table
+# Ironwood Cooking — Current Steam-Era Food Table
 
 Rebuilt from Eco 14 Core using current Gathering, Milling, Butchery and Baking inputs.
+
+Cooking is now operational in the run. The ordinary recipe audit is complete by **distinct market output**: all current Cooking outputs represented by the Core-derived recipe pass are priced below. Alternate biome/ingredient recipes that produce the same final item are grouped under that final item rather than creating duplicate Exchange rows. Specialty-module/upgrade craftables remain limited capital rather than ordinary food inventory.
 
 Cooking food uses the higher of its calorie floor or Exchange-sourced recipe cost plus a modest food-specialist margin. Cast Iron Stove fuel is included at 10 W.
 
@@ -32,7 +34,7 @@ Forest/Grassland/Rainforest/Exotic variants can cost more and are resource-subst
 | Shark Fillet Soup | 1,400 | 2.047 | **2.46** | **2.58** |
 | Simmered Meat | 900 | 1.726 | **2.07** | **2.17** |
 
-Meat Stock can also be made from fish later; the Scrap Meat route is slightly cheaper and therefore controls the current structural price.
+Meat Stock also has an alternate fish-stock route later in the same Cooking specialty. That recipe still produces **Meat Stock**, so it is not a separate market item; the cheaper current route controls the structural price.
 
 ## Cooking 3
 
@@ -56,6 +58,12 @@ Crispy Bacon produces **2 Tallow** as a byproduct. Its net cash cost credits tho
 | Loaded Taro Fries | 5 | 1,200 | 7.670 | **9.20** | **9.66** |
 | Phad Thai | 6 | 1,200 | 4.390 | **5.27** | **5.53** |
 
+## Recipe coverage status
+
+The current ordinary Cooking market contains **18 distinct final/intermediate outputs**. Biome-specific salad/fruit/medley variants and the alternate fish-stock route are intentionally grouped into their shared final outputs rather than counted as separate Exchange goods.
+
+Specialty module/upgrade craftables are limited capital and are intentionally not treated as unlimited food imports merely because Cooking can craft them.
+
 ## Sun Cheese dependency
 
 Current Milling 3 Sun Cheese uses Sunflower Seed, Yeast, Rice and Oil. Expensive early Yeast makes it a high-value ingredient:
@@ -77,4 +85,4 @@ The prepared-food table intentionally has two behaviors:
 
 This gives cooks a recurring commercial outlet without forcing every citizen to buy expensive advanced meals merely to avoid starvation. Campfire staples remain the public fallback.
 
-Research papers, skill books and Cooking Upgrade remain under the separate research-economy policy.
+Research papers, skill books, scrolls and limited Cooking specialty-module procurement remain under their separate policy lanes.
