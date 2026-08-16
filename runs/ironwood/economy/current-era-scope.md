@@ -17,6 +17,8 @@ For the current output pass, Ironwood treats **Tier 1–3 specialties as the act
 - Scientist: Painting, Recycling;
 - Survivalist / Self Improvement: policy treatment rather than ordinary commodity imports.
 
+Baking, Cooking and Recycling are now **operational in the live run**. Baking and Cooking have been published exhaustively by distinct ordinary market output. Recycling's currently usable exact sorted Steam-era recovery streams are active under managed/capped procurement.
+
 ## Future-transition specialties
 
 The following are **not current price setters** for this run even when their source recipes have already been inspected for planning:
@@ -25,7 +27,7 @@ The following are **not current price setters** for this run even when their sou
 - Advanced Cooking;
 - Cutting Edge Cooking;
 - Advanced Masonry;
-- Advanced Smelting / economy-wide Steel transition;
+- later economy-wide Advanced Smelting / Steel transition where not yet normal;
 - Electronics;
 - Oil Drilling / petroleum;
 - Composites;
@@ -50,9 +52,32 @@ The eventual multi-era transition model will be maintained separately from the l
 - current Lubricant is animal-fat Grease, not petroleum Lubricant;
 - current Sugar is the Huckleberry-era route until Beet Sugar is broadly normal;
 - current Linen/Wool production uses current Loom-era routes, not later Automatic Loom efficiency;
-- current metal prices use the present Bloomery/steam-entry chain, not future industrial recovery or petroleum-era processes;
+- current metal prices use the present Steam-entry chain rather than later industrial/petroleum recovery;
 - current vehicle prices use the Steam Mechanics chain and remain valid until a later economy-wide transition is deliberately declared.
 
-## Recycling exception
+## Baking and Cooking publication rule
 
-Recycling is Tier 3 and is within the current technology boundary, but garbage prices remain **stream-specific and activation-sensitive**. A recovery recipe being technically available does not automatically make every garbage stream positive. The existing disposal schedule remains authoritative until a specific recovery stream is economically opened.
+The live Exchange publishes one row per **distinct market output** rather than one row per recipe name.
+
+- alternate biome/ingredient recipes that make the same final food are grouped under that food;
+- `Melting Fat` is represented through Tallow rather than a duplicate Baking output;
+- alternate fish-stock production is represented through Meat Stock rather than a duplicate Cooking output;
+- specialty modules/upgrades are limited capital and are not treated as unlimited food imports merely because the specialty can craft them.
+
+## Recycling exception — current operational treatment
+
+Recycling is Tier 3 and is within the current technology boundary. The following exact sorted recovery feedstocks are now active:
+
+- Food Scrap;
+- Bio Residue;
+- Wood Scrap;
+- Glass Scrap;
+- Iron Scrap;
+- Copper Scrap;
+- Gold Scrap.
+
+Their positive prices are **capped/managed procurement tied to actual recovery capacity**, not unlimited Exchange demand.
+
+Mixed/unsorted garbage and streams whose recovery requires later machinery remain under the disposal schedule. In particular, positive typed-metal scrap prices do not make Mixed Metal Scrap positive, and current Recycling does not activate future Textiles, Plastic, Electronics, Tailings or chemical recovery merely because those streams exist.
+
+The anti-arbitrage rule remains mandatory: a player must not be able to buy a finished good from Ironwood, salvage/recycle it, and sell the recovered feedstock back for a synthetic profit.
