@@ -1,6 +1,8 @@
-# Ironwood Baking — Current Early/Mid Food Table
+# Ironwood Baking — Current Steam-Era Food Table
 
 Rebuilt from Eco 14 Core using current crop, Milling, Butchery and Campfire prices.
+
+Baking is now operational in the run. The ordinary recipe audit is complete by **distinct market output**: all current Baking food/intermediate outputs represented by the Core-derived recipe pass are priced below. Recipes that create an already-priced output, such as `Melting Fat -> Tallow`, are documented without fabricating a duplicate market item. Specialty-module/upgrade craftables are limited capital rather than ordinary food inventory and remain in the upgrade/research lane.
 
 Baked food uses the higher of the calorie floor or Exchange-sourced recipe cost plus a modest food-specialist margin. Bakery Oven fuel is included at 10 W using current Charcoal value.
 
@@ -10,7 +12,7 @@ Current Milling 4 Yeast recipe:
 
 - 2 Sugar
 - 15 calories
-- → 1 Yeast
+- -> 1 Yeast
 
 At Milling 4 and current **early Huckleberry Sugar 1.16 / 1.22**, Yeast costs about 1.596 to make from public inputs.
 
@@ -56,11 +58,17 @@ Core:
 
 - 6 Scrap Meat
 - 15 calories
-- → 5 Tallow
+- -> 5 Tallow
 
 At Baking 2 this is an especially efficient fat-rendering route. It reinforces the canonical **Tallow 0.20 / 0.21** price and confirms that Tallow cannot safely remain near the old provisional 0.50 value.
 
 This route intentionally creates substantial value from Scrap Meat; cooking in Eco increases usable food energy dramatically. The Exchange should not raise Tallow above its calorie floor merely because it also has industrial uses.
+
+## Recipe coverage status
+
+The current ordinary Baking market therefore contains **20 distinct Baking food/intermediate outputs**, plus the Melting Fat route into the already-canonical Tallow market. Equivalent-output recipes are not duplicated as separate Exchange rows.
+
+Specialty module/upgrade craftables are limited capital and are intentionally not treated as an unlimited food import merely because Baking can craft them.
 
 ## Structural Sugar transition
 
@@ -79,4 +87,4 @@ Once Beet Sugar is broadly available, Ironwood should recalculate at least:
 
 That is an economy-wide technology transition, not a personal-efficiency discount.
 
-Research/skill-book/upgrade outputs remain under the research-economy policy.
+Research, skill-book, scroll and limited specialty-module procurement remain under their separate policy lanes.
