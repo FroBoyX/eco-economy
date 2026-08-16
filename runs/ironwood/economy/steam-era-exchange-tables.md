@@ -13,6 +13,8 @@ Rebuilt from the supplied Eco 14 Core and the current Ironwood pricing doctrine.
 - Paraffin is current via Milling 4 **Wax** at the Mill; Waxed Paper is therefore current via Paper Milling.
 - Research papers use capped Library procurement rather than unlimited government demand.
 - Current Tailoring is published exhaustively for player-facing Tailoring Table/Loom outputs; hidden internal objects and Advanced Tailoring Table/Industry-gated recipes are excluded.
+- Baking and Cooking are now published exhaustively by distinct market output; alternate recipes that produce the same final food are grouped under that output.
+- Recycling is operational for the exact sorted Steam-era streams listed below; those recovery buys are capped/managed procurement rather than unlimited garbage demand.
 
 ## Raw / Gathering Anchors
 
@@ -133,8 +135,8 @@ Rebuilt from the supplied Eco 14 Core and the current Ironwood pricing doctrine.
 | Oil | 0.33 | **0.37** | **0.39** |
 | Flaxseed Oil | 0.58 | **0.66** | **0.69** |
 | Charcoal Powder | 0.18 | **0.20** | **0.21** |
-| Yeast | 1.36 | **1.56** | **1.64** |
-| Sun Cheese | 2.99 | **3.44** | **3.61** |
+| Yeast | 1.60 | **1.84** | **1.93** |
+| Sun Cheese | — | **4.57** | **4.80** |
 | Iron Oxide | 0.13 | **0.15** | **0.16** |
 | Copper Hydroxide | 0.13 | **0.15** | **0.16** |
 | Cereal Germ | 0.05 | **0.05** | **0.06** |
@@ -163,7 +165,7 @@ Rebuilt from the supplied Eco 14 Core and the current Ironwood pricing doctrine.
 | Rustic Window Planter | 2.09 | **2.40** | **2.52** |
 | Wood Window Planter | 2.09 | **2.40** | **2.52** |
 
-## Campfire Cooking / Baking / Cooking
+## Campfire Cooking
 
 | Item | Projected Cost | Town Buys | Town Sells |
 |---|---:|---:|---:|
@@ -175,15 +177,58 @@ Rebuilt from the supplied Eco 14 Core and the current Ironwood pricing doctrine.
 | Jungle Campfire Stew | 0.66 | **1.10** | **1.16** |
 | Root Campfire Stew | 0.64 | **1.10** | **1.16** |
 | Wild Stew | 0.62 | **1.10** | **1.16** |
-| Bread | 2.88 | **3.31** | **3.48** |
-| Meat Pie | 1.56 | **1.80** | **1.89** |
-| Huckleberry Pie | 1.87 | **2.15** | **2.26** |
-| Basic Salad | 1.97 | **2.26** | **2.37** |
-| Fruit Salad | 2.58 | **2.96** | **3.11** |
-| Vegetable Medley | 1.97 | **2.26** | **2.37** |
-| Meat Stock | 0.62 | **0.72** | **0.76** |
-| Clam Chowder | 0.59 | **0.80** | **0.84** |
-| Pupusas | 7.40 | **8.51** | **8.94** |
+
+## Baking
+
+Current ordinary Baking outputs are exhaustive by distinct market output for the Core-derived current Baking specialty file. `Melting Fat` is represented through the existing Tallow market rather than duplicated as a new output item. The specialty module/upgrade is a limited capital item and remains outside the ordinary unlimited food table rather than being treated as food inventory.
+
+| Item | Level | Projected Cost | Town Buys | Town Sells |
+|---|---:|---:|---:|---:|
+| Baked Agave | 1 | 0.754 | **0.89** | **0.93** |
+| Baked Beet | 1 | 0.850 | **1.00** | **1.05** |
+| Baked Corn | 1 | 0.850 | **1.00** | **1.05** |
+| Baked Heart of Palm | 1 | 0.434 | **0.70** | **0.74** |
+| Baked Meat | 1 | 0.514 | **0.70** | **0.74** |
+| Baked Taro | 1 | 0.914 | **1.08** | **1.13** |
+| Baked Tomato | 1 | 0.882 | **1.04** | **1.09** |
+| Camas Bulb Bake | 1 | 0.594 | **0.70** | **0.74** |
+| Flatbread | 1 | 0.882 | **1.04** | **1.09** |
+| Leavened Dough | 1 | 2.376 | **2.80** | **2.94** |
+| Pastry Dough | 1 | 2.312 | **2.73** | **2.87** |
+| Fruit Muffin | 2 | 1.157 | **1.39** | **1.46** |
+| Baked Roast | 3 | 0.513 | **1.00** | **1.05** |
+| Roast Pumpkin | 3 | 2.284 | **2.74** | **2.88** |
+| Bread | 4 | 3.914 | **4.70** | **4.94** |
+| Worldly Donut | 4 | 4.091 | **4.91** | **5.16** |
+| Camas Bread | 5 | 2.203 | **2.64** | **2.77** |
+| Huckleberry Fritter | 5 | 7.268 | **8.72** | **9.16** |
+| Huckleberry Pie | 5 | 1.874 | **2.25** | **2.36** |
+| Meat Pie | 5 | 1.634 | **1.96** | **2.06** |
+
+## Cooking
+
+Current ordinary Cooking outputs are exhaustive by distinct market output for the Core-derived current Cooking specialty file. Biome-specific salad/medley recipes that produce the same final item are grouped under one market row using the least-cost legitimate current route. The fish-stock recipe is an alternate route to **Meat Stock**, not a distinct market output. The specialty module/upgrade is limited capital and remains outside the ordinary unlimited food table.
+
+| Item | Level | Projected Cost | Town Buys | Town Sells |
+|---|---:|---:|---:|---:|
+| Basic Salad | 1 | 1.969 | **2.32** | **2.44** |
+| Fruit Salad | 1 | 2.577 | **3.04** | **3.19** |
+| Vegetable Medley | 1 | 1.965 | **2.32** | **2.44** |
+| Rice Noodles | 1 | 0.674 | **0.80** | **0.84** |
+| Autumn Stew | 2 | 1.262 | **1.51** | **1.59** |
+| Meat Stock | 2 | 0.684 | **0.82** | **0.86** |
+| Shark Fillet Soup | 2 | 2.047 | **2.46** | **2.58** |
+| Simmered Meat | 2 | 1.726 | **2.07** | **2.17** |
+| Crispy Bacon | 3 | 0.763 | **0.92** | **0.97** |
+| Taro Fries | 3 | 1.444 | **1.73** | **1.82** |
+| Vegetable Stock | 3 | 1.787 | **2.14** | **2.25** |
+| Vegetable Soup | 3 | 3.410 | **4.09** | **4.29** |
+| Mochi | 4 | 3.343 | **4.01** | **4.21** |
+| Pupusas | 4 | 8.945 | **10.73** | **11.27** |
+| Smooth Gut Noodle Roll | 4 | 4.512 | **5.41** | **5.68** |
+| Clam Chowder | 5 | 0.590 | **0.80** | **0.84** |
+| Loaded Taro Fries | 5 | 7.670 | **9.20** | **9.66** |
+| Phad Thai | 6 | 4.390 | **5.27** | **5.53** |
 
 ## Logging
 
@@ -276,7 +321,7 @@ Current Tailoring Table and Loom outputs are listed here exhaustively. Cosmetic/
 | Crushed Mixed Rock | 0.05 | **0.05** | **0.06** |
 | Crushed Sandstone | 0.05 | **0.05** | **0.06** |
 | Crushed Granite | 0.05 | **0.05** | **0.06** |
-| Crushed Limestone | 0.61 | **0.67** | **0.70** |
+| Crushed Limestone | 0.61 | **0.76** | **0.80** |
 | Crushed Iron Ore | 1.20 | **1.31** | **1.38** |
 | Crushed Copper Ore | 1.80 | **1.98** | **2.08** |
 | Crushed Gold Ore | 1.80 | **1.98** | **2.08** |
@@ -307,7 +352,7 @@ Current Tailoring Table and Loom outputs are listed here exhaustively. Cosmetic/
 |---|---:|---:|---:|
 | Wet Brick | 0.44 | **0.49** | **0.51** |
 | Brick | 0.57 | **1.20** | **1.25** |
-| Glassworks | 26.07 | **33.89** | **35.58** |
+| Glassworks | — | **50.01** | **52.51** |
 | Bakery Oven | 31.23 | **40.60** | **42.63** |
 | Brick Fireplace | 48.19 | **55.42** | **58.20** |
 
@@ -316,25 +361,29 @@ Current Tailoring Table and Loom outputs are listed here exhaustively. Cosmetic/
 | Item | Projected Cost | Town Buys | Town Sells |
 |---|---:|---:|---:|
 | Glass | 1.24 | **1.57** | **1.65** |
-| Light Bulb | 8.34 | **9.84** | **10.33** |
-| Glass Lens | 3.10 | **3.56** | **3.74** |
-| Glassworking Advanced Upgrade | 25.76 | **33.48** | **35.16** |
+| Light Bulb | 10.463 | **12.35** | **12.97** |
+| Glass Lens | 3.972 | **4.57** | **4.80** |
+| Glassworking Advanced Upgrade | 30.60 | **39.78** | **41.77** |
 
 ## Smelting
 
+The Smelting rows below are synchronized to the current Steam-era profession ledger. Metal recycling values depend on these current bar anchors.
+
 | Item | Projected Cost | Town Buys | Town Sells |
 |---|---:|---:|---:|
-| Iron Bar | 1.79 | **2.06** | **2.16** |
-| Copper Bar | 3.59 | **4.13** | **4.34** |
-| Gold Bar | 8.25 | **9.48** | **9.95** |
-| Iron Pipe | 1.44 | **1.62** | **1.70** |
-| Copper Pipe | 2.70 | **3.03** | **3.18** |
-| Cast Iron Stove | 22.87 | **29.73** | **31.21** |
-| Cast Iron Bench | 7.71 | **8.87** | **9.32** |
-| Cast Iron Chair | 5.55 | **6.38** | **6.70** |
-| Cast Iron Table | 8.14 | **9.36** | **9.83** |
-| Smelting Upgrade | 19.29 | **25.08** | **26.33** |
-| Anvil | 24.37 | **31.68** | **33.26** |
+| Iron Bar | — | **2.54** | **2.67** |
+| Copper Bar | — | **5.14** | **5.40** |
+| Gold Bar | — | **12.51** | **13.14** |
+| Iron Pipe | — | **2.41** | **2.53** |
+| Copper Pipe | — | **4.55** | **4.78** |
+| Slag | — | **0.05** | **0.08** |
+| Cast Iron Stove | 28.345 | **36.85** | **38.69** |
+| Cast Iron Bench | — | **13.00** | **13.65** |
+| Cast Iron Chair | — | **9.32** | **9.79** |
+| Cast Iron Table | — | **13.72** | **14.41** |
+| Cast Iron Plaque | — | **29.59** | **31.07** |
+| Smelting Upgrade | 25.860 | **33.62** | **35.30** |
+| Anvil | 33.616 | **43.70** | **45.89** |
 
 ## Blacksmithing
 
@@ -389,17 +438,22 @@ Current Tailoring Table and Loom outputs are listed here exhaustively. Cosmetic/
 
 ## Paper Milling
 
+These are **Exchange/reference** prices. The separately operated private paper shop may use different retail and input prices; those private prices do not rewrite the Exchange ledger.
+
 | Item | Projected Cost | Town Buys | Town Sells |
 |---|---:|---:|---:|
-| Cellulose Fiber | 0.43 | **0.48** | **0.51** |
-| Paper | 0.12 | **0.13** | **0.14** |
-| Printing Supplies | 4.09 | **4.71** | **4.94** |
-| Paper Milling Upgrade | 8.31 | **10.81** | **11.35** |
-| Small Paper Lantern | 13.68 | **15.74** | **16.52** |
-| Large Paper Lantern | 16.90 | **19.43** | **20.40** |
-| Large Festive Paper Lantern | 16.90 | **19.43** | **20.40** |
-| Redwoods Poster | 6.11 | **7.02** | **7.37** |
-| Waxed Paper | 0.36 | **0.42** | **0.44** |
+| Cellulose Fiber | 0.432 | **0.48** | **0.50** |
+| Paper | 0.136 | **0.15** | **0.16** |
+| Printing Supplies | 4.848 | **5.72** | **6.01** |
+| Paper Milling Upgrade | 9.620 | **12.51** | **13.14** |
+| Small Paper Lantern | 17.178 | **19.75** | **20.74** |
+| Large Paper Lantern | 21.338 | **24.54** | **25.77** |
+| Large Festive Paper Lantern | 21.338 | **24.54** | **25.77** |
+| Redwoods Poster | 8.873 | **10.20** | **10.71** |
+| Cart Blueprint Poster | 8.873 | **10.20** | **10.71** |
+| Election Poster | 8.873 | **10.20** | **10.71** |
+| Periodic Table Poster | 8.873 | **10.20** | **10.71** |
+| Waxed Paper | 0.364 | **0.42** | **0.44** |
 
 ## Painting
 
@@ -509,9 +563,27 @@ Current Tailoring Table and Loom outputs are listed here exhaustively. Cosmetic/
 
 ## Recycling
 
+Recycling is now operational. The current Steam-era exact sorted recovery streams are active at managed procurement prices. **These are not unlimited garbage buy orders**: mixed/unsorted streams retain disposal pricing, and the town should cap quantities to real recovery capacity.
+
+### Recovered output
+
 | Item | Projected Cost | Town Buys | Town Sells |
 |---|---:|---:|---:|
-| Compost | 0.05 | **0.05** | **0.06** |
+| Compost | 0.04 | **0.05** | **0.06** |
+
+### Sorted recovery feedstock — capped procurement
+
+| Sorted stream | Town Buys | Town Sells | Current recovery |
+|---|---:|---:|---|
+| Food Scrap | **0.02** | **0.03** | Compost |
+| Bio Residue | **0.02** | **0.03** | Compost |
+| Wood Scrap | **0.25** | **0.27** | Cellulose Fiber |
+| Glass Scrap | **0.75** | **0.79** | Glass |
+| Iron Scrap | **2.75** | **2.89** | Iron Bars |
+| Copper Scrap | **2.50** | **2.63** | Copper Bars |
+| Gold Scrap | **8.00** | **8.40** | Gold Bars |
+
+**Still disposal-priced:** Textiles, Mixed Metal Scrap, Mixed Construction Scrap, Ceramic Scrap, Plastic Scrap, Electronic Scrap, Chemical Waste, Mixed Industrial Waste, Tailings, Wet Tailings, Chemical Pollutant, Trash and other unsorted/residual streams until their later recovery machinery is actually current.
 
 ## Library Research Papers
 
@@ -569,35 +641,26 @@ The Advanced Upgrade was recalculated after Engineering Research Paper Modern mo
 
 ## Special / Non-Unlimited Reference Prices
 
-| Item | Projected Cost | Reference Buy | Reference Sell | Status |
+| Item | Projected / Cash Cost | Reference Buy | Reference Sell | Status |
 |---|---:|---:|---:|---|
-| Town Bell | 62.08 | **80.70** | **84.74** | civic_reference |
-| Bank | 152.00 | **197.59** | **207.47** | civic_reference |
-| Currency Exchange | 49.77 | **64.70** | **67.94** | civic_reference |
-| Mint | 113.62 | **147.71** | **155.10** | civic_reference |
-| Iron Scrap | — | **0.25** | **0.26** | conditional_recovery |
-| Copper Scrap | — | **0.50** | **0.53** | conditional_recovery |
-| Gold Scrap | — | **1.00** | **1.05** | conditional_recovery |
-| Glass Scrap | — | **0.08** | **0.09** | conditional_recovery |
-| Wood Scrap | — | **0.03** | **0.04** | conditional_recovery |
+| Town Bell | 92.448 | **129.43** | **135.90** | civic_reference |
+| Bank | 186.825 | **261.56** | **271.56** | civic_reference |
+| Currency Exchange | 60.825 | **85.16** | **89.42** | civic_reference |
+| Mint | 132.765 | **185.87** | **195.16** | civic_reference |
 
-## Pre-Recycling Garbage Disposal
+Sorted Food/Bio/Wood/Glass/Iron/Copper/Gold scrap no longer belongs in this conditional-reference table. Those exact streams are now active, capped Recycling procurement and are published in the Recycling section above.
 
-Negative intake means the player pays Ironwood to accept the waste.
+## Residual / Non-Recoverable Garbage Disposal
+
+Negative intake means the player pays Ironwood to accept a stream that does not currently have an activated exact recovery market. Activated sorted Recycling feedstocks are intentionally omitted from this table.
 
 | Waste | Exchange Intake |
 |---|---:|
 | Mixed Biowaste | **-0.10** |
-| Food Scrap | **-0.05** |
-| Wood Scrap | **-0.08** |
 | Textiles | **-0.10** |
 | Mixed Metal Scrap | **-0.15** |
-| Iron Scrap | **-0.15** |
-| Copper Scrap | **-0.15** |
-| Gold Scrap | **-0.15** |
 | Mixed Construction Scrap | **-0.15** |
 | Ceramic Scrap | **-0.15** |
-| Glass Scrap | **-0.15** |
 | Stone Rubble | **-0.05** |
 | Mixed Industrial Waste | **-0.25** |
 | Plastic Scrap | **-0.25** |
@@ -608,7 +671,6 @@ Negative intake means the player pays Ironwood to accept the waste.
 | Wet Tailings | **-0.35** |
 | Chemical Pollutant | **-0.50** |
 | Trash | **-0.20** |
-| Bio Residue | **-0.05** |
 
 ## Notes
 
@@ -616,4 +678,6 @@ Negative intake means the player pays Ironwood to accept the waste.
 - Projected Cost is deliberately exposed so Town Buy can be tuned manually without losing the recipe-cost baseline.
 - Research papers are included here for shop posting but remain a **capped Library procurement** lane, not unlimited Exchange imports.
 - Skill-book and scroll access policy remains separate from the paper prices above.
-- Future Advanced Tailoring, Advanced Smelting, Oil Drilling, Electronics, Industry, Composites, Advanced Masonry, and advanced-food efficiencies do not back-propagate into current prices until Ironwood explicitly transitions.
+- Baking and Cooking ordinary outputs are now published exhaustively by distinct market item; equivalent alternate recipes are grouped instead of duplicated.
+- Recycling's currently usable exact sorted Steam-era recovery streams are active only as capped/managed procurement; mixed and future-tech waste remains disposal-priced.
+- Future Advanced Tailoring, later industrial/petroleum recovery, Electronics, Industry, Composites, Advanced Masonry, and advanced-food efficiencies do not back-propagate into current prices until Ironwood explicitly transitions.
