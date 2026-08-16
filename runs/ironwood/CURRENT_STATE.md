@@ -4,10 +4,6 @@ This file is the short-form recovery checkpoint for the current Ironwood run.
 
 It is intentionally overwritten as the run changes. It is not a historical log and must not accumulate obsolete assumptions for preservation purposes.
 
-## Recovery checkpoint
-
-Recovered against `main` after commit `b88dfbd40977e57ec07ef3ef0bdc8e4ef0cee493` (`Rebuild Steam-era Exchange publication with full Tailoring and research`).
-
 The repository remains canonical. Chat sessions are working sessions.
 
 ## Current progression
@@ -16,9 +12,9 @@ Ironwood is **entering the Steam era**.
 
 Live pricing is based on the best normal routes actually available in the current run. Future Oil, Electronics, Industry, advanced food, Composites, Advanced Masonry, and other later efficiencies do not back-propagate into current prices.
 
-## Active profession coverage
+The **Ironwood Flake is live**. Baking, Cooking and Recycling are also now operational.
 
-The active Tier 1-3 economy is source-audited and priced/scoped far enough for live public use.
+## Active profession coverage
 
 ### Canonical-current
 
@@ -29,8 +25,8 @@ The active Tier 1-3 economy is source-audited and priced/scoped far enough for l
 - Hunting
 - Butchery
 - Campfire Cooking
-- Baking
-- Cooking
+- **Baking — operational; ordinary distinct outputs fully published**
+- **Cooking — operational; ordinary distinct outputs fully published**
 - Logging
 - Carpentry
 - Shipwright
@@ -45,7 +41,7 @@ The active Tier 1-3 economy is source-audited and priced/scoped far enough for l
 - Basic Engineering
 - Mechanics
 - Painting
-- Recycling (activation-sensitive by recovery stream)
+- **Recycling — operational for current exact sorted Steam-era recovery lanes**
 
 Self Improvement remains a policy/special lane rather than an ordinary commodity profession.
 
@@ -56,29 +52,34 @@ Self Improvement remains a policy/special lane rather than an ordinary commodity
 - Cutting Edge Cooking
 - Composites
 - Advanced Masonry
-- Advanced Smelting
+- later economy-wide Advanced Smelting / Steel transition where not yet normal
 - Electronics
 - Industry
 - Oil Drilling
 - later petroleum / Plastic / Epoxy routes
 - later Nylon / industrial textile routes
 
-Steel and other later outputs may be inspected for planning without becoming current Steam-entry price setters.
+Future routes may be inspected for planning without becoming current price setters.
 
 ## Current canonical publication
 
-`economy/steam-era-exchange-tables.md` is the current shop-facing Steam-entry publication.
+`economy/steam-era-exchange-tables.md` is the shop-facing Steam-entry publication.
 
-It includes:
+The latest publication pass now includes:
 
-- raw/gathering anchors;
-- active production specialties;
-- current Tailoring outputs;
-- current research-paper procurement prices;
-- generic Basic / Advanced / Modern research upgrades;
-- current disposal/reference rows where appropriate.
+- full Baking ordinary-output coverage;
+- full Cooking ordinary-output coverage;
+- active sorted Recycling procurement and residual disposal separation;
+- corrected current Paper Milling values;
+- corrected Crushed Limestone / Glassworking values;
+- corrected current Smelting bar anchors used by Recycling;
+- current civic-reference prices for Town Bell, Bank, Currency Exchange and Mint.
 
-Research papers use **capped Library procurement**, not unlimited Exchange demand.
+Baking/Cooking alternate recipes that produce the same final output are grouped rather than duplicated. Specialty modules/upgrades remain limited capital rather than unlimited food imports.
+
+Recycling positive feedstock prices are **managed/capped procurement**, not unlimited garbage demand.
+
+Research papers remain **capped Library procurement**, not unlimited Exchange demand.
 
 ## Current pricing doctrine
 
@@ -90,22 +91,38 @@ Research papers use **capped Library procurement**, not unlimited Exchange deman
 - Bulk construction materials may retain explicit policy prices.
 - Civic allocations, research, recycling, garbage, emergency interventions, and other exceptional goods may use policy pricing rather than ordinary recipe markup.
 
-## Remaining economy consolidation
+## Current Recycling lanes
 
-The active recipe-discovery problem is substantially complete. Remaining work is mainly administrative/presentation:
+Active exact sorted feedstocks:
 
-1. keep the central price ledger synchronized with the current profession files and publication;
-2. normalize grouped/tag-product naming where required;
-3. keep civic one-offs and unopened Recycling streams out of unlimited ordinary Buy orders;
-4. produce/update player-facing profession tables as needed from the current canonical values.
+| Sorted stream | Town Buys | Town Sells | Recovery |
+|---|---:|---:|---|
+| Food Scrap | **0.02** | **0.03** | Compost |
+| Bio Residue | **0.02** | **0.03** | Compost |
+| Wood Scrap | **0.25** | **0.27** | Cellulose Fiber |
+| Glass Scrap | **0.75** | **0.79** | Glass |
+| Iron Scrap | **2.75** | **2.89** | Iron Bars |
+| Copper Scrap | **2.50** | **2.63** | Copper Bars |
+| Gold Scrap | **8.00** | **8.40** | Gold Bars |
 
-Do not reopen completed profession chains merely because an older table or chat used a different number. Reopen only when current Core evidence, run conditions, or Product Owner direction changes the model.
+Mixed and future-tech waste streams remain disposal-priced. Do not infer positive value for Mixed Metal Scrap, Textiles, Plastic Scrap, Electronics, Tailings, chemical streams or residual garbage from the activated exact lanes.
 
-## Flake monetary policy — current
+## Private paper shop — run-specific retail
+
+The private paper shop is separate from Exchange/reference pricing.
+
+Current shop policy:
+
+- Natural Fiber input: **0.06**;
+- Paper retail: **0.23**;
+- Paraffin input: **0.55**;
+- Waxed Paper retail: **0.75**.
+
+These private-shop prices do not rewrite the Exchange Paper Milling ledger.
+
+## Flake monetary policy — live
 
 Canonical policy: `economy/flake-monetary-policy.md`.
-
-The **Ironwood Flake** replaces FroBoyX Credit as the run's fiat currency under a land-reserve issuance rule.
 
 Current decisions:
 
@@ -115,19 +132,19 @@ Current decisions:
 - each player Active at cutover receives a **one-time 175-Flake capitalization grant**;
 - a player not Active at cutover receives the same **one-time 175-Flake grant on first becoming Active**;
 - losing and regaining Active status does not create another grant;
-- Active is a server-wide status, not Ironwood residency; the current Active population is **114 players**;
-- the observed legacy FroBoyX Credit economy is **9,236.39**;
+- Active is a server-wide status, not Ironwood residency; the cutover Active population was **114 players**;
+- observed legacy FroBoyX Credit economy at planning was **9,236.39**;
 - 114 × 175 capitalization = **19,950 Flakes**;
 - combined conversion + capitalization requirement = **29,186.39 Flakes**;
 - minimum physical printing at 25 Flakes/Paper = **1,168 Paper (29,200 Flakes)**;
-- working initial print run = **1,600 Paper = 40,000 Flakes**, leaving about **10,813.61 Flakes** of unissued physical-note headroom after conversion and all initial grants;
+- initial print run = **1,600 Paper = 40,000 Flakes**;
 - the issuing authority limits net Flake circulation outside sterilized issuer reserves to **60% of the current face value of unsold sellable civic land instruments it actually controls**;
 - reserve capacity is a ceiling, not a requirement to issue;
 - unissued printed Paper held by the Treasury is not circulation;
 - land-sale receipts are sterilized/retired rather than immediately recycled as ordinary spending while required to preserve the reserve rule;
 - the Flake is intended to circulate outside Ironwood; other players and future Towns can acquire it through Exchange trade, procurement, public works, research, and other authorized transactions with the issuing authority.
 
-### Current Town real-estate prices — LOCKED
+## Current Town real-estate prices — LOCKED
 
 | Civic land instrument | Treasury Buy | Treasury Sell |
 |---|---:|---:|
@@ -145,7 +162,7 @@ A Town Claim Stake includes 5 claims. At 150 Flakes per Town Claim, 750 Flakes o
 
 - A player begins the game with **16 personal claims** that can initially be used anywhere.
 - Once the player joins a Town, those personal 16 claims can only be used within that Town.
-- Those initial 16 claims therefore provide the player's baseline land access; Town-issued claims are additional expansion capacity, not the player's starter allotment.
+- Those initial 16 claims provide baseline land access; Town-issued claims are additional expansion capacity.
 - A **new Claim Stake is required to create a new property**.
 - A settlement Claim Stake comes with **5 claims** of its own.
 - Additional Claim Papers expand claim capacity without themselves creating another property.
@@ -158,21 +175,17 @@ Current settlement defaults used for reserve-scale planning:
 - homestead-support claims per citizen: `5` at Town/Country/Federation;
 - settlement claim stakes per citizen: `1.5` at Town/Country/Federation.
 
-A higher-tier settlement's claim supply is **additive** to the claims generated by its member settlements. A future Country therefore creates a large additional Country claim/stake reserve on top of the existing Town reserves.
+A higher-tier settlement's claim supply is additive to claims generated by its member settlements. Country claims/stakes are materially more flexible because they can be used across member Towns, so do not model Country inventory as merely a larger copy of local Town inventory.
 
-Country claims and stakes are materially more flexible because they can be used across the Country's member Towns. Do not model Country inventory as merely a larger copy of a local Town inventory or price it cheaply enough to bypass member-Town land policy.
-
-### Observed Ironwood Town reserve — 2026-08-15
-
-In-game Foundation screenshot:
+### Observed Ironwood Town reserve — 2026-08-15 snapshot
 
 - non-abandoned Ironwood citizens: `33`;
 - spawned Town Claim Papers: `330`;
 - spawned Homestead Support Claim Papers: `165`;
 - spawned Town Claim Stakes: `49`;
-- currently visible Foundation inventory: `167` Town Claim Papers, `140` Homestead Support Claim Papers, `35` Town Claim Stakes.
+- visible Foundation inventory: `167` Town Claim Papers, `140` Homestead Support Claim Papers, `35` Town Claim Stakes.
 
-At the locked prices, the visible issuer-controlled inventory has a face value of **74,050 Flakes** and a 60% circulation ceiling of **44,430 Flakes**.
+At locked prices, that visible issuer-controlled inventory had face value **74,050 Flakes** and a 60% circulation ceiling of **44,430 Flakes**.
 
 This is a snapshot only; recalculate as inventory or prices change.
 
@@ -184,13 +197,24 @@ The Flake reserve does **not** automatically expand merely because any Country f
 
 When a Country takes a stake in Flakes:
 
-- its generated claims/stakes are additive to member-Town land resources;
+- generated claims/stakes are additive to member-Town land resources;
 - Country claims/stakes may be usable across member Towns and therefore have greater jurisdictional flexibility;
-- only Country land assets actually controlled by that participating issuing authority and assigned published Country prices enter the reserve calculation;
+- only participating issuer-controlled Country land assets with published prices enter the reserve calculation;
 - 60% of that additional face value may increase the circulation ceiling;
 - additional reserve capacity permits but does not require additional issuance;
 - Country pricing/allocation must not make member-Town claims economically irrelevant or create cheap national inventory that bypasses local land policy.
 
+## Remaining economy consolidation
+
+The active recipe-discovery problem is largely complete. Remaining work is administrative and transition-driven:
+
+1. continue synchronizing older stale profession sections in the central Exchange publication when discrepancies are found;
+2. normalize grouped/tag-product naming where required;
+3. keep civic one-offs, research, Recycling feedstocks and other bounded lanes out of unlimited ordinary Buy orders;
+4. recalculate affected chains when a true economy-wide technology transition occurs.
+
+Do not reopen completed profession chains merely because an older table or chat used a different number. Reopen when current Core evidence, live run conditions, or Product Owner direction changes the model.
+
 ## Next action
 
-Implement/publish the Flake cutover and Town real-estate schedule, including the physical note printing plan, then define Country claim/stake prices and allocation policy before participating Country reserve assets enter the Flake framework.
+Operate the newly published Baking/Cooking/Recycling markets, continue central-ledger synchronization, and define Country claim/stake prices and allocation policy before a participating Country contributes reserve assets to the Flake framework.
