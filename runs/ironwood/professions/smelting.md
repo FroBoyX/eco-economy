@@ -24,7 +24,7 @@ Current Bloomery bar costs include Clay Molds, fuel, Ceramic Scrap disposal and 
 | Item | Exchange cash cost | Town Buys | Town Sells |
 |---|---:|---:|---:|
 | Anvil | 38.224 | **49.69** | **52.17** |
-| Cast Iron Stove | 31.033 | **40.34** | **42.36** |
+| Cast Iron Stove | 31.677 | **41.18** | **43.24** |
 | Smelting Upgrade | 29.700 | **38.61** | **40.54** |
 
 ### Anvil — Smelting 1
@@ -37,9 +37,11 @@ At Smelting 1 cash cost = **38.224**.
 
 ### Cast Iron Stove — Smelting 3
 
-Current public-input cash cost including Bloomery fuel = **31.033**.
+The stove consumes both Iron Bars and cross-specialty Cooking Utensils, so the iron reanchor reaches it twice: directly through its bars and indirectly through the repriced utensils.
 
-**Cast Iron Stove: 40.34 / 42.36.**
+Current public-input cash cost = **31.677**.
+
+**Cast Iron Stove: 41.18 / 43.24.**
 
 ### Smelting Upgrade — level 2
 
