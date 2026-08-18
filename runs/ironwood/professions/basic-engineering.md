@@ -23,7 +23,7 @@ The permanent current Ironwood Iron Bar baseline is **3.00 Town Buy / 3.15 Town 
 - Hemp Mooring Rope **1.05 / 1.10**
 - Charcoal Powder **0.22 / 0.23**
 - Store **7.41 / 7.78**
-- Cast Iron Stove **40.34 / 42.36**
+- Cast Iron Stove **41.18 / 43.24**
 
 ## Exchange-ready Basic Engineering outputs
 
@@ -51,7 +51,7 @@ The permanent current Ironwood Iron Bar baseline is **3.00 Town Buy / 3.15 Town 
 | Iron Wheel | 3 | **14.90** | **15.65** |
 | Iron Road Tool | 3 | **82.35** | **86.47** |
 | Wooden Liquid Tank | 4 | **68.55** | **71.98** |
-| Powered Cart | 5 | **144.60** | **151.83** |
+| Powered Cart | 5 | **145.84** | **153.13** |
 
 ## Asphalt Concrete — Basic Engineering 1
 
@@ -94,9 +94,9 @@ The verified current recipes produce these new baseline values:
 - Hand Plow **46.77 / 49.11**;
 - Iron Wheel **14.90 / 15.65**;
 - Iron Road Tool **82.35 / 86.47**;
-- Powered Cart **144.60 / 151.83**.
+- Powered Cart **145.84 / 153.13**.
 
-Powered Cart moves materially because its current recipe contains a static Cast Iron Stove and three static Iron Wheels. The other unchanged Engineering rows either do not consume the repriced iron chain or retain their existing policy price.
+Powered Cart moves materially because its current recipe contains a static Cast Iron Stove and three static Iron Wheels. Its final baseline includes the iron increase inside the Stove's Cooking Utensils as well as the direct iron in the wheels.
 
 ## Major current infrastructure
 
@@ -108,7 +108,7 @@ Powered Cart moves materially because its current recipe contains a static Cast 
 - Wooden Elevator **111.75 / 117.34**
 - Hand Plow **46.77 / 49.11**
 - Wooden Liquid Tank **68.55 / 71.98**
-- Powered Cart **144.60 / 151.83**
+- Powered Cart **145.84 / 153.13**
 
 All use the corrected current animal-fat Lubricant **0.14 / 0.15** where applicable.
 
