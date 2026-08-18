@@ -4,33 +4,35 @@ Rebuilt from Eco 14 Core using current metal, leather, wood, glass and Tallow va
 
 Blacksmithing spans shallow components, durable tools, current housing/decor, workstations and one-off civic capital. Steel/modern material rows are future and do not set this run's prices.
 
+The permanent current Ironwood Iron Bar baseline is **3.00 Town Buy / 3.15 Town Sell**. Verified current Blacksmith outputs that materially consume Iron Bars or Iron Plates are repriced from that baseline below. Copper, Gold and upstream Mining prices are unchanged.
+
 ## Core industrial outputs
 
 | Item | Town Buys | Town Sells |
 |---|---:|---:|
-| Nail | **0.15** | **0.16** |
-| Iron Plate | **2.45** | **2.57** |
+| Nail | **0.18** | **0.19** |
+| Iron Plate | **2.88** | **3.02** |
 | Copper Plate | **4.89** | **5.13** |
-| Cooking Utensils | **4.96** | **5.21** |
-| Iron Saw Blade | **13.87** | **14.56** |
-| Iron Anchor | **37.91** | **39.81** |
-| Sawmill | **36.95** | **38.80** |
-| Small Paper Machine | **27.75** | **29.14** |
-| Blacksmith Upgrade | **23.13** | **24.29** |
+| Cooking Utensils | **5.84** | **6.13** |
+| Iron Saw Blade | **16.35** | **17.17** |
+| Iron Anchor | **44.71** | **46.95** |
+| Sawmill | **42.22** | **44.33** |
+| Small Paper Machine | **31.49** | **33.06** |
+| Blacksmith Upgrade | **26.77** | **28.11** |
 
 ### Small Paper Machine — Blacksmith 1
 
-Core: 8 Iron Plates + 6 Hewn Logs + 240 calories. Current cash cost = **21.344**.
+Core: 8 Iron Plates + 6 Hewn Logs + 240 calories. Current cash cost = **24.224**.
 
 As a capital workstation:
 
-**Small Paper Machine: 27.75 / 29.14.**
+**Small Paper Machine: 31.49 / 33.06.**
 
 ### Blacksmith Upgrade — level 2
 
-2 static Cooking Utensils + 32 static Nails + 3,000 calories. Current cash cost = **17.79**.
+2 static Cooking Utensils + 32 static Nails + 3,000 calories. Current cash cost = **20.59**.
 
-**Blacksmith Upgrade: 23.13 / 24.29.**
+**Blacksmith Upgrade: 26.77 / 28.11.**
 
 ## Iron tools
 
@@ -45,9 +47,11 @@ Current Core gives the same recipe burden to:
 - Iron Hammer;
 - Iron Rock Drill.
 
-Current public cash cost = **32.552** each.
+Current public cash cost = **37.160** each.
 
-**Iron tools: 38.41 Town Buy / 40.33 Town Sell each.**
+**Iron tools: 43.85 Town Buy / 46.04 Town Sell each.**
+
+A private retail price of **45 Flakes** remains commercially viable at this baseline and does not need to rise merely because the public iron anchor changed.
 
 ## Current lighting / brazier goods
 
@@ -67,8 +71,8 @@ Frame shape/orientation variants are tag products and are normalized by material
 
 | Frame family | Town Buys | Town Sells |
 |---|---:|---:|
-| Iron Frame — wide/tall/square/portrait/landscape | **4.11** | **4.32** |
-| Ornate Iron Frame variants | **4.11** | **4.32** |
+| Iron Frame — wide/tall/square/portrait/landscape | **4.83** | **5.07** |
+| Ornate Iron Frame variants | **4.83** | **5.07** |
 | Copper Frame variants | **8.19** | **8.60** |
 | Gold Frame variants | **19.76** | **20.75** |
 | Ornate Gold Frame variants | **19.76** | **20.75** |
@@ -79,21 +83,21 @@ Higher skill makes ornate frames cheaper to manufacture in Core; Ironwood does n
 
 | Item | Town Buys | Town Sells |
 |---|---:|---:|
-| Decorative Anchor | **12.15** | **12.76** |
+| Decorative Anchor | **14.30** | **15.02** |
 | Hourglass | **15.55** | **16.33** |
 | Rotating Cube | **15.55** | **16.33** |
-| Huge Iron Sign | **42.07** | **44.17** |
-| Huge Iron Banner Sign | **46.60** | **48.93** |
+| Huge Iron Sign | **49.51** | **51.99** |
+| Huge Iron Banner Sign | **54.87** | **57.61** |
 | Wooden Paint Sprayer | **10.57** | **11.10** |
-| Iron Paint Sprayer | **46.48** | **48.80** |
+| Iron Paint Sprayer | **53.26** | **55.92** |
 
 ### Iron Paint Sprayer
 
-At Blacksmith 4, current Iron Bars + Iron Plates + Glass produce cash cost **37.187**.
+At Blacksmith 4, current Iron Bars + Iron Plates + Glass produce cash cost **42.608**.
 
 As a deep durable tool:
 
-**46.48 / 48.80.**
+**53.26 / 55.92.**
 
 ## Civic capital — reference/procurement prices
 
@@ -105,7 +109,7 @@ These objects are current-material craftable, but Ironwood should **not** mainta
 | Mint | 132.765 | **185.87** | **195.16** |
 | Bank | 186.825 | **261.56** | **271.56** |
 
-They receive roughly 40% late-capital procurement uplift because each transaction is rare and ties up substantial Gold/Iron/Brick/Lumber value.
+These remain policy/reference prices rather than ordinary standing imports. Their existing late-capital headroom absorbs the moderate Iron Bar reanchor; they do not need an automatic nominal increase.
 
 ## Current-run boundary
 
