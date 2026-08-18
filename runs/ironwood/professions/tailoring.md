@@ -14,6 +14,8 @@ This file covers every player-facing output currently craftable through the **Ta
 - Furniture, decorations, backpacks, beds, and Campsite use the ordinary finished-good margin.
 - Tailoring Basic Upgrade uses the 30% upgrade/capital margin.
 
+The permanent current Ironwood metal baseline uses **Iron Bar 3.00 / 3.15** and the already-current **Gold Bar 12.51 / 13.14**. The iron-bearing Tailoring rows below are recalculated from those current cross-specialty prices rather than the older metal values embedded in the previous Tailoring pass.
+
 ## Current scope boundary
 
 The **Advanced Tailoring Table is not current**. Core requires **Industry 1** to build it, using Steel Plate, Basic Circuits, and Fuses at the Electric Machinist Table. Therefore Farmer/Smith/Shipwright/Tailor profession outfits and other Advanced Tailoring Table recipes are excluded from the Steam-entry table even when their Tailoring skill requirement itself is modest.
@@ -66,7 +68,7 @@ Likewise, Nylon/Plastic/Epoxy/Steel-Spring recipes remain future-gated.
 
 | Item | Tailoring | Projected Cost | Town Buys | Town Sells |
 |---|---:|---:|---:|---:|
-| Kite / Fish Kites | 0 | 17.85 | **21.42** | **22.49** |
+| Kite / Fish Kites | 0 | 23.79 | **28.55** | **29.98** |
 | Padded Chair | 1 | 14.66 | **17.60** | **18.48** |
 | Rug Small / Banana Rug | 1 | 18.84 | **22.61** | **23.74** |
 | Small Cotton Bunting — Red/Festive/Regal/Vibrant | 2 | 1.80 | **2.16** | **2.27** |
@@ -79,10 +81,18 @@ Likewise, Nylon/Plastic/Epoxy/Steel-Spring recipes remain future-gated.
 | Small Bath Mat | 3 | 8.31 | **9.97** | **10.47** |
 | Washboard | 3 | 1.83 | **2.20** | **2.31** |
 | Tapestry / Fish / Sunset | 5 | 4.52 | **5.42** | **5.69** |
-| Cast Iron Bed | 6 | 32.13 | **38.56** | **40.49** |
+| Cast Iron Bed | 6 | 40.84 | **49.01** | **51.46** |
 | Large Bath Mat | 6 | 19.92 | **23.91** | **25.11** |
 | Rug Large | 6 | 35.39 | **42.47** | **44.59** |
-| Cast Iron Royal Bed | 7 | 79.63 | **95.56** | **100.33** |
+| Cast Iron Royal Bed | 7 | 101.05 | **121.26** | **127.32** |
+
+### Metal-bearing Tailoring rows
+
+- **Kite / Fish Kites** use 6 Iron Bars plus Fabric. Their previous 17.85 projected cost reproduced the older 2.16 Iron Bar input; at current Iron Bar Sell 3.15 their projected cost is **23.79**.
+- **Cast Iron Bed** uses 16 Iron Bars at Tailoring 6. Current projected cost is **40.84**.
+- **Cast Iron Royal Bed** uses 24 Iron Bars and 6 Gold Bars at Tailoring 7. The previous row also retained the older Gold Bar input; using current Iron 3.15 and Gold 13.14 gives projected cost **101.05**.
+
+These are baseline corrections, not temporary shortage premiums.
 
 ## Tailoring Basic Upgrade
 
