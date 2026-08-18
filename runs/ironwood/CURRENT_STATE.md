@@ -12,7 +12,44 @@ Ironwood is **entering the Steam era**.
 
 Live pricing is based on the best normal routes actually available in the current run. Future Oil, Electronics, Industry, advanced food, Composites, Advanced Masonry, and other later efficiencies do not back-propagate into current prices.
 
-The **Ironwood Flake is live**. Baking, Cooking and Recycling are also now operational.
+The **Ironwood Flake is live**. Baking, Cooking and Recycling are operational.
+
+## Permanent current iron baseline
+
+Iron scarcity demonstrated that the earlier finished-metal value was too low to pull enough bars into the market. Ironwood has therefore adopted a new **permanent current baseline**, not a temporary shortage surcharge:
+
+| Iron-chain item | Town Buys | Town Sells |
+|---|---:|---:|
+| Iron Ore | **0.20** | **0.22** |
+| Crushed Iron Ore | **1.45** | **1.52** |
+| Iron Concentrate | **7.64** | **8.02** |
+| **Iron Bar** | **3.00** | **3.15** |
+| Iron Pipe | **2.84** | **2.98** |
+| Iron Plate | **2.88** | **3.02** |
+| Nail | **0.18** | **0.19** |
+
+The policy choice is deliberate: **Ore, Crushed Ore and Concentrate do not rise with the bar anchor.** The additional value is concentrated in Smelting conversion so producing Bars becomes more attractive rather than merely inflating the entire extraction chain.
+
+Copper and Gold remain at their current metal baselines:
+
+- Copper Bar **5.14 / 5.40**;
+- Gold Bar **12.51 / 13.14**.
+
+The 3-Flake Iron Bar baseline has been propagated through verified current iron-sensitive Smelting, Blacksmithing, Basic Engineering, Mechanics, Shipwright, Pottery, Painting, Hunting, Tailoring and Carpentry rows. Recycling Iron Scrap remains managed at **2.75 / 2.89** rather than being mechanically raised with finished Iron Bars.
+
+Small metal-cost changes may be absorbed inside an existing nominal margin instead of producing penny-level price churn. Deep Mechanics capital rows whose present structural calculation cannot be reliably reproduced from available source evidence retain their accepted current nominal prices rather than being guessed upward. Both are permanent current-baseline decisions, not temporary exceptions.
+
+Representative downstream baseline values now include:
+
+- Cooking Utensils **5.84 / 6.13**;
+- Iron tools **43.85 / 46.04** at the Exchange, while a private 45-Flake retail tool remains commercially viable;
+- Cast Iron Stove **41.18 / 43.24**;
+- Recurve Bow **69.33 / 72.80**;
+- Storage Silo **70.69 / 74.22**;
+- Powered Cart **145.84 / 153.13**;
+- Cement Kiln **223.35 / 234.52**;
+- Wooden Barge **204.11 / 214.11**;
+- Medium Fishing Trawler **938.69 / 948.69**.
 
 ## Active profession coverage
 
@@ -65,21 +102,24 @@ Future routes may be inspected for planning without becoming current price sette
 
 `economy/steam-era-exchange-tables.md` is the shop-facing Steam-entry publication.
 
-The latest publication pass now includes:
+It has been rebuilt as the **Buy/Sell operating view**. Detailed Projected Cost and recipe arithmetic remain in the profession ledgers, which are updated first when a structural price changes. This reduces duplicated calculation state in the shop-facing file.
 
+The current publication includes:
+
+- the permanent **3.00 / 3.15 Iron Bar baseline**;
+- unchanged upstream iron Mining prices;
+- propagated current iron-sensitive downstream prices;
 - full Baking ordinary-output coverage;
 - full Cooking ordinary-output coverage;
 - active sorted Recycling procurement and residual disposal separation;
-- corrected current Paper Milling values;
-- corrected Crushed Limestone / Glassworking values;
-- corrected current Smelting bar anchors used by Recycling;
+- current Paper Milling, Masonry, Glassworking and construction-material values;
 - current civic-reference prices for Town Bell, Bank, Currency Exchange and Mint.
 
 Baking/Cooking alternate recipes that produce the same final output are grouped rather than duplicated. Specialty modules/upgrades remain limited capital rather than unlimited food imports.
 
 Recycling positive feedstock prices are **managed/capped procurement**, not unlimited garbage demand.
 
-Research papers remain **capped Library procurement**, not unlimited Exchange demand.
+Research papers remain **capped Library procurement**, not unlimited Exchange demand; the Iron Bar reanchor does not automatically rewrite those policy transfers.
 
 ## Current pricing doctrine
 
@@ -90,6 +130,7 @@ Research papers remain **capped Library procurement**, not unlimited Exchange de
 - Direct-sale markup is applied once rather than recursively compounded through a specialty.
 - Bulk construction materials may retain explicit policy prices.
 - Civic allocations, research, recycling, garbage, emergency interventions, and other exceptional goods may use policy pricing rather than ordinary recipe markup.
+- Input changes are propagated where they materially change a verified current recipe; small changes can remain inside an accepted nominal margin.
 
 ## Current Recycling lanes
 
@@ -105,7 +146,9 @@ Active exact sorted feedstocks:
 | Copper Scrap | **2.50** | **2.63** | Copper Bars |
 | Gold Scrap | **8.00** | **8.40** | Gold Bars |
 
-Mixed and future-tech waste streams remain disposal-priced. Do not infer positive value for Mixed Metal Scrap, Textiles, Plastic Scrap, Electronics, Tailings, chemical streams or residual garbage from the activated exact lanes.
+At the new bar baseline, six recycled Iron Bars have 18.00 Flakes of Town Buy value. This increases Recycler surplus but does **not** justify an unlimited Iron Scrap order. Mixed and future-tech waste streams remain disposal-priced.
+
+Do not infer positive value for Mixed Metal Scrap, Textiles, Plastic Scrap, Electronics, Tailings, chemical streams or residual garbage from the activated exact lanes.
 
 ## Private paper shop — run-specific retail
 
@@ -208,13 +251,14 @@ When a Country takes a stake in Flakes:
 
 The active recipe-discovery problem is largely complete. Remaining work is administrative and transition-driven:
 
-1. continue synchronizing older stale profession sections in the central Exchange publication when discrepancies are found;
+1. use profession ledgers as the detailed calculation source and the Steam-era publication as the shop-facing Buy/Sell view;
 2. normalize grouped/tag-product naming where required;
 3. keep civic one-offs, research, Recycling feedstocks and other bounded lanes out of unlimited ordinary Buy orders;
-4. recalculate affected chains when a true economy-wide technology transition occurs.
+4. recalculate affected chains when a true economy-wide technology transition occurs;
+5. do not use older stale `prices.json` rows to override newer profession ledgers or the current publication.
 
 Do not reopen completed profession chains merely because an older table or chat used a different number. Reopen when current Core evidence, live run conditions, or Product Owner direction changes the model.
 
 ## Next action
 
-Operate the newly published Baking/Cooking/Recycling markets, continue central-ledger synchronization, and define Country claim/stake prices and allocation policy before a participating Country contributes reserve assets to the Flake framework.
+Operate the permanent 3-Flake Iron Bar baseline, watch whether actual bar supply moves toward the Exchange, and continue Country claim/stake pricing work before a participating Country contributes reserve assets to the Flake framework.
