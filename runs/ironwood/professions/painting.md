@@ -4,6 +4,8 @@ Rebuilt from the supplied Eco 14 Core using only current Tier 1–3 production r
 
 Painting is a Tier-3 specialty and is therefore inside the current Steam-entry economy. Current pigments use the ordinary Mill routes; later Industrial Mill efficiency does not set the current price.
 
+The permanent current Ironwood Iron Bar baseline is **3.00 Town Buy / 3.15 Town Sell**. Base Paint is the current Painting row directly exposed to Iron Bar and is repriced accordingly.
+
 ## Current pigment inputs
 
 ### White Powder — Milling 2, Mill
@@ -48,7 +50,7 @@ At Milling 2:
 
 | Item | Painting | Exchange cash cost | Town Buys | Town Sells |
 |---|---:|---:|---:|---:|
-| Base Paint | 1 | ~0.193 ea | **0.22** | **0.23** |
+| Base Paint | 1 | ~0.212 ea | **0.24** | **0.25** |
 | Oil Paint | 1 | ~0.468 ea | **0.52** | **0.55** |
 | Art Supplies | 1 | ~1.274 ea | **1.50** | **1.58** |
 | Ink | 2 | ~1.031 ea | **1.19** | **1.25** |
@@ -56,9 +58,9 @@ At Milling 2:
 
 ### Base Paint
 
-Core makes 10 Base Paint from 4 White Powder + 0.5 Iron Bar + 2 generic Oil + 40 calories. At Painting 1 the public-input cash cost is about 0.193 per paint.
+Core makes 10 Base Paint from 4 White Powder + 0.5 Iron Bar + 2 generic Oil + 40 calories. At Painting 1 the public-input cash cost is about **0.212 per paint** at the 3-Flake Iron Bar baseline.
 
-**Base Paint: 0.22 / 0.23.**
+**Base Paint: 0.24 / 0.25.**
 
 ### Oil Paint
 
@@ -119,7 +121,7 @@ Gold Trim Book is materially more expensive because it consumes Gold Bar.
 |---|---:|---:|
 | White Powder | **0.02** | **0.03** |
 | Colored Powder | **0.22** | **0.23** |
-| Base Paint | **0.22** | **0.23** |
+| Base Paint | **0.24** | **0.25** |
 | Oil Paint | **0.52** | **0.55** |
 | Art Supplies | **1.50** | **1.58** |
 | Ink | **1.19** | **1.25** |
