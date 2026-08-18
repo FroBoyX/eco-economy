@@ -4,6 +4,8 @@ Rebuilt from the supplied Eco 14 Core under the current Steam-entry boundary.
 
 Recycling is now **operational** in Ironwood. The exact sorted Steam-era recovery lanes below are active. They are not unlimited garbage demand: procurement should be capped or managed to real recovery capacity, and mixed/unsorted waste does not inherit the value of a sorted feedstock.
 
+The permanent current Ironwood Iron Bar baseline is **3.00 Town Buy / 3.15 Town Sell**. Iron Scrap procurement remains **2.75 / 2.89** as a managed feedstock price rather than automatically rising with finished bars.
+
 ## Active Steam-era recovery lanes
 
 Current workstations permit:
@@ -106,7 +108,7 @@ Core effective at Recycling 2:
 - 1.5 Ceramic Scrap disposal;
 - -> 6 Iron Bars plus Slag.
 
-At Iron Scrap 2.89 public Sell, current cash cost remains well below the recovered six-bar value. Current Iron Bar Town Buy is **2.54**, so 6 recovered bars are worth **15.24** to the Exchange.
+At Iron Scrap 2.89 public Sell, current cash cost remains well below the recovered six-bar value. Current Iron Bar Town Buy is **3.00**, so 6 recovered bars are worth **18.00** to the Exchange.
 
 **Iron Scrap: 2.75 / 2.89.**
 
