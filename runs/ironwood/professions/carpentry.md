@@ -4,9 +4,11 @@ Rebuilt from the supplied Eco 14 Core after canonicalizing commercially viable L
 
 Costs use the actual minimum Carpentry level and **Town Sell prices for purchased inputs**. Margin follows Ironwood's depth ladder: ordinary furniture ~15%, utility/storage ~20%, multi-step components ~18–25%, capital/workstations ~30%. Lumber remains on the Tier-3 construction policy.
 
+The permanent current Ironwood metal baseline is **Iron Bar 3.00 / 3.15**, **Iron Pipe 2.84 / 2.98**, **Iron Plate 2.88 / 3.02**, and **Nail 0.18 / 0.19**. Directly iron-heavy Carpentry rows are rechecked below. Small Nail exposure in ordinary furniture remains inside existing nominal margins and does not require mechanical repricing.
+
 ## Lumber — Carpentry 1
 
-Current cash cost is **1.410 per Lumber** using Boards, Nails and Flaxseed Oil at current public prices.
+Current cash cost is approximately **1.434 per Lumber** using Boards, Nails and Flaxseed Oil at current public prices. The higher Nail price adds only about 0.024 per Lumber and remains comfortably below the accepted Tier-3 construction-policy price.
 
 **Lumber: 1.62 Town Buy / 1.70 Town Sell.**
 
@@ -36,7 +38,7 @@ Current cash cost is **1.410 per Lumber** using Boards, Nails and Flaxseed Oil a
 | Lumber Bench | 3 | **12.38** | **13.00** |
 | Lumber Hallway Table | 3 | **22.86** | **24.00** |
 | Square Lumber Pot | 3 | **5.51** | **5.79** |
-| Storage Silo | 3 | **64.74** | **67.98** |
+| Storage Silo | 3 | **70.69** | **74.22** |
 | **Bookshelf** | 4 | **27.21** | **28.57** |
 | **Heated Display Cabinet** | 4 | **27.21** | **28.57** |
 | **Refrigerated Display Cabinet** | 4 | **27.21** | **28.57** |
@@ -72,6 +74,26 @@ Current cash cost is **1.410 per Lumber** using Boards, Nails and Flaxseed Oil a
 | Wooden Fabric Bed | 6 | **16.37** | **17.19** |
 | Wooden Kitchen Lamp | 6 | **30.48** | **32.00** |
 | Wooden Table Lamp | 6 | **34.32** | **36.04** |
+
+## Storage Silo — Carpentry 3
+
+The verified current route consumes 6 Iron Pipes, 8 Iron Bars and 20 Lumber. At Carpentry 3:
+
+- 4.2 Iron Pipes × 2.98 = 12.516
+- 5.6 Iron Bars × 3.15 = 17.640
+- 14 Lumber × 1.70 = 23.800
+- 420 calories = 0.420
+- cash cost = **54.376**
+
+With the accepted 30% infrastructure/capital treatment:
+
+**Storage Silo: 70.69 / 74.22.**
+
+## Nominal rows with small metal exposure
+
+Lumber and several ordinary furniture rows consume Nails, and Wooden Kitchen Lamp consumes a small quantity of Iron Plate. The new burden remains within their existing direct-sale margins, so Ironwood keeps their nominal prices instead of mechanically moving every furniture price by a few cents.
+
+The currently available external source for Machinist Table does not reproduce the accepted current Ironwood calculation closely enough to replace its current baseline recipe accounting. **Machinist Table therefore remains 64.27 / 67.48** until current Core evidence supports a structural recalculation rather than a guessed one.
 
 ## Paper-enabled display furniture — Carpentry 4
 
