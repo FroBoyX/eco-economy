@@ -4,6 +4,8 @@ Rebuilt from Eco 14 Core using current Mining/Masonry/Painting inputs.
 
 Glass remains a Tier-3 bulk construction material. Ordinary glass decor receives ordinary finished-goods margins; later Steel/Epoxy/Plastic rows are outside the current run boundary.
 
+The permanent Iron Bar reanchor does not change the Glass recipe itself. It does raise the cross-specialty Pottery price of the Glassworks workstation to **54.00 / 56.70**, which is synchronized here as current capital cost without back-propagating workstation acquisition into per-unit Glass prices.
+
 ## Current foundation
 
 | Item | Town Buys | Town Sells |
@@ -13,7 +15,7 @@ Glass remains a Tier-3 bulk construction material. Ordinary glass decor receives
 | Glass | **1.57** | **1.65** |
 | Glass Lens | **4.57** | **4.80** |
 | Light Bulb | **12.35** | **12.97** |
-| Glassworks | **50.01** | **52.51** |
+| Glassworks | **54.00** | **56.70** |
 
 ### Glass — Glassworking 1
 
